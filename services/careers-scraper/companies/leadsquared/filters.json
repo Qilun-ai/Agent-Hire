@@ -1,0 +1,85 @@
+{
+  "company": "LeadSquared",
+  "slug": "leadsquared",
+  "portal": "https://www.leadsquared.com/careers/",
+  "listing_url": "https://leadsquaredhrms.darwinbox.in/ms/candidatev2/main/careers/allJobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Noida, Uttar Pradesh, India",
+        "Chennai, Tamil Nadu, India",
+        "Bangalore, Karnataka, India",
+        "Mumbai, Maharashtra, India",
+        "Pune, Maharashtra, India",
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "Board exposes location (careers_filters.location=1) and returns these options from POST /ms/candidateapi/job/newfilters; the exact alljobs filter key was not confirmed, so filtering is local."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "CP India Emerging Vertical",
+        "Sales US Healthcare",
+        "Sales India Financial Services- Ent.",
+        "SIERA Product",
+        "Sales India Education- Ent.",
+        "CP India Financial Services",
+        "Business Finance",
+        "CSM India Financial Services",
+        "Customer Engineering",
+        "BU PS India Financial Services",
+        "KAM US - Mid Market",
+        "Converse Engg.",
+        "BU Presales India Financial Services"
+      ],
+      "native_param": null,
+      "note": "department filter is enabled on the board; options come from the filter-options API."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "enum",
+      "values": [
+        "Full Time"
+      ],
+      "native_param": null,
+      "note": "employee_type filter is enabled; only Full Time is currently published."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "enum",
+      "values": [
+        "India"
+      ],
+      "native_param": null,
+      "note": "country filter is enabled on the board."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_option=new"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": false,
+  "local_query": true,
+  "notes": "Darwinbox candidate board. The listing request is POST /ms/candidateapi/job/alljobs?companyId=main with JSON {companyId, page, sort_option:'new', limit}; the observed unfiltered request carries no filter keys. The company config enables department, location, experience, employee_type, functional_area, capability, job_tags, country and job_title filters, and POST /ms/candidateapi/job/newfilters returns their options. That filter endpoint returned a Cloudflare challenge to this worker, so native filter parameter names are not documented; the scraper applies keyword/location/department/employment_type/country locally.",
+  "evidence": [
+    "https://leadsquaredhrms.darwinbox.in/ms/candidatev2/main/careers/allJobs",
+    "https://leadsquaredhrms.darwinbox.in/ms/candidateapi/job/alljobs?companyId=main",
+    "https://leadsquaredhrms.darwinbox.in/ms/candidateapi/job/newfilters?companyId=main"
+  ],
+  "verified": true
+}

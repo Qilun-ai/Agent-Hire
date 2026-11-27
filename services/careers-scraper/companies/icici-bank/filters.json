@@ -1,0 +1,75 @@
+{
+  "company": "ICICI Bank",
+  "slug": "icici-bank",
+  "portal": "https://www.icicicareers.com/",
+  "listing_url": "https://careers.icici.bank.in/CareerApplicant/Career/job-listing/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Main group",
+      "kind": "multi",
+      "values": [
+        "Banking",
+        "CREDIT AND POLICY GROUP",
+        "DEBTCAPITALMARKET",
+        "FARMER FINANCE",
+        "FINANCIAL CRIME PREVENTION",
+        "OPERATION RISK & MGT GROUP",
+        "OPERATIONS",
+        "RETAIL BANKING",
+        "RSPPG",
+        "TRANSACTION BANKING DEPT",
+        "WHOLESALE BANKING GROUP"
+      ],
+      "native_param": "maingroup",
+      "note": "POST body field. Values are the main groups the site publishes (records also carry SubGroup/Department); the /CareerApplicantApi/Career/Groups resource lists them."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Mumbai",
+        "Pune",
+        "Thane",
+        "Bangalore",
+        "Hyderabad",
+        "Chennai",
+        "Delhi",
+        "Kolkata",
+        "Jaipur",
+        "Indore",
+        "Bhubaneswar",
+        "Guwahati",
+        "Vishakhapatnam"
+      ],
+      "native_param": null,
+      "note": "Location is a per-job field (hc_Location / category 'location'); the search body only carries the India-wide scope flag isAllIndia (3 = all India), so city narrowing is local."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full Time",
+        "Permanent"
+      ],
+      "native_param": null,
+      "note": "Published on each job page as 'Job type'; no request field for it, so local filter only."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "https://www.icicicareers.com/ redirects to the bank's own SPA at https://careers.icici.bank.in/CareerApplicant/Career/job-listing/ (the HTML is a 1.4 KB shell with no form, so every control is drawn by the React app). Listing and search go through a POST to https://careers.icici.bank.in/CareerApplicantApi/Career/Search/<page> whose JSON body is AES-encrypted by the site's own transform and is {userId, ApplicantId, keyword, maingroup, experience, PageNo, limit, isAllIndia}. Confirmed machine-usable fields are keyword (free text), maingroup (department) and experience; isAllIndia is a scope flag (3 = all India) rather than a city filter. Paging is PageNo with limit=12. No sort control was found.",
+  "evidence": [
+    "https://www.icicicareers.com/ -> https://careers.icici.bank.in/CareerApplicant/Career/job-listing/ (200 shell, 1430 bytes, zero <form>)",
+    "POST https://careers.icici.bank.in/CareerApplicantApi/Career/Search/1 body {keyword:'', maingroup:'', experience:'', isAllIndia:3, PageNo:0, limit:12} (site's own request template)",
+    "https://careers.icici.bank.in/CareerApplicantApi/Career/Groups"
+  ],
+  "verified": true
+}

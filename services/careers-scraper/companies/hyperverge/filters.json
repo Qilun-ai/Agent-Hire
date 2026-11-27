@@ -1,0 +1,64 @@
+{
+  "company": "HyperVerge",
+  "slug": "hyperverge",
+  "portal": "https://hyperverge.co/careers/",
+  "listing_url": "https://hyperverge.co/careers/#jobOpenings",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "single",
+      "values": [
+        "Engineering",
+        "Deep Learning",
+        "Product",
+        "Business",
+        "Account",
+        "Customer",
+        "Marketing",
+        "Corporate",
+        "Contribution"
+      ],
+      "native_param": "data-tab",
+      "note": "The only real control: the #jobOpenings tab strip (.openings-tab a[data-tab]) switches server-rendered panes (.tab-content > div[role=tabpanel]). Values are the data-tab labels; tab ids are engineering, deeplearning, product, business, account, customer, marketing, corporate, contribution."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Bengaluru",
+        "Chennai",
+        "Mumbai",
+        "Ho Chi Minh City"
+      ],
+      "native_param": null,
+      "note": "Printed on each card (.job-meta span) but not a portal control; local filter only."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-time",
+        "Internship"
+      ],
+      "native_param": null,
+      "note": "Printed on each card (.job-meta span) but not a portal control; local filter only."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The careers page is a hand-maintained WordPress page. All job cards (36 .job-col nodes, 14 in the nine department panes plus cross-listed duplicates) are server-rendered; the only interaction is the department tab strip, which shows/hides panes in the browser and issues no request. There is no search box, no location/date/employment-type control and no pagination, so keyword and every other facet are applied locally. Apply links point at exact LinkedIn job postings or Google Forms.",
+  "evidence": [
+    "https://hyperverge.co/careers/ (200, 342120 bytes: .openings-tab with data-tab=\"engineering|deeplearning|product|business|account|customer|marketing|corporate|contribution\", 36 .job-col cards, 2 .no-openings panes)",
+    "https://hyperverge.co/careers/#jobOpenings"
+  ],
+  "verified": true
+}

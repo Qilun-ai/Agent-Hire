@@ -1,0 +1,44 @@
+{
+  "company": "LinkedIn",
+  "slug": "linkedin",
+  "portal": "https://careers.linkedin.com/",
+  "listing_url": "https://www.linkedin.com/jobs/linkedin-jobs-worldwide?f_C=2587638%2C39939%2C1337",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "text",
+      "values": [
+        "Sunnyvale, California, United States",
+        "Dublin, County Dublin, Ireland",
+        "Greater Chicago Area",
+        "Greater Bengaluru Area",
+        "Bengaluru, Karnataka, India",
+        "Mumbai Metropolitan Region"
+      ],
+      "native_param": "location",
+      "note": "Free-text location on the guest search; pair it with the matching geoId (e.g. Bengaluru geoId=90009633, India geoId=102713980)."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=R"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Official careers page publishes LinkedIn job-search links filtered by company ids (f_C), location, geoId and sortBy=R; the worldwide listing with f_C=2587638,39939,1337 currently advertises 303 open roles. The guest endpoint /jobs-guest/jobs/api/seeMoreJobPostings/search accepts f_C, keywords, location, geoId, sortBy and start; a live request with f_C=1337&keywords=engineer&location=India&geoId=102713980&sortBy=R returned 10 LinkedIn company cards, confirming the keyword/location/sort parameters. Workplace and employment-type facets were not tested and are not documented here.",
+  "evidence": [
+    "https://www.linkedin.com/jobs/linkedin-jobs-worldwide?f_C=2587638%2C39939%2C1337",
+    "https://careers.linkedin.com/",
+    "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?f_C=1337&keywords=engineer&location=India&geoId=102713980&sortBy=R&start=0",
+    "https://www.linkedin.com/jobs/search/?f_C=1337%2C9202023%2C2561065%2C2587638%2C290903%2C39939&geoId=90009633&location=Greater%20Bengaluru%20Area&sortBy=R"
+  ],
+  "verified": true
+}

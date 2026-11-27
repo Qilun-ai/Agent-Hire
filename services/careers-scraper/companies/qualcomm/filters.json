@@ -1,0 +1,97 @@
+{
+  "company": "Qualcomm",
+  "slug": "qualcomm",
+  "portal": "https://careers.qualcomm.com/careers",
+  "listing_url": "https://careers.qualcomm.com/careers",
+  "family": "phenom",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "San Diego, CA, United States",
+        "Bengaluru, KA, India",
+        "Santa Clara, CA, United States",
+        "Hyderabad, TS, India",
+        "Austin, TX, United States",
+        "Hsinchu City, Taiwan",
+        "Cork, CO, Ireland",
+        "Tijuana, B.C., Mexico",
+        "Markham, ON, Canada",
+        "Shanghai, China"
+      ],
+      "native_param": "location",
+      "note": "Free-text location parameter used by the site's own search request."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "ASICS Engineering",
+        "Software Engineering",
+        "Hardware Engineering",
+        "Systems Engineering",
+        "CPU Engineering",
+        "Machine Learning Engineering",
+        "Software Applications Engineering",
+        "Program Management",
+        "Product Management",
+        "GPU ASICS Engineering",
+        "Interim Engineering Intern - SW",
+        "Interim Intern",
+        "Packaging Engineering",
+        "Camera Engineering",
+        "Interim Engineering Intern - HW",
+        "IT Engineering",
+        "Interim Engineering Intern - Systems",
+        "Modem Technologies",
+        "DSP Architecture and Design",
+        "Finance",
+        "Hardware Applications Engineering",
+        "PPT Systems Engineering",
+        "Sourcing",
+        "Systems Test Engineering",
+        "Marketing"
+      ],
+      "native_param": "filter_job_family",
+      "note": "Verified: filter_job_family=software engineering yields appliedFilters.jobFamily and count 333 of 2025."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "onsite",
+        "remote_local"
+      ],
+      "native_param": null,
+      "note": "Posting field workLocationOption; no facet in filterDef, so local only."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    },
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort_by=relevance"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Phenom PCSX search API: domain, query, location, start, sort_by. Both sort_by=relevance and sort_by=timestamp were exercised (sortBy echoed, count 2025). Selected facets are sent as filter_<filterName>; filter_job_family was confirmed end-to-end. filterDef.allFilters currently exposes job_family (Department), skills and seniority; there is no country/workplace facet in the response, so those are local-only.",
+  "evidence": [
+    "https://careers.qualcomm.com/api/pcsx/search?domain=qualcomm.com&query=&location=&start=0&sort_by=relevance",
+    "https://careers.qualcomm.com/api/pcsx/search?domain=qualcomm.com&query=&location=&start=0&sort_by=relevance&filter_job_family=software%20engineering",
+    "https://careers.qualcomm.com/api/pcsx/search?domain=qualcomm.com&query=&location=&start=0&sort_by=timestamp"
+  ],
+  "verified": true
+}

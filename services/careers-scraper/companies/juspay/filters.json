@@ -1,0 +1,54 @@
+{
+  "company": "JUSPAY",
+  "slug": "juspay",
+  "portal": "https://juspay.in/careers",
+  "listing_url": "https://juspay.io/careers",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Dublin (Ireland)",
+        "Amsterdam"
+      ],
+      "native_param": null,
+      "note": "job_location in the published allJobs payload; the page groups cards by region."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Business & Marketing"
+      ],
+      "native_param": null,
+      "note": "category in the published allJobs payload; no server-side category parameter."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-Time"
+      ],
+      "native_param": null,
+      "note": "job_type in the published allJobs payload."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Static Astro careers page. The JobListings island fetches https://joinus.juspay.in/api/careerJobOpening?limit=1000&isGlobal=true once, then filters/groups cards client-side by region and category. No server-side keyword, location or category parameter is sent; filters are local.",
+  "evidence": [
+    "https://juspay.io/careers",
+    "https://joinus.juspay.in/api/careerJobOpening?limit=1000&isGlobal=true",
+    "https://juspay.io/_astro/JobListings.By5RNeUP.js"
+  ],
+  "verified": true
+}

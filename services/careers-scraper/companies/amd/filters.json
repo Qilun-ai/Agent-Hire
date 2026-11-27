@@ -1,0 +1,86 @@
+{
+  "company": "AMD",
+  "slug": "amd",
+  "portal": "https://careers.amd.com/careers-home/jobs",
+  "listing_url": "https://careers.amd.com/careers-home/jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "India"
+      ],
+      "native_param": "country",
+      "note": "Search facet named country; API accepted country=India."
+    },
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Hyderabad"
+      ],
+      "native_param": "city",
+      "note": "Search facet named city; counts returned by /api/jobs."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Accounting/Finance",
+        "Customer Service/Support",
+        "Engineering",
+        "General Management/ Administration/ Support",
+        "Human Resources",
+        "Information Technology",
+        "Legal",
+        "Manufacturing",
+        "Sales / Marketing",
+        "Solution Architect / Field Application Engineering",
+        "Student / Intern / Temp",
+        "Supply Chain"
+      ],
+      "native_param": "categories",
+      "note": "Search facet categories; API accepted categories=Engineering."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "FULL_TIME",
+        "PART_TIME",
+        "TEMPORARY"
+      ],
+      "native_param": null,
+      "note": "Collected from job records; no employment-type facet is exposed."
+    },
+    {
+      "key": "seniority",
+      "label": "Tags",
+      "kind": "multi",
+      "values": [
+        "No",
+        "Yes"
+      ],
+      "native_param": "tags1",
+      "note": "Search facet tags1 (the only extra facet besides country/city used by AMD's search config)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "AMD's Jibe/Radancy search app calls GET https://careers.amd.com/api/jobs with limit, page, keywords, categories, country, city and tags1. Verified: categories=Engineering&country=India&keywords=engineer returned 193 jobs and facet counts (city Bangalore 110, Hyderabad 83). The sort parameter is not documented by the page config, so no sort options are published.",
+  "evidence": [
+    "https://careers.amd.com/careers-home/jobs",
+    "https://careers.amd.com/api/jobs?limit=2&page=1&categories=Engineering&country=India&keywords=engineer"
+  ],
+  "verified": true
+}

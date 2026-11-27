@@ -1,0 +1,60 @@
+{
+  "company": "Sarvam AI",
+  "slug": "sarvam-ai",
+  "portal": "https://www.sarvam.ai/careers",
+  "listing_url": "https://www.sarvam.ai/careers",
+  "family": "ashby",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Business Development",
+        "Deployment Engineering",
+        "Engineering",
+        "Founder's Office",
+        "Infrastructure",
+        "Marketing",
+        "Models",
+        "Product",
+        "Sales/GTM"
+      ],
+      "native_param": "department",
+      "note": "Department select on the page (All departments + these 9 options)."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bengaluru",
+        "Delhi"
+      ],
+      "native_param": "location",
+      "note": "Location select on the page (All locations + these 2 options)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full Time"
+      ],
+      "native_param": null,
+      "note": "From the linked Ashby board rows; not a page control."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The Astro careers page embeds every open role in its JobListingSection island (2 jobs at check time) and renders two selects - Department (All departments + 9) and Location (All locations + Bengaluru, Delhi) - plus a 'Search roles...' input. The component reads q / department / location from /careers?... into initialQ / initialDepartment / initialLocation and filters the embedded list in the browser; the server returns the full list, so filtering is local. Cards link to Ashby apply pages on the company-scoped sarvam board.",
+  "evidence": [
+    "https://www.sarvam.ai/careers",
+    "https://www.sarvam.ai/careers?q=&department=Engineering&location=Bengaluru"
+  ],
+  "verified": true
+}

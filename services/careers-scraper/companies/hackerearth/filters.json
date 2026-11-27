@@ -1,0 +1,61 @@
+{
+  "company": "HackerEarth",
+  "slug": "hackerearth",
+  "portal": "https://www.hackerearth.com/careers/",
+  "listing_url": "https://hackerearth.applytojob.com/apply/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Bengaluru"
+      ],
+      "native_param": "s_city",
+      "note": "Free-text city input of the JazzHR advanced-search form; the same form also has a separate s_state <select> (US/Canada state or province, '0' = Any state or province) which is not mapped to a schema key."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [],
+      "native_param": "s_department",
+      "note": "Free-text department input (name=s_department); no fixed option list is published."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full Time",
+        "Part Time",
+        "Part Time to Full Time",
+        "Temporary",
+        "Temporary to Full Time",
+        "Contracted",
+        "Contracted to Full Time",
+        "Internship",
+        "Internship to Full Time",
+        "Seasonal",
+        "Volunteer"
+      ],
+      "native_param": "s_type",
+      "note": "Select s_type options 0-11; '0' is 'Any type'."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "HackerEarth's careers page embeds the JazzHR board in iframe#jazzhr-job-frame (https://hackerearth.applytojob.com/apply/jobs/). The board exposes a real GET search form: action=/apply/jobs with hidden form_id=advanced_search_jobs plus q (simple search), s_title, s_city, s_state, s_keywords, s_type, s_department. All filtering is server-side on that GET request; no sort control is published.",
+  "evidence": [
+    "https://www.hackerearth.com/careers/ embeds iframe#jazzhr-job-frame -> https://hackerearth.applytojob.com/apply/jobs/",
+    "https://hackerearth.applytojob.com/apply/jobs/ <form id='form_advanced_search_jobs' action='/apply/jobs' method='GET'> inputs: form_id=advanced_search_jobs, s_title, s_city, s_state, s_keywords, s_type, s_department; <form id='form_search_jobs'> input name='q'",
+    "select s_type options: 1=Full Time, 2=Part Time, 8=Internship, 6=Contracted, 4=Temporary, 11=Seasonal, 10=Volunteer"
+  ],
+  "verified": true
+}

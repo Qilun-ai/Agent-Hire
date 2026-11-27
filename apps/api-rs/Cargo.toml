@@ -1,0 +1,67 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/contract",
+    "crates/docs",
+    "crates/email",
+    "crates/generation",
+    "crates/jobindex",
+    "crates/leadtext",
+    "crates/llm",
+    "crates/ml",
+    "crates/ranking",
+    "crates/server",
+    "crates/store",
+    "crates/ui",
+]
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.95"
+license = "AGPL-3.0-only"
+publish = false
+
+[workspace.dependencies]
+axum = { version = "0.8", features = ["ws", "multipart"] }
+base64 = "0.22"
+blake2 = "0.10"
+fancy-regex = "0.14"
+futures-util = { version = "0.3", default-features = false, features = ["sink", "std"] }
+getrandom = "0.3"
+imap = { version = "3.0.0-alpha.15", default-features = false, features = ["rustls-tls"] }
+mail-parser = "0.11"
+md-5 = "0.10"
+ort = { version = "=2.0.0-rc.15", default-features = false, features = ["std", "download-binaries", "tls-rustls", "api-31"] }
+pdf-writer = "0.15"
+percent-encoding = "2"
+quick-xml = "0.38"
+regex = "1"
+rusqlite = { version = "0.37", features = ["bundled"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "stream", "json"] }
+sha1 = "0.10"
+sha2 = "0.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+tempfile = "3"
+thiserror = "2"
+tokenizers = { version = "0.23.1", default-features = false, features = ["onig"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "process", "signal", "io-util", "time", "sync", "fs"] }
+tungstenite = { version = "0.27", features = ["rustls-tls-webpki-roots"] }
+unicode-normalization = "0.1"
+url = "2"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+ureq = { version = "3.5", features = ["json"] }
+
+[workspace.lints.rust]
+missing_docs = "warn"
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+unwrap_used = "warn"
+
+# Debug info off: the home disk is small and full debug info for this workspace runs to gigabytes.
+[profile.dev]
+debug = 0
+
+[profile.test]
+debug = 0

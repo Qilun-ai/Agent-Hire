@@ -1,0 +1,83 @@
+{
+  "company": "OfBusiness",
+  "slug": "ofbusiness",
+  "portal": "https://www.ofbusiness.com/careers",
+  "listing_url": "https://www.ofbcareers.com/categories",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Filter by Location",
+      "kind": "multi",
+      "values": [
+        "Ahmedabad",
+        "Bengaluru",
+        "Bhiwadi",
+        "Chennai",
+        "Faridabad",
+        "Gurugram",
+        "Haridwar",
+        "Hyderabad",
+        "Indore",
+        "Jaipur",
+        "Kancheepuram",
+        "Kochi",
+        "Kolkata",
+        "Ludhiana",
+        "Manesar",
+        "Mumbai",
+        "Pune",
+        "Trichy",
+        "Wardha"
+      ],
+      "native_param": null,
+      "note": "Wix CMS dropdown; its option list is rendered client-side from the Jobs collection"
+    },
+    {
+      "key": "department",
+      "label": "By Functions",
+      "kind": "multi",
+      "values": [
+        "Business Development",
+        "Finance & Accounts",
+        "Human Resource",
+        "Manufacturing",
+        "Procurement",
+        "SCM & Operations"
+      ],
+      "native_param": null,
+      "note": "Wix CMS dropdown (placeholder 'Select Category'); filters the loaded collection client-side"
+    },
+    {
+      "key": "job_family",
+      "label": "Filter by Job Function",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Wix CMS dropdown; options render client-side, so no static values were captured"
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-Time",
+        "Internship"
+      ],
+      "native_param": null,
+      "note": "From collected records; not a listing control"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The corporate /careers URL returns 410; the company homepage links to its own Wix careers microsite https://www.ofbcareers.com/categories. The listing has four Wix CMS filter dropdowns ('By Functions' / Select Category, 'Filter Jobs' / Select Job Title, 'Filter by Job Function', 'Filter by Location') that filter the loaded collection client-side; the Wix Data query used by the adapter sends an empty filter object. No server-side filter parameter is exposed, so filters are applied locally.",
+  "evidence": [
+    "https://www.ofbcareers.com/categories",
+    "https://www.ofbcareers.com/_api/cloud-data/v2/items/query"
+  ],
+  "verified": true
+}

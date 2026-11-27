@@ -1,0 +1,343 @@
+[
+  {
+    "body": {},
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/settings"
+    },
+    "status": 200,
+    "step": "defaults"
+  },
+  {
+    "body": {},
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/settings/secret-previews"
+    },
+    "status": 200,
+    "step": "no saved keys"
+  },
+  {
+    "body": {},
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/settings/validate"
+    },
+    "status": 200,
+    "step": "validate defaults"
+  },
+  {
+    "body": {
+      "claude_cli": {
+        "email": null,
+        "exe": null,
+        "install_hint": {
+          "after": "then click Sign in (runs: claude auth login)",
+          "cmd": "npm install -g @anthropic-ai/claude-code",
+          "name": "Claude Code",
+          "url": "https://docs.claude.com/en/docs/claude-code/setup"
+        },
+        "installed": false,
+        "logged_in": false,
+        "plan": null,
+        "provider": "claude_cli"
+      },
+      "codex_cli": {
+        "email": null,
+        "exe": null,
+        "install_hint": {
+          "after": "then click Sign in (runs: codex login)",
+          "cmd": "npm install -g @openai/codex",
+          "name": "Codex CLI",
+          "url": "https://developers.openai.com/codex/cli"
+        },
+        "installed": false,
+        "logged_in": false,
+        "plan": null,
+        "provider": "codex_cli"
+      },
+      "copilot_cli": {
+        "email": null,
+        "exe": "/usr/bin/copilot",
+        "installed": true,
+        "logged_in": false,
+        "plan": null,
+        "provider": "copilot_cli"
+      },
+      "gemini_cli": {
+        "email": null,
+        "exe": null,
+        "install_hint": {
+          "after": "then click Sign in and authorize your Google account",
+          "cmd": "npm install -g @google/gemini-cli",
+          "name": "Gemini CLI",
+          "url": "https://github.com/google-gemini/gemini-cli"
+        },
+        "installed": false,
+        "logged_in": false,
+        "plan": null,
+        "provider": "gemini_cli"
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/settings/subscription-status"
+    },
+    "status": 200,
+    "step": "subscription CLIs absent"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "llm_provider": "nvidia",
+        "nvidia_api_key": "nvapi-contract-test-key-0123456789",
+        "nvidia_model": "minimaxai/minimax-m3.1-flash",
+        "scrape_refresh_hours": "0"
+      },
+      "method": "POST",
+      "path": "/api/v1/settings"
+    },
+    "status": 200,
+    "step": "save provider, model and key"
+  },
+  {
+    "body": {
+      "llm_provider": "nvidia",
+      "nvidia_api_key": "__AGENT_HIRE_SECRET_SET__",
+      "nvidia_model": "minimaxai/minimax-m3.1-flash",
+      "scrape_refresh_hours": "0"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/settings"
+    },
+    "status": 200,
+    "step": "saved values"
+  },
+  {
+    "body": {
+      "nvidia_api_key": "nvap"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/settings/secret-previews"
+    },
+    "status": 200,
+    "step": "key preview is masked"
+  },
+  {
+    "body": {
+      "api": "openai-completions",
+      "api_key": "nvapi-contract-test-key-0123456789",
+      "base_url": "https://integrate.api.nvidia.com/v1",
+      "model": "minimaxai/minimax-m3.1-flash",
+      "provider": "nvidia",
+      "reasoning": ""
+    },
+    "content_type": "application/json",
+    "request": {
+      "auth": "AgentSecret",
+      "method": "GET",
+      "path": "/api/v1/agent-internal/llm-config"
+    },
+    "status": 200,
+    "step": "agent sees the resolved config"
+  },
+  {
+    "body": {
+      "deleted": true,
+      "key": "nvidia_api_key",
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/settings/key/nvidia_api_key"
+    },
+    "status": 200,
+    "step": "delete the key"
+  },
+  {
+    "body": {
+      "deleted": false,
+      "key": "not_a_key",
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/settings/key/not_a_key"
+    },
+    "status": 200,
+    "step": "delete an unknown key"
+  },
+  {
+    "body": {},
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/settings/secret-previews"
+    },
+    "status": 200,
+    "step": "previews after delete"
+  },
+  {
+    "body": {
+      "error": "missing_key",
+      "message": "No API key is configured for nvidia. Add it in Settings → AI provider.",
+      "provider": "nvidia"
+    },
+    "content_type": "application/json",
+    "request": {
+      "auth": "AgentSecret",
+      "method": "GET",
+      "path": "/api/v1/agent-internal/llm-config"
+    },
+    "status": 200,
+    "step": "agent config without the key"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "custom_api_key": "custom-contract-key",
+        "custom_base_url": "http://127.0.0.1:9/v1",
+        "custom_model": "stub-model",
+        "llm_provider": "custom"
+      },
+      "method": "POST",
+      "path": "/api/v1/settings"
+    },
+    "status": 200,
+    "step": "custom provider"
+  },
+  {
+    "body": {
+      "error": "bad_endpoint",
+      "message": "Cannot use localhost as LLM base URL: http://127.0.0.1:9/v1",
+      "provider": "custom"
+    },
+    "content_type": "application/json",
+    "request": {
+      "auth": "AgentSecret",
+      "method": "GET",
+      "path": "/api/v1/agent-internal/llm-config"
+    },
+    "status": 200,
+    "step": "agent config for a custom endpoint"
+  },
+  {
+    "body": {
+      "detail": "claude CLI not found — install it first",
+      "error": "not_installed",
+      "hint": {
+        "after": "then click Sign in (runs: claude auth login)",
+        "cmd": "npm install -g @anthropic-ai/claude-code",
+        "name": "Claude Code",
+        "url": "https://docs.claude.com/en/docs/claude-code/setup"
+      },
+      "started": false
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/settings/subscription-login/claude_cli"
+    },
+    "status": 200,
+    "step": "login without the CLI"
+  },
+  {
+    "body": {
+      "detail": "unknown subscription provider"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/settings/subscription-login/nope_cli"
+    },
+    "status": 400,
+    "step": "login for an unknown provider"
+  },
+  {
+    "body": {
+      "preferences": ""
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/preferences"
+    },
+    "status": 200,
+    "step": "preferences start empty"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "preferences": "Remote backend roles in India; no crypto."
+      },
+      "method": "POST",
+      "path": "/api/v1/preferences"
+    },
+    "status": 200,
+    "step": "save preferences"
+  },
+  {
+    "body": {
+      "preferences": "Remote backend roles in India; no crypto."
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/preferences"
+    },
+    "status": 200,
+    "step": "preferences saved"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "input": [
+            "not",
+            "an",
+            "object"
+          ],
+          "loc": [
+            "body"
+          ],
+          "msg": "Input should be a valid dictionary or object to extract fields from",
+          "type": "model_attributes_type"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": [
+        "not",
+        "an",
+        "object"
+      ],
+      "method": "POST",
+      "path": "/api/v1/settings"
+    },
+    "status": 422,
+    "step": "reject a non-object body"
+  }
+]

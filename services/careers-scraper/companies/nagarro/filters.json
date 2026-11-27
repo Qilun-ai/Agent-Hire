@@ -1,0 +1,57 @@
+{
+  "company": "Nagarro",
+  "slug": "nagarro",
+  "portal": "https://www.nagarro.com/en/careers",
+  "listing_url": "https://www.nagarro.com/en/careers/job-search",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Expertise",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "SAP Development and Consulting",
+        "Product Management and Delivery",
+        "Architecture and Technology Consulting",
+        "Business and Data Intelligence",
+        "Business Development",
+        "Cloud Development and Consulting",
+        "Infrastructure Consulting",
+        "IT Support",
+        "Quality and Testing",
+        "Others"
+      ],
+      "native_param": null,
+      "note": "Options are built client-side from the table's `Expertise` field; values are the rendered group labels"
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "17 country options, populated client-side from Job_Country; list not captured"
+    },
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "#cityField is disabled until a country is picked; populated client-side from Job_City"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The company's own job search renders client-side from its Azure Table Storage listing (nagcareersite.table.core.windows.net, Main/Split/Experience tables, continuation-token pagination). The served HTML has an empty #all-listings container plus the real filter markup: #expertiseField and #countryField dropdown-wraps, a #cityField that stays disabled until a country is chosen, and #keywordSearch (placeholder \"Search Data, Java, Cloud...\", min 3 characters). No filter/query parameters are sent to the table API - all filtering happens in the browser, and there is no page-number pagination (Load more per expertise group). Postings link out to the SmartRecruiters Nagarro1 board only for the detail body.",
+  "evidence": [
+    "https://www.nagarro.com/en/careers",
+    "https://www.nagarro.com/en/careers/job-search"
+  ],
+  "verified": true
+}

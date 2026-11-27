@@ -1,0 +1,89 @@
+{
+  "company": "Samsung R&D",
+  "slug": "samsung-r-d",
+  "portal": "https://research.samsung.com/careers",
+  "listing_url": "https://research.samsung.com/careers",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "101 College Street, Toronto, Canada",
+        "201 Spear Street, San Francisco, CA, USA",
+        "6105 Tennyson Pkwy, Suite 300, Plano TX 75024",
+        "665 Clyde Avenue, Mountain View, CA, USA",
+        "Phoenix Building, Bangalore, India"
+      ],
+      "native_param": null,
+      "note": "Observed office strings from collected records."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Canada",
+        "India",
+        "USA"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Artificial Intelligence Center",
+        "Digital Health",
+        "Emerging Technologies",
+        "Enterprise and Security Innovation Lab",
+        "Mobile Processor Innovation",
+        "People Team",
+        "Robot Intelligence Lab",
+        "Samsung Design Innovation Center",
+        "SoC Architecture Lab"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Contract",
+        "Full time",
+        "Full-Time",
+        "Intern"
+      ],
+      "native_param": null,
+      "note": "Mixed Workday timeType and Greenhouse metadata values."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "On-site"
+      ],
+      "native_param": null,
+      "note": "Workday remoteType observed in records."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "research.samsung.com/careers is a hub, not a filterable job board: its only form (id=searchForm, class=paperListForm) searches research papers. Job membership comes from the hub-published channels - Samsung Research America's two Greenhouse boards and the exact Samsung_Careers Workday searches for SR India-Bangalore (hiringCompany=SRI-B + Bangalore location) and SR United Kingdom (Staines location) - whose facets are fixed by the hub. There is no portal-wide job keyword/facet control, so filtering is local on the collected records.",
+  "evidence": [
+    "https://research.samsung.com/careers",
+    "https://sec.wd3.myworkdayjobs.com/en-US/Samsung_Careers?locations=189767dd6c9201b802603c83a5292c78&Location_Country=c4f78be1a8f14da0ab49ce1162348a5e&hiringCompany=189767dd6c9201554f3e5312a7290a85",
+    "https://boards-api.greenhouse.io/v1/boards/samsungresearchamerica"
+  ],
+  "verified": true
+}

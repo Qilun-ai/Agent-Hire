@@ -1,0 +1,128 @@
+{
+  "company": "Standard Chartered",
+  "slug": "standard-chartered",
+  "portal": "https://www.sc.com/en/global-careers/",
+  "listing_url": "https://jobs.standardchartered.com/search-jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Market",
+      "kind": "multi",
+      "values": [
+        "China",
+        "India",
+        "Malaysia",
+        "Singapore",
+        "Hong Kong",
+        "Taiwan",
+        "Viet Nam",
+        "United Kingdom",
+        "United Arab Emirates",
+        "United States",
+        "Poland",
+        "Thailand",
+        "Pakistan",
+        "Korea, Republic of",
+        "Indonesia",
+        "Nigeria",
+        "Switzerland",
+        "Egypt",
+        "Germany",
+        "Bahrain",
+        "Bangladesh",
+        "Brazil",
+        "Brunei Darussalam",
+        "France",
+        "Jersey",
+        "Nepal",
+        "Tanzania, United Republic of",
+        "Uganda"
+      ],
+      "native_param": "facetFilters.jobLocationCountry",
+      "note": ""
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": "location",
+      "note": "Free-text location field in the widget's search body."
+    },
+    {
+      "key": "department",
+      "label": "Area of Interest",
+      "kind": "multi",
+      "values": [
+        "Retail Banking",
+        "Technology",
+        "Operations",
+        "Corporate & Commercial Banking",
+        "Governance, Risk Management & Compliance",
+        "Audit, Accounting & Finance",
+        "Financial Markets",
+        "Transaction Banking",
+        "Human Resources",
+        "Business Support, Management & Efficiency",
+        "Private Banking & Wealth Management",
+        "Procurement & Supply Chain",
+        "Marketing, Brand & Communications",
+        "Customer Services",
+        "Relationship Manager",
+        "Ventures",
+        "Treasury",
+        "Legal",
+        "Corporate Real Estate and Services",
+        "Data and Analytics",
+        "Institutional Banking",
+        "Sustainability & Sustainable Finance"
+      ],
+      "native_param": "facetFilters.mfield1",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment Type",
+      "kind": "multi",
+      "values": [
+        "Permanent",
+        "Intern",
+        "Fixed Term Worker",
+        "Graduates",
+        "Apprentice"
+      ],
+      "native_param": "facetFilters.cust_csb_employmentType",
+      "note": ""
+    },
+    {
+      "key": "seniority",
+      "label": "Career Type",
+      "kind": "multi",
+      "values": [
+        "Experienced Professionals",
+        "Early Careers"
+      ],
+      "native_param": "facetFilters.cust_csb_careerType",
+      "note": "Experienced Professionals / Early Careers."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=date"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "jobs.sc.com is DNS-retired; the company careers hub links 'Search our jobs' to jobs.standardchartered.com, a SAP SuccessFactors Career Site Builder site (companyId standardch, locale en_GB). The /search-jobs widget POSTs JSON to /services/recruiting/v1/jobs with keywords, location, facetFilters{} keyed by cust_region / jobLocationCountry / mfield1 / cust_csb_employmentType / cust_csb_careerType, pageNumber and sortBy. A facetingOnly request returned totalJobs=995 and all five facets; sortBy=date is the stable ordering used for the full sweep.",
+  "evidence": [
+    "https://jobs.standardchartered.com/search-jobs",
+    "https://jobs.standardchartered.com/services/recruiting/v1/jobs"
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "company": "NK Securities",
+  "slug": "nk-securities",
+  "portal": "https://www.nksecurities.com/open-positions.html",
+  "listing_url": "https://www.nksecurities.com/open-positions.html",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Quantitative Research & Trading",
+        "Core Engineering",
+        "Business Management"
+      ],
+      "native_param": null,
+      "note": "Client-side tabs in #ghDepartments (All Teams 15, Quantitative Research & Trading 2, Core Engineering 9, Business Management 4)."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Gurugram, Haryana, India",
+        "Remote",
+        "Singapore"
+      ],
+      "native_param": null,
+      "note": "Client-side select #ghLocation."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience level",
+      "kind": "multi",
+      "values": [
+        "Early Career",
+        "Experienced"
+      ],
+      "native_param": null,
+      "note": "Client-side tabs in #ghLevels; derived in the browser from years-of-experience text, not a source field."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The open-positions page embeds a client-side Greenhouse renderer over the company-scoped board https://api.greenhouse.io/v1/boards/nksecuritiesresearch (jobs?content=true plus /departments). All filtering happens in the browser: #ghSearch is a free-text search over title/location/department labels, #ghLocation is a select, #ghDepartments is a tab group, and #ghLevels is a derived experience tab. No filter is sent to the API, there is no pagination or search request, and the unfiltered board returns all 15 jobs.",
+  "evidence": [
+    "https://www.nksecurities.com/open-positions.html (inline renderer with BOARD_API=https://api.greenhouse.io/v1/boards/nksecuritiesresearch; controls #ghSearch, #ghLocation, #ghDepartments, #ghLevels)",
+    "https://api.greenhouse.io/v1/boards/nksecuritiesresearch/jobs?content=true (unfiltered 15-job board consumed by the renderer)"
+  ],
+  "verified": true
+}

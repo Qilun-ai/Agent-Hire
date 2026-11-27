@@ -1,0 +1,56 @@
+{
+  "company": "Jupiter",
+  "slug": "jupiter",
+  "portal": "https://jupiter.money/careers/",
+  "listing_url": "https://jupiter.keka.com/careers",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Customer Service",
+        "Engineering",
+        "Engineering – Risk Tech",
+        "Product",
+        "Risk"
+      ],
+      "native_param": null,
+      "note": "departmentName from the Keka active feed."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Europa Bangalore"
+      ],
+      "native_param": null,
+      "note": "jobLocations name from the feed."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-Time"
+      ],
+      "native_param": null,
+      "note": "Keka jobType 2 renders as Full-Time."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Jupiter's careers page embeds the Keka portal jupiter.keka.com (identifier b5279857-cf81-4dde-a215-fc48957ee2b5). careerportalinfo declares jobListingSetting.filters=[\"department\",\"location\"] and jobFields=[\"location\",\"experience\",\"jobType\"], but the single embedjobs/default/active feed returns all 5 jobs and accepts no filter parameters; the widget filters the returned rows client-side. There is no keyword control declared, so keyword stays local/off.",
+  "evidence": [
+    "https://jupiter.money/careers/",
+    "https://jupiter.keka.com/careers/api/organization/default/careerportalinfo",
+    "https://jupiter.keka.com/careers/api/embedjobs/default/active/b5279857-cf81-4dde-a215-fc48957ee2b5"
+  ],
+  "verified": true
+}

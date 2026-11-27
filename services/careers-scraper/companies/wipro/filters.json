@@ -1,0 +1,33 @@
+{
+  "company": "Wipro",
+  "slug": "wipro",
+  "portal": "https://careers.wipro.com/careers-home/jobs",
+  "listing_url": "https://careers.wipro.com/search/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "India",
+        "United States"
+      ],
+      "native_param": "location",
+      "note": "Free-text box name=locationsearch on /search/; the widget posts it as the 'location' body field."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official entry redirects to careers.wipro.com; /search/ renders the SuccessFactors CSB search widget with a keyword box (name=q) and a free-text location box (name=locationsearch). The widget POSTs {locale, pageNumber, sortBy, keywords, location, facetFilters, ...} to /services/recruiting/v1/jobs. Live POSTs confirmed both filters: location=India returned totalJobs 5656, keywords=engineer plus location=United States returned 276 rows whose jobLocationCountry is United States. The page exposes no department, employment-type or workplace facets, so none are declared; sortBy exists in the widget config but no sort options are rendered.",
+  "evidence": [
+    "https://careers.wipro.com/search/",
+    "POST https://careers.wipro.com/services/recruiting/v1/jobs {\"keywords\":\"engineer\",\"location\":\"United States\"} -> totalJobs 276",
+    "POST https://careers.wipro.com/services/recruiting/v1/jobs {\"location\":\"India\"} -> totalJobs 5656"
+  ],
+  "verified": true
+}

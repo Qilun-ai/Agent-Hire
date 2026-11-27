@@ -1,0 +1,87 @@
+{
+  "company": "HashiCorp",
+  "slug": "hashicorp",
+  "portal": "https://www.hashicorp.com/en/career",
+  "listing_url": "https://www.ibm.com/careers/search?q=hashicorp",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "United Kingdom",
+        "India",
+        "Canada",
+        "France",
+        "Netherlands"
+      ],
+      "native_param": "field_keyword_05",
+      "note": "Applied as a term filter in the POST /search/api/v2 body (query.bool.filter) over field_keyword_05; values are the live aggregation buckets for q=hashicorp."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": "field_keyword_19",
+      "note": "Free-text location facet returned on every hit (field_keyword_19); no bucket list is published, filter it as a term on field_keyword_19."
+    },
+    {
+      "key": "department",
+      "label": "Area of work",
+      "kind": "multi",
+      "values": [
+        "Sales",
+        "Software Engineering",
+        "Security",
+        "Enterprise Operations",
+        "Consulting",
+        "Infrastructure & Technology"
+      ],
+      "native_param": "field_keyword_08",
+      "note": "IBM 'Area of work' facet. Verified live: adding {\"term\":{\"field_keyword_08\":\"Sales\"}} to query.bool.filter narrowed 23 hits to 9."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work arrangement",
+      "kind": "multi",
+      "values": [
+        "Hybrid"
+      ],
+      "native_param": "field_keyword_17",
+      "note": "All 23 live postings are Hybrid, so the aggregation has a single bucket."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience level",
+      "kind": "multi",
+      "values": [
+        "Professional"
+      ],
+      "native_param": "field_keyword_18",
+      "note": "Single observed bucket (Professional) across the live search."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Most relevant",
+      "native_param": "sort=[{\"_score\":\"desc\"}]"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "HashiCorp's own /en/careers page now redirects its 'Open positions' links to IBM's careers search (https://www.ibm.com/careers/search?q=hashicorp). The search UI calls POST https://www-api.ibm.com/search/api/v2 with appId=careers, scopes=[careers2], the keyword repeated in query.bool.must.simple_query_string.query and sm.query, page size 30, and reporting aggs for work arrangement (field_keyword_17), area of work (field_keyword_08), experience level (field_keyword_18) and location (field_keyword_05/19). Facets are applied as term filters inside the same JSON body, not as URL parameters; detail pages live on careers.ibm.com.",
+  "evidence": [
+    "https://www.ibm.com/careers/search?q=hashicorp (HTTP 200) -> IBM careers search app, translations 'Most Relevant/Most Recent/Newest To Oldest'",
+    "POST https://www-api.ibm.com/search/api/v2 {appId:careers,scopes:[careers2],query.bool.must.simple_query_string.query:'hashicorp'} -> hits.total.value 23",
+    "same POST aggs: field_keyword_08 {Sales:9, Software Engineering:7, Security:3, Enterprise Operations:2, Consulting:1, Infrastructure & Technology:1}; field_keyword_17 {Hybrid:23}; field_keyword_18 {Professional:23}; field_keyword_05 {United States:14, United Kingdom:4, India:2, Canada:1, France:1, Netherlands:1}",
+    "POST with query.bool.filter [{term:{field_keyword_08:'Sales'}}] -> hits.total.value 9 (filter is machine-usable)"
+  ],
+  "verified": true
+}

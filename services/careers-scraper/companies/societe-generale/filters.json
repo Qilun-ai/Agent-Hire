@@ -1,0 +1,108 @@
+{
+  "company": "Societe Generale",
+  "slug": "societe-generale",
+  "portal": "https://careers.societegenerale.com/en/search",
+  "listing_url": "https://careers.societegenerale.com/en/search",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Abidjan, Côte d'Ivoire",
+        "Amiens, Hauts-de-France, France",
+        "Amneville, Grand Est, France",
+        "Angers, Pays de Loire, France",
+        "Annecy, Auvergne-Rhône-Alpes, France",
+        "Arad, Romania",
+        "Arcachon, Nouvelle-Aquitaine, France",
+        "Ardres, Hauts-de-France, France",
+        "Argences, Normandie, France",
+        "Armentieres, Hauts-de-France, France",
+        "Aubagne, Provence-Alpes-Côte d'Azur, France",
+        "Auxerre, Bourgogne-Franche-Comté, France",
+        "Auxonne, Bourgogne-Franche-Comté, France",
+        "Avallon, Bourgogne-Franche-Comté, France",
+        "Aytre, Nouvelle-Aquitaine, France",
+        "Baia Mare, Maramures, Romania",
+        "Bailleul, Hauts-de-France, France",
+        "Balma, Occitanie, France",
+        "Bangalore, Inde",
+        "Bangalore, India",
+        "Beaulieu-Sur-Mer, Provence-Alpes-Côte d'Azur, France",
+        "Beijing, China",
+        "Belfort, Bourgogne-Franche-Comté, France",
+        "Bergerac, Nouvelle-Aquitaine, France",
+        "Bergues, Hauts-de-France, France"
+      ],
+      "native_param": null,
+      "note": "Collected-record locations; the portal's own refLocation facet carries 2982 city labels."
+    },
+    {
+      "key": "job_family",
+      "label": "Job family (refMetier)",
+      "kind": "multi",
+      "values": [
+        "Purchasing / Procurement",
+        "Audit / Control / Quality",
+        "Others",
+        "Corporate & Investment banking",
+        "Private Banking",
+        "Communication / Marketing",
+        "Compliance",
+        "Development / Coordination",
+        "General Management / Strategy",
+        "Finance",
+        "Management / Administration",
+        "Asset Management",
+        "Banking operations processing",
+        "Real Estate",
+        "Innovation / Project / Organization",
+        "IT (Information Technology)",
+        "Legal / Tax / Insurance",
+        "Retail & online banking",
+        "Human Resources",
+        "Risks",
+        "Facilities management"
+      ],
+      "native_param": null,
+      "note": "quantum_filters.refMetier labels; request field name not confirmed."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type (refContrat)",
+      "kind": "multi",
+      "values": [
+        "Apprenticeship",
+        "Fixed term contract",
+        "Permanent contract",
+        "Trainee",
+        "Contractor / Temp",
+        "Summer Job",
+        "Internship",
+        "International Volunteer Program"
+      ],
+      "native_param": null,
+      "note": "quantum_filters.refContrat labels (ids: APPRENTICESHIP, TEMPORARY_WORK, STANDARD, GRADUATE_JOB, EXPERIENCED, SUMMER_JOB, INTERNSHIP, COOPERATIVE)."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "query.sort=sourcedatetime1.desc"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The /en/search page is a Quantum/CES widget: it takes a CSRF token from /sg-careers-offers/get-token and POSTs JSON to /search-proxy.php (Authorization-API: Bearer, X-Proxy-URL: the api.socgen.com search-profile). Body = profile ces_profile_sgcareers, query.advanced=[{type:simple,name:sourcestr6,op:eq,value:job}], skipCount/skipFrom paging and query.sort=sourcedatetime1.desc. The page's quantum_filters config supplies the refContrat, refMetier and refLocation vocabularies, but the exact 'name' each facet uses inside query.advanced is not published, so those are filtered locally.",
+  "evidence": [
+    "https://careers.societegenerale.com/en/search",
+    "https://careers.societegenerale.com/search-proxy.php"
+  ],
+  "verified": true
+}

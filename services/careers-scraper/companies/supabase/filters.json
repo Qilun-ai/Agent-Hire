@@ -1,0 +1,71 @@
+{
+  "company": "Supabase",
+  "slug": "supabase",
+  "portal": "https://supabase.com/careers",
+  "listing_url": "https://supabase.com/careers",
+  "family": "ashby",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Business Operations",
+        "Data + Growth",
+        "Engineering",
+        "Marketing",
+        "Operations",
+        "Partnerships",
+        "Product",
+        "RevOps",
+        "Sales",
+        "Success",
+        "Support"
+      ],
+      "native_param": null,
+      "note": "Rendered as department groups on the official careers page; the Ashby posting API returns the whole board and filters client-side."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote, AMER",
+        "Remote, APAC",
+        "Remote, Bay Area, CA, US",
+        "Remote, EMEA",
+        "Remote, Global",
+        "Remote, Japan",
+        "Remote, London UK",
+        "Remote, New York, NY, US",
+        "Remote, San Francisco, CA, US"
+      ],
+      "native_param": null,
+      "note": "Ashby board location filter; not accepted by the public posting API (?q= returned the full board)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "FullTime"
+      ],
+      "native_param": null,
+      "note": "From posting-api employmentType; no separate employment-type control is sent to the API."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Official careers page embeds the Ashby board (organization Supabase). The public posting API GET https://api.ashbyhq.com/posting-api/job-board/supabase?includeCompensation=true returns all 71 listed jobs with department, location, employmentType and publishedAt; ?q=engineer returned all 71 plus two new postings, so no server-side keyword/facet filtering. Keyword and filters must be applied locally.",
+  "evidence": [
+    "https://api.ashbyhq.com/posting-api/job-board/supabase?includeCompensation=true",
+    "https://api.ashbyhq.com/posting-api/job-board/supabase?includeCompensation=true&q=engineer",
+    "https://supabase.com/careers",
+    "src/career_scraper/adapters/supabase.py"
+  ],
+  "verified": true
+}

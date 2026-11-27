@@ -1,0 +1,56 @@
+{
+  "company": "Komprise India Private",
+  "slug": "komprise-india-private",
+  "portal": "https://www.komprise.com/company/careers/",
+  "listing_url": "https://www.komprise.com/careers/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search_keywords",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "text",
+      "values": [
+        "Bengalaru",
+        "USA (Remote)"
+      ],
+      "native_param": "search_location",
+      "note": "Free-text location box in the WP Job Manager widget."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full Time",
+        "Internship",
+        "Part Time",
+        "Temporary",
+        "Freelance"
+      ],
+      "native_param": "filter_job_type[]",
+      "note": "Native checkbox values are full-time, internship, part-time, temporary, freelance; a live POST with filter_job_type[]=full-time returned the two current cards."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "bool",
+      "values": [
+        "Remote"
+      ],
+      "native_param": "remote_position",
+      "note": "Remote-position checkbox submits remote_position=1."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "WordPress WP Job Manager widget. It POSTs to /jm-ajax/get_listings/ with search_keywords, search_location, filter_job_type[] (multi), remote_position=1, per_page, orderby, order and page. A live POST with filter_job_type[]=full-time returned the two current cards, so the endpoint and field names are confirmed.",
+  "evidence": [
+    "https://www.komprise.com/careers/",
+    "https://www.komprise.com/jm-ajax/get_listings/"
+  ],
+  "verified": true
+}

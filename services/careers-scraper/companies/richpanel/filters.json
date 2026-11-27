@@ -1,0 +1,66 @@
+{
+  "company": "Richpanel",
+  "slug": "richpanel",
+  "portal": "https://www.richpanel.com/careers",
+  "listing_url": "https://www.richpanel.com/careers",
+  "family": "workable",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bengaluru, India",
+        "United States (Remote)"
+      ],
+      "native_param": null,
+      "note": "From the company's Workable board; the Webflow careers page only exposes a name search."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Customer Success",
+        "Engineering",
+        "Other",
+        "Sales"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Type",
+      "kind": "multi",
+      "values": [
+        "Full-time"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "On-site",
+        "Remote"
+      ],
+      "native_param": null,
+      "note": ""
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The official careers page is a Webflow listing: 3 rendered cards with Location/Type/Department labels and a client-side search input (name=job-search, r-filter=name). The company's Workable account richpanel-1 publishes the full board (12 open roles at apply.workable.com/richpanel-1/jobs.md, Last updated 2026-11-09), and the adapter unions the page cards with that board. The page uses no filter query parameters, so filtering is local.",
+  "evidence": [
+    "https://www.richpanel.com/careers",
+    "https://apply.workable.com/richpanel-1/jobs.md"
+  ],
+  "verified": true
+}

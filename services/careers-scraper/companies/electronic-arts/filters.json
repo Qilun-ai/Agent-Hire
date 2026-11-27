@@ -1,0 +1,96 @@
+{
+  "company": "Electronic Arts",
+  "slug": "electronic-arts",
+  "portal": "https://www.ea.com/careers",
+  "listing_url": "https://jobs.ea.com/en_US/careers",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [],
+      "native_param": "8171[]",
+      "note": "Avature autocomplete select; options load client-side."
+    },
+    {
+      "key": "job_family",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [],
+      "native_param": "4536[]",
+      "note": "Avature autocomplete select; options load client-side."
+    },
+    {
+      "key": "department",
+      "label": "Studio/Department",
+      "kind": "multi",
+      "values": [
+        "Bus Affairs, Bus Dev & Corp Dev",
+        "CT - Creative Innovation",
+        "CT - Data & Insights",
+        "CT - Frostbite",
+        "CT - Infrastructure & Platform",
+        "CT - IT",
+        "CT - Operations",
+        "CT - Security",
+        "EA China Studio",
+        "EA Mobile - Glu",
+        "EA Mobile - Playdemic",
+        "EA Mobile - Pogo",
+        "EA Partners",
+        "EA Studios - Criterion Games",
+        "EA Studios - DCS",
+        "EA Studios - DICE Stockholm",
+        "EA Studios - EA Create",
+        "EA Studios - Localization",
+        "EA Studios - Mobile Korea",
+        "EA Studios - Motive Montreal",
+        "EA Studios - Quality Verification",
+        "EA Studios - Respawn",
+        "EA Studios - Ripple Effect",
+        "EA Studios - SPORTS",
+        "Experiences"
+      ],
+      "native_param": "4538[]",
+      "note": "Avature multi-select field id 4538; options load by autocomplete."
+    },
+    {
+      "key": "employment_type",
+      "label": "Worker Type",
+      "kind": "multi",
+      "values": [
+        "Intern - Temporary Employee",
+        "Regular Employee",
+        "Temporary - with Benefits (EU & Malaysia)",
+        "Temporary Employee"
+      ],
+      "native_param": "4537[]",
+      "note": "Avature multi-select field id 4537; values from collected records."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work Model",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "On Site",
+        "Remote"
+      ],
+      "native_param": "4539[]",
+      "note": "Avature multi-select field id 4539; values from collected records."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The EA careers CTA lands on the Avature portal jobs.ea.com/en_US/careers. Its search form POSTs to /en_US/careers/Home with search and multi-value numeric facet fields (8171[] Country, 4536[] Job Category, 4537[] Worker Type, 4538[] Studio/Department, 4539[] Work Model). Verified search=engineer returned 232 of 334 results. Facet option lists are populated by autocomplete, so empty value lists mean not captured, not absent.",
+  "evidence": [
+    "https://jobs.ea.com/en_US/careers",
+    "https://jobs.ea.com/en_US/careers/Home"
+  ],
+  "verified": true
+}

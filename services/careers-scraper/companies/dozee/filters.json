@@ -1,0 +1,104 @@
+{
+  "company": "Dozee",
+  "slug": "dozee",
+  "portal": "https://www.dozeehealth.ai/careers",
+  "listing_url": "https://jobs.lever.co/dozee",
+  "family": "lever",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Central Operations US",
+        "Finance",
+        "Human Resource",
+        "Operations",
+        "Product & Technology",
+        "Research & Development",
+        "Sales",
+        "Supply Chain"
+      ],
+      "native_param": "department",
+      "note": "Lever ?department= link filter."
+    },
+    {
+      "key": "team",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Audit & Compliance",
+        "Business Finance & Investor Relations",
+        "Clinical Research",
+        "Customer Success - Field",
+        "Hardware",
+        "Medical Affairs & Strategy",
+        "Procurement",
+        "Product",
+        "Sales",
+        "Talent Acquisition"
+      ],
+      "native_param": "team",
+      "note": "Lever ?team= link filter, normally combined with ?department=."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Ahmedabad",
+        "Bangalore",
+        "Chennai",
+        "Coimbatore",
+        "Dayton, Ohio",
+        "Delhi",
+        "Hyderabad",
+        "Jaipur",
+        "Lake Jackson, Texas",
+        "Mumbai",
+        "Texas",
+        "United States"
+      ],
+      "native_param": "location",
+      "note": "Verified: ?location=Bangalore reduced the board from 19 to 8 cards."
+    },
+    {
+      "key": "employment_type",
+      "label": "Commitment",
+      "kind": "multi",
+      "values": [
+        "Consultant",
+        "Contract",
+        "Full Time",
+        "Full Time - Hourly",
+        "Part Time - Hourly"
+      ],
+      "native_param": "commitment",
+      "note": "Lever ?commitment= link filter."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Onsite",
+        "Remote"
+      ],
+      "native_param": "workplaceType",
+      "note": "Lever ?workplaceType= link filter; native values are lowercase hybrid/onsite/remote."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official Dozee careers page links to its Lever board. Lever publishes real reload links for every facet: ?department=, ?team=, ?location=, ?commitment= and ?workplaceType=, so these are native request parameters. The board has no keyword search.",
+  "evidence": [
+    "https://jobs.lever.co/dozee?location=Bangalore",
+    "https://jobs.lever.co/dozee"
+  ],
+  "verified": true
+}

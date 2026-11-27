@@ -1,0 +1,284 @@
+#!/usr/bin/env bash
+#
+# Agent-Hire launcher. It lives in the install folder and keeps everything the app reads or
+# writes inside that folder:
+#
+#   agent-hire start      start the app in the background (and open it with --open)
+#   agent-hire stop       stop it
+#   agent-hire restart    stop, then start
+#   agent-hire status     show whether it runs, where, and how it is sandboxed
+#   agent-hire open       start if needed, then open the app in the browser
+#   agent-hire logs       follow the logs
+#   agent-hire version    print the installed version
+#   agent-hire uninstall  remove the app (asks before deleting your data)
+#
+# To update, run install.sh from a newer Agent-Hire package: it finds this install and updates it.
+set -euo pipefail
+
+INSTALL_DIR=$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)
+APP="$INSTALL_DIR/app"
+DATA="$INSTALL_DIR/data"
+RUN="$INSTALL_DIR/run"
+LOGS="$INSTALL_DIR/logs"
+ENV_FILE="$INSTALL_DIR/.env"
+
+info() { printf '\033[36m▸\033[0m %s\n' "$*"; }
+ok() { printf '\033[32m✓\033[0m %s\n' "$*"; }
+warn() { printf '\033[33m!\033[0m %s\n' "$*" >&2; }
+die() { printf '\033[31m✗\033[0m %s\n' "$*" >&2; exit 1; }
+
+[ -x "$APP/bin/agent-hire-api" ] || die "no app found in $APP; run install.sh again"
+
+load_settings() {
+  if [ -f "$ENV_FILE" ]; then
+    set -a
+    # shellcheck disable=SC1090
+    . "$ENV_FILE"
+    set +a
+  fi
+  APP_PORT="${APP_PORT:-8000}"
+  API_INTERNAL_PORT="${API_INTERNAL_PORT:-8010}"
+  for name in APP_PORT API_INTERNAL_PORT; do
+    value="${!name}"
+    if [[ ! "$value" =~ ^[1-9][0-9]{0,4}$ ]] || ((value > 65535)); then
+      die "$name in $ENV_FILE must be a port number (1-65535)"
+    fi
+  done
+  [ "$APP_PORT" != "$API_INTERNAL_PORT" ] || die "APP_PORT and API_INTERNAL_PORT must differ"
+  URL="http://127.0.0.1:$APP_PORT"
+}
+
+# Provider keys the app recognises, in the spellings people use: OPENAI_API_KEY, OPENAI_API,
+# OPENAI_KEY, OPENAI_API_KEY_1, OPENAI_API_1 (likewise for every provider below).
+KEY_PROVIDERS='ANTHROPIC|GEMINI|OPENAI|GROQ|NVIDIA|DEEPSEEK|XAI|MOONSHOT|MISTRAL|OPENROUTER|TOGETHER|FIREWORKS|CEREBRAS|PERPLEXITY|COHERE|SAMBANOVA|DASHSCOPE|AZURE_OPENAI|OPENCODE|OPENAI_COMPAT'
+KEY_PATTERN="^((${KEY_PROVIDERS})_(API_KEY|API|KEY|API_KEY_1|API_1)|GOOGLE_API_KEY|HF_TOKEN|OPENCODE_BASE_URL|OPENAI_COMPAT_BASE_URL)\$"
+
+# Desktop launchers and services do not read ~/.bashrc, so keys exported there would be missing.
+# Ask the user's login shell for exactly the variables above that are not already set. Only those
+# names are kept, and only in this process's memory; nothing is written to disk.
+import_shell_keys() {
+  [ "${AGENT_HIRE_IMPORT_SHELL_KEYS:-1}" = 1 ] || return 0
+  local shell="${SHELL:-/bin/bash}" entry name started=0
+  [ -x "$shell" ] || return 0
+  # Read the NUL-separated stream directly: shell variables cannot hold NUL bytes. Anything the
+  # shell prints at start-up comes before the marker and is skipped.
+  while IFS= read -r -d '' entry; do
+    if [ "$started" = 0 ]; then
+      [[ "$entry" == *__AGENT_HIRE_ENV__ ]] && started=1
+      continue
+    fi
+    name="${entry%%=*}"
+    [[ "$name" =~ $KEY_PATTERN ]] || continue
+    [ -z "${!name:-}" ] || continue
+    export "$name=${entry#*=}"
+  done < <(timeout 10 "$shell" -ilc 'printf "__AGENT_HIRE_ENV__\0"; env -0' </dev/null 2>/dev/null)
+}
+
+# Every path the app and the agent use points inside the install folder; HOME, XDG and TMPDIR do
+# too, so libraries that default to ~/.cache or ~/.local cannot write anywhere else.
+confine_environment() {
+  mkdir -p "$DATA"/{app,jobs,agent,scrape-runs,home} "$RUN/tmp" "$LOGS" "$INSTALL_DIR/cache"
+  chmod 700 "$DATA" "$RUN"
+  export HOME="$DATA/home"
+  export XDG_DATA_HOME="$DATA/home/.local/share" XDG_CONFIG_HOME="$DATA/home/.config"
+  export XDG_CACHE_HOME="$INSTALL_DIR/cache" XDG_STATE_HOME="$DATA/home/.local/state"
+  export TMPDIR="$RUN/tmp"
+  export AGENT_HIRE_DATA_DIR="$DATA/app"
+  export AGENT_HIRE_JOBS_DIR="$DATA/jobs"
+  export AGENT_HIRE_SCRAPE_RUNS_DIR="$DATA/scrape-runs"
+  export AGENT_HIRE_AGENT_DIR="$DATA/agent"
+  export AGENT_HIRE_RUN_DIR="$RUN"
+  # The API renders the web UI; the agent forwards page requests to it.
+  export AGENT_HIRE_WEB_DIST=""
+  export AGENT_HIRE_SCRAPER_DIR="$APP/scraper"
+  export AGENT_HIRE_BUNDLED_MODELS_DIR="$APP/models"
+  export UV_CACHE_DIR="$INSTALL_DIR/cache/uv"
+  export UV_PYTHON_INSTALL_DIR="$INSTALL_DIR/cache/python"
+  export UV_PROJECT_ENVIRONMENT="$DATA/scraper-venv"
+  export UV_PYTHON_PREFERENCE=only-managed UV_NO_CONFIG=1 UV_FROZEN=1
+  export PATH="$APP/runtime/bin:$APP/runtime/node/bin:/usr/local/bin:/usr/bin:/bin"
+  export AGENT_HIRE_API_URL="http://127.0.0.1:$API_INTERNAL_PORT"
+  export API_ORIGIN="$URL"
+  export APP_PORT API_INTERNAL_PORT
+}
+
+# With bubblewrap the processes see the system read-only, an empty /home, /media and /mnt, and
+# only the install folder as writable. AGENT_HIRE_SANDBOX=off disables it; =required refuses to
+# start without it.
+SANDBOX=()
+SANDBOX_MODE="environment only"
+setup_sandbox() {
+  local wanted="${AGENT_HIRE_SANDBOX:-auto}"
+  [ "$wanted" != off ] || return 0
+  local args=(--ro-bind / / --dev /dev --proc /proc --tmpfs /tmp --tmpfs /home --tmpfs /media
+    --tmpfs /mnt --tmpfs /var/tmp --bind "$INSTALL_DIR" "$INSTALL_DIR" --die-with-parent)
+  if command -v bwrap >/dev/null 2>&1 && bwrap "${args[@]}" true 2>/dev/null; then
+    SANDBOX=(bwrap "${args[@]}" --)
+    SANDBOX_MODE="bubblewrap (only $INSTALL_DIR is visible in your home)"
+    return 0
+  fi
+  [ "$wanted" != required ] || die "AGENT_HIRE_SANDBOX=required but bubblewrap is missing or blocked"
+  warn "bubblewrap is not available, so the app is confined by its settings only (install the 'bubblewrap' package for a real sandbox)"
+}
+
+# Each part runs in its own process group (setsid); the pid file holds the group id. The group
+# leader (bwrap) may exit once the sandbox is set up, so liveness is checked on the whole group.
+group_alive() { # pgid
+  [ -n "$1" ] && kill -0 -- "-$1" 2>/dev/null
+}
+
+is_running() { # name
+  local file="$RUN/$1.pid"
+  [ -f "$file" ] || return 1
+  group_alive "$(cat "$file" 2>/dev/null)"
+}
+
+wait_for() { # url, label, seconds, name
+  local url=$1 label=$2 tries=$3 name=$4
+  for _ in $(seq 1 "$tries"); do
+    if curl -sf -o /dev/null --max-time 2 "$url"; then
+      ok "$label ready"
+      return 0
+    fi
+    is_running "$name" || die "$label stopped while starting; see $LOGS/$name.log"
+    sleep 1
+  done
+  die "$label did not start in time; see $LOGS/$name.log"
+}
+
+spawn() { # name, command...
+  local name=$1
+  shift
+  setsid "${SANDBOX[@]}" "$@" >>"$LOGS/$name.log" 2>&1 </dev/null &
+  echo $! >"$RUN/$name.pid"
+}
+
+port_busy() { # port
+  if command -v ss >/dev/null 2>&1; then
+    ss -Hltn "sport = :$1" 2>/dev/null | grep -q .
+  else
+    (exec 3<>"/dev/tcp/127.0.0.1/$1") 2>/dev/null
+  fi
+}
+
+agent_secret() {
+  local file="$RUN/agent.env"
+  if [ ! -s "$file" ]; then
+    (umask 077 && printf 'AGENT_HIRE_AGENT_SECRET=%s\n' \
+      "$(head -c 32 /dev/urandom | base64 | tr '+/' '-_' | tr -d '=\n')" >"$file")
+  fi
+  set -a
+  # shellcheck disable=SC1090
+  . "$file"
+  set +a
+}
+
+start() {
+  load_settings
+  if is_running api && is_running agent; then
+    ok "Agent-Hire is already running  →  $URL"
+    return 0
+  fi
+  stop quiet
+  for port in "$API_INTERNAL_PORT" "$APP_PORT"; do
+    ! port_busy "$port" || die "port $port is in use; change APP_PORT / API_INTERNAL_PORT in $ENV_FILE"
+  done
+  import_shell_keys
+  confine_environment
+  setup_sandbox
+  agent_secret
+  umask 077
+  info "starting the API on :$API_INTERNAL_PORT (internal)"
+  spawn api "$APP/bin/agent-hire-api" --port "$API_INTERNAL_PORT" --no-token-stdout
+  wait_for "http://127.0.0.1:$API_INTERNAL_PORT/health" "API" 240 api
+  info "starting Agent-Hire on :$APP_PORT"
+  spawn agent "$APP/runtime/node/bin/node" "$APP/agent/dist/main.js"
+  wait_for "$URL/agent/health" "agent" 60 agent
+  ok "Agent-Hire is up  →  $URL"
+  echo "   sandbox: $SANDBOX_MODE"
+  echo "   browser extension: load the folder $INSTALL_DIR/extension (chrome://extensions → Load unpacked)"
+}
+
+stop() { # [quiet]
+  local name pid
+  for name in agent api; do
+    [ -f "$RUN/$name.pid" ] || continue
+    pid=$(cat "$RUN/$name.pid" 2>/dev/null || true)
+    if group_alive "$pid"; then
+      kill -TERM -- "-$pid" 2>/dev/null || true
+      for _ in $(seq 1 40); do
+        group_alive "$pid" || break
+        sleep 0.25
+      done
+      kill -KILL -- "-$pid" 2>/dev/null || true
+    fi
+    rm -f "$RUN/$name.pid"
+  done
+  [ "${1:-}" = quiet ] || ok "stopped"
+}
+
+status() {
+  load_settings
+  echo "Agent-Hire $(cat "$APP/VERSION" 2>/dev/null || echo '?') in $INSTALL_DIR"
+  if is_running api && is_running agent; then
+    ok "running  →  $URL"
+  elif is_running api || is_running agent; then
+    warn "partly running; try: $0 restart"
+  else
+    echo "  not running (start: $0 start)"
+  fi
+  echo "  data: $DATA     logs: $LOGS     settings: $ENV_FILE"
+}
+
+open_app() {
+  start
+  if command -v xdg-open >/dev/null 2>&1; then
+    xdg-open "$URL" >/dev/null 2>&1 &
+  else
+    echo "open $URL in your browser"
+  fi
+}
+
+uninstall() {
+  echo "This removes Agent-Hire from $INSTALL_DIR."
+  read -r -p "Also delete your data (profile, documents, jobs, chats) in $DATA? [y/N] " wipe
+  read -r -p "Continue? [y/N] " sure
+  [[ "$sure" =~ ^[Yy] ]] || { echo "cancelled"; return 0; }
+  stop quiet
+  rm -f "$HOME/.local/share/applications/agent-hire.desktop"
+  if [ "$(readlink -f "$HOME/.local/bin/agent-hire" 2>/dev/null)" = "$INSTALL_DIR/agent-hire" ]; then
+    rm -f "$HOME/.local/bin/agent-hire"
+  fi
+  local pointer="${XDG_CONFIG_HOME:-$HOME/.config}/agent-hire/install-dir"
+  if [ "$(cat "$pointer" 2>/dev/null)" = "$INSTALL_DIR" ]; then
+    rm -f "$pointer"
+  fi
+  rm -rf "${APP:?}" "${INSTALL_DIR:?}/extension" "${INSTALL_DIR:?}/run" "${INSTALL_DIR:?}/cache" \
+    "${INSTALL_DIR:?}/.agent-hire"
+  rm -f "$INSTALL_DIR"/{LICENSE,NOTICE,THIRD_PARTY_NOTICES.md,README.txt}
+  if [[ "$wipe" =~ ^[Yy] ]]; then
+    rm -rf "${DATA:?}" "${LOGS:?}" "$ENV_FILE"
+    rm -f "$INSTALL_DIR/agent-hire"
+    rmdir "$INSTALL_DIR" 2>/dev/null || true
+    ok "Agent-Hire and its data were removed"
+  else
+    rm -f "$INSTALL_DIR/agent-hire"
+    ok "Agent-Hire was removed; your data is still in $DATA (run install.sh again to use it)"
+  fi
+}
+
+case "${1:-start}" in
+  start)
+    start
+    [ "${2:-}" != --open ] || open_app
+    ;;
+  stop) stop ;;
+  restart) stop quiet; start ;;
+  status) status ;;
+  open) open_app ;;
+  logs) tail -n 50 -F "$LOGS"/api.log "$LOGS"/agent.log ;;
+  version) cat "$APP/VERSION" ;;
+  uninstall) uninstall ;;
+  -h | --help | help) sed -n '3,16p' "$0" | sed 's/^# \{0,1\}//' ;;
+  *) die "unknown command: $1 (try: $0 help)" ;;
+esac

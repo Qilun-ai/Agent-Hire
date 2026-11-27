@@ -1,0 +1,78 @@
+{
+  "company": "Mphasis",
+  "slug": "mphasis",
+  "portal": "https://careers.mphasis.com/",
+  "listing_url": "https://mphasis.ripplehire.com/candidate/?token=ty4DfyWddnOrtpclQeia&source=CAREERSITE",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Chennai",
+        "Hyderabad",
+        "Mumbai",
+        "Noida",
+        "Pune",
+        "Singapore",
+        "Taipei",
+        "Toronto",
+        "Calgary",
+        "Alpharetta",
+        "Austin",
+        "Barcelona",
+        "California",
+        "Georgia",
+        "New Jersey",
+        "New York",
+        "North Carolina",
+        "Texas"
+      ],
+      "native_param": null,
+      "note": "Values are the listing API's cityCount facet (count stripped); applied client-side"
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "DirectCore",
+        "DR - BPS",
+        "Finance",
+        "Market Units",
+        "PCA - People, CIO & Admin"
+      ],
+      "native_param": null,
+      "note": "Departments seen in collected rows; the tenant exposes no departmentsCount facet"
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Contract",
+        "Direct Contract",
+        "Fixed Term Employee",
+        "Full Time"
+      ],
+      "native_param": null,
+      "note": "Record-derived (jobType); applied locally"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Mphasis careers site redirects to its RippleHire tenant (token ty4DfyWddnOrtpclQeia). POST https://mphasis.ripplehire.com/candidate/candidatejobsearch with careerSiteUrlParams {\"page\":0,\"search\":\"*:*\",\"token\":...,\"source\":\"CAREERSITE\"}; `search` is a real server-side query (engineer -> 96 rows, 10/page), while facet parameters are not honoured (city:Bangalore inside the Lucene `search` returned 0) and only cityCount counts are returned for client-side filtering.",
+  "evidence": [
+    "https://careers.mphasis.com/home/mphasis-careers.html",
+    "https://mphasis.ripplehire.com/ripplehire/careers",
+    "https://mphasis.ripplehire.com/candidate/?token=ty4DfyWddnOrtpclQeia&source=CAREERSITE",
+    "https://mphasis.ripplehire.com/candidate/candidatejobsearch"
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "company": "Pocketpills",
+  "slug": "pocketpills",
+  "portal": "https://www.pocketpills.com/careers",
+  "listing_url": "https://pocketpills.bamboohr.com/careers",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "No postings and no filter controls on the tenant."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "No postings and no filter controls on the tenant."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "No postings and no filter controls on the tenant."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "No postings and no filter controls on the tenant."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Careers page CTAs to the company's own BambooHR tenant. GET /careers/list returns {\"meta\":{\"totalCount\":0},\"result\":[]} and the careers surface has no search or facet controls, so every field is local-only and currently empty.",
+  "evidence": [
+    "https://pocketpills.bamboohr.com/careers",
+    "https://pocketpills.bamboohr.com/careers/list"
+  ],
+  "verified": true
+}

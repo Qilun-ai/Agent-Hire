@@ -1,0 +1,35 @@
+{
+  "company": "Nation with Namo",
+  "slug": "nation-with-namo",
+  "portal": "https://www.nationwithnamo.com/careers",
+  "listing_url": "https://careers.nationwithnamo.com/",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Consulting",
+        "Policy & Governance",
+        "Product, Technology & Analytics",
+        "Creative Communications"
+      ],
+      "native_param": null,
+      "note": "Published as <h4> section headings above the accordion cards; there is no filter control."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The ledger URL https://www.nationwithnamo.com/careers is a 404; the company-owned careers host https://careers.nationwithnamo.com/ serves one static page with an Open Positions accordion grouped under four department headings. The page has no search input, no location/employment-type/workplace filter, no pagination and no listing API; department is only a local grouping/filter dimension. The adapter collects the full page.",
+  "evidence": [
+    "https://www.nationwithnamo.com/careers (404, title 'Not Found')",
+    "https://careers.nationwithnamo.com/ (200; only contact-email <form> elements, no select/search/filter markup)",
+    "https://careers.nationwithnamo.com/ (Open Positions headings: Consulting, Policy & Governance, Product, Technology & Analytics, Creative Communications)"
+  ],
+  "verified": true
+}

@@ -1,0 +1,78 @@
+{
+  "company": "Innovaccer",
+  "slug": "innovaccer",
+  "portal": "https://innovaccer.com/careers",
+  "listing_url": "https://innovaccer.com/careers/jobs",
+  "family": "workable",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "On-site",
+        "Remote",
+        "Hybrid"
+      ],
+      "native_param": null,
+      "note": "Checkbox group (input name=On-site/Remote/Hybrid)."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "India, Uttar Pradesh, Noida",
+        "United Arab Emirates",
+        "United States",
+        "United States, California, San Francisco",
+        "United States, Texas, Dallas"
+      ],
+      "native_param": null,
+      "note": "Checkbox values are slugged (e.g. United-States-California-San-Francisco)."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Corporate",
+        "Customer Success",
+        "Engineering and Analytics",
+        "Finance",
+        "Go to Market",
+        "Legal",
+        "Marketing",
+        "People eXperience",
+        "Product"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Work type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Other",
+        "Intern",
+        "Apprentice"
+      ],
+      "native_param": null,
+      "note": ""
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "innovaccer.com/careers links to /careers/jobs, a Webflow page listing Workable jobs (each card links to apply.workable.com/j/<shortcode>). The filter form is Finsweet client-side (<form method=get fs-list-element=filters> with <input id=search-input name=name fs-list-field=title> and checkbox groups Workplace type, Location, Department, Work type). Cards are shown 10 at a time via SHOW MORE. Nothing is sent to Workable for filtering; the scraper filters the collected rows locally.",
+  "evidence": [
+    "https://innovaccer.com/careers",
+    "https://innovaccer.com/careers/jobs"
+  ],
+  "verified": true
+}

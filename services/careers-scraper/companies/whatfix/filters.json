@@ -1,0 +1,56 @@
+{
+  "company": "Whatfix",
+  "slug": "whatfix",
+  "portal": "https://whatfix.com/careers/",
+  "listing_url": "https://whatfix101.hire.trakstar.com/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "India",
+        "United Kingdom",
+        "United States",
+        "Bengaluru",
+        "San Jose",
+        "London"
+      ],
+      "native_param": null,
+      "note": "The board ships country/state/city/other_locations option lists inside the listing init data and applies them in the browser; no query parameter for them was observed (only ?q= and ?p=)."
+    },
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Finance",
+        "GCSS",
+        "HR",
+        "Information Security",
+        "Marketing",
+        "Partnerships & Alliances",
+        "Product",
+        "Product Design",
+        "Sales",
+        "Solutions"
+      ],
+      "native_param": null,
+      "note": "Published as the 'teams' filter (option ids + counts, e.g. Engineering 11805, Sales 22006) in the same client-side filter object."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "whatfix.com/careers/ publishes 'See All Openings' -> whatfix101.recruiterbox.com -> 301 -> whatfix101.hire.trakstar.com, a 33-job Trakstar Hire board (25 per page, ?p=N). The only published query parameters are q (keyword, input name='q' inside the GET form .js-job-search-form) and p (page). Location and team facets are rendered from the page's inline filter init data (countries/states/cities/other_locations/teams/remote_options, remote_options empty) and applied client-side, so they are matched locally. Sorting is a client-side widget (js-sort-component) with no observed query parameter.",
+  "evidence": [
+    "https://whatfix101.hire.trakstar.com/ (HTTP 200) -> <form method=\"GET\" class=\"js-job-search-form\"> with <input type=\"text\" name=\"q\" placeholder=\"Search from jobs below\">; pagination is ?p=N",
+    "https://whatfix101.hire.trakstar.com/ inline listing init: filters = {countries:[India 24, United Kingdom 1, United States 3], states:[California 3, England 1, Karnataka 24], cities:[Bengaluru 24, London 1, San Jose 3], other_locations:[...], teams:[Engineering 11805, Finance 9359, GCSS 46260, HR 9358, Information Security 32605, Marketing 6397, Partnerships & Alliances 8438, Product 7999, Product Design 39494, Sales 22006, Solutions 38616], remote_options:[]}"
+  ],
+  "verified": true
+}

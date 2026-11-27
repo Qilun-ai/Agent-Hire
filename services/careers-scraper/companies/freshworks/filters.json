@@ -1,0 +1,81 @@
+{
+  "company": "Freshworks",
+  "slug": "freshworks",
+  "portal": "https://www.freshworks.com/company/careers/",
+  "listing_url": "https://careers.smartrecruiters.com/Freshworks",
+  "family": "smartrecruiters",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "02110 Boston, MA, United States",
+        "94402 San Mateo, CA, United States",
+        "94403 San Mateo, CA, United States",
+        "Atlanta, GA, USA",
+        "Austin, TX, USA",
+        "Bengaluru, India",
+        "Bengaluru, Karnataka, India",
+        "Berlin, Germany",
+        "Boston",
+        "Boston, MA, United States",
+        "Boston, Ma, United States",
+        "Boston, MA, USA",
+        "Chennai, India",
+        "Chennai, Tamil Nadu, India",
+        "Chicago, IL, USA",
+        "Dallas, TX, USA",
+        "Denver, CO, United States",
+        "Hyderabad, India",
+        "Hyderabad, Telangana, India",
+        "London, United Kingdom",
+        "Miami, FL, USA",
+        "New York, NY, USA",
+        "Paris, France",
+        "Raleigh, NC, USA",
+        "San Mateo"
+      ],
+      "native_param": null,
+      "note": "Postings API ignored location=Bengaluru (totalFound unchanged 121); filter locally on posting.location."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Information Technology",
+        "Marketing",
+        "Other",
+        "Sales"
+      ],
+      "native_param": null,
+      "note": "No confirmed request parameter; filter locally on posting.department.label."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job type",
+      "kind": "multi",
+      "values": [
+        "Contract",
+        "Full-time"
+      ],
+      "native_param": null,
+      "note": "No confirmed request parameter; posting.typeOfEmployment."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "SmartRecruiters public postings API: GET https://api.smartrecruiters.com/v1/companies/Freshworks/postings?q=... filters natively (121 total rows, 76 for q=engineer). location= was ignored, so location/department/employment facets are applied locally. The hosted board at careers.smartrecruiters.com/Freshworks is the rendered listing.",
+  "evidence": [
+    "https://api.smartrecruiters.com/v1/companies/Freshworks/postings?limit=1 (totalFound=121)",
+    "https://api.smartrecruiters.com/v1/companies/Freshworks/postings?q=engineer&limit=1 (totalFound=76)",
+    "https://api.smartrecruiters.com/v1/companies/Freshworks/postings?location=Bengaluru&limit=1 (totalFound=121, filter not applied)"
+  ],
+  "verified": true
+}

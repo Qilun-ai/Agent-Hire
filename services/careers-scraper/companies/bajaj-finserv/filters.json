@@ -1,0 +1,99 @@
+{
+  "company": "Bajaj Finserv",
+  "slug": "bajaj-finserv",
+  "portal": "https://www.bajajfinserv.in/careers",
+  "listing_url": "https://bflcareers.peoplestrong.com/api/cp/rest/altone/cp/jobs/v1",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Aashti - Main Road",
+        "Addanki MFI",
+        "Adoni",
+        "Agartala Ext",
+        "Agoocha",
+        "Agra",
+        "Agra - Rajpur Chungi",
+        "AGRA AF",
+        "Agra MFI",
+        "Ahmedabad",
+        "Ahmedabad - Nikol",
+        "Ahmedabad - Vastral",
+        "Ahmedpur",
+        "Ajmer - Adarsh Nagar",
+        "Ajmer - India Motor Circle",
+        "Akividu - Main road",
+        "Akkalkot - Bus Stand",
+        "Akola",
+        "Akola - Jatharpeth",
+        "Akola RJ",
+        "Akot",
+        "Aligarh",
+        "Alipurduar",
+        "Allahabad",
+        "Alur MFI GL"
+      ],
+      "native_param": null,
+      "note": "Location comes from row locationHierarchyComplete (India>State>Region>City>Location>Tier); no server-side filter parameter observed."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "2W/3W - North & East",
+        "Administration",
+        "Affordable Housing",
+        "AI Unit",
+        "B2B Corporate",
+        "B2C COE & DS",
+        "BFSD DMS Bkt 1 & 2",
+        "BFSD DMS High IRR",
+        "BFSD DMS Low IRR",
+        "BFSD Loans B2C PLCS",
+        "BFSD Loans Multi Product",
+        "BFSD UW BOL",
+        "BLSE & LAP North West",
+        "BLSE & LAP South East",
+        "Business Design Unit-Payments & Ecomm",
+        "Business Loans",
+        "Business Loans - DMS East",
+        "Business Loans - DMS South1",
+        "Business Loans - DMS South2",
+        "Business Loans - Indirect",
+        "Business Loans - Indirect East",
+        "Business Loans - Indirect North1",
+        "Business Loans - Indirect North2",
+        "Business Loans - Indirect South1",
+        "Business Loans - Indirect South2"
+      ],
+      "native_param": null,
+      "note": "Department comes from organizationUnitComplete; no server-side filter parameter observed."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Permanent"
+      ],
+      "native_param": null,
+      "note": ""
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Bajaj Finserv/Bajaj Finance careers link to the PeopleStrong board bflcareers.peoplestrong.com. The listing endpoint is POST /api/cp/rest/altone/cp/jobs/v1?offset=&limit= with JSON body {}; a live call returned totalRecords 12617 and rows carrying organizationUnitComplete/locationHierarchyComplete. No keyword/location/facet parameters are documented or exposed, so filters are applied locally over the collected rows.",
+  "evidence": [
+    "https://bflcareers.peoplestrong.com/api/cp/rest/altone/cp/jobs/v1?offset=0&limit=2 (POST {}) -> totalRecords 12617, rows with organizationUnitComplete/locationHierarchyComplete",
+    "adapter:src/career_scraper/adapters/bajaj_finserv.py"
+  ],
+  "verified": true
+}

@@ -1,0 +1,163 @@
+{
+  "company": "Publicis Sapient",
+  "slug": "publicis-sapient",
+  "portal": "https://careers.publicissapient.com/",
+  "listing_url": "https://careers.publicissapient.com/job-search",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Australia",
+        "Brazil",
+        "Bulgaria",
+        "Canada",
+        "Colombia",
+        "Costa Rica",
+        "Denmark",
+        "France",
+        "Germany",
+        "India",
+        "Italy",
+        "Mexico",
+        "New Zealand",
+        "Romania",
+        "Saudi Arabia",
+        "Serbia",
+        "Thailand",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States"
+      ],
+      "native_param": "country",
+      "note": "Maps to facet field countryName."
+    },
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Arlington",
+        "Atlanta",
+        "Auckland",
+        "Bangkok",
+        "Belgrade",
+        "Bengaluru",
+        "Berlin",
+        "Bogota",
+        "Boston",
+        "Brasov",
+        "Bucharest",
+        "Calgary",
+        "Canberra",
+        "Chennai",
+        "Chicago",
+        "Cluj-Napoca",
+        "Cologne",
+        "Copenhagen",
+        "Detroit",
+        "Dubai",
+        "Duesseldorf",
+        "Frankfurt",
+        "Gurgaon",
+        "Houston",
+        "Hyderabad",
+        "Iasi",
+        "Irvine",
+        "Irving",
+        "Kolkata",
+        "London",
+        "Melbourne",
+        "Mexico City",
+        "Miami",
+        "Milan",
+        "Mumbai",
+        "Munich",
+        "New York",
+        "Noida",
+        "Paris",
+        "Pune",
+        "Riyadh",
+        "San Jose",
+        "Sao Paulo",
+        "Sofia",
+        "Sydney",
+        "Timisoara",
+        "Toronto",
+        "Westminster"
+      ],
+      "native_param": "city",
+      "note": "Facet field city."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Corporate Opportunities",
+        "Experience and Product Design",
+        "Product and Agile Management",
+        "Sales/Business Development",
+        "Strategy and Consulting",
+        "Technology and Engineering"
+      ],
+      "native_param": "teams",
+      "note": "Facet field teams."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience Level",
+      "kind": "multi",
+      "values": [
+        "Associate Level",
+        "Director",
+        "Entry Level",
+        "Executive",
+        "Internship",
+        "Senior Level"
+      ],
+      "native_param": "experienceLevel",
+      "note": "Facet field experienceLevel."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Hire Type",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "On-Site",
+        "Remote"
+      ],
+      "native_param": "remote",
+      "note": "Facet field remote."
+    },
+    {
+      "key": "employment_type",
+      "label": "Work Mode",
+      "kind": "multi",
+      "values": [
+        "Full-time",
+        "Others",
+        "Part-time",
+        "Temporary"
+      ],
+      "native_param": "employmentType",
+      "note": "Facet field typeOfEmployment."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The /job-search React widget calls the same-origin AEM endpoint /bin/ps-redesign/careersJobsearch with searchType=/search, lang, facetFields, q, start and rows; clientlib-careerssearchresults.js adds each selected facet as a comma-joined URL param (country, city, teams, experienceLevel, remote, employmentType). The unfiltered response reports numFound 336.",
+  "evidence": [
+    "https://careers.publicissapient.com/bin/ps-redesign/careersJobsearch?searchType=/search&lang=en&facetFields=countryName,city,teams,experienceLevel,remote,typeOfEmployment&q=&start=0&rows=1",
+    "https://careers.publicissapient.com/etc.clientlibs/ps-redesign/clientlibs/clientlib-careerssearchresults.js",
+    "https://careers.publicissapient.com/job-search"
+  ],
+  "verified": true
+}

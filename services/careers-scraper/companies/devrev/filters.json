@@ -1,0 +1,65 @@
+{
+  "company": "DevRev",
+  "slug": "devrev",
+  "portal": "https://devrev.ai/careers",
+  "listing_url": "https://job-boards.greenhouse.io/devrev",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Account Executive",
+        "Business Development",
+        "Customer Experience",
+        "Design Team",
+        "Engineering",
+        "Engineering - Applied AI Engineering",
+        "Field & Event Marketing",
+        "Marketing - Product Marketing",
+        "Partnerships",
+        "People Ops",
+        "R&D",
+        "Sales",
+        "Sales Development",
+        "Sales Engineering"
+      ],
+      "native_param": null,
+      "note": "Client-side #department-filter on the Greenhouse board; no request parameter."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Austin, Texas, United States",
+        "Bangalore, India",
+        "Buenos Aires, Argentina",
+        "Chennai, India",
+        "Delhi, NCR",
+        "India Remote",
+        "London, UK",
+        "Mumbai, India",
+        "Palo Alto, California, United States",
+        "Philippines Remote",
+        "Sydney, Australia",
+        "Tokyo,Japan"
+      ],
+      "native_param": null,
+      "note": "No location control on the board; values are posted locations for local matching."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The official devrev.ai/careers page points at the Greenhouse board job-boards.greenhouse.io/devrev. That board renders the whole boards-api jobs?content=true response and refines it client-side via #keyword-filter and #department-filter; no query/filter parameter is sent.",
+  "evidence": [
+    "https://job-boards.greenhouse.io/devrev",
+    "https://boards-api.greenhouse.io/v1/boards/devrev/jobs?content=true"
+  ],
+  "verified": true
+}

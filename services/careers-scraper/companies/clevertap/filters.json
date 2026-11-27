@@ -1,0 +1,59 @@
+{
+  "company": "CleverTap",
+  "slug": "clevertap",
+  "portal": "https://clevertap.com/careers/",
+  "listing_url": "https://careers.kula.ai/clevertap",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Information Security",
+        "Finance & Legal",
+        "Finance",
+        "Human Resources",
+        "Marketing",
+        "Partner Marketing",
+        "Sales",
+        "SDR",
+        "Hunting",
+        "CEO Office",
+        "Customer Success",
+        "Implementation",
+        "Customer Solutions",
+        "Customer Success Management"
+      ],
+      "native_param": null,
+      "note": "Board filterOptions.departments with departmentsDepth=2; selection is client-side over the fully rendered card list."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Thailand",
+        "Bengaluru, Karnataka, India",
+        "Hanoi, Vietnam",
+        "Mumbai, Maharashtra, India",
+        "São Paulo, State of São Paulo, Brazil"
+      ],
+      "native_param": null,
+      "note": "Board offices list rendered in the location dropdown; no server-side location request."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The careers page iframes the Kula board at careers.kula.ai/clevertap, which server-renders every open card (no pagination) and exposes department + location dropdowns with filterOptions {departmentsDepth:2, departmentsEnabled:true, locationEnabled:true}. There is no keyword box and no filter query string: dropdown selection filters the rendered cards client-side. The board's data endpoint https://api.kula.ai/v1/job-boards/job-posts accepts only ?page=N with the bearer token embedded in the entry page, so no native filter parameters are claimed.",
+  "evidence": [
+    "https://careers.kula.ai/clevertap",
+    "https://clevertap.com/current-openings/"
+  ],
+  "verified": true
+}

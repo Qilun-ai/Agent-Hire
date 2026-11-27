@@ -1,0 +1,66 @@
+{
+  "company": "MAKEMYTRIP",
+  "slug": "makemytrip",
+  "portal": "https://careers.makemytrip.com/",
+  "listing_url": "https://careers.makemytrip.com/prod/jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Cochin",
+        "Delhi",
+        "Gurgaon",
+        "Hyderabad",
+        "Mumbai",
+        "Nagpur"
+      ],
+      "native_param": null,
+      "note": "City filter rendered by the listing; the vocabulary is the locations array of /api/jobs (job rows carry 'City, State, India (City_MMT)')."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "B2B",
+        "Corporate",
+        "Finance",
+        "Marketing",
+        "Product Management",
+        "Revenue Management",
+        "Supply",
+        "Technology",
+        "User Experience"
+      ],
+      "native_param": null,
+      "note": "Department filter, taken from the API's businessUnits buckets and their counts."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Employee"
+      ],
+      "native_param": null,
+      "note": "Not a portal control; value comes from the collected rows' employee_type."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "careers.makemytrip.com/prod/jobs is a React app that performs one GET https://careers.makemytrip.com/api/jobs with no query parameters and receives the complete membership (35 rows, businessUnits summing to 35, 7 location values). The rendered page paginates client-side with LOAD MORE (5 at a time) and its department/location selects and keyword box filter the rows already in memory, so all filtering is local. Details come from /api/jobDetails?jobId=<id>.",
+  "evidence": [
+    "https://careers.makemytrip.com/api/jobs -> 200, allJobs 35, locations [Hyderabad, Gurgaon, Mumbai, Bangalore, Cochin, Delhi, Nagpur], businessUnits 9 buckets summing to 35",
+    "https://careers.makemytrip.com/prod/jobs (LOAD MORE only, filters not applied)",
+    "src/career_scraper/adapters/makemytrip.py"
+  ],
+  "verified": true
+}

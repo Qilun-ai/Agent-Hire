@@ -1,0 +1,48 @@
+{
+  "company": "Groww",
+  "slug": "groww",
+  "portal": "https://groww.in/careers",
+  "listing_url": "https://job-boards.eu.greenhouse.io/groww",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Compliance",
+        "Finance",
+        "Growth",
+        "Internal Controls",
+        "Private Wealth",
+        "Sales"
+      ],
+      "native_param": null,
+      "note": "Rendered by the React board's #department-filter combobox (board loader departments[] ids 4034118101, 4033735101, 4033749101, 4043270101, 4059161101, 4043271101); client-side."
+    },
+    {
+      "key": "location",
+      "label": "Office",
+      "kind": "multi",
+      "values": [
+        "India",
+        "Bengaluru",
+        "Bengaluru-VTP"
+      ],
+      "native_param": null,
+      "note": "Rendered by the #office-filter combobox from offices[] hierarchy India > Bengaluru > Bengaluru-VTP (ids 4016222101, 4018977101, 4018978101); client-side."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Groww's careers page links to its Greenhouse EU board (9 jobs). The board is a React/Remix app: search input #keyword-filter, department combobox #department-filter and office combobox #office-filter, with loader state departmentIds/officeIds and include_department_filter true. Filtering happens in the client; the URL query names for these controls were not confirmed, so the full board is fetched and filtered locally.",
+  "evidence": [
+    "https://job-boards.eu.greenhouse.io/groww (input#keyword-filter, combobox #department-filter, combobox #office-filter, loader departmentIds/officeIds)",
+    "https://boards-api.eu.greenhouse.io/v1/boards/groww/jobs?content=true"
+  ],
+  "verified": true
+}

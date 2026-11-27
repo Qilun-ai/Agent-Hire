@@ -1,0 +1,68 @@
+{
+  "company": "Atlan",
+  "slug": "atlan",
+  "portal": "https://atlan.com/careers/",
+  "listing_url": "https://api.ashbyhq.com/posting-api/job-board/atlan",
+  "family": "ashby",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Marketing",
+        "Sales"
+      ],
+      "native_param": null,
+      "note": "job.department in the board payload; the public posting API has no server-side filter."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "India",
+        "San Francisco",
+        "New York",
+        "United States"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "FullTime"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Remote",
+        "Hybrid",
+        "Onsite"
+      ],
+      "native_param": null,
+      "note": ""
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Atlan's careers page is its own JS listing that fetches the Ashby public posting API https://api.ashbyhq.com/posting-api/job-board/atlan; live response returned 7 jobs with department (Engineering/Marketing/Sales), location, employmentType (FullTime) and workplaceType (Remote) fields. That public endpoint returns the full board in one response and exposes no keyword or facet parameters, and job details are selected by ?id=<uuid> on atlan.com/careers/jobs/, so every filter is applied locally.",
+  "evidence": [
+    "https://api.ashbyhq.com/posting-api/job-board/atlan",
+    "https://atlan.com/careers/"
+  ],
+  "verified": true
+}

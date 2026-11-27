@@ -1,0 +1,154 @@
+{
+  "company": "Adobe",
+  "slug": "adobe",
+  "portal": "https://careers.adobe.com/",
+  "listing_url": "https://careers.adobe.com/us/en/search-results",
+  "family": "phenom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location (city)",
+      "kind": "multi",
+      "values": [
+        "Amsterdam",
+        "Atlanta",
+        "Austin",
+        "Bangalore",
+        "Basel",
+        "Berlin",
+        "Bucharest",
+        "Cambridge",
+        "Chicago",
+        "College Park",
+        "Copenhagen",
+        "Culver City",
+        "Denver",
+        "Hamburg",
+        "Lehi",
+        "London",
+        "McLean",
+        "Mexico City",
+        "Munich",
+        "New York",
+        "Noida",
+        "Ottawa",
+        "Paris",
+        "Quarry Bay",
+        "Remote",
+        "Remote France",
+        "Riyadh",
+        "Rome",
+        "San Francisco",
+        "San Jose",
+        "Seattle",
+        "Singapore",
+        "Stockholm",
+        "Sydney",
+        "Tokyo",
+        "Toronto",
+        "Waltham",
+        "Washington D.C.",
+        "Yerevan"
+      ],
+      "native_param": "city",
+      "note": "City aggregation of the refineSearch widget (native_param \"city\" inside selected_fields); state and country are separate aggregations."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Armenia",
+        "Australia",
+        "Canada",
+        "Denmark",
+        "France",
+        "Germany",
+        "Hong Kong",
+        "India",
+        "Italy",
+        "Japan",
+        "Mexico",
+        "Netherlands",
+        "Romania",
+        "Saudi Arabia",
+        "Singapore",
+        "Sweden",
+        "Switzerland",
+        "United Kingdom",
+        "United States of America"
+      ],
+      "native_param": "country",
+      "note": "Full country aggregation (19 buckets); echoed back in ui_selections when applied."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Administration",
+        "Customer Experience",
+        "Design",
+        "Employee Experience",
+        "Engineering and Product",
+        "Finance and Operations",
+        "Information Technology",
+        "Legal and Government Relations",
+        "Marketing and Strategy",
+        "Other",
+        "Research",
+        "Sales"
+      ],
+      "native_param": "category",
+      "note": "Category aggregation (12 buckets); short labels, not the indexed multi_category strings."
+    },
+    {
+      "key": "employment_type",
+      "label": "Type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time"
+      ],
+      "native_param": "type",
+      "note": "Confirmed live: selected_fields {\"type\":[\"Part time\"]} returned totalHits 1 (R172250, type \"Part time\"); ui_selections echoed type only."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote",
+      "kind": "multi",
+      "values": [
+        "Yes",
+        "No"
+      ],
+      "native_param": "remote",
+      "note": "Raw aggregation values; \"Yes\" means the posting is remote (15 of 271)."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience level",
+      "kind": "multi",
+      "values": [
+        "Experienced",
+        "University Graduate",
+        "University Intern"
+      ],
+      "native_param": "experienceLevel",
+      "note": "experienceLevel aggregation; jobLevel (Individual Contributor/People Manager) is a second, separate aggregation not listed as a field."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Phenom site. Entry redirects to https://careers.adobe.com/us/en (phApp refNum ADOBUS, widgetApiEndpoint https://careers.adobe.com/widgets); the search UI is https://careers.adobe.com/us/en/search-results. Filtering is a POST to https://careers.adobe.com/widgets with {\"ddoKey\":\"refineSearch\",\"selected_fields\":{\"country\":[...],\"city\":[...],\"category\":[...],\"type\":[...],\"remote\":[...],\"experienceLevel\":[...]},\"keywords\":\"...\",\"from\":0,\"size\":10,\"jobs\":true,\"counts\":true}. Unfiltered totalHits 271 on 2026-11-09, matching the 271 jobs in the eagerLoadRefineSearch payload; accepted filters are echoed in data.ui_selections. No sort control/values appear in the ddo or page HTML, so sorts is empty and the portal default (relevance/API order) is used. The adapter's own listing call sends keywords:\"\" with clearAll:true, i.e. it consumes this same endpoint.",
+  "evidence": [
+    "https://careers.adobe.com/us/en/search-results",
+    "https://careers.adobe.com/widgets",
+    "POST /widgets selected_fields={\"type\":[\"Part time\"]} -> status 200, totalHits 1, ui_selections {\"type\":[\"Part time\"]}",
+    "src/career_scraper/adapters/adobe.py"
+  ],
+  "verified": true
+}

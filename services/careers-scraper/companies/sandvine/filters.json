@@ -1,0 +1,86 @@
+{
+  "company": "Sandvine",
+  "slug": "sandvine",
+  "portal": "https://www.sandvine.com/company/careers",
+  "listing_url": "https://recruiting2.ultipro.com/PRO1053PROC/JobBoard/d6eed263-4950-420d-b9f8-5b1a441c931e/?q=&o=postedDateDesc",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore Office",
+        "Bangalore, KA 560103, India",
+        "Cape Town, South Africa",
+        "Dallas, SC 75024, United States",
+        "Kuala Lumpur, KL 50480, Malaysia",
+        "Kuala Lumpur, Malaysia",
+        "Malmo Office",
+        "Malmo, M 21120, Sweden",
+        "Remote - Italy",
+        "Remote - SC",
+        "Remote - South Korea",
+        "Rome, LZ 00197, Italy",
+        "Seoul, GY, Republic of Korea",
+        "South Africa (Remote)",
+        "Tokyo Office",
+        "Tokyo, TK 1010054, Japan"
+      ],
+      "native_param": null,
+      "note": "The board's filter panel (JobBoardView/GetFilters) supplies location choices; the adapter sends the filter slots empty."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Marketing",
+        "Professional Services",
+        "R&D and Innovation",
+        "Sales"
+      ],
+      "native_param": null,
+      "note": "JobCategoryName on the listing rows."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full Time"
+      ],
+      "native_param": null,
+      "note": "FullTime flag on the listing rows."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "JobLocationType on the listing rows."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Posted date (newest)",
+      "native_param": "o=postedDateDesc"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": false,
+  "local_query": true,
+  "notes": "sandvine.com/company/careers 301s to applogicnetworks.com/company/careers, which links the company's UKG/UltiPro board (PRO1053PROC, board d6eed263-4950-420d-b9f8-5b1a441c931e). The listing request is POST .../JobBoardView/LoadSearchResults with opportunitySearch.QueryString plus four TermsSearchFilterDto slots (fieldName 4, 5, 6, 37); the adapter sends every slot empty and reads totalCount/opportunities (10 postings). Filters are a JSON POST body loaded by the filter panel from .../JobBoardView/GetFilters, not URL parameters, so filtering is local.",
+  "evidence": [
+    "https://recruiting2.ultipro.com/PRO1053PROC/JobBoard/d6eed263-4950-420d-b9f8-5b1a441c931e/?q=&o=postedDateDesc",
+    "https://recruiting2.ultipro.com/PRO1053PROC/JobBoard/d6eed263-4950-420d-b9f8-5b1a441c931e/JobBoardView/LoadSearchResults"
+  ],
+  "verified": true
+}

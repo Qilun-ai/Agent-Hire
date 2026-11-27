@@ -1,0 +1,133 @@
+{
+  "company": "Morgan Stanley",
+  "slug": "morgan-stanley",
+  "portal": "https://www.morganstanley.com/people-opportunities",
+  "listing_url": "https://morganstanley.eightfold.ai/careers?source=mscom",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Business Area",
+      "kind": "multi",
+      "values": [
+        "wealth management",
+        "technology",
+        "legal and compliance",
+        "sales and trading",
+        "finance",
+        "investment management",
+        "operations",
+        "investment banking",
+        "administration",
+        "human resources",
+        "internal audit",
+        "research",
+        "global capital markets",
+        "institutional securities",
+        "risk management",
+        "company management",
+        "technology and operations",
+        "wealth management & im shared services"
+      ],
+      "native_param": "filter_businessarea",
+      "note": ""
+    },
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "New York",
+        "Purchase",
+        "Dallas",
+        "Mumbai",
+        "Hong Kong",
+        "Budapest",
+        "Alpharetta",
+        "Tokyo",
+        "London",
+        "Baltimore",
+        "Glasgow",
+        "Montreal",
+        "Boston",
+        "Atlanta",
+        "Bengaluru",
+        "Seattle",
+        "San Francisco",
+        "Singapore",
+        "Frankfurt",
+        "Toronto"
+      ],
+      "native_param": "filter_city",
+      "note": "City facet; a free-text `location` param and a locations facet (e.g. \"Remote\") also exist"
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "United States of America",
+        "India",
+        "United Kingdom",
+        "Hong Kong",
+        "Hungary",
+        "Canada",
+        "Japan",
+        "Singapore",
+        "Australia",
+        "Germany",
+        "France",
+        "Ireland",
+        "Taiwan",
+        "Brazil",
+        "Poland",
+        "South Africa",
+        "United Arab Emirates"
+      ],
+      "native_param": "filter_country",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment Type",
+      "kind": "multi",
+      "values": [
+        "full time",
+        "part time"
+      ],
+      "native_param": "filter_employmenttype",
+      "note": ""
+    },
+    {
+      "key": "seniority",
+      "label": "Job Level",
+      "kind": "multi",
+      "values": [
+        "professional",
+        "vice president",
+        "executive director"
+      ],
+      "native_param": "filter_pcsjoblevel",
+      "note": ""
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The global board is Eightfold PCSX (morganstanley.eightfold.ai, domain=morganstanley.com), reached from the official \"Search All Opportunities\" page, not Workday. GET /api/pcsx/search takes domain, query, location, start, num, sort_by and filter_<facet>; facet names/values come from the API's filterDef (count 1211 at review, 10 rows/page via num). Verified: filter_businessarea=sales and trading&filter_city=New York -> 19 rows with appliedFilters echoed. Separate regional listings the same page routes to: Mainland China careers.morganstanley.com.cn (SuccessFactors, 18 postings) and Korea ms.wd5.myworkdayjobs.com/wday/cxs/ms/External filtered to Location_Country=7a5a2aadf9d34086a2bfbfd408bc28da (8 postings).",
+  "evidence": [
+    "https://www.morganstanley.com/careers/career-opportunities-search",
+    "https://morganstanley.eightfold.ai/api/pcsx/search?domain=morganstanley.com&query=&location=&start=0&num=10&sort_by=timestamp",
+    "https://morganstanley.eightfold.ai/api/pcsx/search?domain=morganstanley.com&query=&location=&start=0&num=10&sort_by=timestamp&filter_businessarea=sales%20and%20trading&filter_city=New%20York"
+  ],
+  "verified": true
+}

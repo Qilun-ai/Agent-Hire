@@ -1,0 +1,18 @@
+[package]
+name = "agent-hire-docs"
+description = "Turning documents and web pages into text for the Agent-Hire agent."
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+agent-hire-llm = { path = "../llm" }
+quick-xml.workspace = true
+regex.workspace = true
+serde_json.workspace = true
+zip.workspace = true
+
+[lints]
+workspace = true

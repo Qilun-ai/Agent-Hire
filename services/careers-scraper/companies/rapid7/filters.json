@@ -1,0 +1,84 @@
+{
+  "company": "Rapid7",
+  "slug": "rapid7",
+  "portal": "https://careers.rapid7.com/",
+  "listing_url": "https://careers.rapid7.com/jobs/search",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "hybrid",
+        "remote"
+      ],
+      "native_param": "workplace_type[]",
+      "note": ""
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Business Support",
+        "Customer Success",
+        "Finance",
+        "Information Security",
+        "Information Technology",
+        "Marketing",
+        "Product & Engineering",
+        "Sales & BD",
+        "Sales Engineering",
+        "Security Services",
+        "Technical Support"
+      ],
+      "native_param": "department_uids[]",
+      "note": "Submitted value is the department UID (32 hex); labels shown."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "CA",
+        "GB",
+        "IE",
+        "IN",
+        "US"
+      ],
+      "native_param": "country_codes[]",
+      "note": "ISO country codes."
+    },
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Arlington",
+        "Austin",
+        "Belfast",
+        "Boston",
+        "Dublin",
+        "Pune",
+        "Reading",
+        "San Francisco",
+        "Tampa"
+      ],
+      "native_param": "cities[]",
+      "note": "Also exposes states[] (CA, FL, MA, TX, VA)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The Clinch listing at /jobs/search is a GET form (action=/jobs/search, method=get) with query, workplace_type[], department_uids[], country_codes[], states[] and cities[] checkboxes whose values were read from the rendered page. Results are 30 per page via ?page=N; there is no sort control. Plain httpx gets the AWS WAF challenge, so the adapter parses captured headless-Chromium HTML.",
+  "evidence": [
+    "https://careers.rapid7.com/jobs/search",
+    "https://careers.rapid7.com/"
+  ],
+  "verified": true
+}

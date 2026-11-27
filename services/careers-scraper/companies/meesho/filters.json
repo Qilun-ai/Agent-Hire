@@ -1,0 +1,77 @@
+{
+  "company": "Meesho",
+  "slug": "meesho",
+  "portal": "https://www.meesho.io/jobs",
+  "listing_url": "https://api.lever.co/v0/postings/meesho?mode=json",
+  "family": "lever",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore, Karnataka",
+        "Delhi NCR",
+        "Delhi, Delhi",
+        "Jaipur, Rajasthan",
+        "Mumbai, Maharashtra",
+        "Surat, Gujarat"
+      ],
+      "native_param": "location",
+      "note": "Lever categories.location. Server-side: ?location=Nowhere returned 0 rows, the bare board returned 52."
+    },
+    {
+      "key": "team",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "AI Services",
+        "Business Finance",
+        "CEO Office",
+        "Controllership",
+        "Corporate development",
+        "Creative",
+        "Creator Acquisition & Activation",
+        "Data Engineering",
+        "Data Science",
+        "Demand",
+        "ENPS",
+        "Experience",
+        "Financial Services",
+        "Fulfilment",
+        "HR Business Partnering",
+        "Infrastructure",
+        "Legal",
+        "Product",
+        "Supply & Fulfilment",
+        "Talent Acquisition"
+      ],
+      "native_param": null,
+      "note": "Lever categories.team. A team query parameter was not exercised, so this field is applied locally."
+    },
+    {
+      "key": "employment_type",
+      "label": "Commitment",
+      "kind": "multi",
+      "values": [
+        "Full Time Employee"
+      ],
+      "native_param": null,
+      "note": "Lever categories.commitment. A commitment query parameter was not exercised, so this field is applied locally."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "meesho.io/jobs is a Next.js shell that reads the public Lever board https://api.lever.co/v0/postings/meesho?mode=json (52 postings; skip/limit paginate 15 per page) and renders detail pages at /jobs/<slug>?id=<id>. The Lever postings API applies the location filter server-side (location=Nowhere -> [], unfiltered -> 52), which is the only native facet confirmed here; the site's own search box, Team and Commitment controls filter the loaded board in the browser, so those are applied locally.",
+  "evidence": [
+    "https://api.lever.co/v0/postings/meesho?mode=json -> 200, 52 postings",
+    "https://api.lever.co/v0/postings/meesho?mode=json&location=Nowhere -> 200, [] (location is applied server-side)",
+    "https://api.lever.co/v0/postings/meesho?mode=json&location=Bangalore%2C%20Karnataka -> 200, rows",
+    "src/career_scraper/adapters/meesho.py"
+  ],
+  "verified": true
+}

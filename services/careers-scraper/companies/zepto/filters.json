@@ -1,0 +1,69 @@
+{
+  "company": "Zepto",
+  "slug": "zepto",
+  "portal": "https://www.zepto.com/careers",
+  "listing_url": "https://zepto.darwinbox.in/ms/candidatev2/main/careers/allJobs",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Darwinbox 'location' filter key in the observed newfilters POST; board is currently empty, so no options."
+    },
+    {
+      "key": "department",
+      "label": "Sub Department",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Visible allJobs filter label; Darwinbox 'department' key in newfilters."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employee Type",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Visible allJobs filter label; Darwinbox 'employee_type' key in newfilters."
+    },
+    {
+      "key": "team",
+      "label": "Job Tag",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Visible allJobs filter label; Darwinbox 'job_tags' key in newfilters."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Visible allJobs filter label; Darwinbox 'country' key in newfilters."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Visible allJobs filter label; no option values while the board lists zero jobs."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "zepto.com/careers answers an AWS WAF challenge (HTTP 202) and, in a browser, 308-redirects to zepto.darwinbox.in/ms/candidatev2/main/careers/home; its Open Jobs link is /ms/candidatev2/main/careers/allJobs. The Angular app shell is live (base href /ms/candidatev2/, main bundle), but the candidate API (POST /ms/candidateapi/job/newfilters and /job/alljobs with {companyId:'main'}) returns Cloudflare 403 to non-browser HTTP, so no live facet values could be pulled. Declared controls come from the board's own newfilters request and visible filter labels observed by the adapter (newfilters keys employee_type, functional_area, location, department, job_tags, country, capability; labels Sub Department, Location, Employee Type, Job Tag, Country, Experience). The board currently advertises 0 open jobs, so every option list is empty; no alljobs filter parameter is confirmed, hence local filtering.",
+  "evidence": [
+    "https://zepto.darwinbox.in/ms/candidatev2/main/careers/allJobs",
+    "POST https://zepto.darwinbox.in/ms/candidateapi/job/newfilters?companyId=main {\"companyId\":\"main\",\"id\":[]} (Cloudflare 403 outside browser; request shape observed by adapter)"
+  ],
+  "verified": true
+}

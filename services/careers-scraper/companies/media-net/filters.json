@@ -1,0 +1,55 @@
+{
+  "company": "Media.net",
+  "slug": "media-net",
+  "portal": "https://careers.media.net/",
+  "listing_url": "https://careers.media.net/",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Data Science & Analytics",
+        "Engineering",
+        "Design",
+        "Product Management & Operations",
+        "Business Development",
+        "System Operations",
+        "Finance & Accounting",
+        "Human Resource",
+        "Legal & compliance",
+        "Product Marketing",
+        "Business Operations",
+        "Information Technology"
+      ],
+      "native_param": null,
+      "note": "The 12 department cards in section#openings; each is a /<slug>/ taxonomy page listing that department's postings."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Chicago",
+        "Dubai",
+        "New York"
+      ],
+      "native_param": null,
+      "note": "Not a portal control: postings state the city in the title ('(Chicago based)'); values come from the collected rows."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "careers.media.net is a WordPress careers site. The home page publishes 12 department cards (section#openings, 'Open Positions') and each department page lists its postings; there is no search box, no form, no select and no pagination anywhere on the site, and details are server-rendered. Every keyword/filter therefore has to be applied locally over the collected set.",
+  "evidence": [
+    "https://careers.media.net/ -> 200, 12 department cards (Data Science & Analytics, Engineering, ..., Information Technology), no form/input/select",
+    "companies/media_net journey: department pages https://careers.media.net/<department>/",
+    "src/career_scraper/adapters/media_net.py"
+  ],
+  "verified": true
+}

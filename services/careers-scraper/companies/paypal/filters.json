@@ -1,0 +1,153 @@
+{
+  "company": "PayPal",
+  "slug": "paypal",
+  "portal": "https://careers.pypl.com/home/",
+  "listing_url": "https://paypal.eightfold.ai/careers?domain=paypal.com",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote",
+        "San Jose, CA, United States",
+        "Austin, TX, United States",
+        "Chicago, IL, United States",
+        "New York, NY, United States",
+        "Scottsdale, AZ, United States",
+        "Omaha, NE, United States",
+        "England, United Kingdom",
+        "Singapore",
+        "Bengaluru, KA, India",
+        "Berlin, BE, Germany"
+      ],
+      "native_param": "location",
+      "note": "Free-text location param; values are the live data.filterDef.facets.locations labels ('Current Location' is a browser-geo sentinel, not a location)."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Software Engineering",
+        "Product Management",
+        "Large Enterprise Commercial",
+        "Small & Medium Business",
+        "Data Science",
+        "Legal Counsel",
+        "Cybersecurity Engineering",
+        "Marketing",
+        "Product Sales",
+        "Sales Development",
+        "Accounting",
+        "Business Operations",
+        "Intern",
+        "Financial Planning & Analysis",
+        "Sales Support",
+        "Ad Sales",
+        "Audit",
+        "System & Cloud Engineering",
+        "Treasury",
+        "Compliance",
+        "Corporate Strategy",
+        "Executive Assistant",
+        "Experience Research",
+        "Product Growth",
+        "Program Management",
+        "Business Process",
+        "Entity Management",
+        "Experience Design",
+        "Machine Learning Engineering",
+        "People Business Partner",
+        "Risk Management",
+        "Risk Operations",
+        "Strategic Sourcing",
+        "Tax",
+        "Technical Program Management",
+        "Corporate Development",
+        "Cybersecurity Risk",
+        "Lead Development",
+        "Performance Marketing",
+        "Product Marketing",
+        "Talent Acquisition",
+        "Benefits",
+        "Collections",
+        "Compensation",
+        "Creative & Content",
+        "Cybersecurity Threat Analysis",
+        "Data Analytics",
+        "Enterprise Systems",
+        "Global Mobility & Immigration",
+        "Global Strategic Accounts",
+        "Legal Operations",
+        "Marketing Planning & Operations",
+        "Paralegal",
+        "Payment Partnerships",
+        "Pricing",
+        "Site Reliability Engineering",
+        "Systems Analysis",
+        "Tax Counsel"
+      ],
+      "native_param": "filter_job_category",
+      "note": "PCSX facet job_category (58 options from data.filterDef.allFilters)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment Type",
+      "kind": "multi",
+      "values": [
+        "full time"
+      ],
+      "native_param": "filter_employment_type",
+      "note": "PCSX facet employment_type; only 'full time' is published today."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace Type",
+      "kind": "multi",
+      "values": [
+        "onsite",
+        "hybrid",
+        "remote_local"
+      ],
+      "native_param": "filter_work_location_option",
+      "note": "PCSX facet work_location_option; labels are On-site / Hybrid / Virtual (remote_local = Virtual)."
+    },
+    {
+      "key": "business_unit",
+      "label": "Brand",
+      "kind": "multi",
+      "values": [
+        "paypal",
+        "venmo",
+        "paidy"
+      ],
+      "native_param": "filter_brand",
+      "note": "PCSX facet brand, one per PayPal brand entity."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    },
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort_by=relevance"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "careers.pypl.com/home/ is PayPal's Eightfold PCSX site at paypal.eightfold.ai/careers?domain=paypal.com. GET /api/pcsx/search takes domain, query, location, start and sort_by; facets are sent as filter_<filterName> using the names published in data.filterDef.allFilters (job_category, employment_type, brand, work_location_option, skills). Verified live: unfiltered count 312; adding filter_job_category=Software Engineering returns 48 with appliedFilters.jobCategory=['Software Engineering']. There is no country facet in this tenant, and skills (200 options) is a real facet that is not modelled here.",
+  "evidence": [
+    "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=0&sort_by=timestamp (count 312, filterDef.allFilters)",
+    "https://paypal.eightfold.ai/api/pcsx/search?domain=paypal.com&query=&location=&start=0&sort_by=timestamp&filter_job_category=Software%20Engineering (count 48, appliedFilters.jobCategory)"
+  ],
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "company": "Netlify",
+  "slug": "netlify",
+  "portal": "https://www.netlify.com/careers/",
+  "listing_url": "https://www.netlify.com/careers/",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "G&A",
+        "Marketing",
+        "R&D"
+      ],
+      "native_param": null,
+      "note": "Select #job-search-category; it has no name attribute and filters the embedded rows in the browser."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "Location is a table column and a keyword-search target; there is no separate location control."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The official careers page server-renders the complete Greenhouse board (boards-api.greenhouse.io/v1/boards/netlify/jobs?content=true) into an Astro JobSearch island. Its component (#job-search-keywords search box and #job-search-category select with All Categories/G&A/Marketing/R&D) filters the already-embedded array: the compiled asset matches title, location and first department against the keyword and compares the first department to the category. It makes no search request and the controls have no name/query parameters. 'Show all N jobs' only expands the client-side list.",
+  "evidence": [
+    "https://www.netlify.com/careers/ (input#job-search-keywords, select#job-search-category with All Categories/G&A/Marketing/R&D, no form action or name attributes)",
+    "https://www.netlify.com/_astro/JobSearch.BZNCTgS2.js (client-side filter over the embedded jobs array; no fetch/search request)"
+  ],
+  "verified": true
+}

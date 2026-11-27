@@ -1,0 +1,95 @@
+{
+  "company": "Texas Instruments",
+  "slug": "texas-instruments",
+  "portal": "https://careers.ti.com/",
+  "listing_url": "https://careers.ti.com/en/sites/CX/jobs",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Dallas, TX, United States",
+        "Bengaluru, Karnataka, India",
+        "Lehi, UT, United States",
+        "Sherman, TX, United States",
+        "Richardson, TX, United States",
+        "Chengdu, Sichuan, China",
+        "Shanghai, China",
+        "Tucson, AZ, United States",
+        "Knoxville, TN, United States",
+        "Freising, Bayern, Germany",
+        "Santa Clara, CA, United States",
+        "Japan",
+        "United States",
+        "Phoenix, AZ, United States",
+        "Shanghai, Shanghai, China",
+        "Wilayah Persekutuan Kuala Lumpur, Malaysia",
+        "Melaka, Malaysia",
+        "Taiwan",
+        "South Portland, ME, United States",
+        "Shenzhen, Guangdong, China",
+        "Taipei City, Taiwan",
+        "New Taipei City, Taiwan",
+        "Germany",
+        "AGUASCALIENTES, Mexico",
+        "Southfield, MI, United States",
+        "Ra'anana, Israel",
+        "OSLO, Norway",
+        "India",
+        "Stuttgart, Baden-Wuerttemberg, Germany",
+        "Sugar Land, TX, United States",
+        "Malaysia",
+        "Seoul, Korea, Republic of",
+        "Austin, TX, United States",
+        "Garching b. Muenchen, Bayern, Germany",
+        "Waltham, MA, United States"
+      ],
+      "native_param": "location",
+      "note": "findReqs finder location= accepts a free-text place name; location=India returned 126 of 914. Radius/radiusUnit are also supported by Oracle CE. Site-level strings with '>' were excluded because they are not place names."
+    },
+    {
+      "key": "department",
+      "label": "Organization",
+      "kind": "multi",
+      "values": [
+        "Engineering - Product Dev",
+        "Manufacturing",
+        "Facilities",
+        "Sales",
+        "Supply Chain & Operations",
+        "Information Technology",
+        "Quality",
+        "Finance",
+        "Human Resources",
+        "Communications",
+        "Marketing",
+        "Administration",
+        "Legal"
+      ],
+      "native_param": null,
+      "note": "Collected organization values; the findReqs facet payload no longer returns category ids, so this filter is applied locally rather than inventing selectedCategoriesFacet ids."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Oracle Recruiting Cloud Candidate Experience site CX (tenant edbz.fa.us2.oraclecloud.com). Listing pages are fetched through recruitingCEJobRequisitions with finder=findReqs;siteNumber=CX[,keyword=...,][,location=...],facetsList=WORK_LOCATIONS;WORKPLACE_TYPES;TITLES;CATEGORIES;ORGANIZATIONS;POSTING_DATES;FLEX_FIELDS;LOCATIONS,limit=25,sortBy=POSTING_DATES_DESC,offset=N plus onlyData=true and expand=requisitionList.*. keyword=engineer returned 838 versus 914 unfiltered; location=India returned 126, confirming server-side keyword and location. Facet value ids are not exposed by the response, so department stays local.",
+  "evidence": [
+    "https://careers.ti.com/en/sites/CX/jobs",
+    "https://edbz.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX,keyword=engineer,...",
+    "https://edbz.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX,location=India,...",
+    "src/career_scraper/adapters/texas_instruments.py"
+  ],
+  "verified": true
+}

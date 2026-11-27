@@ -1,0 +1,82 @@
+{
+  "company": "Goldman Sachs",
+  "slug": "goldman-sachs",
+  "portal": "https://www.goldmansachs.com/careers",
+  "listing_url": "https://higher.gs.com/results?&page=1&sort=RELEVANCE",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "searchTerm",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": "filters[filterCategoryType=LOCATION].filters",
+      "note": "GraphQL filterCategoryType LOCATION accepted by RoleSearchFilterTypeInput."
+    },
+    {
+      "key": "department",
+      "label": "Organization",
+      "kind": "multi",
+      "values": [
+        "Asset & Wealth Management",
+        "Compliance Division",
+        "Controllers",
+        "Corporate and Workplace Solutions",
+        "Corporate Planning & Management",
+        "Corporate Treasury",
+        "Engineering Division",
+        "Executive Office Division",
+        "Global Banking & Markets",
+        "Global Investment Research Division",
+        "Human Capital Management Division",
+        "Internal Audit",
+        "Legal",
+        "Office of Regulatory Relations",
+        "Operations Division",
+        "Platform Solutions",
+        "Risk Division",
+        "Skillset",
+        "Tax",
+        "The Core Engineering",
+        "The Core Management & Strategy"
+      ],
+      "native_param": "filters[filterCategoryType=DIVISION].filters",
+      "note": "Division values collected from posting rows; GraphQL filterCategoryType DIVISION."
+    },
+    {
+      "key": "job_family",
+      "label": "Job function",
+      "kind": "multi",
+      "values": [],
+      "native_param": "filters[filterCategoryType=JOB_FUNCTION].filters",
+      "note": "GraphQL filterCategoryType JOB_FUNCTION."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience level",
+      "kind": "multi",
+      "values": [],
+      "native_param": "filters[filterCategoryType=EXPERIENCE_LEVEL].filters",
+      "note": "GraphQL filterCategoryType EXPERIENCE_LEVEL."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort.sortStrategy=RELEVANCE&sortOrder=DESC"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Goldman's real listing is Higher (higher.gs.com), a Next.js app posting to https://api-higher.gs.com/gateway/api/v1/graphql. Introspection confirms RoleSearchQueryInput fields page, sort, searchTerm, experiences and filters; filters is a list of RoleSearchFilterTypeInput {filterCategoryType, filters}. RoleSearchFilterCategoryType enum = EXPERIENCE_LEVEL, DIVISION, JOB_FUNCTION, LOCATION, RECRUITING_TYPE, SKILL, SKILLSET, EDUCATION_LEVEL, GRADUATION_YEAR. Results and Campus are separate experiences (results covers EARLY_CAREER+PROFESSIONAL, campus covers CAMPUS). No Oracle-style keyword/location params are used by the live portal.",
+  "evidence": [
+    "https://higher.gs.com/results?&page=1&sort=RELEVANCE (200, page query {page:1, sort:RELEVANCE})",
+    "https://api-higher.gs.com/gateway/api/v1/graphql introspection: RoleSearchQueryInput {page, sort, searchTerm, experiences, filters}",
+    "https://api-higher.gs.com/gateway/api/v1/graphql introspection: RoleSearchFilterTypeInput {filterCategoryType, filters}; RoleSearchFilterCategoryType enum values EXPERIENCE_LEVEL, DIVISION, JOB_FUNCTION, LOCATION, RECRUITING_TYPE, SKILL, SKILLSET, EDUCATION_LEVEL, GRADUATION_YEAR"
+  ],
+  "verified": true
+}

@@ -1,0 +1,121 @@
+{
+  "company": "Fastenal",
+  "slug": "fastenal",
+  "portal": "https://careers.fastenal.com/",
+  "listing_url": "https://jobs.fastenal.com/jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "Austria",
+        "Canada",
+        "Chile",
+        "Colombia",
+        "Czech Republic",
+        "Dominican Republic",
+        "France",
+        "Germany",
+        "Hungary",
+        "Italy",
+        "Malaysia",
+        "Mexico",
+        "Netherlands",
+        "Panama",
+        "Poland",
+        "Romania",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "United Kingdom"
+      ],
+      "native_param": "countryLocalityId",
+      "note": "Select ID values: 156=United States, 26=Canada, 9=Austria, ... (\"-1\" is All)."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Abbotsford, WI 54405",
+        "Aberdeen, MD 21001",
+        "Ada, OK 74820",
+        "Akron, OH 44314",
+        "Alburtis, PA 18011",
+        "Alice, TX 78332",
+        "Allentown, PA 18106",
+        "Alpena, MI 49707",
+        "Anniston, AL 36207",
+        "Atlanta, GA 30336",
+        "Auburn, ME 04210",
+        "Auburn, NY 13021",
+        "Augusta, GA 30901",
+        "Austin, TX 78741",
+        "Barwick, ON P0W 1A0",
+        "Batesville, MS 38606",
+        "Bathurst, NB E2A 4W7",
+        "Beckley, WV 25801",
+        "Bellmead, TX 76705",
+        "Beloit, WI 53511",
+        "Benton Harbor, MI 49022",
+        "Berlin, NJ 08009",
+        "Berlin, VT 05602",
+        "Bessemer, AL 35022",
+        "Bismarck, ND 58504"
+      ],
+      "native_param": null,
+      "note": "Find Jobs geocodes the zip/address field (name=\"zip\") with distanceInMiles and state checkboxes (id=\"states-checkbox-<stateId>\"); values below are posting locations for local matching."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Accounting/Finance",
+        "Administrative",
+        "Distribution/Warehouse",
+        "Human Resources",
+        "Information Technology",
+        "Lean Solutions",
+        "Logistics",
+        "Manufacturing",
+        "Marketing",
+        "Operations",
+        "Quality/Engineering",
+        "Sales",
+        "Supply Chain",
+        "Transportation",
+        "eCommerce"
+      ],
+      "native_param": null,
+      "note": "Department checkboxes carry id=\"search-checkbox-<termId>\" and no name attribute; the published UI submits their IDs with the search request."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full and Part Time",
+        "Full Time",
+        "Part Time"
+      ],
+      "native_param": "type",
+      "note": "Select values are \"\", \"Full-Time\" and \"Part-Time\"."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "careers.fastenal.com links to jobs.fastenal.com/jobs, a DataTables UI backed by POST /load-jobs (CSRF header from meta[name=\"_csrf_header\"], token from meta[name=\"_csrf\"]). The Find Jobs form exposes query, zip, countryLocalityId, states-checkbox-<id>, distanceInMiles, type, search-checkbox-<id> and jobId. A same-session POST with query=engineer returned recordsFiltered=9, confirming server-side keyword filtering.",
+  "evidence": [
+    "https://jobs.fastenal.com/jobs",
+    "https://jobs.fastenal.com/load-jobs"
+  ],
+  "verified": true
+}

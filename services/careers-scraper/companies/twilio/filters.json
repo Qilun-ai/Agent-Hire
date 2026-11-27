@@ -1,0 +1,97 @@
+{
+  "company": "Twilio",
+  "slug": "twilio",
+  "portal": "https://www.twilio.com/en-us/company/jobs",
+  "listing_url": "https://jobs.twilio.com/careers?domain=twilio.com",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote - US",
+        "Remote - United Kingdom",
+        "Remote - Colombia",
+        "Remote - India",
+        "Remote - Canada",
+        "Remote - Ireland",
+        "Remote - Australia",
+        "Remote - Mexico",
+        "Remote - Singapore",
+        "Remote - Brazil",
+        "Mexico City, Mexico",
+        "Remote - Estonia",
+        "Remote - Japan",
+        "Remote - Ontario, Canada (DNU)"
+      ],
+      "native_param": "filter_job_location",
+      "note": "Multi-select from filterDef.smartFilters (filterName=job_location); native option values are lowercase."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Sales",
+        "Engineering",
+        "Customer Support",
+        "Product Management",
+        "Marketing",
+        "Finance",
+        "Accounting",
+        "People Team",
+        "Services",
+        "Enterprise Sales",
+        "Business Operations",
+        "Carrier Relations/Carrier Ops",
+        "Sales Development",
+        "Sales Operations",
+        "Security",
+        "Solutions Engineering",
+        "Customer Success",
+        "Legal",
+        "Administration",
+        "Developer Network",
+        "Ops (Fraud, Compliance, Biz, Prod, Analyst)",
+        "Service Operations"
+      ],
+      "native_param": "filter_custom_department",
+      "note": "Multi-select from filterDef.smartFilters (filterName=custom_department); native option values are lowercase."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Location Type",
+      "kind": "multi",
+      "values": [
+        "Remote"
+      ],
+      "native_param": "filter_work_location_option",
+      "note": "filterDef.smartFilters filterName=work_location_option; the only native value is remote_local."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    },
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort_by=relevance"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Eightfold PCSX. GET https://jobs.twilio.com/api/pcsx/search?domain=twilio.com&query=&location=&start=0 returns positions plus filterDef. Confirmed query=engineer, filter_job_location=remote - india (7 results, appliedFilters.jobLocation), filter_custom_department=engineering, filter_work_location_option=remote_local and sort_by=relevance (response sortBy=relevance). The unfiltered request reports sortBy=timestamp, so timestamp is the default. Multi-select filters use filter_<filterName>; values below are the filterDef option labels (native values are lowercase).",
+  "evidence": [
+    "https://jobs.twilio.com/api/pcsx/search?domain=twilio.com&query=&location=&start=0&filter_job_location=remote%20-%20india&sort_by=relevance",
+    "https://jobs.twilio.com/api/pcsx/search?domain=twilio.com&query=engineer&location=&start=0&filter_custom_department=engineering&filter_work_location_option=remote_local&sort_by=relevance",
+    "https://jobs.twilio.com/careers?domain=twilio.com"
+  ],
+  "verified": true
+}

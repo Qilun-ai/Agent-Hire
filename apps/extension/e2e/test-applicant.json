@@ -1,0 +1,18 @@
+{"facts": {
+  "full_name": "Priya Raman", "first_name": "Priya", "last_name": "Raman", "preferred_name": "Pri",
+  "email": "priya.raman.test@example.com", "phone": "+91 98450 00000", "phone_country_code": "+91",
+  "address_line1": "12 Test Layout, Indiranagar", "city": "Bengaluru", "state": "Karnataka", "postal_code": "560038",
+  "country": "India", "country_of_residence": "India", "citizenship": "Indian",
+  "linkedin_url": "https://www.linkedin.com/in/priya-raman-example", "github_url": "https://github.com/priya-example",
+  "portfolio_url": "https://priya.example.dev",
+  "work_authorized": "Yes", "needs_sponsorship": "No", "visa_status": "Indian citizen — no visa needed",
+  "over_18": "Yes", "willing_to_relocate": "Yes", "notice_period": "1 month", "earliest_start_date": "2027-01-04",
+  "current_ctc": "18,00,000 INR", "salary_expectation": "24,00,000 INR per year",
+  "relative_at_company": "No", "previously_employed_here": "No", "how_heard": "LinkedIn", "referral": "",
+  "military_service": "No", "veteran_status": "I am not a protected veteran", "gender": "Female",
+  "race_ethnicity": "I don't wish to answer", "disability_status": "No, I do not have a disability",
+  "sexual_orientation": "I don't wish to answer", "pronouns": "she/her",
+  "languages": "English, Tamil, Kannada", "highest_education": "B.Tech in Computer Science"},
+ "defaults": {"total_years_experience": "4", "current_title": "Backend Engineer", "current_company": "Example Payments Pvt Ltd",
+  "summary": "Backend engineer with 4 years building payment APIs in Go and PostgreSQL.",
+  "why_interested": "I want to work on platform infrastructure that other engineering teams depend on."}}

@@ -1,0 +1,74 @@
+{
+  "company": "WorldQuant Research",
+  "slug": "worldquant-research",
+  "portal": "https://www.worldquant.com/career-listing/",
+  "listing_url": "https://www.worldquant.com/career-listing/",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Austin, United States",
+        "Beijing, China",
+        "Bengaluru, India",
+        "Budapest, Hungary",
+        "Chicago, United States",
+        "Geneva, Switzerland",
+        "Hanoi, Vietnam",
+        "Ho Chi Minh City, Vietnam",
+        "Hong Kong",
+        "London, United Kingdom",
+        "Miami, United States",
+        "Montevideo, Uruguay",
+        "Mumbai, India",
+        "New Delhi, India",
+        "New York, United States",
+        "Old Greenwich, United States",
+        "Paris, France",
+        "Ramat Gan, Israel",
+        "San Francisco, United States",
+        "Seoul, South Korea",
+        "Shanghai, China",
+        "Singapore",
+        "Sydney, Australia",
+        "Taipei, Taiwan",
+        "West Palm Beach, United States",
+        "Yerevan, Armenia",
+        "Zug, Switzerland",
+        "Multiple Locations"
+      ],
+      "native_param": null,
+      "note": "Options of select.js-location (name=single-location); choosing one only hides already-rendered cards."
+    },
+    {
+      "key": "department",
+      "label": "Departments",
+      "kind": "multi",
+      "values": [
+        "Artificial Intelligence",
+        "Portfolio Management Division",
+        "Research Division",
+        "Support Division",
+        "Technology Division",
+        "WMA",
+        "WQBrain Management"
+      ],
+      "native_param": null,
+      "note": "Options of select.js-department; department is also on each li as data-department."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The company-owned WordPress listing server-renders every open role in ul#careers_list (no pagination; a js-btn-load-more button exists but all rows are already in the initial HTML). The 'Filter' button, input.js-keyword (name=keyword), select.js-location and select.js-department only show/hide those rows in the browser; no request carries a filter value. Membership is the page's own list, cross-checked against the worldquant Greenhouse board feed.",
+  "evidence": [
+    "https://www.worldquant.com/career-listing/",
+    "https://job-boards.greenhouse.io/worldquant"
+  ],
+  "verified": true
+}

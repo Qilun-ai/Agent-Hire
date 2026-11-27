@@ -1,0 +1,86 @@
+{
+  "company": "Pocket FM",
+  "slug": "pocket-fm",
+  "portal": "https://www.pocketfm.com/careers",
+  "listing_url": "https://jobs.lever.co/pocketfm",
+  "family": "lever",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Analytics",
+        "Audio",
+        "Business Finance",
+        "Business Growth",
+        "Content Marketing",
+        "Content Production"
+      ],
+      "native_param": null,
+      "note": "Lever categories.department; no server filter."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Brazil",
+        "Mexico",
+        "Tokyo"
+      ],
+      "native_param": null,
+      "note": "Lever categories.location."
+    },
+    {
+      "key": "employment_type",
+      "label": "Commitment",
+      "kind": "multi",
+      "values": [
+        "Contract",
+        "Freelance",
+        "Full Time"
+      ],
+      "native_param": null,
+      "note": "Lever categories.commitment."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "hybrid",
+        "onsite",
+        "remote"
+      ],
+      "native_param": null,
+      "note": "Lever posting workplaceType."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "BR",
+        "IN",
+        "JP",
+        "MX"
+      ],
+      "native_param": null,
+      "note": "Lever posting country code."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The ledger URL www.pocketfm.com/careers redirects to the consumer homepage; the company's own site links to its Lever board, which is the listing of record. The board HTML/JSON returns all 14 postings in one page with no filter or search controls, so filters are applied locally.",
+  "evidence": [
+    "https://jobs.lever.co/pocketfm",
+    "https://api.lever.co/v0/postings/pocketfm?mode=json"
+  ],
+  "verified": true
+}

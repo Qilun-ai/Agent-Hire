@@ -1,0 +1,3 @@
+# Google Rust Style Guide: 100 columns. The guide's other options (imports_granularity = "Module",
+# hex_literal_case, format_macro_matchers) are nightly-only; imports are kept module-granular by hand.
+max_width = 100

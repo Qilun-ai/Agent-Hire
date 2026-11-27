@@ -1,0 +1,121 @@
+{
+  "company": "Lenskart",
+  "slug": "lenskart",
+  "portal": "https://www.lenskart.com/careers",
+  "listing_url": "https://ainterviews.com/api/job_board/lenskart_ho/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Delhi",
+        "Okhla, Delhi",
+        "UAE",
+        "Gurgaon",
+        "Bangalore",
+        "Gurugram",
+        "Bhiwadi",
+        "Delhi NCR",
+        "Japan",
+        "Spain",
+        "Gurugram / Singapore / Dubai/Thailand",
+        "Gurugram (HQ) with Pan-India Travel",
+        "Bhiwadi, Rajasthan",
+        "Delhi NCR, India",
+        "Gurugram, India",
+        "Gurugram / Delhi NCR/Bengaluru",
+        "PAN India",
+        "India",
+        "Italy",
+        "Thailand",
+        "Singapore",
+        "Delhi NCR / Bangalore",
+        "Bengaluru",
+        "Bengaluru, India",
+        "Tokyo",
+        "Ahmedabad",
+        "Bangkok, Thailand",
+        "Dubai",
+        "Tokyo, Japan",
+        "New Delhi"
+      ],
+      "native_param": "location",
+      "note": "Live ?location=Delhi returned 20 of the 92 unfiltered jobs."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "CXO Office",
+        "Merchandising",
+        "Finance",
+        "Offline",
+        "Operations",
+        "Middle East",
+        "Legal",
+        "Supply Chain",
+        "Marketing",
+        "Product",
+        "Technology",
+        "Data & Analytics",
+        "Design",
+        "Inventory",
+        "Offline Retail",
+        "Engineering",
+        "Sales",
+        "Human Resources",
+        "Administration",
+        "Strategy",
+        "Customer Service",
+        "General",
+        "Business Tech",
+        "Data Intelligence & AI"
+      ],
+      "native_param": "category",
+      "note": "Live ?category=Technology returned 15 jobs."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-time",
+        "Part-time",
+        "Contract",
+        "Internship"
+      ],
+      "native_param": "job_type",
+      "note": "Native query values are full_time, part_time, contract, internship; live ?job_type=full_time returned 78 of 92 jobs."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience level",
+      "kind": "multi",
+      "values": [
+        "Junior",
+        "Mid",
+        "Senior",
+        "Lead"
+      ],
+      "native_param": "experience_level",
+      "note": "Native query values are junior, mid, senior, lead; the board publishes experience_level in its filter payload and rows."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Lenskart's own AInterview board (ainterviews.com/job_board/lenskart_ho/). GET /api/job_board/lenskart_ho/jobs/ returns all jobs plus filter lists. Query params location, category and job_type are confirmed natively: base 92 jobs, location=Delhi 20, category=Technology 15, job_type=full_time 78. No keyword/search parameter is exposed in the filters payload, so keyword matching is local.",
+  "evidence": [
+    "https://ainterviews.com/api/job_board/lenskart_ho/jobs/",
+    "https://ainterviews.com/api/job_board/lenskart_ho/jobs/?location=Delhi",
+    "https://ainterviews.com/api/job_board/lenskart_ho/jobs/?category=Technology",
+    "https://ainterviews.com/api/job_board/lenskart_ho/jobs/?job_type=full_time"
+  ],
+  "verified": true
+}

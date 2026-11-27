@@ -1,0 +1,76 @@
+{
+  "company": "Ola",
+  "slug": "ola",
+  "portal": "https://www.olacabs.com/careers",
+  "listing_url": "https://olacareers.turbohire.co/careerpage/e0c1eb37-eb7a-4ca4-bcc5-d59ce4ce9212",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "Keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": "Locations.Value",
+      "note": "POST body filter object {Value, FilterType}"
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [],
+      "native_param": "Department",
+      "note": "POST body string; department options are fetched from /api/justdropyourresume/departments"
+    },
+    {
+      "key": "employment_type",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [],
+      "native_param": "JobTypes.Value",
+      "note": "POST body filter object; JobTypeV2 also present"
+    },
+    {
+      "key": "seniority",
+      "label": "Experience",
+      "kind": "multi",
+      "values": [],
+      "native_param": "Experience.Value",
+      "note": "POST body filter object"
+    },
+    {
+      "key": "date_posted",
+      "label": "Created date",
+      "kind": "multi",
+      "values": [],
+      "native_param": "CreatedDate.Value",
+      "note": "POST body filter object"
+    },
+    {
+      "key": "business_unit",
+      "label": "Business unit",
+      "kind": "multi",
+      "values": [],
+      "native_param": "BunitIds.Value",
+      "note": "POST body filter object"
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "SortByV2.Key=PostedDate&Order=2"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official olacabs.com/careers page links to Ola's TurboHire tenant. The board is a JS app; its listing request is POST /api/careerpagev2/filteredjobs?orgId=...&pageType=0 with a JSON body carrying Keyword, Department, Locations, JobTypes/JobTypeV2, Experience, CreatedDate, BunitIds, Skills, Compensation and SortByV2. The exact unfiltered body captured from the public dashboard was replayed live and returned Total=0/Result=[] (the career page also renders 'Sorry, Currently there are no vacancies'), so filter values could not be exercised. Department options are fetched by the page from /api/justdropyourresume/departments.",
+  "evidence": [
+    "https://olacareers.turbohire.co/careerpage/e0c1eb37-eb7a-4ca4-bcc5-d59ce4ce9212",
+    "https://thapi.azurewebsites.net/api/careerpagev2/filteredjobs?orgId=e0c1eb37-eb7a-4ca4-bcc5-d59ce4ce9212&pageType=0",
+    "https://thapi.azurewebsites.net/api/justdropyourresume/departments?orgId=e0c1eb37-eb7a-4ca4-bcc5-d59ce4ce9212&pageType=0"
+  ],
+  "verified": true
+}

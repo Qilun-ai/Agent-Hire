@@ -1,0 +1,51 @@
+{
+  "company": "Cashfree",
+  "slug": "cashfree",
+  "portal": "https://www.cashfree.com/careers/",
+  "listing_url": "https://careers.kula.ai/cashfree?jobs=true",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "filter_value",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Marketing",
+        "Product Management",
+        "Risk & Compliance",
+        "Customer Success",
+        "Product Operations"
+      ],
+      "native_param": "filter_by[ats_department_ids]",
+      "note": "option ids from /filter_options: 2613,2616,2630,3133,3134,3140"
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bellandur, Karnataka, India",
+        "Gurgaon, Haryana, India"
+      ],
+      "native_param": "filter_by[ats_office_ids]",
+      "note": "office ids 2194 and 1102; location_keys bellandur..., gurgaon..."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Cashfree's careers page embeds the Kula widget at careers.kula.ai/cashfree?jobs=true. The widget calls GET /api/internal/ats_job_posts?accountName=cashfree&page=N&type=ats_job_post.index&items=99 with optional filter_value and filter_by{ats_office_ids,location_keys,ats_department_ids,workplaces}; exact filter options come from /api/internal/ats_job_posts/filter_options.",
+  "evidence": [
+    "https://www.cashfree.com/careers/",
+    "https://careers.kula.ai/cashfree?jobs=true",
+    "https://careers.kula.ai/api/internal/ats_job_posts?accountName=cashfree&page=1&type=ats_job_post.index&items=99",
+    "https://careers.kula.ai/api/internal/ats_job_posts/filter_options?accountName=cashfree&type=ats_job_post.filter_options",
+    "companies/cashfree/source/kula-jobs-ui-bundle.js",
+    "companies/cashfree/source/filter-options-initial.json"
+  ],
+  "verified": true
+}

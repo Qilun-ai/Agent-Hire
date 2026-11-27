@@ -1,0 +1,102 @@
+{
+  "company": "Uber",
+  "slug": "uber",
+  "portal": "https://www.uber.com/us/en/careers/list/",
+  "listing_url": "https://iaziqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/UberCareers/jobs",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Amsterdam, Noord-Holland, Netherlands",
+        "Atlanta, GA, United States",
+        "Auckland, New Zealand",
+        "Belgium",
+        "Bengaluru, Karnataka, India",
+        "Berlin, Germany",
+        "Bogotá D.C., Colombia",
+        "Brazil",
+        "Bruxelles, Belgium",
+        "Buenos Aires, Argentina",
+        "CDMX, México",
+        "Chicago, IL, United States",
+        "CMX, Mexico",
+        "Cuauhtemoc, CMX, Mexico",
+        "Dallas, TX, United States",
+        "Dubai, United Arab Emirates",
+        "Dublin, Co. Dublin, Ireland",
+        "Germany",
+        "Guadalajara, JAL, Mexico",
+        "Gurugram, Haryana, India",
+        "Helsinki, Uusimaa, Finland",
+        "Hong Kong",
+        "Hovedstaden, Denmark",
+        "Hyderabad, Telangana, India",
+        "Istanbul, Türkiye"
+      ],
+      "native_param": "selectedLocationsFacet",
+      "note": "Oracle finder clause; accepts facet Id values from locationsFacet (e.g. 300000000484560 = United States)."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Sales Incentive Plan",
+        "Engineer",
+        "Sales Non-Incentive Plan",
+        "Product",
+        "Central Operations",
+        "Finance",
+        "Sales Operations",
+        "Local Operations",
+        "People",
+        "Science"
+      ],
+      "native_param": "selectedCategoriesFacet",
+      "note": "Oracle finder clause; values are categoriesFacet names. The organizations facet contains only 'Uber Technologies, Inc.'"
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "On-site"
+      ],
+      "native_param": "selectedWorkplaceTypesFacet",
+      "note": "workplaceTypesFacet currently exposes only On-site (code ORA_ON_SITE)."
+    },
+    {
+      "key": "date_posted",
+      "label": "Date posted",
+      "kind": "multi",
+      "values": [
+        "Less than 7 days",
+        "Less than 30 days",
+        "Greater than 30 days"
+      ],
+      "native_param": "selectedPostingDatesFacet",
+      "note": "postingDatesFacet Ids are 7, 30 and 31 respectively."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Oracle Recruiting Cloud site CX_1. GET https://iaziqy.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions with finder=findReqs;siteNumber=CX_1,facetsList=WORK_LOCATIONS;WORKPLACE_TYPES;TITLES;CATEGORIES;ORGANIZATIONS;POSTING_DATES;FLEX_FIELDS;LOCATIONS,limit=25,sortBy=POSTING_DATES_DESC. Confirmed the finder keyword clause (keyword=engineer -> response Keyword=engineer) and selectedLocationsFacet=300000000484560 (unfiltered 815 -> 256; response SelectedLocationsFacet set). Facet clauses follow selected<FacetName>; department uses the categories facet because there is no separate organization facet.",
+  "evidence": [
+    "https://iaziqy.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX_1,facetsList=LOCATIONS;CATEGORIES;ORGANIZATIONS;WORK_LOCATIONS;WORKPLACE_TYPES;POSTING_DATES;TITLES,limit=25,sortBy=POSTING_DATES_DESC,keyword=engineer,selectedLocationsFacet=300000000484560",
+    "https://iaziqy.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/UberCareers/jobs"
+  ],
+  "verified": true
+}

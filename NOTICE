@@ -1,0 +1,39 @@
+Agent-Hire
+Copyright (C) 2026 noobed-max and Agent-Hire contributors
+https://github.com/Qilun-ai/Agent-Hire
+
+This program is free software: you can redistribute it and/or modify it under the terms of the
+GNU Affero General Public License as published by the Free Software Foundation, version 3 only
+(AGPL-3.0-only). It is distributed WITHOUT ANY WARRANTY. See LICENSE for the full terms.
+
+In plain words (the LICENSE text is what counts):
+  - You may use Agent-Hire for any purpose, including commercially, and copy, share, modify and
+    sell it.
+  - If you share a modified version, or let people use a modified version over a network (for
+    example as a website or hosted service), you must offer them its complete source code under
+    this same license.
+  - You must keep the copyright notices and credit the authors as described below.
+
+
+Third-party components
+----------------------
+Agent-Hire packages and links third-party software under its own licenses (Node.js, uv, ONNX
+Runtime, Datastar, the all-MiniLM-L6-v2 model and others). See THIRD_PARTY_NOTICES.md.
+
+
+Additional terms under section 7(b) of the GNU AGPL v3
+------------------------------------------------------
+These terms apply to the material authored by the Agent-Hire contributors. They do not change the
+terms of third-party components, which stay under their own licenses and notices.
+
+1. Preserve notices. Every copy or modified version must keep this NOTICE file (adding your own
+   notices is fine), the LICENSE file, and the copyright and license notices in the source files.
+
+2. Author attribution. Any work that contains Agent-Hire, or a modified version of it, and that
+   displays Appropriate Legal Notices in an interactive user interface (as AGPL section 5(d) and
+   section 0 define them) must include in those notices a credit of this form:
+
+       Based on Agent-Hire by noobed-max and contributors
+       https://github.com/Qilun-ai/Agent-Hire
+
+   Unmodified Agent-Hire shows this in Settings > General > About & license.

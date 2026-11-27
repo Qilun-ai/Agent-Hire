@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Apply — Software Engineer, Platform · Northwind Labs</title>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; max-width: 760px; margin: 32px auto; padding: 0 16px; color: #222; }
+  h1 { font-size: 24px; } h2 { font-size: 17px; margin-top: 28px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  .field { margin: 14px 0; } .field > label, .q { display: block; font-weight: 600; margin-bottom: 4px; }
+  input[type=text], input[type=email], input[type=tel], input[type=url], select, textarea { width: 100%; padding: 7px; box-sizing: border-box; }
+  .req::after { content: " *"; color: #c00; } .hint { color: #777; font-size: 13px; }
+  .row { display: flex; gap: 12px; } .row > .field { flex: 1; }
+</style>
+</head>
+<body>
+<h1>Software Engineer, Platform</h1>
+<p>Northwind Labs · Bengaluru, India (Hybrid) · Full-time</p>
+
+<form id="application" onsubmit="event.preventDefault(); document.getElementById('submitted').textContent = 'SUBMITTED';">
+  <h2>Personal information</h2>
+  <div class="row">
+    <div class="field"><label for="first_name" class="req">First Name</label><input type="text" id="first_name" name="job_application[first_name]" required></div>
+    <div class="field"><label for="last_name" class="req">Last Name</label><input type="text" id="last_name" name="job_application[last_name]" required></div>
+  </div>
+  <div class="field"><label for="preferred_name">Preferred First Name</label><input type="text" id="preferred_name" name="job_application[preferred_name]"></div>
+  <div class="field"><label for="email" class="req">Email</label><input type="email" id="email" name="job_application[email]" autocomplete="email" required></div>
+  <div class="field"><span class="q req" id="phone-label">Phone</span><input type="tel" aria-labelledby="phone-label" name="job_application[phone]"></div>
+  <div class="field"><label for="loc">Location (City)</label><input type="text" id="loc" name="job_application[location]" placeholder="Start typing your city"></div>
+
+  <h2>Resume / CV</h2>
+  <div class="field"><label for="resume" class="req">Resume/CV</label><input type="file" id="resume" name="job_application[resume]" accept=".pdf,.doc,.docx"></div>
+  <div class="field"><label for="cover">Cover Letter</label><input type="file" id="cover" name="job_application[cover_letter]"></div>
+
+  <h2>Links</h2>
+  <div class="field"><label for="li">LinkedIn Profile</label><input type="url" id="li" name="linkedin"></div>
+  <div class="field"><label for="gh">GitHub</label><input type="url" id="gh" name="github"></div>
+  <div class="field"><label for="web">Website / Portfolio</label><input type="url" id="web" name="website"></div>
+
+  <h2>Questions</h2>
+  <!-- A framework-style controlled input: it keeps its own state and re-renders from it on blur,
+       so a value written without input events is wiped, the way React inputs behave. -->
+  <div class="field"><label for="cur_company">Current Company</label><input type="text" id="cur_company" name="current_company"></div>
+  <div class="field"><input type="text" name="current_title" placeholder="Current job title"></div>
+
+  <fieldset class="field"><legend class="q req">Are you legally authorized to work in India?</legend>
+    <label><input type="radio" name="authorized" value="1"> Yes</label>
+    <label><input type="radio" name="authorized" value="0"> No</label>
+  </fieldset>
+  <div class="field"><label for="sponsor" class="req">Will you now or in the future require sponsorship for employment visa status?</label>
+    <select id="sponsor" name="sponsorship"><option value="">Please select</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+  <fieldset class="field"><legend class="q">Are you willing to relocate to Bengaluru?</legend>
+    <label><input type="radio" name="relocate" value="y"> Yes</label>
+    <label><input type="radio" name="relocate" value="n"> No</label>
+  </fieldset>
+  <div class="field"><label for="years">How many years of professional software experience do you have?</label>
+    <select id="years" name="years"><option value="">Select…</option><option>0-1</option><option>1-3</option><option>3-5</option><option>5-10</option><option>10+</option></select></div>
+  <div class="field"><label for="notice">What is your notice period?</label>
+    <select id="notice" name="notice"><option value="">Select…</option><option>Immediately available</option><option>2 weeks</option><option>1 month</option><option>2 months</option><option>3 months or more</option></select></div>
+  <div class="field"><label for="salary">What are your salary expectations (annual, INR)?</label><input type="text" id="salary" name="salary"></div>
+  <div class="field"><label for="heard">How did you hear about this job?</label>
+    <select id="heard" name="source"><option value="">Select…</option><option>LinkedIn</option><option>Company website</option><option>Employee referral</option><option>Job board</option><option>Other</option></select></div>
+  <fieldset class="field"><legend class="q">Do you have any relatives currently employed by Northwind Labs?</legend>
+    <label><input type="radio" name="relatives" value="yes"> Yes</label>
+    <label><input type="radio" name="relatives" value="no"> No</label>
+  </fieldset>
+  <fieldset class="field"><legend class="q">Have you previously been employed by Northwind Labs?</legend>
+    <label><input type="radio" name="previous" value="yes"> Yes</label>
+    <label><input type="radio" name="previous" value="no"> No</label>
+  </fieldset>
+  <div class="field"><label for="age">Are you at least 18 years of age?</label>
+    <select id="age" name="age"><option value="">--</option><option>Yes</option><option>No</option></select></div>
+  <div class="field"><label for="why" class="req">Why do you want to join Northwind Labs?</label><textarea id="why" name="why" rows="4"></textarea></div>
+  <div class="field"><label for="project">Describe a project you are proud of that is relevant to this role.</label><textarea id="project" name="project" rows="4"></textarea></div>
+  <div class="field"><label for="spam" class="req">What is 4 + 3? (spam check)</label><input type="text" id="spam" name="spam_check"></div>
+  <div class="field"><label for="already">Pronouns</label><input type="text" id="already" name="pronouns" value="they/them"><div class="hint">(already typed by the applicant — must not be overwritten)</div></div>
+
+  <h2>Voluntary self-identification</h2>
+  <div class="field"><label for="gender">Gender</label>
+    <select id="gender" name="gender"><option value="">Please select</option><option>Male</option><option>Female</option><option>Non-binary</option><option>Decline To Self Identify</option></select></div>
+  <div class="field"><label for="veteran">Veteran Status</label>
+    <select id="veteran" name="veteran"><option value="">Please select</option><option>I am not a protected veteran</option><option>I identify as one or more of the classifications of protected veteran</option><option>I don't wish to answer</option></select></div>
+  <div class="field"><label for="disability">Disability Status</label>
+    <select id="disability" name="disability"><option value="">Please select</option><option>Yes, I have a disability (or previously had a disability)</option><option>No, I do not have a disability</option><option>I do not want to answer</option></select></div>
+
+  <div class="field"><label><input type="checkbox" name="consent" id="consent"> I agree to Northwind Labs' privacy policy and consent to the processing of my data.</label></div>
+  <button type="submit">Submit application</button>
+  <p id="submitted"></p>
+</form>
+
+<script>
+  // Controlled-input simulation (see the comment above #cur_company).
+  const el = document.getElementById('cur_company');
+  let state = '';
+  el.addEventListener('input', () => { state = el.value; });
+  el.addEventListener('blur', () => { el.value = state; });
+  window.__controlledState = () => state;
+</script>
+</body>
+</html>

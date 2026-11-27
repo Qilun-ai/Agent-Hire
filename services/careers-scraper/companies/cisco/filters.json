@@ -1,0 +1,55 @@
+{
+  "company": "Cisco",
+  "slug": "cisco",
+  "portal": "https://jobs.cisco.com/",
+  "listing_url": "https://careers.cisco.com/global/en/search-results",
+  "family": "phenom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Customer Experience",
+        "Product and Engineering",
+        "Project and Program Management",
+        "Sales"
+      ],
+      "native_param": "category",
+      "note": "Phenom refineSearch facet; category=Product and Engineering returned 726 hits with every row in that category."
+    },
+    {
+      "key": "employment_type",
+      "label": "Type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": "type",
+      "note": "Phenom refineSearch facet; type=Full time kept every row on Full time."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "India"
+      ],
+      "native_param": "country",
+      "note": "Listed in the widget's all_fields (city, state, category, type, orgFunction, country); the response is geo-defaulted to India, so the country effect was not isolated."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Cisco's careers entry redirects to the Phenom site careers.cisco.com, whose search-results page POSTs refineSearch to /widgets with all_fields city/state/category/type/orgFunction/country and 500 rows per request. The page URL accepts the same facets: unfiltered totalHits 1448; keywords=engineer returned 757 hits whose rows were all engineer roles; category=Product and Engineering&type=Full time returned 726 hits with every row matching both. No explicit sort control was observed on the page.",
+  "evidence": [
+    "https://careers.cisco.com/global/en/search-results",
+    "https://careers.cisco.com/global/en/search-results?keywords=engineer&country=India",
+    "https://careers.cisco.com/global/en/search-results?category=Product%20and%20Engineering&type=Full%20time"
+  ],
+  "verified": true
+}

@@ -1,0 +1,48 @@
+{
+  "company": "Quadeye (QE Securities)",
+  "slug": "quadeye-qe-securities",
+  "portal": "https://www.quadeye.com/careers/",
+  "listing_url": "https://www.quadeye.com/jobs",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Chicago",
+        "Gurugram",
+        "Hong Kong",
+        "New York",
+        "Romania",
+        "Singapore",
+        "South Korea"
+      ],
+      "native_param": null,
+      "note": "Zoho Job_Location arrays; no server filter."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Internship"
+      ],
+      "native_param": null,
+      "note": "Zoho Job_Type."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The careers URL redirects to /jobs, a Next.js page whose Open Roles section fetches GET /api/zoho-recruit/job-openings. The endpoint returns all 25 published openings in one response and ignores page/limit/offset; the page renders no keyword or facet controls, so filters are local.",
+  "evidence": [
+    "https://www.quadeye.com/api/zoho-recruit/job-openings",
+    "https://www.quadeye.com/jobs"
+  ],
+  "verified": true
+}

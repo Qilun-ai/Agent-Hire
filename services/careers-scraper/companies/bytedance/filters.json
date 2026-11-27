@@ -1,0 +1,118 @@
+{
+  "company": "ByteDance",
+  "slug": "bytedance",
+  "portal": "https://jobs.bytedance.com/en/position",
+  "listing_url": "https://joinbytedance.com/search",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Jakarta",
+        "Los Angeles",
+        "Tokyo",
+        "Jakarta Utara",
+        "Dubai",
+        "Kulai",
+        "Amsterdam",
+        "Hanoi",
+        "Chon Buri",
+        "Seattle",
+        "Gurgaon",
+        "Singapore",
+        "Madrid",
+        "Ho Chi Minh City",
+        "Seoul",
+        "Pasig                  ",
+        "Taguig",
+        "Hong Kong (China)",
+        "Ashburn",
+        "Mexico City",
+        "Dublin",
+        "Bangkok",
+        "San Diego",
+        "Paris",
+        "Jakarta Selatan",
+        "Sao Paulo",
+        "Beijing",
+        "Kuala Lumpur",
+        "Washington D.C.",
+        "Stockholm",
+        "San Jose",
+        "Boston",
+        "Munich",
+        "Riyadh",
+        "New York",
+        "London"
+      ],
+      "native_param": "location_code_list",
+      "note": "city codes come from the filter config"
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "R&D",
+        "Corporate Function / Support",
+        "Operations",
+        "Sales",
+        "Product",
+        "Marketing",
+        "Design",
+        "Teaching and researching",
+        "Game Design"
+      ],
+      "native_param": "job_category_id_list",
+      "note": "job_type_list"
+    },
+    {
+      "key": "employment_type",
+      "label": "Recruitment Type",
+      "kind": "multi",
+      "values": [
+        "Experienced",
+        "Campus"
+      ],
+      "native_param": "recruitment_id_list",
+      "note": "Experienced/Campus"
+    },
+    {
+      "key": "job_family",
+      "label": "Program",
+      "kind": "multi",
+      "values": [
+        "Global Frontier Tech Recruitment Program - 2027 Grad",
+        "Global Frontier Tech Recruitment Program - Intern",
+        "PhD Intern - 2026 Start",
+        "PhD Graduates - 2026 Start",
+        "PhD Graduates - 2027 Start",
+        "PhD Intern - 2027 Start",
+        "Project Intern",
+        "Undergraduate/Master Intern - 2027 Start",
+        "Bachelor/Master Graduate - 2027 Start",
+        "MBA Graduates - 2027 Start",
+        "Seed Foundation Model Campus Recruitment - Graduates",
+        "Seed Foundation Model Campus Recruitment - Intern"
+      ],
+      "native_param": "subject_id_list",
+      "note": "job_subject_list"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The international search UI at joinbytedance.com/search posts JSON to https://jobs.bytedance.com/api/v1/public/supplier/search/job/posts with keyword plus recruitment_id_list, job_category_id_list, subject_id_list and location_code_list. Filter option names/labels come from the official config/job/filters API. Requires the published website-path/x-tt-env headers.",
+  "evidence": [
+    "https://jobs.bytedance.com/en/position",
+    "https://joinbytedance.com/search",
+    "https://jobs.bytedance.com/api/v1/public/supplier/config/job/filters",
+    "https://jobs.bytedance.com/api/v1/public/supplier/search/job/posts"
+  ],
+  "verified": true
+}

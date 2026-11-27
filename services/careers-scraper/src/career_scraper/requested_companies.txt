@@ -1,0 +1,242 @@
+42 Gears
+Accenture
+Addverb Technologies
+Adobe
+Air Asia
+Airbnb
+Airoha Technology
+Alphawave Semi
+Amagi
+Amagi Media Labs
+Amazon
+AMD
+American Express
+Apple
+Applied Materials
+Arcesium
+Arista Networks
+Atlan
+Atlassian
+Autodesk
+auxoAI
+Bajaj Finserv
+Baker Hughes
+Barclays
+BharatPe
+BharatX
+BlackRock
+BNY Mellon
+Boeing
+Bosch Global Software Technologies
+Broadcom
+BrowserStack
+ByteDance
+Calendly
+Canva
+Capital One
+Cashfree
+Celigo
+Chargebee
+Check Point
+Cisco
+Citadel Securities
+Citibank
+CleverTap
+Cloudera
+Cognizant
+Cohesity
+Commvault Systems Pvt Ltd
+Confluent
+ConveGenius
+CRED
+CrowdStrike
+Cure.fit
+Cursor
+Cyware
+D.E. Shaw
+Da Vinci
+Darwinbox
+Databricks
+Datadog
+Delhivery
+Dell Technologies
+Deutsche Bank
+DevRev
+DigitalOcean
+Discord
+Dozee
+Druva
+eBay
+Elastic
+Electronic Arts
+Enphase Energy
+Etsy
+Expedia Group
+FAREPORTAL
+Fastenal
+Fidelity
+Figma
+Flexcar IDC
+Flipkart
+Flow Traders
+Fortinet
+Fractal Analytics
+Freshworks
+GitHub
+GitLab
+Glean
+Gojek
+Goldman Sachs
+Google
+Graviton Research Capital
+Groww
+Gullak Money
+HackerEarth
+HackerRank
+Harness
+HashiCorp
+Hasura
+HCL Technologies
+HDFC Bank
+Hella Infra Market Private Limited
+Hewlett Packard Enterprise
+HighRadius
+HP
+HSBC
+HyperVerge
+IBM
+Icertis
+ICICI Bank
+IMC Trading
+Infosys
+InMobi
+Innovaccer
+Intel
+Intuit
+JetBrains
+Jio
+JPMorgan Chase
+Jupiter
+JUSPAY
+Kaleyra
+Komprise India Private
+Kotak Mahindra
+L&T Infotech
+LeadSquared
+Lenskart
+LetsTransport
+LinkedIn
+Loom
+MAKEMYTRIP
+Mastercard
+Maxlinear Technologies
+Media.net
+Meesho
+Meta
+Micron Technology
+Microsoft
+Mindtree
+MONEYVIEW
+MongoDB
+Morgan Stanley
+Mphasis
+Myntra
+Nagarro
+Nation with Namo
+Navi Technologies
+NetApp
+Netflix
+Netlify
+Neysa Networks
+NK Securities
+Nomura
+Notion
+Nutanix
+NVIDIA
+OfBusiness
+Okta
+Ola
+OpenAI
+Optiver
+Oracle
+Oracle GBU
+PagerDuty
+Palo Alto Networks
+PayPal
+Paytm
+PayU
+Persistent Systems
+Philips Lighting (Signify)
+PhonePe
+PlanetScale
+Pocket FM
+Pocketpills
+Postman
+Providence
+Publicis Sapient
+Quadeye (QE Securities)
+Qualcomm
+Rapid7
+Razorpay
+Redis
+Richpanel
+Sabre Corporation
+Salesforce
+Samsung R&D
+Samsung Semiconductor India Research
+Sandvine
+SAP
+SAP Labs
+Sarvam AI
+Schlumberger
+SecPod Technologies
+SendGrid
+ServiceNow
+ShareChat
+Shopify
+Siemens EDA
+Silicon Labs
+Slack
+Slice
+Snowflake
+Societe Generale
+Sony Japan
+Spotify
+Sprinklr
+SquadStack
+Standard Chartered
+Stripe
+Supabase
+Swiggy
+Taiwan Semiconductor (TSMC)
+Target
+TCS
+Tech Mahindra
+Tekion India Private Limited
+Texas Instruments
+TikTok
+Tower Research
+Twilio
+Uber
+UBS
+Upstox
+Urban Company
+Varonis
+Vercel
+Visa
+VMware
+Walmart Global Tech India
+Walmart Labs
+WebEngage
+Wells Fargo
+Whatfix
+Wingify
+Wipro
+WorldQuant Research
+Yellow.ai
+Zepto
+Zerodha
+Zeta
+Zoho
+Zoom
+Zynga

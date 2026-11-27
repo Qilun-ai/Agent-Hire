@@ -1,0 +1,54 @@
+{
+  "company": "Hella Infra Market Private Limited",
+  "slug": "hella-infra-market-private-limited",
+  "portal": "https://infra.market/careers/",
+  "listing_url": "https://career.hrone.cloud/career-portal?appId=6YxX23eqtwshPSTFPNk3Qz4X0QMCf5-mK6fQ_QAngIkmAcIzyOhH5dvf9QeMs5kOjj8B0kRCcRqvItav2wUneDVvWgs0k8r5u9PYicIIiwBRAxsXiN630qpSKsvn8yVa&dc=infra&rqt=UVozgs-AUV1ILPLBxDlf7A&cc=wsfN2dASB51O-xE0FRHd_g",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "jobTitle",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": "locationId",
+      "note": "HROne listing-body filter key; preferredLocationId is the parallel key for preferred locations. No values exist because the company-scoped portal currently has no vacancies."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [],
+      "native_param": "departmentCode",
+      "note": "The body carries departmentCode/department/subDepartment plus businessUnitCode/designationCode/levelCode/branchCode/regionCode; no option list is published while the portal is empty."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [],
+      "native_param": "employmentType",
+      "note": "Empty filter field in the observed listing request; values normally mirror the detail field employeeType."
+    },
+    {
+      "key": "seniority",
+      "label": "Seniority",
+      "kind": "multi",
+      "values": [],
+      "native_param": "seniorityName",
+      "note": "Empty filter field in the observed listing request."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "https://infra.market/careers/ publishes a single hr1.to short link (https://hr1.to//56f9dd) that lands on the company-branded HROne portal https://career.hrone.cloud/career-portal?appId=...&dc=infra&rqt=...&cc=.... The portal queries POST https://gateway.app.hrone.cloud/api/external/public/referral/CareerPosition/Details with headers domainCode=infra, apiKey=<appId>, AccessMode=W and a JSON body of filter keys (departmentCode, companyCode, careerPortalType, jobTitle, employmentType, seniorityName, jobFunction, businessUnitCode, department, subDepartment, gradeCode, designationCode, levelCode, branchCode, subBranchCode, regionCode, locationId, preferredLocationId, experience, qualification, skillsName, urgentOpening, jobPosted, isShortUrl, nationality, pagination) plus jobPosted='0' and pagination {pageNumber,pageSize}. Sending all filters empty returns HTTP 200 [] and the rendered portal shows 'CURRENTLY NO VACANCIES'.",
+  "evidence": [
+    "https://infra.market/careers/ -> https://hr1.to//56f9dd -> https://career.hrone.cloud/career-portal?appId=...&dc=infra&rqt=UVozgs-AUV1ILPLBxDlf7A&cc=wsfN2dASB51O-xE0FRHd_g (HTTP 200)",
+    "POST https://gateway.app.hrone.cloud/api/external/public/referral/CareerPosition/Details with 26 named filter keys (all empty), jobPosted='0', pagination {pageNumber:1,pageSize:10} -> HTTP 200 []",
+    "adapter src/career_scraper/adapters/hella_infra_market_private_limited.py: LISTING_FILTERS tuple, LISTING_URL, zero_vacancy metadata"
+  ],
+  "verified": true
+}

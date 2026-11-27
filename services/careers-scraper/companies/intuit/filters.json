@@ -1,0 +1,83 @@
+{
+  "company": "Intuit",
+  "slug": "intuit",
+  "portal": "https://jobs.intuit.com/search-jobs",
+  "listing_url": "https://jobs.intuit.com/search-jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "Keywords",
+  "fields": [
+    {
+      "key": "job_family",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Administration",
+        "Communications",
+        "Corporate Strategy & Development",
+        "Customer Experience",
+        "Customer Success",
+        "Data",
+        "Design & User Experience",
+        "Executive",
+        "Finance",
+        "Human Resources",
+        "Information Technology",
+        "Internship",
+        "Legal, Compliance & Policy",
+        "Marketing",
+        "New College Grad",
+        "Product Management",
+        "Program Management & Business Operations",
+        "Real Estate & Workplace Services",
+        "Sales",
+        "Security, Risk & Fraud",
+        "Software Engineering",
+        "Tax & Bookkeeping Experts"
+      ],
+      "native_param": "fc",
+      "note": "Checkbox data-facet-type=1 IDs from the page's Filter Results panel."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Canada",
+        "India",
+        "Israel",
+        "Remote",
+        "United Kingdom",
+        "United States"
+      ],
+      "native_param": "fl",
+      "note": "The page also publishes State/Region and City location facets; all use the fl parameter with their own facet IDs."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Relevancy",
+      "native_param": "SortCriteria=0&SortDirection=0"
+    },
+    {
+      "value": "recent",
+      "label": "Date Posted",
+      "native_param": "SortCriteria=1&SortDirection=0"
+    },
+    {
+      "value": "updated",
+      "label": "Date Updated",
+      "native_param": "SortCriteria=2&SortDirection=0"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Radancy TalentBrew search on jobs.intuit.com (tenant 27595). The search module requests GET /search-jobs/results with Keywords, Location, fc (Job Category facet IDs), fl (location facet IDs), fcf (custom facets), SortCriteria and RecordsPerPage; the unfiltered listing reports 609 jobs, and Keywords=software with fc=68338 returned 309 rows while the response echoed data-filtered-categories=\"68338\". The Filter Results panel renders Job Category, Country, State/Region, City, Divisions and custom-field facets, and the Sort Jobs select offers Relevancy/Date Posted/Date Updated. The server-rendered ?p=N listing mirrors the same widget.",
+  "evidence": [
+    "https://jobs.intuit.com/search-jobs",
+    "https://jobs.intuit.com/search-jobs/results?Keywords=software&fc=68338&CurrentPage=1&RecordsPerPage=15&SortCriteria=1&SortDirection=0"
+  ],
+  "verified": true
+}

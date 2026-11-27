@@ -1,0 +1,41 @@
+{
+  "company": "Kaleyra",
+  "slug": "kaleyra",
+  "portal": "https://www.kaleyra.com/careers/",
+  "listing_url": "https://kaleyra-talent.freshteam.com/jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "enum",
+      "values": [
+        "Bengaluru"
+      ],
+      "native_param": "branch_id",
+      "note": "FreshTeam location select on GET /jobs/search; Bengaluru option value is 2000006306."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "bool",
+      "values": [
+        "Remote"
+      ],
+      "native_param": "remote",
+      "note": "Remote checkbox submits remote=1 (hidden remote=0 when unchecked)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The kaleyra.com/careers/ ledger URL redirects to the Tata Communications parent board, so this schema documents Kaleyra's company-scoped FreshTeam board. The listing form is GET /jobs/search with query (keyword), branch_id (location), and remote (workplace). A live request query=engineer&branch_id=2000006306&remote=1 returned 'No jobs found', confirming the parameters are applied natively. Department headings and employment labels are display-only, not filters.",
+  "evidence": [
+    "https://kaleyra-talent.freshteam.com/jobs",
+    "https://kaleyra-talent.freshteam.com/jobs/search?query=engineer&branch_id=2000006306&remote=1"
+  ],
+  "verified": true
+}

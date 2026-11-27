@@ -1,0 +1,27 @@
+[package]
+name = "agent-hire-jobindex"
+description = "The Agent-Hire job index: scraped postings, search, levels and departments."
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+agent-hire-store = { path = "../store" }
+fancy-regex.workspace = true
+getrandom.workspace = true
+regex.workspace = true
+rusqlite.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+unicode-normalization.workspace = true
+
+base64.workspace = true
+thiserror.workspace = true
+tungstenite.workspace = true
+ureq = { workspace = true, features = ["cookies"] }
+url.workspace = true
+
+[lints]
+workspace = true

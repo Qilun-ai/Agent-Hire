@@ -1,0 +1,49 @@
+{
+  "company": "Chargebee",
+  "slug": "chargebee",
+  "portal": "https://www.chargebee.com/careers/",
+  "listing_url": "https://www.linkedin.com/jobs/chargebee-jobs-worldwide?f_C=2277385",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Worldwide",
+        "Bengaluru, Karnataka, India",
+        "Chennai, Tamil Nadu, India",
+        "Dublin, County Dublin, Ireland",
+        "Lehi, UT",
+        "San Francisco Bay Area",
+        "United States"
+      ],
+      "native_param": "location",
+      "note": "The listing's jserp-filters form carries hidden keywords/location/geoId inputs; location is pinned to Worldwide for the company-filtered list."
+    },
+    {
+      "key": "date_posted",
+      "label": "Date posted",
+      "kind": "single",
+      "values": [
+        "r86400",
+        "r604800",
+        "r2592000"
+      ],
+      "native_param": "f_TPR",
+      "note": "Radio group on the listing face: Past 24 hours (r86400), Past week (r604800), Past month (r2592000)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Chargebee's careers page publishes the LinkedIn company jobs list at /jobs/chargebee-jobs-worldwide?f_C=2277385. The guest listing ships a real GET form (id=jserp-filters) with keywords/location/geoId/f_TPR/f_C, so the parameter names are the portal's own, but a server-side keyword request with browser headers returned HTTP 429, so native querying is not reliable; the adapter collects the unfiltered worldwide list and filters locally.",
+  "evidence": [
+    "https://www.linkedin.com/jobs/chargebee-jobs-worldwide?f_C=2277385&trk=job-results_see-all-jobs-link",
+    "https://www.linkedin.com/jobs/chargebee-jobs-worldwide?keywords=engineer&f_C=2277385 (HTTP 429)"
+  ],
+  "verified": true
+}

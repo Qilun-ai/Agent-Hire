@@ -1,0 +1,72 @@
+{
+  "company": "Optiver",
+  "slug": "optiver",
+  "portal": "https://optiver.com/working-at-optiver/career-opportunities/",
+  "listing_url": "https://www.optiver.com/join-us/jobs/",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Business Operations",
+        "Human Resources & Recruiting",
+        "Institutional Sales",
+        "Quantitative Research & Machine Learning",
+        "Risk, Finance & Legal",
+        "Strategy",
+        "Technology",
+        "Trade Operations",
+        "Trading"
+      ],
+      "native_param": "department",
+      "note": "From filterConfig.filterGroups; department=trading returned totalCount=24 vs 153 unfiltered"
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Amsterdam",
+        "Austin",
+        "Chicago",
+        "London",
+        "Mumbai",
+        "New York",
+        "Shanghai",
+        "Singapore",
+        "Sydney",
+        "Taipei",
+        "Washington D.C."
+      ],
+      "native_param": "location",
+      "note": "From filterConfig.filterGroups; same filter-group id used as the API query key"
+    },
+    {
+      "key": "seniority",
+      "label": "Level",
+      "kind": "multi",
+      "values": [
+        "Early Careers",
+        "Experienced",
+        "Graduate",
+        "Internship"
+      ],
+      "native_param": "level",
+      "note": "From filterConfig.filterGroups; same filter-group id used as the API query key"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The jobs page embeds filterConfig.filterGroups (department, location, level) and apiEndpoint /en/api/v1/jobs. GET /en/api/v1/jobs?from=0&size=16&department=trading returned totalCount=24 versus 153 unfiltered, confirming department is a server-side query parameter; location and level use the same filter-group ids. The page sets showSearch=false, so there is no keyword control.",
+  "evidence": [
+    "https://www.optiver.com/join-us/jobs/",
+    "https://www.optiver.com/en/api/v1/jobs?from=0&size=1&department=trading"
+  ],
+  "verified": true
+}

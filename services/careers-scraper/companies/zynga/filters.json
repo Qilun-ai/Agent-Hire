@@ -1,0 +1,63 @@
+{
+  "company": "Zynga",
+  "slug": "zynga",
+  "portal": "https://www.zynga.com/jobs/",
+  "listing_url": "https://job-boards.greenhouse.io/zyngacareers",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Disciplines",
+      "kind": "multi",
+      "values": [
+        "Art & Animation",
+        "Data, Analytics & User Research",
+        "Engineering",
+        "Facilities & Admin",
+        "Game Design",
+        "Marketing & User Acquisition",
+        "Other",
+        "Product Management",
+        "Production",
+        "Sales & Business Development",
+        "UI / UX Design"
+      ],
+      "native_param": null,
+      "note": "React-select #custom-field-4033182004 labelled Disciplines; filters the SSR cards in the browser (Greenhouse metadata 'Disciplines')."
+    },
+    {
+      "key": "location",
+      "label": "Office",
+      "kind": "multi",
+      "values": [
+        "Austin, TX",
+        "Austin, TX; Bay Area, CA; Carlsbad, CA; Chicago, IL",
+        "Austin, TX; Toronto, Canada",
+        "Barcelona, Spain",
+        "Barcelona, Spain; Berlin, Germany; Dublin, Ireland; Helsinki, Finland; Istanbul, Turkey",
+        "Barcelona, Spain; London, UK",
+        "Bay Area, CA",
+        "Bay Area, CA; Toronto, Canada",
+        "Bengaluru, India",
+        "Chicago, IL; New York, NY",
+        "Helsinki, Finland",
+        "London, UK",
+        "Toronto, Canada"
+      ],
+      "native_param": null,
+      "note": "React-select #office-filter labelled Office; filters the SSR cards in the browser."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "zynga.com/jobs/ 301-redirects (CloudFront) to job-boards.greenhouse.io/zyngacareers, which server-renders all 48 jobs with '48 jobs' in the page text. The only controls are Search (input#keyword-filter), Office (#office-filter) and Disciplines (custom field 4033182004); React filters the already-rendered cards client-side and there is no pagination. The companion public feed https://api.greenhouse.io/v1/boards/zyngacareers/jobs?content=false returns the same 48 rows (metadata includes Disciplines, Time Type, Connected Workplace Options, Worker Type) and accepts no keyword/location filter parameters.",
+  "evidence": [
+    "https://job-boards.greenhouse.io/zyngacareers",
+    "https://api.greenhouse.io/v1/boards/zyngacareers/jobs?content=false"
+  ],
+  "verified": true
+}

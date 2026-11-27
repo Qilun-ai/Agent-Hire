@@ -1,0 +1,71 @@
+{
+  "company": "Zeta",
+  "slug": "zeta",
+  "portal": "https://www.zeta.tech/us/careers/",
+  "listing_url": "https://api.lever.co/v0/postings/zeta?group=team&mode=json",
+  "family": "lever",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "team",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Administration & Secretarial",
+        "Business Operations",
+        "Cloud & Product Security",
+        "Engineering",
+        "Finance",
+        "Information Technology",
+        "Legal",
+        "People Success",
+        "Product Management",
+        "Real Estate & Workplace",
+        "Sales",
+        "Solution Engineering"
+      ],
+      "native_param": null,
+      "note": "Department tabs (ul.departments-list) filter the already-loaded grouped Lever response client-side."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Bangalore - DD",
+        "Basking Ridge, New Jersey",
+        "East Coast",
+        "Hyderabad",
+        "Hyderabad/Bangalore",
+        "Mumbai",
+        "Mumbai / Bangalore",
+        "USA"
+      ],
+      "native_param": "location",
+      "note": "India page has a location dropdown (ul.location-list); the Lever postings API also honours location= (verified exact match)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Commitment",
+      "kind": "multi",
+      "values": [
+        "Full-time"
+      ],
+      "native_param": null,
+      "note": "categories.commitment in the Lever payload; no commitment control was verified."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Both the US entry and the India 'work with us' page ship the same request, https://api.lever.co/v0/postings/zeta?group=team&mode=json, and partition the 28 postings by country in the browser (US: country != IN, India: country == IN). Department tabs and the #searchRole keyword box filter the rendered rows client-side. The Lever postings API itself accepts location: ?mode=json&location=Bangalore returned exactly the single Bangalore posting, so native_query is true for location only; keyword and team filtering remain local.",
+  "evidence": [
+    "https://api.lever.co/v0/postings/zeta?group=team&mode=json",
+    "https://api.lever.co/v0/postings/zeta?mode=json&location=Bangalore",
+    "https://www.zeta.tech/us/careers/"
+  ],
+  "verified": true
+}

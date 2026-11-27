@@ -1,0 +1,167 @@
+[
+  {
+    "body": {
+      "chars": 39,
+      "images": [],
+      "method": "text",
+      "pages": null,
+      "text": "Priya Raman\nBackend engineer\n\nGo, Kafka"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": "multipart: notes.txt (text)",
+      "method": "POST",
+      "path": "/api/v1/agent-docs/extract"
+    },
+    "status": 200,
+    "step": "text file"
+  },
+  {
+    "body": {
+      "chars": 48,
+      "images": [],
+      "method": "docx-xml",
+      "pages": null,
+      "text": "Priya Raman\nBackend engineer & SRE\n• Go\n\n• Kafka"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": "multipart: cv.docx (two paragraphs, two numbered items)",
+      "method": "POST",
+      "path": "/api/v1/agent-docs/extract"
+    },
+    "status": 200,
+    "step": "docx"
+  },
+  {
+    "body": {
+      "chars": 1771,
+      "images": [],
+      "method": "pdftotext",
+      "pages": 1,
+      "text": "--- page 1 ---\nPriya Raman\nSenior Backend Engineer | Hyderabad, Telangana, India | priya.raman.test@example.com | +91 98765 43210\nlinkedin.com/in/priya-raman-test | github.com/priyaraman-test | priyaraman.dev\n\nSummary\nBackend engineer with 6 years of experience building distributed systems in Go and Python. Led the migration of a\npayments platform to event-driven microservices on AWS (Kafka, PostgreSQL, Kubernetes), cutting p99 latency by\n40%. Comfortable owning services end to end: design, on-call, observability and mentoring.\nExperience\nSenior Software Engineer, Ledgerline Fintech, Hyderabad - Mar 2023 to present\n- Designed a Go settlement service processing 3M transactions/day on Kafka and PostgreSQL.\n- Introduced OpenTelemetry tracing and SLOs; reduced incident time-to-resolve from 90 to 25 minutes.\n- Mentored 4 engineers; ran the backend interview loop.\nSoftware Engineer, Cartwheel Commerce, Bengaluru - Jul 2020 to Feb 2023\n- Built Python (FastAPI) order and inventory APIs serving 2,000 requests/s.\n- Moved batch jobs to Kubernetes CronJobs and Terraform-managed AWS infrastructure.\nAssociate Software Engineer, Brightpath Labs, Pune - Jun 2019 to Jun 2020\n- Java/Spring REST services and PostgreSQL schema design for a logistics product.\nSkills\nGo, Python, Java, PostgreSQL, Redis, Kafka, gRPC, REST, Docker, Kubernetes, Terraform, AWS (ECS, RDS, SQS,\nLambda), OpenTelemetry, Prometheus, CI/CD (GitHub Actions)\nEducation\nB.Tech, Computer Science and Engineering - National Institute of Technology, Warangal - 2015 to 2019 (CGPA 8.6/10)\nOther\nWork authorization: Indian citizen; no sponsorship needed to work in India. Notice period: 30 days. Open to hybrid roles\nin Hyderabad or remote. Expected salary: INR 42 LPA. Languages: English, Telugu, Hindi."
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": "multipart: resume.pdf (the e2e résumé)",
+      "method": "POST",
+      "path": "/api/v1/agent-docs/extract"
+    },
+    "status": 200,
+    "step": "pdf"
+  },
+  {
+    "body": {
+      "detail": "Could not read this document: BadZipFile"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": "multipart: cv.docx (not a zip)",
+      "method": "POST",
+      "path": "/api/v1/agent-docs/extract"
+    },
+    "status": 422,
+    "step": "broken docx"
+  },
+  {
+    "body": {
+      "company": "Nimbus Robotics",
+      "date_posted": "2026-11-01",
+      "location": "Hyderabad, TG, IN",
+      "source": "jobposting",
+      "text": "## About\n\nWe run **fleets** & robots.\n\n  * Go\n  * Kafka",
+      "title": "Platform Engineer",
+      "truncated": false,
+      "url": "<page-server>/posting"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "url": "<page-server>/posting"
+      },
+      "method": "POST",
+      "path": "/api/v1/agent-docs/read-page"
+    },
+    "status": 200,
+    "step": "read a job posting"
+  },
+  {
+    "body": {
+      "source": "page",
+      "text": "# Data Analyst\n\nJoin our _finance_ team.\nSQL required.\n\n  1. Dashboards\n  2. Reports",
+      "title": "Data Analyst – Ledgerline",
+      "truncated": false,
+      "url": "<page-server>/plain"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "url": "<page-server>/plain"
+      },
+      "method": "POST",
+      "path": "/api/v1/agent-docs/read-page"
+    },
+    "status": 200,
+    "step": "read a plain page"
+  },
+  {
+    "body": {
+      "detail": "Not a web page (application/pdf)"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "url": "<page-server>/file.pdf"
+      },
+      "method": "POST",
+      "path": "/api/v1/agent-docs/read-page"
+    },
+    "status": 415,
+    "step": "not a web page"
+  },
+  {
+    "body": {
+      "detail": "The page answered HTTP 410"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "url": "<page-server>/gone"
+      },
+      "method": "POST",
+      "path": "/api/v1/agent-docs/read-page"
+    },
+    "status": 502,
+    "step": "page error"
+  },
+  {
+    "body": {
+      "detail": "Give a full http(s) link"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "url": "ftp://example.com"
+      },
+      "method": "POST",
+      "path": "/api/v1/agent-docs/read-page"
+    },
+    "status": 400,
+    "step": "bad link"
+  },
+  {
+    "body": {
+      "detail": "Could not open the page: ConnectError"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "url": "http://127.0.0.1:9/nothing"
+      },
+      "method": "POST",
+      "path": "/api/v1/agent-docs/read-page"
+    },
+    "status": 502,
+    "step": "unreachable"
+  }
+]

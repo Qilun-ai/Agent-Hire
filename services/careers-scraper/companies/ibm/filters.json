@@ -1,0 +1,141 @@
+{
+  "company": "IBM",
+  "slug": "ibm",
+  "portal": "https://www.ibm.com/careers/search",
+  "listing_url": "https://www.ibm.com/careers/search",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bengaluru, Karnataka, India",
+        "Hyderabad, Telangana, India",
+        "Pune, Maharashtra, India",
+        "Gurugram, Haryana, India",
+        "Austin, Texas, United States",
+        "New York, New York, United States",
+        "Armonk, New York, United States",
+        "London, United Kingdom",
+        "Toronto, Ontario, Canada"
+      ],
+      "native_param": "query.bool.must[].match.field_keyword_19",
+      "note": "field_keyword_19 is the city/location the API returns as search_location; filter with a must[] match clause."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "India",
+        "United States",
+        "Philippines",
+        "United Kingdom",
+        "Canada",
+        "Mexico",
+        "Malaysia",
+        "Germany",
+        "France",
+        "Romania"
+      ],
+      "native_param": "query.bool.must[].match.field_keyword_05",
+      "note": "Values are the field_keyword_05 aggregation buckets the API itself returns."
+    },
+    {
+      "key": "department",
+      "label": "Career area",
+      "kind": "multi",
+      "values": [
+        "Consulting",
+        "Software Engineering",
+        "Enterprise Operations",
+        "Infrastructure & Technology",
+        "Data & Analytics",
+        "Project Management",
+        "Cloud",
+        "Design & UX",
+        "Research",
+        "Sales",
+        "Security"
+      ],
+      "native_param": "query.bool.must[].match.field_keyword_08",
+      "note": "The first six values are the field_keyword_08 aggregation buckets returned by the API; the rest are collected from IBM records."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work arrangement",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Remote"
+      ],
+      "native_param": "query.bool.must[].match.field_keyword_17",
+      "note": "field_keyword_17 aggregation buckets (the page presents them as 'Hybrid and Remote jobs')."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience level",
+      "kind": "multi",
+      "values": [
+        "Professional",
+        "Internship",
+        "Entry Level"
+      ],
+      "native_param": "query.bool.must[].match.field_keyword_18",
+      "note": "field_keyword_18 aggregation buckets."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job type",
+      "kind": "multi",
+      "values": [
+        "Regular",
+        "Intern (Fixed Term)",
+        "Co-Op (Fixed Term)",
+        "Apprentice (Fixed Term)",
+        "Fixed Term (Fixed Term)",
+        "Student (Fixed Term)",
+        "Supplemental 1 (Fixed Term - Short)",
+        "Supplemental 2 (Fixed Term - Long)"
+      ],
+      "native_param": null,
+      "note": "Job-detail 'Job Type' values from collected records; no separate facet parameter was confirmed, so this is a local filter."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Newest To Oldest",
+      "native_param": "sort=[{\"dcdate\":\"desc\"},{\"_score\":\"desc\"}]"
+    },
+    {
+      "value": "oldest",
+      "label": "Oldest to Newest",
+      "native_param": "sort=[{\"dcdate\":\"asc\"},{\"_score\":\"desc\"}]"
+    },
+    {
+      "value": "relevance",
+      "label": "Most Relevant",
+      "native_param": "sort=[{\"_score\":\"desc\"},{\"pageviews\":\"desc\"}]"
+    },
+    {
+      "value": "title_az",
+      "label": "Title A-Z",
+      "native_param": "sort=[{\"title.keyword\":\"asc\"},{\"_score\":\"desc\"}]"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The search page posts an Elasticsearch-style body to https://www-api.ibm.com/search/api/v2 (appId 'careers', scope 'careers2', lang 'zz', size 30, 'from' for paging). Facets are must[] match clauses on the index's field_keyword_* fields; the API returns the faceted buckets for field_keyword_17/08/18/05, which is where the filter values come from. Confirmed live: must[{\"match\":{\"field_keyword_08\":\"Software Engineering\"}}] narrowed 2818 to 740 jobs, all in that career area. Keyword: the page has a search box but the field its query lands in was not confirmed (sm.query had no effect and match on 'description' returned 0), so keyword_param stays null and keyword filtering is local. Sort clauses are the four the page publishes as a dropdown.",
+  "evidence": [
+    "POST https://www-api.ibm.com/search/api/v2 {\"appId\":\"careers\",\"scopes\":[\"careers2\"],\"query\":{\"bool\":{\"must\":[]}},...} -> hits.total 2818 with field_keyword_05/08/17/18 buckets",
+    "POST https://www-api.ibm.com/search/api/v2 ... \"must\":[{\"match\":{\"field_keyword_08\":\"Software Engineering\"}}] -> hits.total 740, all Software Engineering",
+    "POST https://www-api.ibm.com/search/api/v2 ... \"sort\":[{\"dcdate\":\"desc\"},{\"_score\":\"desc\"}] -> 200, date-ordered hits",
+    "https://www.ibm.com/careers/search (server-rendered shell declaring scopeid 'careers2', appid 'careers', 4 sort labels)"
+  ],
+  "verified": true
+}

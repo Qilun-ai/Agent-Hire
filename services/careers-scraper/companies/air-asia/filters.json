@@ -1,0 +1,108 @@
+{
+  "company": "Air Asia",
+  "slug": "air-asia",
+  "portal": "https://careers.airasia.com/",
+  "listing_url": "https://mycareer.airasia.com/gb/en/search-results",
+  "family": "phenom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Malaysia",
+        "Indonesia",
+        "Thailand",
+        "Cambodia",
+        "India",
+        "Philippines",
+        "Kazakhstan"
+      ],
+      "native_param": "selected_fields.country",
+      "note": "Aggregation field country; sent inside the widget body's selected_fields object."
+    },
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Sepang",
+        "Kuala Lumpur",
+        "‌Kuala‌ ‌Lumpur‌",
+        "Tangerang",
+        "Bangalore",
+        "Kota Kinabalu",
+        "Newport City, Pasay",
+        "Puchong",
+        "Almaty",
+        "Bayan Lepas",
+        "Kuching",
+        "Unspecified"
+      ],
+      "native_param": "selected_fields.city",
+      "note": "Aggregation field city; sent inside selected_fields."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Digital & Information Technology",
+        "Others",
+        "Aircraft & Aviation",
+        "Brand & Commercial",
+        "Finance",
+        "Governance",
+        "General Management & Strategy",
+        "Retail & Food",
+        "People & Culture",
+        "Safety & Security",
+        "Communications",
+        "Logistics & Supply Chain"
+      ],
+      "native_param": "selected_fields.category",
+      "note": "Aggregation field category; a category=Finance request was echoed in ui_selections."
+    },
+    {
+      "key": "business_unit",
+      "label": "Brand",
+      "kind": "multi",
+      "values": [
+        "AirAsia Airlines",
+        "MOVE",
+        "ADE",
+        "Santan",
+        "Others",
+        "AirAsia SEA",
+        "BigPay",
+        "Capital A"
+      ],
+      "native_param": "selected_fields.subBrand",
+      "note": "Aggregation field subBrand (AirAsia Airlines, MOVE, ADE, ...)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Hiring type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time"
+      ],
+      "native_param": "selected_fields.hiringType",
+      "note": "Aggregation field hiringType."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official Search Jobs page is a Phenom widget. POST https://mycareer.airasia.com/widgets with ddoKey=refineSearch accepts keywords, selected_fields (country/city/category/subBrand/hiringType) and sortBy. Keyword and category were exercised: keywords=engineer with category=Finance returned 0 and ui_selections echoed the category. Sort values remain unverified, so no sort options are published.",
+  "evidence": [
+    "https://careers.airasia.com/",
+    "https://mycareer.airasia.com/gb/en/search-results",
+    "https://mycareer.airasia.com/widgets (POST refineSearch, keywords=engineer, selected_fields.category=[Finance])"
+  ],
+  "verified": true
+}

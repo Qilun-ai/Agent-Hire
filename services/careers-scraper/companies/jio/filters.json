@@ -1,0 +1,75 @@
+{
+  "company": "Jio",
+  "slug": "jio",
+  "portal": "https://careers.jio.com/",
+  "listing_url": "https://careers.jio.com/frmJobCategories.aspx",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "ASP.NET auto-complete combo (ctl00$MainContent$RefineYourSearch$MultiCheckCombo1); options are loaded client-side."
+    },
+    {
+      "key": "department",
+      "label": "Industry",
+      "kind": "multi",
+      "values": [
+        "Apprentice",
+        "Business Operations",
+        "Corporate Affairs",
+        "Corporate Services (Admin)",
+        "Customer Service",
+        "Engineering & Technology",
+        "Finance Compliance & Accounting",
+        "Freelancer",
+        "Freelancer - Sales Associate",
+        "Freelancer Enterprise",
+        "Human Resources & Training",
+        "Information Security",
+        "Infrastructure",
+        "IT & Systems",
+        "Jio Sales Associate",
+        "Legal",
+        "Marketing",
+        "Operations",
+        "Others",
+        "Procurement and Contracts",
+        "Product Management",
+        "Regulatory",
+        "Sales and Distribution",
+        "Supply Chain"
+      ],
+      "native_param": null,
+      "note": "ddlFunction option values 0201-0227; the category links use opaque func/desc/flag tokens."
+    },
+    {
+      "key": "date_posted",
+      "label": "Freshness",
+      "kind": "multi",
+      "values": [
+        "Today",
+        "Last 1 day",
+        "Last 7 days",
+        "Last 30 days"
+      ],
+      "native_param": null,
+      "note": "ddlFreshness values 1/2/7/30."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "careers.jio.com is an ASP.NET WebForms site. The 'Refine your search' panel (Keyword, Select Industry, Location combo, Freshness) is inside <form method=\"post\" action=\"./frmJobCategories.aspx\"> and only posts back, so there is no GET filter parameter. Each industry link opens frmfuncwisejob.aspx?func=<token>&desc=<token>&flag=<token> (opaque base64, per-category, not a reusable filter value), and that page's pager also posts back. Filters are therefore applied locally by the scraper.",
+  "evidence": [
+    "https://careers.jio.com/frmJobCategories.aspx",
+    "https://careers.jio.com/frmfuncwisejob.aspx?func=09Bqkj0vwzk=&desc=tBOU2f2ubJIKJJaEorlljoC0jBhJb9cLpWXiiP5HyBU=&flag=/wASbQn4xyQ="
+  ],
+  "verified": true
+}

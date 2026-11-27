@@ -1,0 +1,140 @@
+{
+  "company": "Oracle",
+  "slug": "oracle",
+  "portal": "https://www.oracle.com/careers/",
+  "listing_url": "https://careers.oracle.com/en/sites/jobsearch/jobs",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "TN, United States",
+        "Nashville, TN, United States",
+        "India",
+        "TX, United States",
+        "KARNATAKA, India",
+        "BENGALURU, KARNATAKA, India",
+        "CA, United States",
+        "WA, United States",
+        "Seattle, WA, United States",
+        "Austin, TX, United States",
+        "Santa Clara, CA, United States",
+        "VA, United States",
+        "Abilene, TX, United States",
+        "MI, United States",
+        "Reston, VA, United States",
+        "Saline, MI, United States",
+        "NM, United States"
+      ],
+      "native_param": "selectedLocationsFacet",
+      "note": "Facet LOCATIONS; values are facet Ids in the request"
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Product and Research",
+        "Technology Operations",
+        "Business practice and Operations",
+        "Services and Support",
+        "Product Development",
+        "Manufacturing and Distribution",
+        "Consulting",
+        "Pre Sales",
+        "Sales",
+        "Finance",
+        "Marketing",
+        "All Roles",
+        "Facilities",
+        "Information Technology",
+        "Training",
+        "Human Resources",
+        "Support",
+        "Legal"
+      ],
+      "native_param": "selectedCategoriesFacet",
+      "note": "Facet CATEGORIES"
+    },
+    {
+      "key": "job_family",
+      "label": "Job Family",
+      "kind": "multi",
+      "values": [
+        "Software Engineering",
+        "Data Center Operations",
+        "BUSPRAC-BUSPRAC",
+        "Engineering Services",
+        "Technical Support",
+        "MANUDIST-MANUENG",
+        "Hardware Engineering",
+        "PRODEV-SWENG",
+        "Technical Program Management",
+        "CONS-IMPDEL",
+        "Product Management",
+        "Customer Account Management",
+        "PRESALES-PRODTECH",
+        "Data Center Engineering",
+        "Production System Administration",
+        "PRESALES-PRODAPPS",
+        "Data and Applied Science",
+        "ALLROLES-ALLSPECAEA"
+      ],
+      "native_param": "selectedTitlesFacet",
+      "note": "Facet TITLES"
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "On-site"
+      ],
+      "native_param": "selectedWorkplaceTypesFacet",
+      "note": "Facet WORKPLACE_TYPES; only On-site is currently published"
+    },
+    {
+      "key": "date_posted",
+      "label": "Posted",
+      "kind": "multi",
+      "values": [
+        "Less than 7 days",
+        "Less than 30 days",
+        "Greater than 30 days"
+      ],
+      "native_param": "selectedPostingDatesFacet",
+      "note": "Facet POSTING_DATES"
+    },
+    {
+      "key": "business_unit",
+      "label": "Organization",
+      "kind": "multi",
+      "values": [
+        "CLBPTS - All Lines of Business"
+      ],
+      "native_param": "selectedOrganizationsFacet",
+      "note": "Facet ORGANIZATIONS; a single value is currently published"
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Oracle Candidate Experience site CX_45001 (careers.oracle.com jobsearch -> eeho.fa.us2.oraclecloud.com). The public recruitingCEJobRequisitions finder takes siteNumber, facetsList, limit, offset, sortBy and keyword; the response echoes Keyword. keyword=engineer returned TotalJobsCount=2103 with Keyword='engineer'. Adding selectedCategoriesFacet=302958497961752 and selectedLocationsFacet=300000000149325 returned 854 and echoed both facets. Facet values and IDs are published in the same response.",
+  "evidence": [
+    "https://eeho.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX_45001,facetsList=LOCATIONS%3BWORK_LOCATIONS%3BWORKPLACE_TYPES%3BTITLES%3BCATEGORIES%3BORGANIZATIONS%3BPOSTING_DATES%3BFLEX_FIELDS,limit=5,sortBy=POSTING_DATES_DESC,keyword=engineer",
+    "https://eeho.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX_45001,facetsList=LOCATIONS%3BWORK_LOCATIONS%3BWORKPLACE_TYPES%3BTITLES%3BCATEGORIES%3BORGANIZATIONS%3BPOSTING_DATES%3BFLEX_FIELDS,limit=5,sortBy=POSTING_DATES_DESC,selectedCategoriesFacet=302958497961752,selectedLocationsFacet=300000000149325"
+  ],
+  "verified": true
+}

@@ -1,0 +1,77 @@
+{
+  "company": "Citadel Securities",
+  "slug": "citadel-securities",
+  "portal": "https://www.citadelsecurities.com/careers/open-opportunities/",
+  "listing_url": "https://www.citadelsecurities.com/careers/open-opportunities/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "jobTitle",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Section",
+      "kind": "multi",
+      "values": [
+        "business-operations",
+        "engineering",
+        "markets-and-trading",
+        "quantitative-research"
+      ],
+      "native_param": "sections-filter",
+      "note": "Repeatable checkbox name in form#ajax-careers-search-filter; the jQuery serialization also carries the hidden selected-job-sections field (IDs 323,325,324,326)."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience level",
+      "kind": "multi",
+      "values": [
+        "experienced-professionals",
+        "internships",
+        "new-graduates"
+      ],
+      "native_param": "experience-filter",
+      "note": "Repeatable checkbox name in the listing filter form."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "europe",
+        "amsterdam",
+        "dublin",
+        "london",
+        "paris",
+        "zurich",
+        "americas",
+        "chicago",
+        "miami",
+        "new-york",
+        "asia-pacific",
+        "gurugram",
+        "hong-kong",
+        "shanghai",
+        "singapore",
+        "sydney"
+      ],
+      "native_param": "location-filter",
+      "note": "Repeatable checkbox name; region rows (europe/americas/asia-pacific) and city rows share the same parameter."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_order=DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The Open Opportunities page embeds form#ajax-careers-search-filter, which POSTs to https://www.citadelsecurities.com/wp-admin/admin-ajax.php with action=careers_listing_filter, jobTitle, sections-filter/experience-filter/location-filter checkboxes, current_page, sort_order=DESC and per_page=10. The page JS (careerListingFilter) serializes the form, appends jobTitle/current_page/action and also mirrors the same pairs into the page URL. GET /careers/open-opportunities/page/<n>/ serves the same unfiltered cards.",
+  "evidence": [
+    "https://www.citadelsecurities.com/careers/open-opportunities/",
+    "https://www.citadelsecurities.com/wp-admin/admin-ajax.php"
+  ],
+  "verified": true
+}

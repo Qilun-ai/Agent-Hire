@@ -1,0 +1,127 @@
+{
+  "company": "SAP",
+  "slug": "sap",
+  "portal": "https://jobs.sap.com/search/",
+  "listing_url": "https://jobs.sap.com/en/jobs/",
+  "family": "smartrecruiters",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Teams",
+      "kind": "multi",
+      "values": [
+        "Accounting/Auditing",
+        "Administration",
+        "Administrative",
+        "Business Development",
+        "Communication",
+        "Consulting",
+        "Consulting and Professional Services",
+        "Corporate Operations",
+        "Customer Service",
+        "Customer Service and Support",
+        "Design",
+        "Education and Training",
+        "Engineering",
+        "Finance",
+        "General Business",
+        "Human Resources",
+        "Information Technology",
+        "Legal",
+        "Management",
+        "Marketing",
+        "Other",
+        "Presales",
+        "Product Management",
+        "Sales",
+        "Software Development"
+      ],
+      "native_param": null,
+      "note": "Teams facet on the new listing; applied in the browser."
+    },
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Addison, TX, United States",
+        "Al Khobar, SA, 31952",
+        "Alpharetta, GA, United States",
+        "Alpharetta, GA, US, 30009",
+        "Amsterdam, NL, 1097 JB",
+        "Atlanta, GA, United States",
+        "Atlanta, GA, US, 30326",
+        "Auckland, , New Zealand",
+        "Austin, TX, US, 78728",
+        "Bangalore, , India",
+        "Bangalore, IN, 560066",
+        "Bangalore, KA, IN, 560066",
+        "Bangalore, Karnataka, India",
+        "Bangkok, TH, 10500",
+        "Barcelona, , Spain",
+        "Barcelona, ES, 08019",
+        "Beijing, , China",
+        "Berlin, , Germany",
+        "Brno, , Czechia",
+        "Budapest, , Hungary",
+        "Buenos Aires, , Argentina",
+        "Cairo, , Egypt",
+        "Chicago, IL, United States",
+        "Coimbatore, , India",
+        "Copenhagen, , Denmark"
+      ],
+      "native_param": null,
+      "note": "Locations facet on the new listing; applied in the browser."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work Pattern",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "On-Site",
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "Work Pattern facet on the new listing; applied in the browser."
+    },
+    {
+      "key": "employment_type",
+      "label": "Contract Type",
+      "kind": "multi",
+      "values": [
+        "Contract",
+        "Full-time",
+        "Intern",
+        "Limited Full Time",
+        "Limited Part Time",
+        "Part-time",
+        "Regular Full Time",
+        "Regular Part Time",
+        "Teilzeit, befristet",
+        "Vollzeit, befristet",
+        "Vollzeit, unbefristet"
+      ],
+      "native_param": null,
+      "note": "Contract Type facet on the new listing; applied in the browser."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Newest",
+      "native_param": null
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": false,
+  "local_query": true,
+  "notes": "jobs.sap.com/search/ 301s to jobs.sap.com/en/jobs/, a Next.js listing paginated server-side as ?page=N (35 pages of 12; 412 jobs found). The page exposes a 'Filter & Sort' panel with Teams / Locations / Work Pattern / Contract Type facets, but filter parameters are inert server-side (the same 412 are returned), so the facets run in the browser and filtering is local. Apply URLs point at jobs.smartrecruiters.com. The previous site careers.sap.com/search supports q plus sortColumn=referencedate/sortDirection=desc, but it is a separate 549-row board.",
+  "evidence": [
+    "https://jobs.sap.com/en/jobs/",
+    "https://careers.sap.com/search/?q=&sortColumn=referencedate&sortDirection=desc&startrow=0"
+  ],
+  "verified": true
+}

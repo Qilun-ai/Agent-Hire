@@ -1,0 +1,53 @@
+{
+  "company": "Graviton Research Capital",
+  "slug": "graviton-research-capital",
+  "portal": "https://www.gravitonresearch.com/careers",
+  "listing_url": "https://www.gravitontrading.com/careers",
+  "family": "greenhouse",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Core Engineering",
+        "Finance",
+        "Human Resources",
+        "Network Engineering",
+        "Quantitative Trading",
+        "Risk Management",
+        "Trade Support"
+      ],
+      "native_param": null,
+      "note": "Populated from the board data into select#departments-select[name=departments-select]; local."
+    },
+    {
+      "key": "location",
+      "label": "Office",
+      "kind": "multi",
+      "values": [
+        "Amsterdam",
+        "Gurgaon",
+        "London",
+        "New York",
+        "Noida",
+        "Singapore"
+      ],
+      "native_param": null,
+      "note": "Populated into select#offices-select[name=offices-select]; local."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "gravitonresearch.com/careers redirects to gravitontrading.com/careers, which embeds a local Greenhouse board: an iframe page (greenhouse-embed-local.html) rendering data/greenhouse_jobs.json, with board.filters.include_department_filter and include_office_filter true. The only controls are select#departments-select and select#offices-select (both client-side); the embed page has no keyword input, so keyword search is unsupported. Scraper reads the JSON board and filters locally.",
+  "evidence": [
+    "https://www.gravitontrading.com/greenhouse-embed-local.html (select#departments-select, select#offices-select, no text input)",
+    "https://www.gravitontrading.com/data/greenhouse_jobs.json (board.filters include_department_filter/include_office_filter true; department and office id maps)",
+    "https://www.gravitontrading.com/greenhouse-embed-local.js"
+  ],
+  "verified": true
+}

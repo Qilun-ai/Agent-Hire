@@ -1,0 +1,897 @@
+[
+  {
+    "body": {
+      "n": "Asha Rao",
+      "s": "Backend engineer who builds Rust services on PostgreSQL"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "n": "Asha Rao",
+        "s": "Backend engineer who builds Rust services on PostgreSQL"
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/candidate"
+    },
+    "status": 200,
+    "step": "set candidate"
+  },
+  {
+    "body": {
+      "city": "",
+      "country": "India",
+      "email": "asha@example.net",
+      "github_url": "",
+      "linkedin_url": "",
+      "phone": "+91 98765 43210",
+      "website_url": ""
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "country": "India",
+        "email": "asha@example.net",
+        "phone": "+91 98765 43210"
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/identity"
+    },
+    "status": 200,
+    "step": "set profile identity"
+  },
+  {
+    "body": {
+      "cat": "general",
+      "id": "f5e265d607cb",
+      "n": "Rust"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "n": "Rust"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/skill"
+    },
+    "status": 200,
+    "step": "add a matching skill"
+  },
+  {
+    "body": {
+      "cat": "general",
+      "id": "399bd1ee5872",
+      "n": "PostgreSQL"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "n": "PostgreSQL"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/skill"
+    },
+    "status": 200,
+    "step": "add a matching skill"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-54d6701643f5295c9b64",
+      "pipeline": {
+        "added": [
+          "custom-54d6701643f5295c9b64"
+        ],
+        "already_in_pipeline": [],
+        "cart_size": 1,
+        "missing": []
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": true,
+        "company": "Example",
+        "description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+        "title": "Rust Backend Engineer",
+        "url": "https://example.test/jobs/custom-rust"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "create a custom lead with a matching profile"
+  },
+  {
+    "body": {
+      "asset": "",
+      "base_score": 0,
+      "base_signal_score": 0,
+      "budget": "",
+      "company": "Example",
+      "contact_lookup": {},
+      "cover_letter_asset": "",
+      "created_at": "<string>",
+      "description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+      "events": [],
+      "feedback": "",
+      "feedback_note": "",
+      "fit_bullets": [],
+      "followup_due_at": "<string>",
+      "followup_sequence": [],
+      "gaps": [],
+      "job_id": "custom-54d6701643f5295c9b64",
+      "keyword_coverage": {},
+      "kind": "job",
+      "last_contacted_at": "<string>",
+      "lead_quality_reason": "",
+      "lead_quality_score": 0,
+      "learning_delta": 0,
+      "learning_reason": "",
+      "location": "",
+      "match_points": [],
+      "outreach_dm": "",
+      "outreach_email": "",
+      "outreach_reply": "",
+      "platform": "careers",
+      "proof_snippet": "",
+      "proposal_draft": "",
+      "reason": "",
+      "resume_asset": "",
+      "resume_version": 0,
+      "score": 0,
+      "selected_projects": [],
+      "seniority_level": "unknown",
+      "signal_reason": "",
+      "signal_score": 0,
+      "signal_tags": [],
+      "source_meta": {
+        "added_at": "<string>",
+        "agent_note": "added by hand",
+        "apply_url": "https://example.test/jobs/custom-rust",
+        "company_slug": "custom",
+        "date_posted": "<datetime>",
+        "experience_level": "mid",
+        "full_description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+        "index_job_id": "custom-54d6701643f5295c9b64",
+        "is_beginner": false,
+        "min_years_experience": 3,
+        "posted_basis": "first_seen",
+        "seniority_level": "unknown",
+        "source": "agent",
+        "workplace_type": null
+      },
+      "status": "discovered",
+      "tech_stack": [
+        "rust",
+        "postgresql",
+        "distributed systems",
+        "data processing",
+        "reliability",
+        "production"
+      ],
+      "title": "Rust Backend Engineer",
+      "urgency": "",
+      "url": "https://example.test/jobs/custom-rust"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/custom-54d6701643f5295c9b64"
+    },
+    "status": 200,
+    "step": "scores on a newly created lead"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-4c79219d97b66fc605cb"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": false,
+        "company": "Example",
+        "description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+        "title": "Backend Platform Engineer",
+        "url": "https://example.test/jobs/promoted-rust"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "create a job to promote separately"
+  },
+  {
+    "body": {
+      "added": [
+        "custom-4c79219d97b66fc605cb"
+      ],
+      "already_in_pipeline": [],
+      "cart_size": 2,
+      "missing": []
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "job_refs": [
+          "custom-4c79219d97b66fc605cb"
+        ]
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/promote"
+    },
+    "status": 200,
+    "step": "promote the indexed job"
+  },
+  {
+    "body": {
+      "asset": "",
+      "base_score": 0,
+      "base_signal_score": 0,
+      "budget": "",
+      "company": "Example",
+      "contact_lookup": {},
+      "cover_letter_asset": "",
+      "created_at": "<string>",
+      "description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+      "events": [],
+      "feedback": "",
+      "feedback_note": "",
+      "fit_bullets": [],
+      "followup_due_at": "<string>",
+      "followup_sequence": [],
+      "gaps": [],
+      "job_id": "custom-4c79219d97b66fc605cb",
+      "keyword_coverage": {},
+      "kind": "job",
+      "last_contacted_at": "<string>",
+      "lead_quality_reason": "",
+      "lead_quality_score": 0,
+      "learning_delta": 0,
+      "learning_reason": "",
+      "location": "",
+      "match_points": [],
+      "outreach_dm": "",
+      "outreach_email": "",
+      "outreach_reply": "",
+      "platform": "careers",
+      "proof_snippet": "",
+      "proposal_draft": "",
+      "reason": "",
+      "resume_asset": "",
+      "resume_version": 0,
+      "score": 0,
+      "selected_projects": [],
+      "seniority_level": "unknown",
+      "signal_reason": "",
+      "signal_score": 0,
+      "signal_tags": [],
+      "source_meta": {
+        "added_at": "<string>",
+        "agent_note": "",
+        "apply_url": "https://example.test/jobs/promoted-rust",
+        "company_slug": "custom",
+        "date_posted": "<datetime>",
+        "experience_level": "mid",
+        "full_description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+        "index_job_id": "custom-4c79219d97b66fc605cb",
+        "is_beginner": false,
+        "min_years_experience": 3,
+        "posted_basis": "first_seen",
+        "seniority_level": "unknown",
+        "source": "agent",
+        "workplace_type": null
+      },
+      "status": "discovered",
+      "tech_stack": [
+        "platform",
+        "rust",
+        "postgresql",
+        "distributed systems",
+        "data processing",
+        "reliability",
+        "production"
+      ],
+      "title": "Backend Platform Engineer",
+      "urgency": "",
+      "url": "https://example.test/jobs/promoted-rust"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/custom-4c79219d97b66fc605cb"
+    },
+    "status": 200,
+    "step": "scores on a promoted lead"
+  },
+  {
+    "body": {
+      "detail": "Invalid job ID format"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "feedback": "good"
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/invalid%40id/feedback"
+    },
+    "status": 400,
+    "step": "invalid lead id"
+  },
+  {
+    "body": {
+      "detail": "Lead not found"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "feedback": "good"
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/missing/feedback"
+    },
+    "status": 404,
+    "step": "missing lead"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "ctx": {
+            "expected": "'good', 'trash', 'too_generic', 'not_ai', 'already_contacted', 'relevant', 'not_relevant', 'duplicate', 'low_quality' or 'incorrect_category'"
+          },
+          "input": "not_freelance",
+          "loc": [
+            "body",
+            "feedback"
+          ],
+          "msg": "Input should be 'good', 'trash', 'too_generic', 'not_ai', 'already_contacted', 'relevant', 'not_relevant', 'duplicate', 'low_quality' or 'incorrect_category'",
+          "type": "literal_error"
+        },
+        {
+          "input": true,
+          "loc": [
+            "body",
+            "extra"
+          ],
+          "msg": "Extra inputs are not permitted",
+          "type": "extra_forbidden"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "extra": true,
+        "feedback": "not_freelance"
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/custom-54d6701643f5295c9b64/feedback"
+    },
+    "status": 422,
+    "step": "invalid feedback model"
+  },
+  {
+    "body": {
+      "asset": "",
+      "base_score": 0,
+      "base_signal_score": 0,
+      "budget": "",
+      "company": "Example",
+      "contact_lookup": {},
+      "cover_letter_asset": "",
+      "created_at": "<string>",
+      "description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+      "events": [
+        {
+          "action": "feedback=already_contacted",
+          "ts": "<string>"
+        }
+      ],
+      "feedback": "already_contacted",
+      "feedback_note": "",
+      "fit_bullets": [],
+      "followup_due_at": "<string>",
+      "followup_sequence": [],
+      "gaps": [],
+      "job_id": "custom-54d6701643f5295c9b64",
+      "keyword_coverage": {},
+      "kind": "job",
+      "last_contacted_at": "<string>",
+      "lead_quality_reason": "",
+      "lead_quality_score": 0,
+      "learning_delta": 0,
+      "learning_reason": "",
+      "location": "",
+      "match_points": [],
+      "outreach_dm": "",
+      "outreach_email": "",
+      "outreach_reply": "",
+      "platform": "careers",
+      "proof_snippet": "",
+      "proposal_draft": "",
+      "reason": "",
+      "resume_asset": "",
+      "resume_version": 0,
+      "score": 0,
+      "selected_projects": [],
+      "signal_reason": "",
+      "signal_score": 0,
+      "signal_tags": [],
+      "source_meta": {
+        "added_at": "<string>",
+        "agent_note": "added by hand",
+        "apply_url": "https://example.test/jobs/custom-rust",
+        "company_slug": "custom",
+        "date_posted": "<datetime>",
+        "experience_level": "mid",
+        "full_description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+        "index_job_id": "custom-54d6701643f5295c9b64",
+        "is_beginner": false,
+        "min_years_experience": 3,
+        "posted_basis": "first_seen",
+        "seniority_level": "unknown",
+        "source": "agent",
+        "workplace_type": null
+      },
+      "status": "applied",
+      "tech_stack": [
+        "rust",
+        "postgresql",
+        "distributed systems",
+        "data processing",
+        "reliability",
+        "production"
+      ],
+      "title": "Rust Backend Engineer",
+      "urgency": "",
+      "url": "https://example.test/jobs/custom-rust"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "feedback": "already_contacted"
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/custom-54d6701643f5295c9b64/feedback"
+    },
+    "status": 200,
+    "step": "mark the lead already contacted"
+  },
+  {
+    "body": {
+      "asset": "",
+      "base_score": 0,
+      "base_signal_score": 0,
+      "budget": "",
+      "company": "Example",
+      "contact_lookup": {},
+      "cover_letter_asset": "",
+      "created_at": "<string>",
+      "description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+      "events": [
+        {
+          "action": "feedback=already_contacted",
+          "ts": "<string>"
+        },
+        {
+          "action": "feedback=too_generic",
+          "ts": "<string>"
+        }
+      ],
+      "feedback": "too_generic",
+      "feedback_note": "Needs more detail",
+      "fit_bullets": [],
+      "followup_due_at": "<string>",
+      "followup_sequence": [],
+      "gaps": [],
+      "job_id": "custom-54d6701643f5295c9b64",
+      "keyword_coverage": {},
+      "kind": "job",
+      "last_contacted_at": "<string>",
+      "lead_quality_reason": "",
+      "lead_quality_score": 0,
+      "learning_delta": 0,
+      "learning_reason": "",
+      "location": "",
+      "match_points": [],
+      "outreach_dm": "",
+      "outreach_email": "",
+      "outreach_reply": "",
+      "platform": "careers",
+      "proof_snippet": "",
+      "proposal_draft": "",
+      "reason": "",
+      "resume_asset": "",
+      "resume_version": 0,
+      "score": 0,
+      "selected_projects": [],
+      "signal_reason": "",
+      "signal_score": 0,
+      "signal_tags": [],
+      "source_meta": {
+        "added_at": "<string>",
+        "agent_note": "added by hand",
+        "apply_url": "https://example.test/jobs/custom-rust",
+        "company_slug": "custom",
+        "date_posted": "<datetime>",
+        "experience_level": "mid",
+        "full_description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+        "index_job_id": "custom-54d6701643f5295c9b64",
+        "is_beginner": false,
+        "min_years_experience": 3,
+        "posted_basis": "first_seen",
+        "seniority_level": "unknown",
+        "source": "agent",
+        "workplace_type": null
+      },
+      "status": "discarded",
+      "tech_stack": [
+        "rust",
+        "postgresql",
+        "distributed systems",
+        "data processing",
+        "reliability",
+        "production"
+      ],
+      "title": "Rust Backend Engineer",
+      "urgency": "",
+      "url": "https://example.test/jobs/custom-rust"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "feedback": "too_generic",
+        "note": "Needs more detail"
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/custom-54d6701643f5295c9b64/feedback"
+    },
+    "status": 200,
+    "step": "save feedback and discard"
+  },
+  {
+    "body": {
+      "asset": "",
+      "base_score": 0,
+      "base_signal_score": 0,
+      "budget": "",
+      "company": "Example",
+      "contact_lookup": {},
+      "cover_letter_asset": "",
+      "created_at": "<string>",
+      "description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+      "events": [
+        {
+          "action": "feedback=already_contacted",
+          "ts": "<string>"
+        },
+        {
+          "action": "feedback=too_generic",
+          "ts": "<string>"
+        }
+      ],
+      "feedback": "too_generic",
+      "feedback_note": "Needs more detail",
+      "fit_bullets": [],
+      "followup_due_at": "<string>",
+      "followup_sequence": [],
+      "gaps": [],
+      "job_id": "custom-54d6701643f5295c9b64",
+      "keyword_coverage": {},
+      "kind": "job",
+      "last_contacted_at": "<string>",
+      "lead_quality_reason": "",
+      "lead_quality_score": 0,
+      "learning_delta": 0,
+      "learning_reason": "",
+      "location": "",
+      "match_points": [],
+      "outreach_dm": "",
+      "outreach_email": "",
+      "outreach_reply": "",
+      "platform": "careers",
+      "proof_snippet": "",
+      "proposal_draft": "",
+      "reason": "",
+      "resume_asset": "",
+      "resume_version": 0,
+      "score": 0,
+      "selected_projects": [],
+      "seniority_level": "unknown",
+      "signal_reason": "",
+      "signal_score": 0,
+      "signal_tags": [],
+      "source_meta": {
+        "added_at": "<string>",
+        "agent_note": "added by hand",
+        "apply_url": "https://example.test/jobs/custom-rust",
+        "company_slug": "custom",
+        "date_posted": "<datetime>",
+        "experience_level": "mid",
+        "full_description": "Build backend applications with Rust and PostgreSQL. Maintain distributed systems and                        improve high-volume data processing. Work with the engineering team on reliability                        and operating production APIs. Candidates should have three years of backend experience.",
+        "index_job_id": "custom-54d6701643f5295c9b64",
+        "is_beginner": false,
+        "min_years_experience": 3,
+        "posted_basis": "first_seen",
+        "seniority_level": "unknown",
+        "source": "agent",
+        "workplace_type": null
+      },
+      "status": "discarded",
+      "tech_stack": [
+        "rust",
+        "postgresql",
+        "distributed systems",
+        "data processing",
+        "reliability",
+        "production"
+      ],
+      "title": "Rust Backend Engineer",
+      "urgency": "",
+      "url": "https://example.test/jobs/custom-rust"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/custom-54d6701643f5295c9b64"
+    },
+    "status": 200,
+    "step": "lead after feedback"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "llm_provider": "nvidia"
+      },
+      "method": "POST",
+      "path": "/api/v1/settings"
+    },
+    "status": 200,
+    "step": "configured model provider without credentials"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "defaults": {
+          "notice_period": "30 days"
+        },
+        "facts": {
+          "country": "India",
+          "email": "asha@example.net",
+          "phone": "+91 98765 43210",
+          "phone_country_code": "+91"
+        }
+      },
+      "method": "PUT",
+      "path": "/api/v1/fill/facts"
+    },
+    "status": 200,
+    "step": "save a fact and an answer default"
+  },
+  {
+    "body": {
+      "decided_by": "main_model",
+      "fills": [
+        {
+          "from": "facts",
+          "id": "email",
+          "key": "email",
+          "source": "rules",
+          "value": "asha@example.net"
+        },
+        {
+          "from": "facts",
+          "id": "phone",
+          "key": "phone",
+          "source": "rules",
+          "value": "98765 43210"
+        },
+        {
+          "from": "facts",
+          "id": "dial",
+          "key": "phone_country_code",
+          "source": "rules",
+          "value": "+91"
+        },
+        {
+          "from": "facts",
+          "id": "country",
+          "key": "country",
+          "source": "rules",
+          "value": "India"
+        }
+      ],
+      "job_data": {
+        "confidence": 0.0,
+        "source": "resume"
+      },
+      "skipped": [
+        {
+          "id": "consent",
+          "reason": "consent: tick it yourself"
+        },
+        {
+          "id": "human",
+          "reason": "human check: answer it yourself"
+        },
+        {
+          "id": "other",
+          "reason": "no matching value"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "fields": [
+          {
+            "id": "email",
+            "label": "Email"
+          },
+          {
+            "id": "phone",
+            "kind": "tel"
+          },
+          {
+            "autocomplete": "tel-country-code",
+            "id": "dial",
+            "kind": "select",
+            "label": "Dialing code",
+            "options": [
+              "+1",
+              "+91"
+            ]
+          },
+          {
+            "id": "country",
+            "kind": "select",
+            "label": "Country",
+            "options": [
+              "India",
+              "Ireland"
+            ]
+          },
+          {
+            "context": "I agree to the terms",
+            "id": "consent",
+            "kind": "checkbox"
+          },
+          {
+            "id": "human",
+            "label": "Are you a human?"
+          },
+          {
+            "id": "other",
+            "kind": "textarea",
+            "label": "Why are you interested in this role?"
+          }
+        ],
+        "job_id": "unknown"
+      },
+      "method": "POST",
+      "path": "/api/v1/fill/plan"
+    },
+    "status": 200,
+    "step": "fill plan with rules and no decision endpoint"
+  },
+  {
+    "body": {
+      "decided_by": "rules",
+      "fills": [
+        {
+          "from": "facts",
+          "id": "name",
+          "key": "email",
+          "source": "rules",
+          "value": "asha@example.net"
+        }
+      ],
+      "job_data": {
+        "confidence": 0.0,
+        "source": "resume"
+      },
+      "skipped": []
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "fields": [
+          {
+            "id": "name",
+            "kind": "text",
+            "label": "Email"
+          }
+        ],
+        "job_id": "custom-4c79219d97b66fc605cb"
+      },
+      "method": "POST",
+      "path": "/api/v1/fill/plan"
+    },
+    "status": 200,
+    "step": "fill a known job without model credentials"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "input": {
+            "options": [
+              7
+            ],
+            "required": "maybe"
+          },
+          "loc": [
+            "body",
+            "fields",
+            0,
+            "id"
+          ],
+          "msg": "Field required",
+          "type": "missing"
+        },
+        {
+          "input": 7,
+          "loc": [
+            "body",
+            "fields",
+            0,
+            "options",
+            0
+          ],
+          "msg": "Input should be a valid string",
+          "type": "string_type"
+        },
+        {
+          "input": "maybe",
+          "loc": [
+            "body",
+            "fields",
+            0,
+            "required"
+          ],
+          "msg": "Input should be a valid boolean, unable to interpret input",
+          "type": "bool_parsing"
+        },
+        {
+          "input": false,
+          "loc": [
+            "body",
+            "fields",
+            1
+          ],
+          "msg": "Input should be a valid dictionary or object to extract fields from",
+          "type": "model_attributes_type"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "fields": [
+          {
+            "options": [
+              7
+            ],
+            "required": "maybe"
+          },
+          false
+        ],
+        "job_id": ""
+      },
+      "method": "POST",
+      "path": "/api/v1/fill/plan"
+    },
+    "status": 422,
+    "step": "validate nested fill fields"
+  }
+]

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>Agent-Hire</title>
+  <!-- Letter A: black trapezoid -->
+  <path d="M200 64 H312 L452 448 H60 Z" fill="#000" stroke="#000" stroke-width="16" stroke-linejoin="round"/>
+  <!-- Head -->
+  <!-- Character, scaled down around the bottom-centre so the body still opens the A's base -->
+  <g transform="translate(256 456) scale(0.88) translate(-256 -456)">
+  <circle cx="256" cy="222" r="44" fill="#fff"/>
+  <!-- Body: forms the gap between the A's legs -->
+  <path d="M146 456 C148 396 170 330 224 312 Q256 303 288 312 C342 330 364 396 366 456 Z" fill="#fff"/>
+  <!-- Necktie: white with black outline -->
+  <g fill="#fff" stroke="#000" stroke-width="8" stroke-linejoin="round">
+    <!-- Tie blade -->
+    <path d="M246 334 L233 404 L256 430 L279 404 L266 334 Z"/>
+    <!-- Tie knot -->
+    <path d="M237 306 H275 L267 336 H245 Z"/>
+  </g>
+  </g>
+</svg>

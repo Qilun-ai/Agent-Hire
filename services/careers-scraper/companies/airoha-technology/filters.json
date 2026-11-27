@@ -1,0 +1,72 @@
+{
+  "company": "Airoha Technology",
+  "slug": "airoha-technology",
+  "portal": "https://www.airoha.com/recruit/jobs",
+  "listing_url": "https://careers.airoha.com/Jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "台灣",
+        "日本",
+        "美國"
+      ],
+      "native_param": "CountryTw",
+      "note": "Select name=CountryTw on the official /Jobs search form."
+    },
+    {
+      "key": "department",
+      "label": "Job category",
+      "kind": "multi",
+      "values": [
+        "研發設計",
+        "工程技術",
+        "業務行銷",
+        "管理/支援"
+      ],
+      "native_param": "REQ_TYPEs_Prefix",
+      "note": "Checkbox group name=REQ_TYPEs_Prefix; repeat the parameter for multiple categories."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience",
+      "kind": "multi",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "native_param": "WORK_EXP",
+      "note": "Select name=WORK_EXP; codes 0=2年以下, 1=3-5年, 2=6-10年, 3=11-15年, 4=16年以上."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "全職",
+        "兼職"
+      ],
+      "native_param": null,
+      "note": "Collected from job records; the search form has no employment-type control."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official airoha.com careers form posts GET to careers.airoha.com/Jobs with fields Keyword, CountryTw, CityTw, WORK_EXP and REQ_TYPEs_Prefix. The keyword query is confirmed: /Jobs returned 10 postings while /Jobs?keyword=engineer returned 2. CityTw is populated dynamically from CountryTw and exposed no options, so cities are not published as values.",
+  "evidence": [
+    "https://www.airoha.com/recruit/jobs",
+    "https://careers.airoha.com/Jobs?keyword=engineer",
+    "https://careers.airoha.com/Jobs"
+  ],
+  "verified": true
+}

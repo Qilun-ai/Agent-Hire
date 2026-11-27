@@ -1,0 +1,129 @@
+{
+  "company": "Taiwan Semiconductor (TSMC)",
+  "slug": "taiwan-semiconductor-tsmc",
+  "portal": "https://careers.tsmc.com/",
+  "listing_url": "https://careers.tsmc.com/en_US/careers/SearchJobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Taiwan",
+        "Canada",
+        "China",
+        "Germany-Dresden",
+        "Germany-Munich",
+        "Japan-Yokohama",
+        "Japan-Osaka",
+        "Japan-Tsukuba",
+        "Japan-Kumamoto",
+        "Korea",
+        "Netherlands",
+        "USA-Arizona",
+        "USA-California",
+        "USA-Massachusetts",
+        "USA-Texas",
+        "USA-Washington",
+        "USA-Washington, D.C."
+      ],
+      "native_param": "1277",
+      "note": "Form select name=1277; native values are option ids (Taiwan=13209; Canada=13210; China=13211; Germany-Dresden=2326764; Germany-Munich=4762540; Japan-Yokohama=13214; Japan-Osaka=13215; Japan-Tsukuba=13216; Japan-Kumamoto=13217; Korea=13212; Netherlands=13213; USA-Arizona=13221; USA-California=13218; USA-Massachusetts=13219; USA-Texas=13220; USA-Washington=13222; USA-Washington, D.C.=13223). Select 4178 is the dependent second-level location."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "R&D",
+        "Specialty Technology",
+        "IC Design Technology",
+        "Manufacturing (fabs)",
+        "Facility & Industrial Safety / Environmental Protection",
+        "Product Development",
+        "R&D Advanced Packaging Technology Development",
+        "Testing Development and Technology",
+        "Quality and Reliability",
+        "Information Technology",
+        "Internal Audit",
+        "Business Development",
+        "Customer Service",
+        "Corporate Planning",
+        "Finance / Accounting / Risk Management",
+        "Human Resources",
+        "Legal",
+        "Materials Management",
+        "Corporate Sustainability (ESG)",
+        "Administration",
+        "Accessibility Inclusion"
+      ],
+      "native_param": "558",
+      "note": "Form select name=558; native values are option ids (R&D=38617; Specialty Technology=38618; IC Design Technology=38619; Manufacturing (fabs)=38620; Facility & Industrial Safety / Environmental Protection=38621; Product Development=38622; R&D Advanced Packaging Technology Development=38623; Testing Development and Technology=38635; Quality and Reliability=38624; Information Technology=38625; Internal Audit=38626; Business Development=38627; Customer Service=38628; Corporate Planning=38629; Finance / Accounting / Risk Management=38630; Human Resources=38631; Legal=38632; Materials Management=38633; Corporate Sustainability (ESG)=7898835; Administration=38634; Accessibility Inclusion=38636)."
+    },
+    {
+      "key": "business_unit",
+      "label": "Organization",
+      "kind": "multi",
+      "values": [
+        "TSMC Group",
+        "ESMC",
+        "JASM"
+      ],
+      "native_param": "4177",
+      "note": "Form select name=4177; option ids TSMC Group=5410262, ESMC=5410263, JASM=5410264."
+    },
+    {
+      "key": "seniority",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [
+        "Technician",
+        "Associate Engineer / Admin",
+        "Engineer / Admin",
+        "Manager / Executive",
+        "Others"
+      ],
+      "native_param": "147",
+      "note": "Form select name=147; option ids (Technician=5710; Associate Engineer / Admin=39075; Engineer / Admin=5709; Manager / Executive=5708; Others=39076)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment Type",
+      "kind": "multi",
+      "values": [
+        "Regular",
+        "Temporary",
+        "Intern",
+        "Apprenticeship"
+      ],
+      "native_param": "542",
+      "note": "Form select name=542; option ids (Regular=5701; Temporary=5702; Intern=13100; Apprenticeship=4348108)."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Latest Update",
+      "native_param": "jobSort=postedDate"
+    },
+    {
+      "value": "title",
+      "label": "Title (A - Z)",
+      "native_param": "jobSort=jobname&jobSortDirection=asc"
+    }
+  ],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Avature portal. Rendered SearchJobs page has one GET/POST form action=https://careers.tsmc.com/en_US/careers/SearchJobs with method=post and fields: search (keyword), 4177 Organization, 1277 Location, 4178 dependent location, 558 Job Category, 147 Job Type, 542 Employment Type, hidden jobSort/jobSortDirection/listFilterMode. Paging uses jobRecordsPerPage and jobOffset and sorting uses the data-sortby=postedDate (Latest Update) and jobname (Title A-Z) controls. Cloudflare returns 403 to plain curl; a headless browser rendered the page and these controls. The adapter requests the unfiltered, title-sorted listing and applies filters locally.",
+  "evidence": [
+    "https://careers.tsmc.com/en_US/careers/SearchJobs/",
+    "https://careers.tsmc.com/en_US/careers/SearchJobs/?jobSort=jobname&jobSortDirection=asc&jobRecordsPerPage=10&jobOffset=0",
+    "rendered form: action=https://careers.tsmc.com/en_US/careers/SearchJobs method=post; select names 4177,1277,4178,558,147,542; input name=search",
+    "src/career_scraper/adapters/taiwan_semiconductor_tsmc.py"
+  ],
+  "verified": true
+}

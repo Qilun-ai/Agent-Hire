@@ -1,0 +1,51 @@
+{
+  "company": "Celigo",
+  "slug": "celigo",
+  "portal": "https://www.celigo.com/careers/",
+  "listing_url": "https://www.celigo.com/careers/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "CX : Customer Support",
+        "CX : Professional Services",
+        "G&A : GTO : Business Systems & Transformations",
+        "G&A : GTO : Data Analytics & Integrations",
+        "R&D : Product Management",
+        "S&M : Business Development",
+        "S&M : Marketing",
+        "S&M : Sales"
+      ],
+      "native_param": "department",
+      "note": "FacetWP facet data-name=department; option hashes are in the page's FWP_JSON"
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Hyderabad, India",
+        "US"
+      ],
+      "native_param": "location",
+      "note": "FacetWP facet data-name=location"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The careers page renders a FacetWP listing with search, department and location dropdowns. FacetWP refreshes via POST https://www.celigo.com/wp-json/facetwp/v1/refresh using the page nonce and facet names; no stable URL-only query was confirmed, so the scraper filters locally and may use the native AJAX only after re-reading the nonce.",
+  "evidence": [
+    "https://www.celigo.com/careers/",
+    "companies/celigo/fixtures/landing.html",
+    "window.FWP_JSON preload_data facets search/department/location",
+    "https://www.celigo.com/wp-json/facetwp/v1/refresh"
+  ],
+  "verified": true
+}

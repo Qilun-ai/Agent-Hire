@@ -1,0 +1,83 @@
+{
+  "company": "Navi Technologies",
+  "slug": "navi-technologies",
+  "portal": "https://navi.com/careers",
+  "listing_url": "https://navi.com/careers/jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Analytics",
+        "Brand",
+        "C2",
+        "Cash Loan Business",
+        "Chairman's Office",
+        "Claims",
+        "Compensation & Benefits",
+        "Compliance",
+        "Corporate Development",
+        "Credit Risk",
+        "Credit Strategy",
+        "Debt Management - Field",
+        "Engineering Office",
+        "Fund Raising",
+        "Housing Loan Business",
+        "Human Resources and People Strategy",
+        "IT Network & Infra",
+        "Infosec",
+        "Infrastructure & Engineering excellence",
+        "Product Design",
+        "Product Management",
+        "Product Office",
+        "Secretarial",
+        "Talent Acquisition"
+      ],
+      "native_param": null,
+      "note": "From FiltersData.DepartmentData in /api/careers/jobs; filtered client-side."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bengaluru, Karnataka, India",
+        "Bangalore, Karnataka, India",
+        "Hyderabad, Telangana, India",
+        "Guwahati, Assam, India",
+        "Mumbai, Maharashtra, India",
+        "Kolkata, West Bengal, India",
+        "Delhi, India",
+        "Vaishnavi Tech Square, Ibbaluru, Bellandur, Bengaluru, Karnataka, India"
+      ],
+      "native_param": null,
+      "note": "From FiltersData.LocationData; filtered client-side."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job type",
+      "kind": "multi",
+      "values": [
+        "Full Time",
+        "Intern"
+      ],
+      "native_param": null,
+      "note": "From FiltersData.JobTypeData; filtered client-side."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "https://navi.com/api/careers/jobs returns the complete unfiltered set (Total = FilteredCount = 38 job rows) together with FiltersData for Department, Location and Job Type. The jobs page exposes Department/Location/Job Type menus plus a 'Search jobs...' input, but the API ignores filter parameters: GET /api/careers/jobs?department=Compliance still returns Total=38/FilteredCount=38 with every department. Filtering is therefore client-side over the embedded rows, so there is no native query parameter to record.",
+  "evidence": [
+    "https://navi.com/api/careers/jobs (Total=38, FilteredCount=38, FiltersData.DepartmentData/LocationData/JobTypeData)",
+    "https://navi.com/api/careers/jobs?department=Compliance (still Total=38, FilteredCount=38; filter parameter ignored)",
+    "https://navi.com/careers/jobs"
+  ],
+  "verified": true
+}

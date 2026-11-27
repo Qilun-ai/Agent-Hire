@@ -1,0 +1,65 @@
+{
+  "company": "Druva",
+  "slug": "druva",
+  "portal": "https://www.druva.com/about/careers",
+  "listing_url": "https://www.druva.com/why-druva/explore/careers",
+  "family": "greenhouse",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Channel",
+        "Cloud Native",
+        "Cloud Ops",
+        "CloudApps",
+        "Corporate Sales Acquire",
+        "Customer Success Manager",
+        "Druva Cloud Platform",
+        "Engineering Escalations",
+        "Engineering Management",
+        "Engineering Product Security",
+        "Foundation Technology",
+        "HR",
+        "IT",
+        "Join Druva's Talent Community",
+        "Product",
+        "Product Security",
+        "Professional Services",
+        "Sales",
+        "Sales Engineering"
+      ],
+      "native_param": null,
+      "note": "greenhouseDepartments tiles link to /about/careers/departments/<slug>.html pages with data-department-filter; no query parameter."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Hyderabad, India",
+        "Letterkenny, Ireland",
+        "Pune, Maharashtra, India",
+        "Remote, UK",
+        "Remote, US",
+        "Santa Clara, CA",
+        "Worldwide"
+      ],
+      "native_param": null,
+      "note": "No location control; values are posted locations for local matching."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The official /about/careers entry redirects to /why-druva/explore/careers and ships the greenhouseDepartments AEM component with data-board-token=druva. It builds department tiles from boards-api.greenhouse.io/v1/boards/druva/departments and each tile opens a separate department page; the unfiltered jobs endpoint returns every row. There is no job keyword box (the only search input is the site-wide Algolia search) and no query-param filter on the entry page.",
+  "evidence": [
+    "https://www.druva.com/why-druva/explore/careers",
+    "https://boards-api.greenhouse.io/v1/boards/druva/jobs"
+  ],
+  "verified": true
+}

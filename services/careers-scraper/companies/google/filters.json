@@ -1,0 +1,82 @@
+{
+  "company": "Google",
+  "slug": "google",
+  "portal": "https://www.google.com/about/careers/applications/jobs/results/",
+  "listing_url": "https://www.google.com/about/careers/applications/jobs/results/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Accra, Ghana",
+        "Addison, TX, USA",
+        "Alameda, CA, USA",
+        "Alberta, CA",
+        "Amsterdam, Netherlands",
+        "Ann Arbor, MI, USA",
+        "Anyang-si, Gyeonggi-do, South Korea",
+        "Appling, GA, USA",
+        "Arizona, USA",
+        "Arkansas, USA",
+        "Atlanta, GA, USA",
+        "Atlanta, TX, USA",
+        "Auckland, New Zealand",
+        "Austin, TX, USA",
+        "Australian Capital Territory, AU",
+        "Bangkok, Thailand",
+        "Beijing, China",
+        "Bellevue, WA, USA",
+        "Belo Horizonte, Minas Gerais, Brazil",
+        "Belo Horizonte, State of Minas Gerais, Brazil",
+        "Bengaluru, Karnataka, India",
+        "Berlin, Germany",
+        "Bogotá, Bogota, Colombia",
+        "Boulder, CO, USA",
+        "Brazil"
+      ],
+      "native_param": "location",
+      "note": "?location=India narrowed 3,139 -> 263 jobs matched."
+    },
+    {
+      "key": "department",
+      "label": "Organizations",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Rendered as an 'Organizations filter options' panel; request parameter not confirmed, applied locally over job.organization."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job types",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Rendered as 'Job types filter options'; request parameter not confirmed, applied locally."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "Remote locations are flagged in each job row; local."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Server-rendered results page: ?q= filters natively (3,139 unfiltered -> 1,398 for q=software engineer) and ?location= filters natively (-> 263 for India), both reflected in the 'N jobs matched' counter and echoed into the search input value. The sidebar also exposes Locations, Job types, Organizations and Experience/Degree filter panels, but their query parameter names were not confirmed, so those are applied locally. Pagination uses the page's own next-page link.",
+  "evidence": [
+    "https://www.google.com/about/careers/applications/jobs/results/ (3,139 jobs matched)",
+    "https://www.google.com/about/careers/applications/jobs/results/?q=software%20engineer (1,398 jobs matched)",
+    "https://www.google.com/about/careers/applications/jobs/results/?location=India (263 jobs matched)"
+  ],
+  "verified": true
+}

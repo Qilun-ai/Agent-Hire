@@ -1,0 +1,47 @@
+{
+  "company": "PayU",
+  "slug": "payu",
+  "portal": "https://corporate.payu.com/careers/",
+  "listing_url": "https://corporate.payu.com/job-board/",
+  "family": "lever",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "gpo-emea-commercial",
+        "gpo-emea-finance",
+        "gpo-emea-risk",
+        "gpo-emea-talent-pool"
+      ],
+      "native_param": "department[]",
+      "note": "Checkbox name=department[]; submitted slug values map to 'GPO EMEA - Commercial', 'GPO EMEA - Finance', 'GPO EMEA - Risk', 'GPO EMEA - Talent Pool'."
+    },
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "bucharest-romania",
+        "poznan-poland",
+        "prague-czech-republic",
+        "warsaw-poland"
+      ],
+      "native_param": "location[]",
+      "note": "Checkbox name=location[]; slugs map to Bucharest, Romania / Poznan, Poland / Prague, Czech Republic / Warsaw, Poland. Verified live: location[]=warsaw-poland shows 1 of 9 positions."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "corporate.payu.com/careers/ redirects to the company's own WordPress job board, corporate.payu.com/job-board/. The board is server-rendered ('Showing 9 of 9 positions', no pagination, no AJAX) and filters through a GET form (action /job-board/, method get) with two checkbox groups: department[] and location[]. There is no keyword input, so keyword matching is local. Each row links to a PayU-owned /job/<uuid>/ detail page; jobs.lever.co/payugpo is only the apply destination and is not used for membership or filtering.",
+  "evidence": [
+    "https://corporate.payu.com/job-board/ (GET form .filter--filters-list, checkboxes name=department[] and name=location[])",
+    "https://corporate.payu.com/job-board/?location%5B%5D=warsaw-poland ('Showing 1 of 9 positions')"
+  ],
+  "verified": true
+}

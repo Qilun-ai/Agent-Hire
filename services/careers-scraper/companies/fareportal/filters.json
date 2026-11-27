@@ -1,0 +1,74 @@
+{
+  "company": "FAREPORTAL",
+  "slug": "fareportal",
+  "portal": "https://www.fareportal.com/careers/",
+  "listing_url": "https://www.fareportal.com/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "jq",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Analytics",
+        "Data",
+        "IT",
+        "Product",
+        ".net",
+        "react",
+        "Technology"
+      ],
+      "native_param": "awsm_job_spec[job-category]",
+      "note": "Option values are WordPress term IDs: 57=Product, 63=IT, 65=Data, 67=.net, 69=react, 71=Technology, 73=Analytics."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [
+        "Full Time"
+      ],
+      "native_param": "awsm_job_spec[job-type]",
+      "note": "Option value 37 = Full Time."
+    },
+    {
+      "key": "location",
+      "label": "Job Location",
+      "kind": "multi",
+      "values": [
+        "Gurgaon",
+        "NYC",
+        "United States"
+      ],
+      "native_param": "awsm_job_spec[job-location]",
+      "note": "Option values 61=Gurgaon, 75=NYC, 59=United States."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Hybrid (work from office)",
+        "Hybrid , In-Office",
+        "Hybrid, Gurgaon IN",
+        "Hybrid, In-Office",
+        "Hybrid, work from office"
+      ],
+      "native_param": null,
+      "note": "Derived from posting text; WP Job Openings exposes no workplace facet."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The ledger /careers/ URL is a WordPress 404; the published board is the WP Job Openings archive at /jobs/. Its filter form POSTs to /wp-admin/admin-ajax.php with action=jobfilter plus jq (keyword) and awsm_job_spec[job-category|job-type|job-location]; the response is an HTML fragment of matching awsm-grid-item cards. A POST with jq=engineer returned 11 matching cards.",
+  "evidence": [
+    "https://www.fareportal.com/jobs/",
+    "https://www.fareportal.com/wp-admin/admin-ajax.php"
+  ],
+  "verified": true
+}

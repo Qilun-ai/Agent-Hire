@@ -1,0 +1,45 @@
+{
+  "company": "Cyware",
+  "slug": "cyware",
+  "portal": "https://cyware.com/careers",
+  "listing_url": "https://cyware.com/careers",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Customer Success",
+        "Engineering",
+        "Product / Research"
+      ],
+      "native_param": null,
+      "note": "No filter control in the page shell; values come from the company's collected records. The live /api/careers payload groups India roles by Client_Name (Engineering) and publishes no department on US Greenhouse rows."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "United States, Remote",
+        "Bengaluru, India"
+      ],
+      "native_param": null,
+      "note": "USA/India are separate tabs in the UI, not query parameters; values are the live listing's location labels."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Next.js careers page calls GET https://cyware.com/api/careers (no query string) and renders usJobs (Greenhouse board 'cyware') plus indiaJobs (Zoho Recruit). The USA/India tabs and the India Client_Name grouping are client-side; no keyword or facet parameter is sent, so all filtering must be local.",
+  "evidence": [
+    "https://cyware.com/api/careers",
+    "https://cyware.com/careers"
+  ],
+  "verified": true
+}

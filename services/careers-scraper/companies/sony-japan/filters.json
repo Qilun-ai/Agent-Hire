@@ -1,0 +1,71 @@
+{
+  "company": "Sony Japan",
+  "slug": "sony-japan",
+  "portal": "https://www.sony.com/en/SonyInfo/Careers/",
+  "listing_url": "https://app.zookeep.com/career/sonygroupcorp",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Work location",
+      "kind": "multi",
+      "values": [
+        "品川",
+        "品川/みなとみらい/厚木",
+        "品川/大崎/みなとみらい/厚木",
+        "大崎",
+        "汐留（港区）"
+      ],
+      "native_param": null,
+      "note": "ZooKeep options endpoint publishes these locations, but ?location=品川 still returned 汐留/大崎 rows, so the parameter is not honoured."
+    },
+    {
+      "key": "department",
+      "label": "Function",
+      "kind": "multi",
+      "values": [
+        "Accounting",
+        "Business Operations",
+        "Compliance / Risk",
+        "DevOps / SRE",
+        "Full Stack Engineering",
+        "Human Resources",
+        "Legal / Counsel",
+        "Partnerships / Alliances",
+        "Product Management",
+        "Project / Program Management",
+        "QA / Test Engineering",
+        "Research / R&D",
+        "Security",
+        "Security Engineering",
+        "Software Engineering (Backend)",
+        "Strategy / Corporate Planning"
+      ],
+      "native_param": null,
+      "note": "ZooKeep function titles; the options endpoint lists function ids only."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "正社員",
+        "契約社員"
+      ],
+      "native_param": null,
+      "note": "ZooKeep employmentTypes permanent/fixedterm."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Sony Japan publishes four listings; this schema describes the ZooKeep boards reached from sony.co.jp/recruit/mid-career (sonygroupcorp, sonycorp, sonysemiconductorsolutions). GET https://app.zookeep.com/api/public/career_site/{org}/job_postings/?search=&limit=&offset=&ordering=title is unfiltered; search=エンジニア returned 18 of 36 rows, so keyword search is native. The options endpoint (.../job_postings/options/) returns locations, function ids and employmentTypes but no filter parameter names; ?location= was ignored. The fourth listing, careers.playstation.com/ja/locations/tokyo/mid-professional/job, has no filter controls.",
+  "evidence": [
+    "https://app.zookeep.com/api/public/career_site/sonygroupcorp/job_postings/options/",
+    "https://app.zookeep.com/api/public/career_site/sonygroupcorp/job_postings/?search=%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2&limit=99&offset=0&ordering=title"
+  ],
+  "verified": true
+}

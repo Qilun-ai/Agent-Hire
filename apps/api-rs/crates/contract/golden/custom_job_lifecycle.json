@@ -1,0 +1,1031 @@
+[
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-33424b74785e25ccf34a",
+      "pipeline": {
+        "added": [
+          "custom-33424b74785e25ccf34a"
+        ],
+        "already_in_pipeline": [],
+        "cart_size": 1,
+        "missing": []
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": true,
+        "company": "Nimbus Robotics",
+        "description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+        "location": "Hyderabad, Telangana, India",
+        "title": "Senior Backend Engineer, Fleet Platform",
+        "url": "http://127.0.0.1:8099/jobs/nr-1042/",
+        "workplace_type": "hybrid"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "add a custom job"
+  },
+  {
+    "body": {
+      "classification": {
+        "by_source": {},
+        "classified": 0,
+        "remaining": 1,
+        "software_jobs": 1
+      },
+      "companies_available": 237,
+      "decision_endpoints": [],
+      "department_model": {
+        "active_jobs": 1,
+        "judged": 0,
+        "model": false,
+        "remaining": 1
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 1,
+        "jobs_last_24h": 1,
+        "jobs_software": 1,
+        "jobs_total": 1,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs_dir": "<data>/jobs",
+      "level_model": {
+        "active_jobs": 1,
+        "device": "not loaded",
+        "judged": 0,
+        "model": false,
+        "remaining": 1
+      },
+      "scrape": {
+        "active": null,
+        "recent": [],
+        "refresh_hours": 12.0
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/jobindex/status"
+    },
+    "status": 200,
+    "step": "index status counts it"
+  },
+  {
+    "body": {
+      "active": 1,
+      "apply_url": "http://127.0.0.1:8099/jobs/nr-1042/",
+      "baseline": 0,
+      "company": "Nimbus Robotics",
+      "company_slug": "custom",
+      "content_hash": "aa72dbd2dbbf5aac468f983e9313b50f9f8e867e0d5e4b92c9743bafdd5ae039",
+      "country_codes": ",IN,",
+      "date_posted": null,
+      "department": null,
+      "department_model": null,
+      "description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+      "employment_type": null,
+      "first_seen_at": "<string>",
+      "id": "custom-33424b74785e25ccf34a",
+      "last_seen_at": "<string>",
+      "lead_id": "custom-33424b74785e25ccf34a",
+      "location_text": "Hyderabad, Telangana, India",
+      "locations": [
+        "Hyderabad, Telangana, India"
+      ],
+      "min_years": 5,
+      "posted_source": null,
+      "rule_level": "senior",
+      "rule_software": 1,
+      "rules_version": 5,
+      "salary": null,
+      "skills": [
+        "platform",
+        "kafka",
+        "postgresql",
+        "on-call",
+        "slos"
+      ],
+      "title": "Senior Backend Engineer, Fleet Platform",
+      "url": "http://127.0.0.1:8099/jobs/nr-1042/",
+      "workplace_type": "hybrid"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/jobindex/jobs/custom-33424b74785e25ccf34a"
+    },
+    "status": 200,
+    "step": "read it from the index"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 1,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 1
+        },
+        "levels": {
+          "senior": 1
+        },
+        "top_companies": [
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "backend",
+        "role_family": "software",
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 1,
+        "jobs_last_24h": 1,
+        "jobs_software": 1,
+        "jobs_total": 1,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Nimbus Robotics",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": true,
+          "job_ref": "custom-33424b74785e25ccf34a",
+          "level": "senior",
+          "level_source": "stated",
+          "location": "Hyderabad, Telangana, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 5,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Senior Backend Engineer, Fleet Platform",
+          "top_skills": [
+            "platform",
+            "kafka",
+            "postgresql",
+            "on-call",
+            "slos"
+          ],
+          "url": "http://127.0.0.1:8099/jobs/nr-1042/",
+          "workplace": "hybrid"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 1,
+      "total_postings": 1
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "role": "backend"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "search finds it"
+  },
+  {
+    "body": {
+      "asset": "",
+      "base_score": 0,
+      "base_signal_score": 0,
+      "budget": "",
+      "company": "Nimbus Robotics",
+      "contact_lookup": {},
+      "cover_letter_asset": "",
+      "created_at": "<string>",
+      "description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+      "events": [],
+      "feedback": "",
+      "feedback_note": "",
+      "fit_bullets": [],
+      "followup_due_at": "<string>",
+      "followup_sequence": [],
+      "gaps": [],
+      "job_id": "custom-33424b74785e25ccf34a",
+      "keyword_coverage": {},
+      "kind": "job",
+      "last_contacted_at": "<string>",
+      "lead_quality_reason": "",
+      "lead_quality_score": 0,
+      "learning_delta": 0,
+      "learning_reason": "",
+      "location": "Hyderabad, Telangana, India",
+      "match_points": [],
+      "outreach_dm": "",
+      "outreach_email": "",
+      "outreach_reply": "",
+      "platform": "careers",
+      "proof_snippet": "",
+      "proposal_draft": "",
+      "reason": "",
+      "resume_asset": "",
+      "resume_version": 0,
+      "score": 0,
+      "selected_projects": [],
+      "seniority_level": "senior",
+      "signal_reason": "",
+      "signal_score": 0,
+      "signal_tags": [],
+      "source_meta": {
+        "added_at": "<string>",
+        "agent_note": "added by hand",
+        "apply_url": "http://127.0.0.1:8099/jobs/nr-1042/",
+        "company_slug": "custom",
+        "date_posted": "<datetime>",
+        "experience_level": "senior",
+        "full_description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+        "index_job_id": "custom-33424b74785e25ccf34a",
+        "is_beginner": false,
+        "min_years_experience": 5,
+        "posted_basis": "first_seen",
+        "seniority_level": "senior",
+        "source": "agent",
+        "workplace_type": "hybrid"
+      },
+      "status": "discovered",
+      "tech_stack": [
+        "platform",
+        "kafka",
+        "postgresql",
+        "on-call",
+        "slos"
+      ],
+      "title": "Senior Backend Engineer, Fleet Platform",
+      "urgency": "",
+      "url": "http://127.0.0.1:8099/jobs/nr-1042/"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a"
+    },
+    "status": 200,
+    "step": "lead detail"
+  },
+  {
+    "body": [
+      {
+        "asset": "",
+        "base_score": 0,
+        "base_signal_score": 0,
+        "budget": "",
+        "company": "Nimbus Robotics",
+        "contact_lookup": {},
+        "cover_letter_asset": "",
+        "created_at": "<string>",
+        "description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+        "feedback": "",
+        "feedback_note": "",
+        "fit_bullets": [],
+        "followup_due_at": "<string>",
+        "followup_sequence": [],
+        "gaps": [],
+        "job_id": "custom-33424b74785e25ccf34a",
+        "keyword_coverage": {},
+        "kind": "job",
+        "last_contacted_at": "<string>",
+        "lead_quality_reason": "",
+        "lead_quality_score": 0,
+        "learning_delta": 0,
+        "learning_reason": "",
+        "location": "Hyderabad, Telangana, India",
+        "match_points": [],
+        "outreach_dm": "",
+        "outreach_email": "",
+        "outreach_reply": "",
+        "platform": "careers",
+        "proof_snippet": "",
+        "proposal_draft": "",
+        "reason": "",
+        "resume_asset": "",
+        "resume_version": 0,
+        "score": 0,
+        "selected_projects": [],
+        "seniority_level": "senior",
+        "signal_reason": "",
+        "signal_score": 0,
+        "signal_tags": [],
+        "source_meta": {
+          "added_at": "<string>",
+          "agent_note": "added by hand",
+          "apply_url": "http://127.0.0.1:8099/jobs/nr-1042/",
+          "company_slug": "custom",
+          "date_posted": "<datetime>",
+          "experience_level": "senior",
+          "full_description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+          "index_job_id": "custom-33424b74785e25ccf34a",
+          "is_beginner": false,
+          "min_years_experience": 5,
+          "posted_basis": "first_seen",
+          "seniority_level": "senior",
+          "source": "agent",
+          "workplace_type": "hybrid"
+        },
+        "status": "discovered",
+        "tech_stack": [
+          "platform",
+          "kafka",
+          "postgresql",
+          "on-call",
+          "slos"
+        ],
+        "title": "Senior Backend Engineer, Fleet Platform",
+        "urgency": "",
+        "url": "http://127.0.0.1:8099/jobs/nr-1042/"
+      }
+    ],
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads"
+    },
+    "status": 200,
+    "step": "leads list"
+  },
+  {
+    "body": {
+      "companies": [
+        {
+          "count": 1,
+          "value": "Nimbus Robotics"
+        }
+      ],
+      "counts": {
+        "accepted": 0,
+        "accepted_after_interview": 0,
+        "applied": 0,
+        "approved": 0,
+        "discarded": 0,
+        "discovered": 1,
+        "evaluated": 0,
+        "evaluating": 0,
+        "hot": 0,
+        "interviewing": 0,
+        "ready": 0,
+        "rejected": 0,
+        "rejected_after_interview": 0,
+        "tailoring": 0
+      },
+      "locations": [
+        {
+          "count": 1,
+          "value": "Hyderabad, Telangana, India"
+        }
+      ],
+      "platforms": [
+        {
+          "count": 1,
+          "value": "careers"
+        }
+      ],
+      "skills": [],
+      "sponsorship": {
+        "not_stated": 1
+      },
+      "total": 1
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/summary"
+    },
+    "status": 200,
+    "step": "summary"
+  },
+  {
+    "body": {
+      "jobs": [
+        {
+          "company": "Nimbus Robotics",
+          "in_cart": true,
+          "job_id": "custom-33424b74785e25ccf34a",
+          "location": "Hyderabad, Telangana, India",
+          "prepared": false,
+          "prepared_at": "<string>",
+          "resume_ready": false,
+          "status": "discovered",
+          "title": "Senior Backend Engineer, Fleet Platform",
+          "url": "http://127.0.0.1:8099/jobs/nr-1042/"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/extension/jobs"
+    },
+    "status": 200,
+    "step": "extension queue"
+  },
+  {
+    "body": {
+      "job_ids": [
+        "custom-33424b74785e25ccf34a"
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/cart"
+    },
+    "status": 200,
+    "step": "cart"
+  },
+  {
+    "body": {
+      "anything_else": "",
+      "apply_url": "http://127.0.0.1:8099/jobs/nr-1042/",
+      "ats_score": 0.0,
+      "company": "Nimbus Robotics",
+      "experience": [],
+      "identity": {
+        "citizenship": null,
+        "email": "",
+        "links": [],
+        "locations": [],
+        "name": "",
+        "phone": "",
+        "willing_to_relocate": null,
+        "work_authorization": null
+      },
+      "job_id": "custom-33424b74785e25ccf34a",
+      "prepared_at": "<string>",
+      "projects": [],
+      "resume_path": "",
+      "resume_paths": {},
+      "resume_ref": "",
+      "resume_url": "",
+      "skills": [],
+      "title": "Senior Backend Engineer, Fleet Platform"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/fill-context?job_id=custom-33424b74785e25ccf34a"
+    },
+    "status": 200,
+    "step": "fill context by job"
+  },
+  {
+    "body": {
+      "detail": "no prepared application matches that URL"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/fill-context?url=http%3A%2F%2F127.0.0.1%3A8099%2Fjobs%2Fnr-1042%2F"
+    },
+    "status": 404,
+    "step": "fill context by url"
+  },
+  {
+    "body": {
+      "added": [],
+      "already_in_pipeline": [
+        "custom-33424b74785e25ccf34a"
+      ],
+      "cart_size": 1,
+      "missing": []
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_cart": true,
+        "job_refs": [
+          "custom-33424b74785e25ccf34a"
+        ]
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/promote"
+    },
+    "status": 200,
+    "step": "promote again (idempotent)"
+  },
+  {
+    "body": {
+      "asset": "",
+      "base_score": 0,
+      "base_signal_score": 0,
+      "budget": "",
+      "company": "Nimbus Robotics",
+      "contact_lookup": {},
+      "cover_letter_asset": "",
+      "created_at": "<string>",
+      "description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+      "events": [
+        {
+          "action": "feedback=good",
+          "ts": "<string>"
+        }
+      ],
+      "feedback": "good",
+      "feedback_note": "great stack",
+      "fit_bullets": [],
+      "followup_due_at": "<string>",
+      "followup_sequence": [],
+      "gaps": [],
+      "job_id": "custom-33424b74785e25ccf34a",
+      "keyword_coverage": {},
+      "kind": "job",
+      "last_contacted_at": "<string>",
+      "lead_quality_reason": "",
+      "lead_quality_score": 0,
+      "learning_delta": 0,
+      "learning_reason": "",
+      "location": "Hyderabad, Telangana, India",
+      "match_points": [],
+      "outreach_dm": "",
+      "outreach_email": "",
+      "outreach_reply": "",
+      "platform": "careers",
+      "proof_snippet": "",
+      "proposal_draft": "",
+      "reason": "",
+      "resume_asset": "",
+      "resume_version": 0,
+      "score": 0,
+      "selected_projects": [],
+      "signal_reason": "",
+      "signal_score": 0,
+      "signal_tags": [],
+      "source_meta": {
+        "added_at": "<string>",
+        "agent_note": "added by hand",
+        "apply_url": "http://127.0.0.1:8099/jobs/nr-1042/",
+        "company_slug": "custom",
+        "date_posted": "<datetime>",
+        "experience_level": "senior",
+        "full_description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+        "index_job_id": "custom-33424b74785e25ccf34a",
+        "is_beginner": false,
+        "min_years_experience": 5,
+        "posted_basis": "first_seen",
+        "seniority_level": "senior",
+        "source": "agent",
+        "workplace_type": "hybrid"
+      },
+      "status": "discovered",
+      "tech_stack": [
+        "platform",
+        "kafka",
+        "postgresql",
+        "on-call",
+        "slos"
+      ],
+      "title": "Senior Backend Engineer, Fleet Platform",
+      "urgency": "",
+      "url": "http://127.0.0.1:8099/jobs/nr-1042/"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "feedback": "good",
+        "note": "great stack"
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a/feedback"
+    },
+    "status": 200,
+    "step": "feedback"
+  },
+  {
+    "body": {
+      "asset": "",
+      "base_score": 0,
+      "base_signal_score": 0,
+      "budget": "",
+      "company": "Nimbus Robotics",
+      "contact_lookup": {},
+      "cover_letter_asset": "",
+      "created_at": "<string>",
+      "description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+      "events": [
+        {
+          "action": "feedback=good",
+          "ts": "<string>"
+        },
+        {
+          "action": "followup_due=<datetime>",
+          "ts": "<string>"
+        },
+        {
+          "action": "search_feedback=good",
+          "ts": "<string>"
+        }
+      ],
+      "feedback": "good",
+      "feedback_note": "great stack",
+      "fit_bullets": [],
+      "followup_due_at": "<string>",
+      "followup_sequence": [],
+      "gaps": [],
+      "job_id": "custom-33424b74785e25ccf34a",
+      "keyword_coverage": {},
+      "kind": "job",
+      "last_contacted_at": "<string>",
+      "lead_quality_reason": "",
+      "lead_quality_score": 0,
+      "learning_delta": 0,
+      "learning_reason": "",
+      "location": "Hyderabad, Telangana, India",
+      "match_points": [],
+      "outreach_dm": "",
+      "outreach_email": "",
+      "outreach_reply": "",
+      "platform": "careers",
+      "proof_snippet": "",
+      "proposal_draft": "",
+      "reason": "",
+      "resume_asset": "",
+      "resume_version": 0,
+      "score": 0,
+      "selected_projects": [],
+      "signal_reason": "",
+      "signal_score": 0,
+      "signal_tags": [],
+      "source_meta": {
+        "added_at": "<string>",
+        "agent_note": "added by hand",
+        "apply_url": "http://127.0.0.1:8099/jobs/nr-1042/",
+        "company_slug": "custom",
+        "date_posted": "<datetime>",
+        "experience_level": "senior",
+        "full_description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+        "index_job_id": "custom-33424b74785e25ccf34a",
+        "is_beginner": false,
+        "min_years_experience": 5,
+        "posted_basis": "first_seen",
+        "seniority_level": "senior",
+        "source": "agent",
+        "workplace_type": "hybrid"
+      },
+      "status": "discovered",
+      "tech_stack": [
+        "platform",
+        "kafka",
+        "postgresql",
+        "on-call",
+        "slos"
+      ],
+      "title": "Senior Backend Engineer, Fleet Platform",
+      "urgency": "",
+      "url": "http://127.0.0.1:8099/jobs/nr-1042/"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "days": 7
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a/followup"
+    },
+    "status": 200,
+    "step": "follow-up"
+  },
+  {
+    "body": {
+      "filled": 2,
+      "ok": true,
+      "skipped": 1
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "filled": [
+          "First name",
+          "Email"
+        ],
+        "skipped": [
+          "Gender"
+        ],
+        "url": "http://127.0.0.1:8099/jobs/nr-1042/apply.html"
+      },
+      "method": "POST",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a/filled"
+    },
+    "status": 200,
+    "step": "extension reports a fill"
+  },
+  {
+    "body": {
+      "job_id": "custom-33424b74785e25ccf34a",
+      "ok": true,
+      "status": "applied"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a/applied"
+    },
+    "status": 200,
+    "step": "extension marks applied"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "status": "interviewing"
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a/status"
+    },
+    "status": 200,
+    "step": "status change"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "ctx": {
+            "expected": "'discovered', 'evaluating', 'tailoring', 'approved', 'applied', 'interviewing', 'rejected', 'accepted', 'discarded', 'matched', 'bidding', 'proposal_sent', 'awarded' or 'completed'"
+          },
+          "input": "bogus",
+          "loc": [
+            "body",
+            "status"
+          ],
+          "msg": "Input should be 'discovered', 'evaluating', 'tailoring', 'approved', 'applied', 'interviewing', 'rejected', 'accepted', 'discarded', 'matched', 'bidding', 'proposal_sent', 'awarded' or 'completed'",
+          "type": "literal_error"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "status": "bogus"
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a/status"
+    },
+    "status": 422,
+    "step": "invalid status"
+  },
+  {
+    "body": [
+      {
+        "action": "extension_filled:2/3",
+        "job_id": "custom-33424b74785e25ccf34a",
+        "ts": "<string>"
+      },
+      {
+        "action": "feedback=good",
+        "job_id": "custom-33424b74785e25ccf34a",
+        "ts": "<string>"
+      },
+      {
+        "action": "followup_due=<datetime>",
+        "job_id": "custom-33424b74785e25ccf34a",
+        "ts": "<string>"
+      },
+      {
+        "action": "search_feedback=good",
+        "job_id": "custom-33424b74785e25ccf34a",
+        "ts": "<string>"
+      },
+      {
+        "action": "status_changed=applied",
+        "job_id": "custom-33424b74785e25ccf34a",
+        "ts": "<string>"
+      },
+      {
+        "action": "status_changed=interviewing",
+        "job_id": "custom-33424b74785e25ccf34a",
+        "ts": "<string>"
+      }
+    ],
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/events?job_id=custom-33424b74785e25ccf34a"
+    },
+    "status": 200,
+    "step": "events for the job"
+  },
+  {
+    "body": {
+      "has_more": false,
+      "items": [
+        {
+          "asset": "",
+          "base_score": 0,
+          "base_signal_score": 0,
+          "budget": "",
+          "company": "Nimbus Robotics",
+          "contact_lookup": {},
+          "cover_letter_asset": "",
+          "created_at": "<string>",
+          "description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+          "feedback": "good",
+          "feedback_note": "great stack",
+          "fit_bullets": [],
+          "followup_due_at": "<string>",
+          "followup_sequence": [],
+          "gaps": [],
+          "job_id": "custom-33424b74785e25ccf34a",
+          "keyword_coverage": {},
+          "kind": "job",
+          "last_contacted_at": "<string>",
+          "lead_quality_reason": "",
+          "lead_quality_score": 0,
+          "learning_delta": 0,
+          "learning_reason": "",
+          "location": "Hyderabad, Telangana, India",
+          "match_points": [],
+          "outreach_dm": "",
+          "outreach_email": "",
+          "outreach_reply": "",
+          "platform": "careers",
+          "proof_snippet": "",
+          "proposal_draft": "",
+          "reason": "",
+          "resume_asset": "",
+          "resume_version": 0,
+          "score": 0,
+          "selected_projects": [],
+          "seniority_level": "senior",
+          "signal_reason": "",
+          "signal_score": 0,
+          "signal_tags": [],
+          "source_meta": {
+            "added_at": "<string>",
+            "agent_note": "added by hand",
+            "apply_url": "http://127.0.0.1:8099/jobs/nr-1042/",
+            "company_slug": "custom",
+            "date_posted": "<datetime>",
+            "experience_level": "senior",
+            "full_description": "Build event-driven services in Go with Kafka and PostgreSQL. 5+ years of backend experience. Own on-call and SLOs.",
+            "index_job_id": "custom-33424b74785e25ccf34a",
+            "is_beginner": false,
+            "min_years_experience": 5,
+            "posted_basis": "first_seen",
+            "seniority_level": "senior",
+            "source": "agent",
+            "workplace_type": "hybrid"
+          },
+          "status": "interviewing",
+          "tech_stack": [
+            "platform",
+            "kafka",
+            "postgresql",
+            "on-call",
+            "slos"
+          ],
+          "title": "Senior Backend Engineer, Fleet Platform",
+          "urgency": "",
+          "url": "http://127.0.0.1:8099/jobs/nr-1042/"
+        }
+      ],
+      "limit": 25,
+      "page": 1,
+      "pages": 1,
+      "total": 1
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads?page=1&limit=25&view=applied&sort=newest"
+    },
+    "status": 200,
+    "step": "applied view"
+  },
+  {
+    "body": {
+      "detail": "Resume not generated yet"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a/pdf"
+    },
+    "status": 404,
+    "step": "pdf before tailoring"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a"
+    },
+    "status": 200,
+    "step": "delete the lead"
+  },
+  {
+    "body": {
+      "detail": "Lead not found"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/custom-33424b74785e25ccf34a"
+    },
+    "status": 404,
+    "step": "lead is gone"
+  },
+  {
+    "body": {
+      "index_deleted": 1,
+      "not_found": [],
+      "pipeline_deleted": 0
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "job_refs": [
+          "custom-33424b74785e25ccf34a"
+        ],
+        "scope": "both"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/delete"
+    },
+    "status": 200,
+    "step": "delete from the index"
+  },
+  {
+    "body": {
+      "classification": {
+        "by_source": {},
+        "classified": 0,
+        "remaining": 0,
+        "software_jobs": 0
+      },
+      "companies_available": 237,
+      "decision_endpoints": [],
+      "department_model": {
+        "active_jobs": 0,
+        "judged": 0,
+        "model": false,
+        "remaining": 0
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 0,
+        "jobs_last_24h": 0,
+        "jobs_software": 0,
+        "jobs_total": 0,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs_dir": "<data>/jobs",
+      "level_model": {
+        "active_jobs": 0,
+        "device": "not loaded",
+        "judged": 0,
+        "model": false,
+        "remaining": 0
+      },
+      "scrape": {
+        "active": null,
+        "recent": [],
+        "refresh_hours": 12.0
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/jobindex/status"
+    },
+    "status": 200,
+    "step": "index after delete"
+  }
+]

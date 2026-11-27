@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-definitions" width="0" height="0" aria-hidden="true">
+  <defs>
+    <path id="icon-plus" d="M12 5v14M5 12h14"/>
+    <path id="icon-close" d="m6 6 12 12M18 6 6 18"/>
+    <path id="icon-history" d="M4 4h16v16H4zM9 4v16"/>
+    <path id="icon-attach" d="m9 13 6-6a3 3 0 0 1 4 4l-8 8a5 5 0 0 1-7-7l8-8"/>
+    <path id="icon-trash" d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13"/>
+    <path id="icon-arrow" d="M9 5l7 7-7 7"/>
+  </defs>
+</svg>

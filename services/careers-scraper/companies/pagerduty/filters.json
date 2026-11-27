@@ -1,0 +1,79 @@
+{
+  "company": "PagerDuty",
+  "slug": "pagerduty",
+  "portal": "https://www.pagerduty.com/careers/",
+  "listing_url": "https://careers.pagerduty.com/jobs/search",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Atlanta",
+        "Boston",
+        "Lisbon",
+        "London",
+        "New York",
+        "San Francisco",
+        "Santiago",
+        "Toronto"
+      ],
+      "native_param": "cities[]",
+      "note": "Repeated checkbox parameter on the search form (filter_city_* inputs)."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "CA",
+        "CL",
+        "PT",
+        "GB",
+        "US"
+      ],
+      "native_param": "country_codes[]",
+      "note": "ISO-2 codes from the country_codes[] checkboxes."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Customer Success",
+        "Finance",
+        "IT",
+        "Marketing",
+        "People",
+        "Product Development",
+        "Sales",
+        "Security"
+      ],
+      "native_param": "category_uids[]",
+      "note": "The form submits a 32-hex uid per category (filter_category_1_0_N value); the label sits next to each checkbox, so label -> uid mapping has to be scraped from the listing HTML."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote",
+      "kind": "multi",
+      "values": [
+        "Remote"
+      ],
+      "native_param": "remote",
+      "note": "Single checkbox named remote with value 'true'."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "https://www.pagerduty.com/careers/ redirects to careers.pagerduty.com, whose unfiltered listing is GET /jobs/search (30 rows/page, one-based ?page=N). The listing page carries a real GET form (action /jobs/search, method get) with: query (keyword box, 'Search by job title, location, department, category, etc.'), location_uids (hidden, written by the location autocomplete), category_uids[], country_codes[], states[], cities[], remote and a hidden sort field with no published option list. Results are rendered client-side after an AWS WAF challenge, so the adapter renders the page in headless Chromium; the query contract itself is the portal's own form. States[] (8 values) and the geo location_uids slider are additional controls not modelled here.",
+  "evidence": [
+    "https://careers.pagerduty.com/jobs/search (GET form: query, location_uids, category_uids[], country_codes[], states[], cities[], remote, sort)",
+    "https://careers.pagerduty.com/jobs/search?query=engineer (query echoed into id=search_control_query_1_0 value='engineer')"
+  ],
+  "verified": true
+}

@@ -1,0 +1,99 @@
+{
+  "company": "Canva",
+  "slug": "canva",
+  "portal": "https://www.lifeatcanva.com/en/jobs/",
+  "listing_url": "https://www.lifeatcanva.com/en/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Content",
+        "Customer Happiness",
+        "Engineering",
+        "Marketing",
+        "People",
+        "Sales & Success"
+      ],
+      "native_param": "team",
+      "note": ""
+    },
+    {
+      "key": "job_family",
+      "label": "Sub-specialty",
+      "kind": "multi",
+      "values": [
+        "Account Management",
+        "Backend",
+        "Business Development",
+        "Communications",
+        "Content Strategy",
+        "Customer Service Operations",
+        "Customer Success Management",
+        "District Engagement Advocates",
+        "Frontend",
+        "Inbound Sales",
+        "Rewards",
+        "Security Engineering",
+        "Software Engineering"
+      ],
+      "native_param": "specialty",
+      "note": ""
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Australia",
+        "France",
+        "Germany",
+        "Korea",
+        "New Zealand",
+        "Philippines",
+        "United Kingdom",
+        "United States"
+      ],
+      "native_param": "country",
+      "note": ""
+    },
+    {
+      "key": "workplace_type",
+      "label": "Location Type",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Onsite",
+        "Remote"
+      ],
+      "native_param": "pattern",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Work Type",
+      "kind": "multi",
+      "values": [
+        "Contract & Freelance",
+        "Full-time"
+      ],
+      "native_param": "type",
+      "note": ""
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The native listing form #job-filter submits GET to /en/jobs/#results with search, team, specialty, country, pattern and type; option values above are the exact rendered option labels. This is Canva's own site, not a SmartRecruiters board.",
+  "evidence": [
+    "https://www.lifeatcanva.com/en/jobs/",
+    "companies/canva/research/page-0.html",
+    "form#job-filter: GET search/team/specialty/country/pattern/type"
+  ],
+  "verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "company": "Yellow.ai",
+  "slug": "yellow-ai",
+  "portal": "https://yellow.ai/career/",
+  "listing_url": "https://careers.yellow.ai/jobs/Careers",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Bangalore South"
+      ],
+      "native_param": null,
+      "note": "Zoho Recruit City facet; the widget filters the single loaded response in the browser."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "India"
+      ],
+      "native_param": null,
+      "note": "Zoho Recruit Country facet."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": null,
+      "note": "Zoho Recruit Job_Type facet."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote Job",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Remote_Job boolean facet in the widget info block; no enumerated option list is published."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The ledger URL /careers/ returns 404; the live official entry is yellow.ai/career/, which embeds a Zoho Recruit careers site at careers.yellow.ai. That widget calls GET https://careers.yellow.ai/recruit/v2/public/Job_Openings?pagename=Careers&source=CareerSite and renders the returned rows; at observation it returned one row (GTM recruiter, position filled). The response info block exposes facets Remote_Job, Job_Type, Industry, City and Country, and the widget's search and facet controls filter that already-loaded response client-side. The endpoint rejects extra page/filter parameters, so native_query is false.",
+  "evidence": [
+    "https://yellow.ai/career/",
+    "https://careers.yellow.ai/recruit/v2/public/Job_Openings?pagename=Careers&source=CareerSite"
+  ],
+  "verified": true
+}

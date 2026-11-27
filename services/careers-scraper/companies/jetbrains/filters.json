@@ -1,0 +1,91 @@
+{
+  "company": "JetBrains",
+  "slug": "jetbrains",
+  "portal": "https://www.jetbrains.com/careers/jobs/",
+  "listing_url": "https://www.jetbrains.com/careers/jobs/",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Amsterdam, Netherlands",
+        "Belgrade, Serbia",
+        "Berlin, Germany",
+        "Boston, Massachusetts",
+        "Foster City, California",
+        "Limassol, Cyprus",
+        "London, United Kingdom",
+        "Madrid, Spain",
+        "Marlton, New Jersey",
+        "Munich, Germany",
+        "Paphos, Cyprus",
+        "Prague, Czech Republic",
+        "Remote",
+        "Remote, Germany",
+        "Remote, United States",
+        "Shanghai, China",
+        "Warsaw, Poland",
+        "Yerevan, Armenia"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        ".NET and GameDev Marketing",
+        "Accounting Prague",
+        "AI DevTools Experience Product",
+        "Air Design",
+        "Americas Sales",
+        "Databases QA",
+        "Developer Advocacy",
+        "FlySto",
+        "Greater China Sales",
+        "GrowthBricks",
+        "IDEs",
+        "IDEs Infrastructure",
+        "Innovation Hub",
+        "JCP Core Foundation",
+        "JCP Core Foundation IAM",
+        "JCP Growth",
+        "Junie Base Quality",
+        "Kotlin Build Infrastructure",
+        "Labour Law, Employment [Legal]",
+        "Legal",
+        "Public Relations (PR) and Communications",
+        "Regional Marketing",
+        "Sales",
+        "Tax",
+        "TeamCity"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "job_family",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "The page exposes a Job Category filter, but no fixed option list is published in the fetched HTML."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The jobs page is a client-rendered app that loads the fixed Greenhouse feed https://resources.jetbrains.com/storage/greenhouse/greenhouse-data.json (32 rows) and filters/paginates it in the browser: 8 cards per page, with search, Locations, Job Category and Team controls. No request parameter reaches the feed, so all filters are local. Job detail/apply routes are on job-boards.eu.greenhouse.io/jetbrains.",
+  "evidence": [
+    "https://www.jetbrains.com/careers/jobs/",
+    "https://resources.jetbrains.com/storage/greenhouse/greenhouse-data.json",
+    "https://job-boards.eu.greenhouse.io/jetbrains"
+  ],
+  "verified": true
+}

@@ -1,0 +1,88 @@
+{
+  "company": "PhonePe",
+  "slug": "phonepe",
+  "portal": "https://www.phonepe.com/careers/",
+  "listing_url": "https://www.phonepe.com/careers/job-openings/",
+  "family": "smartrecruiters",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "By location",
+      "kind": "multi",
+      "values": [
+        "Bengaluru",
+        "Bhagalpur",
+        "Bhopal",
+        "Bhubaneshwar",
+        "Chennai",
+        "Delhi Shahdara",
+        "Gurgaon",
+        "Hubballi",
+        "Karnal",
+        "Kochi",
+        "Kolhapur",
+        "Mumbai",
+        "Navi Mumbai",
+        "Noida",
+        "Pune",
+        "Tirupati",
+        "Vadodara",
+        "Vijayawada"
+      ],
+      "native_param": null,
+      "note": "Client-side 'By location' dropdown fed from the company feed's location field; no request parameter."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Analytics",
+        "CX",
+        "Compliance",
+        "Consumer Payments Business",
+        "Design",
+        "Engineering",
+        "Finance & Accounting",
+        "Human Resources",
+        "Insurance Business",
+        "Legal",
+        "Lending Business",
+        "Marketing",
+        "Offline Merchants Business",
+        "Online Merchants Business",
+        "PR & Communications",
+        "Product Management",
+        "Share.Market",
+        "Tech Infra & IT",
+        "Trust & Safety"
+      ],
+      "native_param": null,
+      "note": "Published as department on every PUBLIC row of the company feed; there is no dedicated department dropdown on the page."
+    },
+    {
+      "key": "employment_type",
+      "label": "By type",
+      "kind": "multi",
+      "values": [
+        "Contract",
+        "Full-time",
+        "Intern"
+      ],
+      "native_param": null,
+      "note": "Client-side 'By type' dropdown fed from the feed's type field."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "phonepe.com/careers/ sends visitors to /careers/job-openings/, whose bundle fetches one static company feed (https://www.phonepe.com/apollo/job-postings/latest.json) and keeps rows where status == 'PUBLIC' and applyUrl is set (152 of 955 rows today). The page's controls (a free-text search box, 'By location', 'By type') are applied in the browser over that feed, and the feed itself takes no parameters, so there is no native filtered request; the scraper downloads the whole feed and filters locally. SmartRecruiters (jobs.smartrecruiters.com/PHONEPELIMITED/<id>) is only the per-posting detail/apply host, and its API is not used as a membership or filter source.",
+  "evidence": [
+    "https://www.phonepe.com/careers/job-openings/ (job-filter-container: search box, By location, By type; populated client-side)",
+    "https://www.phonepe.com/apollo/job-postings/latest.json (955 results, 152 PUBLIC rows with applyUrl; type and department fields)"
+  ],
+  "verified": true
+}

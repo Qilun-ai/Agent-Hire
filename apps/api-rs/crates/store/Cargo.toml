@@ -1,0 +1,21 @@
+[package]
+name = "agent-hire-store"
+description = "SQLite storage for the Agent-Hire backend: the app database and its repositories."
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+agent-hire-leadtext = { path = "../leadtext" }
+md-5.workspace = true
+percent-encoding.workspace = true
+regex.workspace = true
+rusqlite.workspace = true
+serde_json.workspace = true
+unicode-normalization.workspace = true
+url.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,71 @@
+{
+  "company": "GitLab",
+  "slug": "gitlab",
+  "portal": "https://about.gitlab.com/jobs/all-jobs/",
+  "listing_url": "https://about.gitlab.com/jobs/all-jobs/",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Sales",
+        "Marketing",
+        "Product",
+        "Engineering",
+        "Security",
+        "General & Administrative"
+      ],
+      "native_param": null,
+      "note": "Rendered by select#department-filter-dropdown[name=department-filter-dropdown]; client-side over the loaded payload."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote",
+        "Bangalore, India",
+        "Remote, Australia",
+        "Remote, Austria",
+        "Remote, Brazil",
+        "Remote, Canada",
+        "Remote, France",
+        "Remote, Germany",
+        "Remote, India",
+        "Remote, Ireland",
+        "Remote, Israel",
+        "Remote, Japan",
+        "Remote, KSA",
+        "Remote, Mexico",
+        "Remote, Netherlands",
+        "Remote, North America",
+        "Remote, Poland",
+        "Remote, Singapore",
+        "Remote, South Korea",
+        "Remote, Spain",
+        "Remote, Sweden",
+        "Remote, Switzerland",
+        "Remote, United Arab Emirates",
+        "Remote, United Kingdom",
+        "Remote, United States"
+      ],
+      "native_param": null,
+      "note": "Rendered by select#location-filter-dropdown[name=location-filter-dropdown]; client-side."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Nuxt all-jobs page renders the whole Greenhouse board from /jobs/all-jobs/_payload.json?<hash> plus the departments API, then filters in memory: the two <select> elements location-filter-dropdown and department-filter-dropdown and the search box internal-search-search (placeholder 'Search by job title or keyword') all filter client-side, and no query parameter is written to the URL. So the scraper fetches the board unfiltered and filters locally. A 'Sort By' dropdown exists but its request parameter was not confirmed.",
+  "evidence": [
+    "https://about.gitlab.com/jobs/all-jobs/ (select#location-filter-dropdown, select#department-filter-dropdown, input#internal-search-search)",
+    "https://about.gitlab.com/jobs/all-jobs/_payload.json?9cba197e-9fc8-4461-971c-94c5fe6e1f51",
+    "https://boards-api.greenhouse.io/v1/boards/gitlab/departments"
+  ],
+  "verified": true
+}

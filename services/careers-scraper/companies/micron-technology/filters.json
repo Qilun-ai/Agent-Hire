@@ -1,0 +1,131 @@
+{
+  "company": "Micron Technology",
+  "slug": "micron-technology",
+  "portal": "https://careers.micron.com/",
+  "listing_url": "https://careers.micron.com/careers",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Albany, New York, United States of America",
+        "Arzano, Napoli, Italy",
+        "Austin, Texas, United States of America",
+        "Avezzano, L'Aquila, Italy",
+        "Batu Kawan, Pulau Pinang (Penang), Malaysia",
+        "Bengaluru, Karnataka, India",
+        "Boise, Idaho, United States of America",
+        "Clay, New York, United States of America",
+        "Folsom, California, United States of America",
+        "Gujarat, India",
+        "Hadera, Israel",
+        "Hiroshima, Japan",
+        "Hukou Township, Hsinchu County, Taiwan",
+        "Hyderabad, Telangana, India",
+        "Kanagawa, Japan",
+        "Longmont, Colorado, United States of America",
+        "Manassas, Virginia, United States of America",
+        "Meridian, Idaho, United States of America",
+        "Miaoli County, Miaoli County, Taiwan",
+        "Minneapolis, Minnesota, United States of America",
+        "Muar, Johor, Malaysia",
+        "Munich, Germany",
+        "Novi, Michigan, United States of America",
+        "Perai, Pulau Pinang (Penang), Malaysia",
+        "Remote, California, United States of America"
+      ],
+      "native_param": "location",
+      "note": "PCSX location text search. Verified: location=India -> count 316 of 2872."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Front End",
+        "STPG",
+        "Assembly & Test",
+        "HIG",
+        "DTPG",
+        "IT",
+        "Smart MFG/AI",
+        "Quality",
+        "Global Procurement",
+        "Ops & Eng."
+      ],
+      "native_param": "filter_department",
+      "note": "filterDef.allFilters department (10 options, searchConfig.departmentField=job_function). Verified: filter_department=Assembly & Test was echoed in data.appliedFilters. Job rows also carry finer codes (AEBU, CDBU, GCM, ...) that are not facet options."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "onsite",
+        "remote_local"
+      ],
+      "native_param": "filter_work_location_option",
+      "note": "filterDef.allFilters work_location_option. Verified: filter_work_location_option=onsite was echoed in data.appliedFilters."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Germany",
+        "India",
+        "Israel",
+        "Italy",
+        "Japan",
+        "Malaysia",
+        "Mexico",
+        "Singapore",
+        "Taiwan",
+        "United States of America"
+      ],
+      "native_param": null,
+      "note": "filter_country is silently dropped by this tenant (not echoed in appliedFilters), so country is filtered locally; use location=India for a native equivalent."
+    },
+    {
+      "key": "seniority",
+      "label": "Seniority",
+      "kind": "enum",
+      "values": [
+        "Entry",
+        "Mid/Senior",
+        "Intern",
+        "Director/Executive",
+        "CXO"
+      ],
+      "native_param": null,
+      "note": "filterDef.allFilters seniority publishes the labels Entry/Mid/Senior/Intern/Director/Executive/CXO with codes 1/2/0/3/5; filter_seniority was not exercised, so this field is applied locally on titles."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Latest",
+      "native_param": "sort_by=timestamp"
+    },
+    {
+      "value": "priority",
+      "label": "Company priority",
+      "native_param": "sort_by=hot"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "careers.micron.com is an Eightfold PCSX shell. Listing is GET /api/pcsx/search with domain=micron.com, query, location, start (10 rows per page), sort_by and filter_<facet>; the site config sets basePositionFq 'position.system_id:workday AND is_externally_posted:1 AND -location_country:CN', departmentField job_function and allFilters [skills, department, seniority, work_location_option]. Live checks: empty query -> 2872, query=engineer -> 2459, location=India -> 316, filter_department + filter_work_location_option echoed in data.appliedFilters, filter_country dropped. Sort menu publishes Company priority (sort_by=hot, the UI default) and Latest (sort_by=timestamp, used by the collector).",
+  "evidence": [
+    "https://careers.micron.com/api/pcsx/search?domain=micron.com&query=&location=&start=0&sort_by=timestamp -> count 2872, appliedFilters {}",
+    "https://careers.micron.com/api/pcsx/search?domain=micron.com&query=engineer&location=&start=0&sort_by=timestamp -> count 2459",
+    "https://careers.micron.com/api/pcsx/search?domain=micron.com&query=&location=India&start=0&sort_by=timestamp -> count 316",
+    "https://careers.micron.com/api/pcsx/search?...&filter_department=Assembly%20%26%20Test&filter_work_location_option=onsite&filter_country=India -> appliedFilters {department, workLocationOption}; count 335"
+  ],
+  "verified": true
+}

@@ -1,0 +1,132 @@
+{
+  "company": "Schlumberger",
+  "slug": "schlumberger",
+  "portal": "https://careers.slb.com/",
+  "listing_url": "https://careers.slb.com/job-listing",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Algeria, Algiers",
+        "Algeria, Hassi Messaoud",
+        "Angola, Luanda",
+        "Angola, Multi-Location",
+        "Angola, Soyo",
+        "Argentina, Buenos Aires",
+        "Argentina, Multi-Location",
+        "Argentina, Neuquen",
+        "Argentina, Rincon De Los Sauces",
+        "Australia, Jandakot",
+        "Australia, Multi-Location",
+        "Australia, Perth",
+        "Austria, Multi-Location",
+        "Azerbaijan, Baku",
+        "Azerbaijan, Multi-Location",
+        "Bahrain",
+        "Bahrain, Multi-Location",
+        "Bangladesh, Dhaka",
+        "Bolivia (Plurinational State of), Santa Cruz De La Sierra",
+        "Bolivia, Multi-Location",
+        "Brazil, Aracaju",
+        "Brazil, Catu",
+        "Brazil, Macae",
+        "Brazil, Macaé",
+        "Brazil, Nossa Senhora Do Socorro"
+      ],
+      "native_param": null,
+      "note": "City is rendered on listing cards (Coveo field `city`) but the portal exposes no city facet; these values come from collected records and are filtered locally."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Angola",
+        "Cameroon",
+        "China",
+        "Ghana",
+        "Ivory Coast",
+        "Kenya",
+        "Morocco",
+        "Namibia",
+        "Nigeria",
+        "Senegal",
+        "Uganda",
+        "United States"
+      ],
+      "native_param": "aq[@country]",
+      "note": "Coveo `country` facet (checkbox list). Filter with aq=@country==\"India\"."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Administrative and Office Support",
+        "Brand and Communications",
+        "Engineering and Manufacturing",
+        "Facility Management",
+        "Field Operations and Services",
+        "Finance and Accounting",
+        "HSE, Quality and Sustainability",
+        "Human Resources",
+        "IT & Digital Technology",
+        "Other",
+        "Sales, Commercial and Marketing",
+        "Supply Chain and Logistics"
+      ],
+      "native_param": "aq[@hierarchicalcategory]",
+      "note": "Portal label is \"Job Category\" (Coveo field hierarchicalcategory). Filter with aq=@hierarchicalcategory==\"Engineering and Manufacturing\"."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience Level",
+      "kind": "multi",
+      "values": [
+        "Early Careers",
+        "Experienced Professional",
+        "Intern"
+      ],
+      "native_param": "aq[@jobexperiencelevel]",
+      "note": "Coveo field jobexperiencelevel. Filter with aq=@jobexperiencelevel==\"Experienced Professional\"."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sortCriteria=relevancy"
+    },
+    {
+      "value": "recent",
+      "label": "Newest",
+      "native_param": "sortCriteria=@jobposteddate descending"
+    },
+    {
+      "value": "oldest",
+      "label": "Oldest",
+      "native_param": "sortCriteria=@jobposteddate ascending"
+    },
+    {
+      "value": "title",
+      "label": "Job Title ascending",
+      "native_param": "sortCriteria=title ascending"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "careers.slb.com/job-listing is a Coveo Atomic search page (searchHub CoveoJobsHub, pipeline ATSJobsPipeline, source \"ATS_Jobs_Source - Prod\", 1,098 postings). Results are served by POST https://schlumbergerproduction0cs2zrh7.org.coveo.com/rest/search/v2?organizationId=schlumbergerproduction0cs2zrh7 with the bearer token embedded in the listing page and a JSON body: q (keyword), cq='@source==\"ATS_Jobs_Source - Prod\"', aq (facet filters), sortCriteria, firstResult, numberOfResults. The page exposes Job Category, Country and Experience Level facets plus Relevance/Title/Oldest/Newest sort expressions; there is no title-search facet, no workplace-type facet and no city facet. This is a Coveo front end, not Workday.",
+  "evidence": [
+    "https://careers.slb.com/job-listing (Coveo Atomic config: searchHub=CoveoJobsHub, pipeline=ATSJobsPipeline; facets field=hierarchicalcategory, country, jobexperiencelevel)",
+    "POST https://schlumbergerproduction0cs2zrh7.org.coveo.com/rest/search/v2?organizationId=schlumbergerproduction0cs2zrh7 body={q,cq,numberOfResults,firstResult} -> totalCount=1098",
+    "POST same endpoint with body={aq:\"@country==\\\"India\\\"\",sortCriteria:\"@jobposteddate descending\"} -> totalCountFiltered=44, newest first 2026-11-05",
+    "POST same endpoint with facets=[country,hierarchicalcategory,jobexperiencelevel] -> facet values used above"
+  ],
+  "verified": true
+}

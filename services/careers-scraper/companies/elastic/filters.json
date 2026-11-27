@@ -1,0 +1,79 @@
+{
+  "company": "Elastic",
+  "slug": "elastic",
+  "portal": "https://www.elastic.co/careers/jobs",
+  "listing_url": "https://jobs.elastic.co/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Corporate",
+        "Engineering",
+        "Field Operations",
+        "Finance, IT & Operations",
+        "Human Resources",
+        "Marketing",
+        "Pipeline"
+      ],
+      "native_param": "category",
+      "note": "Disjunctive facet field in the appSearch body; sent as filters[].field=category."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Arizona, United States",
+        "Arlington, VA",
+        "Austin, TX",
+        "Australia",
+        "Austria",
+        "Austria; Germany; Switzerland",
+        "Bangalore, India",
+        "Barcelona, Spain",
+        "Belgium",
+        "Brazil",
+        "California, United States",
+        "Canada",
+        "Colorado, United States",
+        "Costa Rica",
+        "Delhi, India",
+        "Denmark",
+        "Dubai, United Arab Emirates",
+        "Florida, United States",
+        "Germany",
+        "Greece",
+        "Hungary",
+        "India",
+        "Indonesia",
+        "Ireland",
+        "Israel"
+      ],
+      "native_param": "location",
+      "note": "Disjunctive facet field in the appSearch body; sent as filters[].field=location."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job type",
+      "kind": "multi",
+      "values": [],
+      "native_param": "job_type",
+      "note": "Disjunctive facet field in the appSearch body; sent as filters[].field=job_type."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Search is POST https://jobs.elastic.co/api/appSearch with an Elasticsearch-style JSON body. The keyword is body.query (the visible input is named search); category, location and job_type are disjunctive facets sent through body.filters with field/values/type. Unfiltered requests constrain group_id=1509 and live=1.",
+  "evidence": [
+    "https://jobs.elastic.co/build/assets/CareersHome-B7m08aqC.js",
+    "https://jobs.elastic.co/api/appSearch"
+  ],
+  "verified": true
+}

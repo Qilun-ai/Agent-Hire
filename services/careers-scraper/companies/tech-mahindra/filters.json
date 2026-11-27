@@ -1,0 +1,63 @@
+{
+  "company": "Tech Mahindra",
+  "slug": "tech-mahindra",
+  "portal": "https://careers.techmahindra.com/",
+  "listing_url": "https://careers.techmahindra.com/CurrentOpportunity.aspx",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "ctl00$ContentPlaceHolder1$txtAdvanceSearch",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "single",
+      "values": [
+        "India"
+      ],
+      "native_param": "ctl00$ContentPlaceHolder1$ddlCountry",
+      "note": "ASP.NET select; option values are ISO3 codes (India=IND). Selecting a country postbacks to populate state."
+    },
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "single",
+      "values": [],
+      "native_param": "ctl00$ContentPlaceHolder1$ddlCity",
+      "note": "ASP.NET select populated by country/state postbacks (ddlState then ddlCity); no fixed options until a country is chosen."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience (years)",
+      "kind": "single",
+      "values": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "native_param": "ctl00$ContentPlaceHolder1$ddlMinExp;ctl00$ContentPlaceHolder1$ddlTotExpYears",
+      "note": "Minimum and maximum experience selects; options are 1-14 and both form fields are submitted together (ddlMinExp, ddlTotExpYears)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Server-rendered ASP.NET WebForms portal. The IT opportunities page posts back to itself (CurrentOpportunity.aspx) with __VIEWSTATE/__EVENTVALIDATION plus the free-text field txtAdvanceSearch (placeholder 'Enter keyword like (Job Reference ID or Job Title or Skills or Experience)') and optional ddlCountry/ddlState/ddlCity/ddlMinExp/ddlTotExpYears. BPS opportunities live on BpsOpportunity.aspx. The adapter uses the unfiltered free-text search (empty keyword) as the complete membership; no JSON search API exists.",
+  "evidence": [
+    "https://careers.techmahindra.com/CurrentOpportunity.aspx",
+    "rendered form inputs: ctl00$ContentPlaceHolder1$txtAdvanceSearch, ctl00$ContentPlaceHolder1$ddlCountry (ISO3 values), ddlState, ddlCity, ddlMinExp, ddlTotExpYears",
+    "src/career_scraper/adapters/tech_mahindra.py"
+  ],
+  "verified": true
+}

@@ -1,0 +1,85 @@
+{
+  "company": "Sprinklr",
+  "slug": "sprinklr",
+  "portal": "https://www.sprinklr.com/careers/",
+  "listing_url": "https://sprinklr.wd1.myworkdayjobs.com/careers",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "France - Paris",
+        "Germany - Hamburg",
+        "Germany - Munich",
+        "Germany - Remote",
+        "India - Haryana - Gurgaon",
+        "India - Karnataka - Bangalore",
+        "Ireland - Dublin",
+        "Japan - Tokyo",
+        "Mexico - Remote",
+        "South Korea - Seoul",
+        "Spain - Madrid",
+        "Switzerland - Lausanne",
+        "Switzerland - Zurich",
+        "United Arab Emirates - Dubai",
+        "United Kingdom - London",
+        "United Kingdom - Remote",
+        "United States - Arizona - Remote",
+        "United States - California - Remote",
+        "United States - Colorado - Remote",
+        "United States - Connecticut - Remote",
+        "United States - Connecticut Metro Area - Remote",
+        "United States - Delaware - Remote",
+        "United States - Florida - Remote",
+        "United States - Georgia - Remote",
+        "United States - Illinois - Remote"
+      ],
+      "native_param": null,
+      "note": "Workday returns a single locationMainGroup facet whose children are labelled Location Country / Locations without ids, so location filtering is local."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Professional Services & Support Group",
+        "Sales Group",
+        "Solutions & Success Group",
+        "Engineering & Product Development",
+        "Marketing Group",
+        "IT Group",
+        "Finance & Admin Group",
+        "Sales Support Group",
+        "Inside Sales Group",
+        "Corporate Functions",
+        "Security Group"
+      ],
+      "native_param": "appliedFacets[jobFamilyGroup]",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Time Type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": "appliedFacets[timeType]",
+      "note": ""
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "sprinklr.com/careers links 'Explore jobs' to https://sprinklr.wd1.myworkdayjobs.com/careers. The board POSTs JSON to /wday/cxs/sprinklr/careers/jobs with appliedFacets, limit, offset and searchText; the unfiltered call returns total=67 with facets jobFamilyGroup (Job Category, 11), workerSubType (Job Type: Regular / Fixed Term Contract / PEO), timeType (Full time) and locationMainGroup (Location Country / Locations). searchText=engineer returned 32 of 67, so keyword search is native.",
+  "evidence": [
+    "https://sprinklr.wd1.myworkdayjobs.com/careers",
+    "https://sprinklr.wd1.myworkdayjobs.com/wday/cxs/sprinklr/careers/jobs"
+  ],
+  "verified": true
+}

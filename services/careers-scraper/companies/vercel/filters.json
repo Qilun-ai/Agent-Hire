@@ -1,0 +1,63 @@
+{
+  "company": "Vercel",
+  "slug": "vercel",
+  "portal": "https://vercel.com/careers",
+  "listing_url": "https://vercel.com/careers",
+  "family": "greenhouse",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Data",
+        "Design",
+        "Engineering",
+        "Field Engineering",
+        "Finance",
+        "Marketing",
+        "People",
+        "Product",
+        "Revenue Operations",
+        "Sales",
+        "Security & IT",
+        "University"
+      ],
+      "native_param": null,
+      "note": "Client-side Department accordion (button label 'Department'); no server-side parameter."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Hybrid - India",
+        "Hybrid - London",
+        "Hybrid - London, Berlin",
+        "Hybrid - New York City",
+        "Hybrid - San Francisco",
+        "Hybrid - San Francisco, New York City",
+        "Hybrid - San Francisco, New York City, Austin",
+        "Hybrid - San Francisco, New York City, London",
+        "Hybrid - Sydney",
+        "Remote - Australia",
+        "Remote - Germany",
+        "Remote - United States"
+      ],
+      "native_param": null,
+      "note": "Client-side Location accordion (button label 'Location'); no server-side parameter."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "vercel.com/careers server-renders the Greenhouse board with client-side Department and Location accordions. There is no keyword/search input and no server-side filter or pagination parameter; the Greenhouse board feed (boards-api.greenhouse.io/v1/boards/vercel/jobs) returns the full set.",
+  "evidence": [
+    "https://vercel.com/careers",
+    "https://boards-api.greenhouse.io/v1/boards/vercel/jobs"
+  ],
+  "verified": true
+}

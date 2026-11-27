@@ -1,0 +1,99 @@
+{
+  "company": "Silicon Labs",
+  "slug": "silicon-labs",
+  "portal": "https://www.silabs.com/about-us/careers",
+  "listing_url": "https://silabs.wd1.myworkdayjobs.com/SiliconLabsCareers",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Austin",
+        "Boston",
+        "Budapest",
+        "Espoo",
+        "Hsinchu",
+        "Hyderabad",
+        "Oslo",
+        "Shanghai",
+        "Shenzhen",
+        "Singapore"
+      ],
+      "native_param": "appliedFacets[locations]",
+      "note": "Nested locations facet inside locationMainGroup."
+    },
+    {
+      "key": "country",
+      "label": "Location Country",
+      "kind": "multi",
+      "values": [
+        "China",
+        "Finland",
+        "Hungary",
+        "India",
+        "Norway",
+        "Singapore",
+        "Taiwan",
+        "United States of America"
+      ],
+      "native_param": "appliedFacets[locationCountry]",
+      "note": "Nested locationCountry facet inside locationMainGroup."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Design Group",
+        "Applications Group",
+        "Manufacturing Engineering Group",
+        "Operations",
+        "Field Sales Group",
+        "Validation Group",
+        "Intern Group",
+        "CAD Group",
+        "Marketing",
+        "IT",
+        "Data & Analytics"
+      ],
+      "native_param": "appliedFacets[jobFamilyGroup]",
+      "note": "Workday jobFamilyGroup facet."
+    },
+    {
+      "key": "employment_type",
+      "label": "Time Type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time"
+      ],
+      "native_param": "appliedFacets[timeType]",
+      "note": "Workday timeType facet."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sortBy=relevance"
+    },
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=postedOn"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Silicon Labs' own careers page sends Browse Job Openings to silabs.wd1.myworkdayjobs.com/SiliconLabsCareers. Membership is POST /wday/cxs/silabs/SiliconLabsCareers/jobs with {appliedFacets, limit, offset, searchText, sortBy}. The live facet list is jobFamilyGroup, workerSubType, timeType, locationMainGroup (nested locationCountry + locations) and distance; there is no jobFamily facet and no workplaceType facet. workerSubType (Regular / Intern (Fixed Term) (Seasonal) (Trainee)) is a real facet but is not one of the canonical keys. 82 postings at verification time.",
+  "evidence": [
+    "POST https://silabs.wd1.myworkdayjobs.com/wday/cxs/silabs/SiliconLabsCareers/jobs {\"appliedFacets\":{},\"limit\":20,\"offset\":0,\"searchText\":\"\"} -> total=82, facets [jobFamilyGroup(11), workerSubType(2), timeType(2), locationMainGroup(locationCountry 8 + locations 10), distance]",
+    "POST same endpoint {\"appliedFacets\":{\"locations\":[\"15081e9a5f8e01a7c343745ac500ce04\"]},\"sortBy\":\"postedOn\"} -> total=25 (Hyderabad), 20 rows on page 1"
+  ],
+  "verified": true
+}

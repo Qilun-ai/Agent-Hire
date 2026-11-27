@@ -1,0 +1,55 @@
+{
+  "company": "Flow Traders",
+  "slug": "flow-traders",
+  "portal": "https://www.flowtraders.com/careers/",
+  "listing_url": "https://boards-api.greenhouse.io/v1/boards/flowtraders/jobs?content=true&per_page=500",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Divisions",
+      "kind": "multi",
+      "values": [
+        "Data",
+        "Events",
+        "Facilities & Office Management",
+        "HR & Recruitment",
+        "IT",
+        "Legal",
+        "Management Support",
+        "Operations and Middle Office",
+        "Product Development",
+        "Risk",
+        "Trading"
+      ],
+      "native_param": null,
+      "note": "Vue dropdown filters client-side on the board row's Division metadata; no server parameter."
+    },
+    {
+      "key": "location",
+      "label": "Offices",
+      "kind": "multi",
+      "values": [
+        "Amsterdam",
+        "Chicago",
+        "Hong Kong",
+        "London",
+        "New York"
+      ],
+      "native_param": null,
+      "note": "Vue dropdown filters client-side on offices[].name and the location prefix; offices come from /v1/boards/flowtraders/offices."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "https://www.flowtraders.com/careers/ links to /careers/job-search/, whose Vue app fetches the company-published Greenhouse board https://boards-api.greenhouse.io/v1/boards/flowtraders/jobs?content=true&per_page=500 plus the offices feed in one request each. The page markup has a free-term keyword input, Divisions and Offices dropdowns and a Search button; filter(), showMoreJobs() and filteredJobs show keyword/division/office matching and 10-row \"show more\" slicing are all client-side over the single 500-row array. No server-side filter parameters exist.",
+  "evidence": [
+    "https://www.flowtraders.com/careers/job-search/",
+    "https://boards-api.greenhouse.io/v1/boards/flowtraders/jobs?content=true&per_page=500"
+  ],
+  "verified": true
+}

@@ -1,0 +1,61 @@
+{
+  "company": "SquadStack",
+  "slug": "squadstack",
+  "portal": "https://www.squadstack.com/careers",
+  "listing_url": "https://www.squadstack.ai/careers",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bengaluru",
+        "Goa",
+        "Mumbai",
+        "Noida"
+      ],
+      "native_param": null,
+      "note": "Location values in the published feed."
+    },
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Decision Science",
+        "Engineering",
+        "Marketing",
+        "People",
+        "Product",
+        "Sales",
+        "Success"
+      ],
+      "native_param": null,
+      "note": "Feed department values; the UI select is labelled All Teams."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Intern",
+        "Permanent"
+      ],
+      "native_param": null,
+      "note": "Feed employement_type values."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "www.squadstack.com/careers redirects to www.squadstack.ai/careers, a Webflow page that fetches the complete array from https://careers.squadstack.com/webflow.php (21 rows) and renders the cards and detail links itself. The page has two selects, All Teams and All Locations, that filter that array client-side; the feed endpoint accepts no filter or keyword parameters.",
+  "evidence": [
+    "https://careers.squadstack.com/webflow.php",
+    "https://www.squadstack.ai/careers"
+  ],
+  "verified": true
+}

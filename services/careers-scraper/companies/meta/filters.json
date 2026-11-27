@@ -1,0 +1,140 @@
+{
+  "company": "Meta",
+  "slug": "meta",
+  "portal": "https://www.metacareers.com/jobs/",
+  "listing_url": "https://www.metacareers.com/jobsearch/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore, India",
+        "Gurgaon, India",
+        "Hyderabad, India",
+        "Mumbai, India",
+        "New Delhi, India",
+        "Menlo Park, CA",
+        "Mountain View, CA",
+        "San Francisco, CA",
+        "Sunnyvale, CA",
+        "Burlingame, CA",
+        "Fremont, CA",
+        "Los Angeles, CA",
+        "San Diego, CA",
+        "Seattle, WA",
+        "Bellevue, WA",
+        "Redmond, WA",
+        "New York, NY",
+        "Austin, TX",
+        "Boston, MA",
+        "Chicago, IL",
+        "Washington, DC",
+        "London, UK",
+        "Dublin, Ireland",
+        "Zurich, Switzerland",
+        "Berlin, Germany",
+        "Munich, Germany",
+        "Amsterdam, Netherlands",
+        "Paris, France",
+        "Tel Aviv, Israel",
+        "Singapore",
+        "Tokyo, Japan",
+        "Sydney, Australia",
+        "Toronto, Canada",
+        "Vancouver, Canada",
+        "Remote, US",
+        "Remote, UK"
+      ],
+      "native_param": "offices",
+      "note": "search_input.offices; the vocabulary is the CareersJobSearchLocationFilterV3Query list (161 entries), whose ids are slugs such as 'bangalore'."
+    },
+    {
+      "key": "team",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Advertising Technology",
+        "AR/VR",
+        "Artificial Intelligence",
+        "Business Development & Partnerships",
+        "Communications & Public Policy",
+        "Creative",
+        "Data & Analytics",
+        "Data Center",
+        "Design & User Experience",
+        "Enterprise Engineering",
+        "Global Operations",
+        "Infrastructure",
+        "Internship - Business",
+        "Internship - Engineering, Tech & Design",
+        "Internship - PhD",
+        "Legal, Finance, Facilities & Admin",
+        "People & Recruiting",
+        "Product Management",
+        "Research",
+        "Sales & Marketing",
+        "Security",
+        "Software Engineering",
+        "Technical Program Management",
+        "University Grad - Business",
+        "University Grad - Engineering, Tech & Design",
+        "University Grad - PhD & Postdoc"
+      ],
+      "native_param": "teams",
+      "note": "search_input.teams; the 26 values are the team_display_name list returned by CareersJobSearchFiltersV3Query."
+    },
+    {
+      "key": "business_unit",
+      "label": "Technology",
+      "kind": "multi",
+      "values": [
+        "Facebook",
+        "Messenger",
+        "Instagram",
+        "WhatsApp",
+        "Meta Quest"
+      ],
+      "native_param": "divisions",
+      "note": "search_input.divisions; CareersJobSearchFiltersV3Query publishes these 5 technologies."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full time employment",
+        "Internship",
+        "Short term employment"
+      ],
+      "native_param": "roles",
+      "note": "search_input.roles; CareersJobSearchFiltersV3Query publishes exactly these 3 values for the 'Employment type' filter."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort_by_new=false"
+    },
+    {
+      "value": "recent",
+      "label": "Newest",
+      "native_param": "sort_by_new=true"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "metacareers.com/jobs/ 301s to /jobsearch/, a React/Relay app. The unfiltered listing is a single form-encoded POST to https://www.metacareers.com/graphql with doc_id=27129360303422352, fb_api_req_friendly_name=CareersJobSearchResultsV2DataQuery and a JSON variables value whose search_input object carries q, divisions, offices, roles, teams, sub_teams, leadership_levels, is_remote_only, sort_by_new and results_per_page; one response returns all All Jobs rows (1342) plus the featured job. The UI exposes a keyword box, Technologies (divisions), Teams, Employment type (roles) and Location (offices) plus a Relevance/Newest sort. Note the nesting: q and the facet arrays live inside variables.search_input, not at the top level of the request. Plain HTTP is refused (HTTP 400 Facebook error page), so the parameters are documented from the request body captured in Chromium, which the adapter replays.",
+  "evidence": [
+    "companies/meta/source/graphql/003.request.json (POST https://www.metacareers.com/graphql, doc_id=27129360303422352, variables.search_input={q, divisions, offices, roles, teams, sub_teams, is_remote_only, sort_by_new})",
+    "companies/meta/source/graphql/001.json (CareersJobSearchFiltersV3Query: teams 26, technologies 5, roles 3)",
+    "companies/meta/source/graphql/004.json (CareersJobSearchLocationFilterV3Query: 161 locations incl. Bangalore, India)",
+    "companies/meta/source/listing-visible.txt (Technologies / Teams / Employment type / Location / keyword box, Sort by Relevance|Newest)"
+  ],
+  "verified": true
+}

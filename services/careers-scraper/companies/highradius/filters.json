@@ -1,0 +1,50 @@
+{
+  "company": "HighRadius",
+  "slug": "highradius",
+  "portal": "https://www.highradius.com/about/careers/",
+  "listing_url": "https://www.highradius.com/about/career/",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Houston, Texas, United States",
+        "London, England, United Kingdom",
+        "Hyderabad, Telangana, India",
+        "Europe",
+        "Amsterdam, North Holland, Netherlands; London, England, United Kingdom; Remote - Germany"
+      ],
+      "native_param": null,
+      "note": "Rendered as the #gh-location <select> of the embedded Greenhouse job board. The values are its own option values (slugs such as 'houston-texas-united-states'); the board script filters the rendered cards client-side and sends no request."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Sales",
+        "Product & Engineering",
+        "General & Administration",
+        "Consulting",
+        "Customer Value"
+      ],
+      "native_param": null,
+      "note": "Rendered as the #gh-department <select>; option values are slugs ('sales', 'product--engineering', 'general--administration', 'consulting', 'customer-value'). Client-side display filter only."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The ledger URL redirects to https://www.highradius.com/about/career/, which embeds the Greenhouse board script (boards.greenhouse.io/embed/job_board/js?for=highradius). Every card links to /about/careers-list/?gh_jid=<id>. The only controls are the #gh-location and #gh-department selects plus a name=\"search\" box; all three filter the rendered cards in the browser and none is sent to an API. The board API (boards-api.greenhouse.io/v1/boards/highradius/jobs?content=true) takes no keyword/facet/sort parameter, so all filtering is local.",
+  "evidence": [
+    "https://www.highradius.com/about/careers/ -> https://www.highradius.com/about/career/ (200) with id=\"gh-location\" and id=\"gh-department\" option lists",
+    "https://boards-api.greenhouse.io/v1/boards/highradius/jobs?content=true",
+    "https://boards.greenhouse.io/embed/job_board/js?for=highradius"
+  ],
+  "verified": true
+}

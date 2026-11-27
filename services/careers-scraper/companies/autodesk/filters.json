@@ -1,0 +1,110 @@
+{
+  "company": "Autodesk",
+  "slug": "autodesk",
+  "portal": "https://jobs.autodesk.com/careers",
+  "listing_url": "https://jobs.autodesk.com/careers",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "AMER - United States - California - San Francisco - One Market",
+        "AMER - United States - California - Remote",
+        "AMER - United States - Oregon - Portland",
+        "AMER - Canada - Ontario - Toronto - University Ave",
+        "AMER - Canada - Quebec - Montreal - 10 Rue Duke",
+        "EMEA - United Kingdom - London",
+        "EMEA - Germany - Munich",
+        "EMEA - France - Paris",
+        "EMEA - Israel - Tel Aviv",
+        "APAC - India - Bengaluru",
+        "APAC - India - Pune",
+        "APAC - Japan - Tokyo",
+        "APAC - Australia - Melbourne",
+        "APAC - Singapore",
+        "AMER - Brazil - Sao Paulo",
+        "AMER - Mexico - Remote"
+      ],
+      "native_param": "location",
+      "note": "PCSX location string; accepts the published location labels."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Product Design & Manufacturing",
+        "Sales",
+        "Marketing",
+        "Customer Success",
+        "Finance",
+        "People & Places",
+        "Legal",
+        "Information Technology",
+        "Data Science",
+        "Operations"
+      ],
+      "native_param": "filter_department",
+      "note": "Accepted by PCSX search and echoed back in data.appliedFilters.department (not listed in this tenant's filterDef facets)."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "hybrid",
+        "onsite",
+        "remote_local"
+      ],
+      "native_param": "filter_work_location_option",
+      "note": "Echoed back as appliedFilters.workLocationOption."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "Canada",
+        "United Kingdom",
+        "Germany",
+        "France",
+        "India",
+        "Japan",
+        "Australia",
+        "Singapore",
+        "Brazil",
+        "Mexico",
+        "Israel"
+      ],
+      "native_param": null,
+      "note": "PCSX drops filter_country for this tenant (not echoed in appliedFilters), so country is derived from the location labels and filtered locally."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    },
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort_by=relevance"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "jobs.autodesk.com is Autodesk's own Eightfold PCSX careers site. GET /api/pcsx/search takes domain=autodesk.com, query, location, start and sort_by; verified live that query=engineer returns count 141, sort_by=timestamp and sort_by=relevance are echoed in data.sortBy, filter_department is echoed in data.appliedFilters, and filter_work_location_option is echoed as appliedFilters.workLocationOption. This tenant's filterDef only advertises hiring_title, skills and latlong facets, and filter_country/filter_employee_type are silently dropped, so those facets are filtered locally. Details come from /api/pcsx/position_details?position_id=...&domain=autodesk.com.",
+  "evidence": [
+    "https://jobs.autodesk.com/api/pcsx/search?domain=autodesk.com&query=engineer&location=&start=0&sort_by=timestamp",
+    "https://jobs.autodesk.com/api/pcsx/search?domain=autodesk.com&query=&location=Bengaluru%2C%20India&start=0&sort_by=timestamp&filter_work_location_option=remote_local"
+  ],
+  "verified": true
+}

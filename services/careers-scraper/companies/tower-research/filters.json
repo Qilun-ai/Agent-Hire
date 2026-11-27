@@ -1,0 +1,76 @@
+{
+  "company": "Tower Research",
+  "slug": "tower-research",
+  "portal": "https://tower-research.com/open-positions/",
+  "listing_url": "https://job-boards.greenhouse.io/embed/job_board?for=towerresearchcapital",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Application Reliability Engineering",
+        "Business Management",
+        "Core AI and Machine Learning",
+        "Core Engineering",
+        "Core Management",
+        "Corporate Services",
+        "Data",
+        "Human Resources",
+        "Information Security and Enterprise Engineering",
+        "Infrastructure Engineering",
+        "Infrastructure Operations",
+        "Markets",
+        "On-Campus Recruiting",
+        "Operations",
+        "Post-Trade",
+        "Project Management",
+        "Quantitative Research & Trading",
+        "Risk & Trading Supervision",
+        "Telco",
+        "Trading Supervision"
+      ],
+      "native_param": null,
+      "note": "Client-side Department select (id=department-filter); options are embedded in the board payload."
+    },
+    {
+      "key": "location",
+      "label": "Office",
+      "kind": "multi",
+      "values": [
+        "Amsterdam",
+        "Charleston, SC",
+        "Chicago, IL",
+        "Dubai",
+        "Gift City",
+        "Grand Cayman",
+        "Gurgaon",
+        "Hong Kong",
+        "London",
+        "Montreal",
+        "New York",
+        "New York, NY - 120 Broadway",
+        "Paris",
+        "Shanghai",
+        "Singapore",
+        "Sydney"
+      ],
+      "native_param": null,
+      "note": "Client-side Office select (id=office-filter); the board filters on office, not on multi-city job-location strings."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Greenhouse embed job board. The page embeds the full board payload (route data jobPosts total 91) and filters client-side through the keyword input (id=keyword-filter), Department select (id=department-filter) and Office select (id=office-filter). The Greenhouse board API (boards-api.greenhouse.io/v1/boards/towerresearchcapital/jobs) accepts no filter parameters, and no department/office query parameter is present in the embed.",
+  "evidence": [
+    "https://tower-research.com/open-positions/",
+    "https://job-boards.greenhouse.io/embed/job_board?for=towerresearchcapital",
+    "https://boards-api.greenhouse.io/v1/boards/towerresearchcapital/jobs"
+  ],
+  "verified": true
+}

@@ -1,0 +1,120 @@
+{
+  "company": "Cursor",
+  "slug": "cursor",
+  "portal": "https://cursor.com/careers",
+  "listing_url": "https://cursor.com/careers",
+  "family": "ashby",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Customer Success",
+        "Design",
+        "Engineering",
+        "Marketing",
+        "Partnerships",
+        "People",
+        "Revenue Operations",
+        "Sales",
+        "Solutions",
+        "User Ops"
+      ],
+      "native_param": null,
+      "note": "Ashby row field department"
+    },
+    {
+      "key": "team",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Ai Deployment",
+        "Client",
+        "Cloud",
+        "Commercial Sales",
+        "Customer Education",
+        "Data",
+        "Deal Strategy and Compensation",
+        "Design",
+        "Engineering",
+        "Field Engineering",
+        "Forward Deployment",
+        "Foundations",
+        "GTM Finance Systems Architecture",
+        "Geo Enterprise Sales",
+        "Global Strategic Accounts",
+        "Machine Learning",
+        "Marketing",
+        "Partnerships",
+        "People",
+        "Public Sector",
+        "Revenue Operations",
+        "Sales",
+        "Sales Development",
+        "Security"
+      ],
+      "native_param": null,
+      "note": "Ashby row field team (finer than department)"
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "FullTime"
+      ],
+      "native_param": null,
+      "note": "Ashby row field employmentType (values FullTime/PartTime/Intern/Contract/Temporary)"
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Austin, TX",
+        "Australia",
+        "Bengaluru",
+        "Germany",
+        "Indonesia",
+        "Japan",
+        "London",
+        "New York, NY",
+        "Palo Alto, CA",
+        "Philippines",
+        "Remote",
+        "San Francisco, CA",
+        "Singapore",
+        "South Korea",
+        "Washington, D.C."
+      ],
+      "native_param": null,
+      "note": "Ashby row field location, plus secondaryLocations[] per posting"
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "OnSite",
+        "Remote",
+        "Hybrid"
+      ],
+      "native_param": null,
+      "note": "Ashby row fields workplaceType (OnSite/Remote/Hybrid) and isRemote"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "https://cursor.com/careers is a Next.js page whose React Server Components flight data embeds the complete Ashby job array (118 postings carrying id, title, department, team, employmentType, location, secondaryLocations, workplaceType, isRemote, publishedAt, jobUrl, applyUrl). The same records are served by the public Ashby posting API GET https://api.ashbyhq.com/posting-api/job-board/cursor, which answers 200 with {jobs:[...118...]} but accepts no filter or sort parameters, and the adapter reads the official page's own flight data rather than starting a board crawl. Every control therefore has to be applied locally over the full array; the array's own order (publishedAt) is the only ordering available.",
+  "evidence": [
+    "https://cursor.com/careers (embeds Ashby job array in RSC flight data)",
+    "https://api.ashbyhq.com/posting-api/job-board/cursor (jobs: 118, department/team/employmentType/location/workplaceType)",
+    "adapter:cursor"
+  ],
+  "verified": true
+}

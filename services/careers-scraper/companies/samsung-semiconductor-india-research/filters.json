@@ -1,0 +1,58 @@
+{
+  "company": "Samsung Semiconductor India Research",
+  "slug": "samsung-semiconductor-india-research",
+  "portal": "https://semiconductor.samsung.com/careers/",
+  "listing_url": "https://search.semiconductor.samsung.com/semi/insightfinder?onlyfilter=N&filter=&sort=Newest&stage=live&pagetype=page&site=semissir&category=workday&q=&startno=0&pageno=1&num=12",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "SSIR, Goldstone, Bangalore, India"
+      ],
+      "native_param": null,
+      "note": "The search publishes only one location facet (India > Bangalore > SSIR, codes locationindia / locationindiabanga / locationindiabangassir); the adapter's site=semissir scope already fixes it."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "India"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": null,
+      "note": "From the linked Workday postings; the search API has no employment facet."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Newest",
+      "native_param": "sort=Newest"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The India tab (site=semissir, category=workday, stage=live, pagetype=page) calls https://search.semiconductor.samsung.com/semi/insightfinder with q, sort, startno, pageno and num. Unfiltered it reports 26 SSIR postings; q=verification returned 7, so keyword search is server-side. Only a location facet is published (India/Bangalore/SSIR); department and employment type come from the Workday postings and are filtered locally.",
+  "evidence": [
+    "https://search.semiconductor.samsung.com/semi/insightfinder?onlyfilter=N&filter=&sort=Newest&stage=live&pagetype=page&site=semissir&category=workday&q=&startno=0&pageno=1&num=2",
+    "https://search.semiconductor.samsung.com/semi/insightfinder?onlyfilter=N&filter=&sort=Newest&stage=live&pagetype=page&site=semissir&category=workday&q=verification&startno=0&pageno=1&num=2",
+    "https://semiconductor.samsung.com/about-us/careers/jobs/?region=india"
+  ],
+  "verified": true
+}

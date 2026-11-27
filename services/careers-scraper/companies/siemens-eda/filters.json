@@ -1,0 +1,95 @@
+{
+  "company": "Siemens EDA",
+  "slug": "siemens-eda",
+  "portal": "https://eda.sw.siemens.com/en-US/careers/",
+  "listing_url": "https://jobs.sw.siemens.com/business-structure/electronic-design-automation-eda/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "Egypt",
+        "India",
+        "Japan",
+        "France",
+        "Israel",
+        "China",
+        "Armenia",
+        "Germany",
+        "Poland",
+        "Canada",
+        "South Korea",
+        "Austria",
+        "Belgium",
+        "Ireland",
+        "Italy",
+        "Mexico",
+        "Serbia",
+        "Spain",
+        "United Kingdom"
+      ],
+      "native_param": "country",
+      "note": "API takes the 3-letter lowercase code from the site path (/locations/ind/...), e.g. country=ind. Verified: country=ind returned 15 rows, matching the India facet count."
+    },
+    {
+      "key": "job_family",
+      "label": "Job Family",
+      "kind": "multi",
+      "values": [
+        "Sales",
+        "Research & Development",
+        "Customer Services",
+        "Product Management, Portfolio & Innovation",
+        "Internal Services",
+        "Strategy"
+      ],
+      "native_param": "jobfamily",
+      "note": "API value is the slug published in the site path, e.g. /job-family/research-development/... -> jobfamily=research-development."
+    },
+    {
+      "key": "business_unit",
+      "label": "Business Structure",
+      "kind": "multi",
+      "values": [
+        "EDA Calibre",
+        "EDA DVT",
+        "Electronic Design Automation (EDA)",
+        "Product lifecycle management (PLM)",
+        "Software as a service (SaaS)",
+        "Supplyframe",
+        "Simulation",
+        "Low Code Mendix"
+      ],
+      "native_param": "businessStructures",
+      "note": "API value is the business-structure slug, e.g. businessStructures=electronic-design-automation-eda (the listing itself) or product-lifecycle-management-plm."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote/Hybrid/Onsite",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Onsite",
+        "Remote"
+      ],
+      "native_param": "workplaceTypes",
+      "note": "API value is the lowercase path slug, e.g. /remotehybridonsite/hybrid/... -> workplaceTypes=hybrid."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "jobs.sw.siemens.com is a Nuxt jobsyn board. The EDA business-structure listing is GET https://prod-search-api.jobsyn.org/api/v1/solr/search?page=1&businessStructures=electronic-design-automation-eda&num_items=10 and returns pagination.total=176 plus a filters object with the exact native facet keys country, jobfamily, workplaceTypes and businessStructures (also talenthiringprograms/militarybases, which are not canonical). The page config window.__NUXT__.config.public.filters declares the same keys and maps display labels to their slugs/solr queries; the UI routes selections as path segments (e.g. /locations/ind/business-structure/.../jobs). Verified country=ind -> total 15. No keyword, sort or employment-type control was observed, so keyword/sort are local.",
+  "evidence": [
+    "https://jobs.sw.siemens.com/business-structure/electronic-design-automation-eda/jobs/ (window.__NUXT__.config.public.filters = country, jobfamily, workplaceTypes, talenthiringprograms, businessStructures)",
+    "GET https://prod-search-api.jobsyn.org/api/v1/solr/search?page=1&businessStructures=electronic-design-automation-eda&num_items=10 -> pagination.total=176, filters keys [businessStructures,country,jobfamily,militarybases,talenthiringprograms,workplaceTypes]",
+    "GET https://prod-search-api.jobsyn.org/api/v1/solr/search?page=1&businessStructures=electronic-design-automation-eda&num_items=10&country=ind -> pagination.total=15, rows all IND"
+  ],
+  "verified": true
+}

@@ -1,0 +1,88 @@
+{
+  "company": "Wells Fargo",
+  "slug": "wells-fargo",
+  "portal": "https://www.wellsfargojobs.com/en/jobs/",
+  "listing_url": "https://www.wellsfargojobs.com/en/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [],
+      "native_param": "country",
+      "note": "Multi-select in form#job-filter (id l-country); options are populated by the portal, so no values are hard-coded."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "CHARLOTTE",
+        "BENGALURU",
+        "TAGUIG CITY",
+        "IRVING",
+        "CHANDLER",
+        "SCOTTSDALE",
+        "MINNEAPOLIS",
+        "PHOENIX",
+        "MESA",
+        "NEW YORK",
+        "HYDERABAD",
+        "SAN FRANCISCO",
+        "GLENDALE",
+        "TEMPE",
+        "RICHMOND"
+      ],
+      "native_param": "location",
+      "note": "City multi-select (id l-location); the form also publishes a separate 'region' multi-select for state/province."
+    },
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Administrative & Corporate Services",
+        "Client Management",
+        "Data & Analytics",
+        "Finance & Accounting",
+        "Governance & Controls",
+        "Human Resources",
+        "Investments & Trading",
+        "Legal & Investigations",
+        "Marketing & Communications & Public Affairs",
+        "Operations",
+        "Operations / Administrative & Corporate Services",
+        "Product Management",
+        "Research",
+        "Strategy & Execution",
+        "Technology"
+      ],
+      "native_param": "team",
+      "note": "Multi-select (id l-team)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time"
+      ],
+      "native_param": "type",
+      "note": "Multi-select (id l-type). The form also publishes 'wtype' (Fixed Term / Intern (Fixed Term) / Regular), which is a worker type rather than an employment type."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "wellsfargojobs.com is Wells Fargo's own server-rendered board (20 cards per page, ?page=N, 'Showing X to Y of Z' counter, RSS alternate at /en/jobs/xml/?rss=true). Search is a plain GET form#job-filter (action /en/jobs/#results, method get) whose control names are the query parameters: search, country, region, location, team, type, wtype and the hidden pagesize=20 — multi-selects send repeated parameters. The same data is served by the site's own XHR GET https://www.wellsfargojobs.com/umbraco/jobboard/CandidateJobs/GetJobs?culture=en. No sort control/parameter is published on the form, so the scraper keeps portal order. The listing host answers 403 to plain curl and only renders for a browser client.",
+  "evidence": [
+    "https://www.wellsfargojobs.com/en/jobs/ (headless Chromium, HTTP 200) -> form#job-filter method=get action=/en/jobs/#results; controls: input[name=search], select[name=country], select[name=region], select[name=location], select[name=team], select[name=type], select[name=wtype], input[name=pagesize][value=20]",
+    "https://www.wellsfargojobs.com/umbraco/jobboard/CandidateJobs/GetJobs?culture=en -> XHR the listing page issues for the same board"
+  ],
+  "verified": true
+}

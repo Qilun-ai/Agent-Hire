@@ -1,0 +1,660 @@
+[
+  {
+    "body": {
+      "errors": [],
+      "report": {
+        "capped": [],
+        "imported": {
+          "achievements": 0,
+          "certifications": 1,
+          "education": 1,
+          "experience": 1,
+          "projects": 1,
+          "skills": 4
+        },
+        "received": {
+          "achievements": 0,
+          "certifications": 1,
+          "education": 1,
+          "experience": 1,
+          "projects": 1,
+          "skills": 3
+        },
+        "skipped": []
+      },
+      "stats": {
+        "achievements": 0,
+        "certifications": 1,
+        "education": 1,
+        "experience": 1,
+        "graph_sync": "<backend sync>",
+        "projects": 1,
+        "skills": 4,
+        "vector_sync": "<backend sync>"
+      },
+      "status": "ok",
+      "summary": "Imported 4 skills, 1 role, 1 project, 1 education entry, 1 certification"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "basics": {
+          "email": "eva@example.net",
+          "location": {
+            "city": "Lyon"
+          },
+          "name": "Éva Martin",
+          "summary": "Builds reliable payment systems."
+        },
+        "certs": [
+          {
+            "issuer": "AWS",
+            "name": "Cloud Practitioner"
+          }
+        ],
+        "education": [
+          {
+            "area": "Computer Science",
+            "institution": "Example University",
+            "studyType": "Bachelor"
+          }
+        ],
+        "projects": [
+          {
+            "description": "Processed payments across multiple regions.",
+            "name": "Payment Gateway",
+            "technologies": [
+              "Go",
+              "PostgreSQL"
+            ]
+          }
+        ],
+        "skills": {
+          "database": "PostgreSQL",
+          "language": [
+            "Go",
+            {
+              "n": "Python"
+            }
+          ]
+        },
+        "work": [
+          {
+            "endDate": "2025-01",
+            "highlights": [
+              "Implemented reliable payment processing."
+            ],
+            "name": "Ledgerline",
+            "position": "Backend Engineer",
+            "startDate": "2022-01"
+          }
+        ]
+      },
+      "method": "POST",
+      "path": "/api/v1/ingest/profile"
+    },
+    "status": 200,
+    "step": "import grouped skills and JSON Resume aliases"
+  },
+  {
+    "body": {
+      "errors": [],
+      "report": {
+        "capped": [],
+        "imported": {
+          "achievements": 1,
+          "certifications": 0,
+          "education": 0,
+          "experience": 0,
+          "projects": 1,
+          "skills": 2
+        },
+        "received": {
+          "achievements": 1,
+          "certifications": 0,
+          "education": 0,
+          "experience": 0,
+          "projects": 1,
+          "skills": 3
+        },
+        "skipped": [
+          {
+            "count": 1,
+            "field": "skills",
+            "reason": "invalid or duplicate"
+          }
+        ]
+      },
+      "stats": {
+        "achievements": 1,
+        "certifications": 0,
+        "education": 0,
+        "experience": 0,
+        "graph_sync": "<backend sync>",
+        "projects": 1,
+        "skills": 2,
+        "vector_sync": "<backend sync>"
+      },
+      "status": "ok",
+      "summary": "Imported 2 skills, 1 project, 1 achievement; skipped 1"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "awards": [
+          "Won the internal engineering award"
+        ],
+        "projects": [
+          {
+            "impact": "Improved visibility into message processing.",
+            "stack": "Go, Docker",
+            "title": "Queue Monitor"
+          }
+        ],
+        "skills": [
+          "Docker",
+          {
+            "category": "tool",
+            "name": "Apache Kafka"
+          },
+          {
+            "name": "Docker"
+          }
+        ]
+      },
+      "method": "POST",
+      "path": "/api/v1/ingest/profile"
+    },
+    "status": 200,
+    "step": "import flat and object skills and a string stack"
+  },
+  {
+    "body": {
+      "detail": "Body is not valid JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": "{",
+      "method": "POST",
+      "path": "/api/v1/ingest/profile"
+    },
+    "status": 400,
+    "step": "malformed JSON"
+  },
+  {
+    "body": {
+      "detail": "Profile JSON must be a JSON object (e.g. {\"skills\": ...})"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": [],
+      "method": "POST",
+      "path": "/api/v1/ingest/profile"
+    },
+    "status": 400,
+    "step": "non-object JSON"
+  },
+  {
+    "body": {
+      "detail": "Profile JSON too large (max 5 MB)"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": "5 MiB plus one byte",
+      "method": "POST",
+      "path": "/api/v1/ingest/profile"
+    },
+    "status": 413,
+    "step": "oversize JSON"
+  },
+  {
+    "body": {
+      "achievements": [
+        "Won the internal engineering award"
+      ],
+      "certifications": [
+        "Cloud Practitioner"
+      ],
+      "education": [
+        "Bachelor Computer Science at Example University"
+      ],
+      "exp": [
+        {
+          "co": "Ledgerline",
+          "d": "Implemented reliable payment processing.",
+          "exact_matches": [],
+          "id": "ada82c592322",
+          "matched_entity_id": "",
+          "new_points": [],
+          "period": "2022-01 – 2025-01",
+          "points": [
+            {
+              "id": "20ef3ef160bc",
+              "text": "Implemented reliable payment processing."
+            }
+          ],
+          "role": "Backend Engineer",
+          "role_variants": [
+            {
+              "company": "Ledgerline",
+              "period": "2022-01 – 2025-01",
+              "resume_id": "",
+              "tag_id": "",
+              "title": "Backend Engineer"
+            }
+          ],
+          "similar_pairs": [],
+          "source_resume_ids": [],
+          "tag_ids": []
+        }
+      ],
+      "identity": {
+        "city": "Lyon",
+        "country": "",
+        "email": "eva@example.net",
+        "github_url": "",
+        "linkedin_url": "",
+        "phone": "",
+        "website_url": ""
+      },
+      "n": "Éva Martin",
+      "projects": [
+        {
+          "exact_matches": [],
+          "id": "e90cc5a4e5ba",
+          "impact": "Processed payments across multiple regions.",
+          "matched_entity_id": "",
+          "new_points": [],
+          "points": [
+            {
+              "id": "31e28d0eb8cb",
+              "text": "Processed payments across multiple regions."
+            }
+          ],
+          "repo": "",
+          "similar_pairs": [],
+          "source_resume_ids": [],
+          "stack": [
+            "Go",
+            "PostgreSQL",
+            "SQL"
+          ],
+          "tag_ids": [],
+          "title": "Payment Gateway",
+          "title_variants": [
+            {
+              "resume_id": "",
+              "tag_id": "",
+              "title": "Payment Gateway"
+            }
+          ]
+        },
+        {
+          "exact_matches": [],
+          "id": "da2efff2d8f1",
+          "impact": "Improved visibility into message processing.",
+          "matched_entity_id": "",
+          "new_points": [],
+          "points": [
+            {
+              "id": "fae00b8ab285",
+              "text": "Improved visibility into message processing."
+            }
+          ],
+          "repo": "",
+          "similar_pairs": [],
+          "source_resume_ids": [],
+          "stack": [
+            "Go",
+            "Docker"
+          ],
+          "tag_ids": [],
+          "title": "Queue Monitor",
+          "title_variants": [
+            {
+              "resume_id": "",
+              "tag_id": "",
+              "title": "Queue Monitor"
+            }
+          ]
+        }
+      ],
+      "s": "Builds reliable payment systems",
+      "skills": [
+        {
+          "cat": "language",
+          "id": "5f075ae3e1f9",
+          "n": "Go",
+          "source_resume_ids": [],
+          "tag_ids": []
+        },
+        {
+          "cat": "language",
+          "id": "a7f5f35426b9",
+          "n": "Python",
+          "source_resume_ids": [],
+          "tag_ids": []
+        },
+        {
+          "cat": "database",
+          "id": "399bd1ee5872",
+          "n": "PostgreSQL",
+          "source_resume_ids": [],
+          "tag_ids": []
+        },
+        {
+          "cat": "database",
+          "id": "9778840a0100",
+          "n": "SQL",
+          "source_resume_ids": [],
+          "tag_ids": []
+        },
+        {
+          "cat": "general",
+          "id": "c5fd214cdd0d",
+          "n": "Docker",
+          "source_resume_ids": [],
+          "tag_ids": []
+        },
+        {
+          "cat": "tool",
+          "id": "bb2bd99338b1",
+          "n": "Apache Kafka",
+          "source_resume_ids": [],
+          "tag_ids": []
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/profile"
+    },
+    "status": 200,
+    "step": "imported profile"
+  },
+  {
+    "body": [],
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/events"
+    },
+    "status": 200,
+    "step": "activity after profile import"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "ingestor_provider": "nvidia"
+      },
+      "method": "POST",
+      "path": "/api/v1/settings"
+    },
+    "status": 200,
+    "step": "select an ingestor with no API key"
+  },
+  {
+    "body": {
+      "created_at": "<string>",
+      "excerpt": "Éva Martin\nSkills\nGo, Docker",
+      "exists": true,
+      "file_path": "<data>/appdata/documents/resume/<stored-file>.txt",
+      "id": "<document-id>",
+      "kind": "resume",
+      "mime": "text/plain",
+      "source": "upload",
+      "source_filename": "resume.txt",
+      "tag_id": null,
+      "topic": "resume"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": "multipart: resume.txt, kind=resume, ingest=true",
+      "method": "POST",
+      "path": "/api/v1/documents"
+    },
+    "status": 200,
+    "step": "upload a resume without model credentials"
+  },
+  {
+    "body": {
+      "documents": [
+        {
+          "created_at": "<string>",
+          "excerpt": "Éva Martin\nSkills\nGo, Docker",
+          "exists": true,
+          "file_path": "<data>/appdata/documents/resume/<stored-file>.txt",
+          "id": "<document-id>",
+          "kind": "resume",
+          "mime": "text/plain",
+          "source": "upload",
+          "source_filename": "resume.txt",
+          "tag_id": null,
+          "tag_name": "",
+          "topic": "resume"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/documents"
+    },
+    "status": 200,
+    "step": "documents after resume upload"
+  },
+  {
+    "body": {
+      "detail": "Ingestion task 'missing' not found"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/documents/ingest/status?task_id=missing"
+    },
+    "status": 404,
+    "step": "unknown ingest task"
+  },
+  {
+    "body": {
+      "completed_at": null,
+      "elapsed_seconds": 0.0,
+      "error": null,
+      "filename": null,
+      "has_staged_duplicates": false,
+      "progress_percent": 0,
+      "result": null,
+      "reviewable_duplicates": [],
+      "stage": "idle",
+      "stage_message": "No ingestion task active.",
+      "stage_number": 0,
+      "started_at": null,
+      "status": "idle",
+      "tag_id": null,
+      "task_id": null,
+      "thoughts": []
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/documents/ingest/status"
+    },
+    "status": 200,
+    "step": "no asynchronous task"
+  },
+  {
+    "body": {
+      "achievements": [
+        "Won the internal engineering award"
+      ],
+      "certifications": [
+        "Cloud Practitioner"
+      ],
+      "education": [
+        "Bachelor Computer Science at Example University"
+      ],
+      "exp": [
+        {
+          "co": "Ledgerline",
+          "d": "Implemented reliable payment processing.",
+          "exact_matches": [],
+          "id": "ada82c592322",
+          "matched_entity_id": "",
+          "new_points": [],
+          "period": "2022-01 – 2025-01",
+          "points": [
+            {
+              "id": "20ef3ef160bc",
+              "text": "Implemented reliable payment processing."
+            }
+          ],
+          "role": "Backend Engineer",
+          "role_variants": [
+            {
+              "company": "Ledgerline",
+              "period": "2022-01 – 2025-01",
+              "resume_id": "",
+              "tag_id": "",
+              "title": "Backend Engineer"
+            }
+          ],
+          "similar_pairs": [],
+          "source_resume_ids": [],
+          "tag_ids": []
+        }
+      ],
+      "identity": {
+        "city": "Lyon",
+        "country": "",
+        "email": "eva@example.net",
+        "github_url": "",
+        "linkedin_url": "",
+        "phone": "",
+        "website_url": ""
+      },
+      "n": "va Martin",
+      "projects": [
+        {
+          "exact_matches": [],
+          "id": "e90cc5a4e5ba",
+          "impact": "Processed payments across multiple regions.",
+          "matched_entity_id": "",
+          "new_points": [],
+          "points": [
+            {
+              "id": "31e28d0eb8cb",
+              "text": "Processed payments across multiple regions."
+            }
+          ],
+          "repo": "",
+          "similar_pairs": [],
+          "source_resume_ids": [],
+          "stack": [
+            "Go",
+            "PostgreSQL",
+            "SQL"
+          ],
+          "tag_ids": [],
+          "title": "Payment Gateway",
+          "title_variants": [
+            {
+              "resume_id": "",
+              "tag_id": "",
+              "title": "Payment Gateway"
+            }
+          ]
+        },
+        {
+          "exact_matches": [],
+          "id": "da2efff2d8f1",
+          "impact": "Improved visibility into message processing.",
+          "matched_entity_id": "",
+          "new_points": [],
+          "points": [
+            {
+              "id": "fae00b8ab285",
+              "text": "Improved visibility into message processing."
+            }
+          ],
+          "repo": "",
+          "similar_pairs": [],
+          "source_resume_ids": [],
+          "stack": [
+            "Go",
+            "Docker"
+          ],
+          "tag_ids": [],
+          "title": "Queue Monitor",
+          "title_variants": [
+            {
+              "resume_id": "",
+              "tag_id": "",
+              "title": "Queue Monitor"
+            }
+          ]
+        }
+      ],
+      "s": "Builds reliable payment systems",
+      "skills": [
+        {
+          "cat": "language",
+          "id": "5f075ae3e1f9",
+          "n": "Go",
+          "source_resume_ids": [
+            "<resume-id>"
+          ],
+          "tag_ids": []
+        },
+        {
+          "cat": "language",
+          "id": "a7f5f35426b9",
+          "n": "Python",
+          "source_resume_ids": [],
+          "tag_ids": []
+        },
+        {
+          "cat": "database",
+          "id": "399bd1ee5872",
+          "n": "PostgreSQL",
+          "source_resume_ids": [],
+          "tag_ids": []
+        },
+        {
+          "cat": "database",
+          "id": "9778840a0100",
+          "n": "SQL",
+          "source_resume_ids": [],
+          "tag_ids": []
+        },
+        {
+          "cat": "general",
+          "id": "c5fd214cdd0d",
+          "n": "Docker",
+          "source_resume_ids": [
+            "<resume-id>"
+          ],
+          "tag_ids": []
+        },
+        {
+          "cat": "tool",
+          "id": "bb2bd99338b1",
+          "n": "Apache Kafka",
+          "source_resume_ids": [],
+          "tag_ids": []
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/profile"
+    },
+    "status": 200,
+    "step": "profile after local resume parsing"
+  }
+]

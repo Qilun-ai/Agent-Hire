@@ -1,0 +1,21 @@
+{
+  "company": "LetsTransport",
+  "slug": "letstransport",
+  "portal": "https://letstransport.in/careers/",
+  "listing_url": "https://letstransport.in/openings/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "No search or filter UI exists. The ledger URL /careers/ is HTTP 404; the current official page is /we-are-hiring/, whose 'Open opportunities' wrapper is empty and has no form. The WordPress openings post type returns an empty array, and the official /openings/ directory currently contains one static posting. Keyword matching can only run locally over collected records.",
+  "evidence": [
+    "https://letstransport.in/we-are-hiring/",
+    "https://letstransport.in/wp-json/wp/v2/openings?per_page=100&_fields=id,title,link",
+    "https://letstransport.in/openings/"
+  ],
+  "verified": true
+}

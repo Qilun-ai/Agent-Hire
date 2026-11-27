@@ -1,0 +1,3373 @@
+[
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-7eb05e18c9446e83fe11"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": false,
+        "company": "Nimbus Robotics",
+        "description": "Go, Kafka and PostgreSQL. 6+ years of experience building distributed systems.",
+        "location": "Hyderabad, Telangana, India",
+        "title": "Senior Backend Engineer",
+        "workplace_type": "hybrid"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "add Senior Backend Engineer at Nimbus Robotics"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-f8fd5864d12387d88052"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": false,
+        "company": "Ledgerline",
+        "description": "Python, Django and AWS. 2+ years of professional experience with REST APIs.",
+        "location": "Bengaluru, India",
+        "title": "Backend Engineer",
+        "workplace_type": "remote"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "add Backend Engineer at Ledgerline"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-3c98c9915b7384da6a61"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": false,
+        "company": "Pixel Forge",
+        "description": "React and TypeScript. Freshers welcome, no experience required.",
+        "location": "Remote",
+        "title": "Junior Frontend Developer",
+        "workplace_type": "remote"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "add Junior Frontend Developer at Pixel Forge"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-f722d8cd7337e4648b85"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": false,
+        "company": "Ledgerline",
+        "description": "SQL, Excel and Tableau dashboards for finance.",
+        "location": "Pune, India",
+        "title": "Data Analyst",
+        "workplace_type": "onsite"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "add Data Analyst at Ledgerline"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-eb6dfa32bb3635b1864f"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": false,
+        "company": "Orbit Labs",
+        "description": "Rust, Kubernetes and gRPC. Lead the platform team.",
+        "location": "Austin, TX",
+        "title": "Staff Software Engineer",
+        "workplace_type": "onsite"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "add Staff Software Engineer at Orbit Labs"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-6cc96cfc6224cde06339"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": false,
+        "company": "Orbit Labs",
+        "description": "Summer internship working with Java and Spring Boot.",
+        "location": "Austin, TX",
+        "title": "Software Engineering Intern",
+        "workplace_type": "onsite"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "add Software Engineering Intern at Orbit Labs"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-f8fd5864d12387d88052"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": false,
+        "company": "Ledgerline",
+        "description": "Python, Django and AWS. 2+ years of professional experience with REST APIs.",
+        "location": "Chennai, India",
+        "title": "Backend Engineer",
+        "workplace_type": "remote"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "add Backend Engineer at Ledgerline"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 6,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 6
+        },
+        "levels": {
+          "fresher": 1,
+          "intern": 1,
+          "junior": 1,
+          "lead": 1,
+          "senior": 1,
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Orbit Labs",
+            2
+          ],
+          [
+            "Ledgerline",
+            2
+          ],
+          [
+            "Pixel Forge",
+            1
+          ],
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-6cc96cfc6224cde06339",
+          "level": "intern",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Software Engineering Intern",
+          "top_skills": [
+            "software engineering",
+            "java",
+            "spring boot"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-eb6dfa32bb3635b1864f",
+          "level": "lead",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Staff Software Engineer",
+          "top_skills": [
+            "rust",
+            "kubernetes",
+            "grpc",
+            "platform"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f722d8cd7337e4648b85",
+          "level": null,
+          "level_source": null,
+          "location": "Pune, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Data Analyst",
+          "top_skills": [
+            "sql",
+            "tableau",
+            "dashboards",
+            "finance"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Pixel Forge",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-3c98c9915b7384da6a61",
+          "level": "fresher",
+          "level_source": "stated",
+          "location": "Remote",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 0,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Junior Frontend Developer",
+          "top_skills": [
+            "react",
+            "typescript"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Nimbus Robotics",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-7eb05e18c9446e83fe11",
+          "level": "senior",
+          "level_source": "stated",
+          "location": "Hyderabad, Telangana, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 6,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Senior Backend Engineer",
+          "top_skills": [
+            "kafka",
+            "postgresql",
+            "distributed systems"
+          ],
+          "url": null,
+          "workplace": "hybrid"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 6,
+      "total_postings": 6
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "everything"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 5,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 5
+        },
+        "levels": {
+          "fresher": 1,
+          "intern": 1,
+          "junior": 1,
+          "lead": 1,
+          "senior": 1
+        },
+        "top_companies": [
+          [
+            "Orbit Labs",
+            2
+          ],
+          [
+            "Pixel Forge",
+            1
+          ],
+          [
+            "Ledgerline",
+            1
+          ],
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "software engineer",
+        "role_family": "software",
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-6cc96cfc6224cde06339",
+          "level": "intern",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Software Engineering Intern",
+          "top_skills": [
+            "software engineering",
+            "java",
+            "spring boot"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-eb6dfa32bb3635b1864f",
+          "level": "lead",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Staff Software Engineer",
+          "top_skills": [
+            "rust",
+            "kubernetes",
+            "grpc",
+            "platform"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Pixel Forge",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-3c98c9915b7384da6a61",
+          "level": "fresher",
+          "level_source": "stated",
+          "location": "Remote",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 0,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Junior Frontend Developer",
+          "top_skills": [
+            "react",
+            "typescript"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Nimbus Robotics",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-7eb05e18c9446e83fe11",
+          "level": "senior",
+          "level_source": "stated",
+          "location": "Hyderabad, Telangana, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 6,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Senior Backend Engineer",
+          "top_skills": [
+            "kafka",
+            "postgresql",
+            "distributed systems"
+          ],
+          "url": null,
+          "workplace": "hybrid"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 5,
+      "total_postings": 5
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "role": "software engineer",
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "software family"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 1,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 1
+        },
+        "levels": {
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Ledgerline",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "data analyst",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f722d8cd7337e4648b85",
+          "level": null,
+          "level_source": null,
+          "location": "Pune, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Data Analyst",
+          "top_skills": [
+            "sql",
+            "tableau",
+            "dashboards",
+            "finance"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 1,
+      "total_postings": 1
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "role": "data analyst"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "free-text role"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 6,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 1
+        },
+        "levels": {
+          "senior": 1
+        },
+        "top_companies": [
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [
+          "senior"
+        ],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Nimbus Robotics",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-7eb05e18c9446e83fe11",
+          "level": "senior",
+          "level_source": "stated",
+          "location": "Hyderabad, Telangana, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 6,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Senior Backend Engineer",
+          "top_skills": [
+            "kafka",
+            "postgresql",
+            "distributed systems"
+          ],
+          "url": null,
+          "workplace": "hybrid"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 1,
+      "total_postings": 1
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "levels": [
+          "senior"
+        ],
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "seniors"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 6,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 4
+        },
+        "levels": {
+          "fresher": 1,
+          "intern": 1,
+          "junior": 1,
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Ledgerline",
+            2
+          ],
+          [
+            "Orbit Labs",
+            1
+          ],
+          [
+            "Pixel Forge",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [
+          "fresher",
+          "junior",
+          "intern"
+        ],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-6cc96cfc6224cde06339",
+          "level": "intern",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Software Engineering Intern",
+          "top_skills": [
+            "software engineering",
+            "java",
+            "spring boot"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Pixel Forge",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-3c98c9915b7384da6a61",
+          "level": "fresher",
+          "level_source": "stated",
+          "location": "Remote",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 0,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Junior Frontend Developer",
+          "top_skills": [
+            "react",
+            "typescript"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f722d8cd7337e4648b85",
+          "level": null,
+          "level_source": null,
+          "location": "Pune, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Data Analyst",
+          "top_skills": [
+            "sql",
+            "tableau",
+            "dashboards",
+            "finance"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 4,
+      "total_postings": 4
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "levels": [
+          "fresher",
+          "junior",
+          "intern"
+        ],
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "beginners"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 6,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 6
+        },
+        "levels": {
+          "fresher": 1,
+          "intern": 1,
+          "junior": 1,
+          "lead": 1,
+          "senior": 1,
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Orbit Labs",
+            2
+          ],
+          [
+            "Ledgerline",
+            2
+          ],
+          [
+            "Nimbus Robotics",
+            1
+          ],
+          [
+            "Pixel Forge",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-eb6dfa32bb3635b1864f",
+          "level": "lead",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Staff Software Engineer",
+          "top_skills": [
+            "rust",
+            "kubernetes",
+            "grpc",
+            "platform"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Nimbus Robotics",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-7eb05e18c9446e83fe11",
+          "level": "senior",
+          "level_source": "stated",
+          "location": "Hyderabad, Telangana, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 6,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Senior Backend Engineer",
+          "top_skills": [
+            "kafka",
+            "postgresql",
+            "distributed systems"
+          ],
+          "url": null,
+          "workplace": "hybrid"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Pixel Forge",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-3c98c9915b7384da6a61",
+          "level": "fresher",
+          "level_source": "stated",
+          "location": "Remote",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 0,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Junior Frontend Developer",
+          "top_skills": [
+            "react",
+            "typescript"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-6cc96cfc6224cde06339",
+          "level": "intern",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Software Engineering Intern",
+          "top_skills": [
+            "software engineering",
+            "java",
+            "spring boot"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f722d8cd7337e4648b85",
+          "level": null,
+          "level_source": null,
+          "location": "Pune, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Data Analyst",
+          "top_skills": [
+            "sql",
+            "tableau",
+            "dashboards",
+            "finance"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 6,
+      "total_postings": 6
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "sort": "level"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "sort by level"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 3,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 3
+        },
+        "levels": {
+          "junior": 1,
+          "senior": 1,
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Ledgerline",
+            2
+          ],
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [
+          "India"
+        ],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f722d8cd7337e4648b85",
+          "level": null,
+          "level_source": null,
+          "location": "Pune, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Data Analyst",
+          "top_skills": [
+            "sql",
+            "tableau",
+            "dashboards",
+            "finance"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Nimbus Robotics",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-7eb05e18c9446e83fe11",
+          "level": "senior",
+          "level_source": "stated",
+          "location": "Hyderabad, Telangana, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 6,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Senior Backend Engineer",
+          "top_skills": [
+            "kafka",
+            "postgresql",
+            "distributed systems"
+          ],
+          "url": null,
+          "workplace": "hybrid"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 3,
+      "total_postings": 3
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "locations": [
+          "India"
+        ],
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "india"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 2,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 2
+        },
+        "levels": {
+          "intern": 1,
+          "lead": 1
+        },
+        "top_companies": [
+          [
+            "Orbit Labs",
+            2
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [
+          "austin"
+        ],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-6cc96cfc6224cde06339",
+          "level": "intern",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Software Engineering Intern",
+          "top_skills": [
+            "software engineering",
+            "java",
+            "spring boot"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-eb6dfa32bb3635b1864f",
+          "level": "lead",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Staff Software Engineer",
+          "top_skills": [
+            "rust",
+            "kubernetes",
+            "grpc",
+            "platform"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 2,
+      "total_postings": 2
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "locations": [
+          "austin"
+        ],
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "texas city"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 2,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 2
+        },
+        "levels": {
+          "fresher": 1,
+          "junior": 1
+        },
+        "top_companies": [
+          [
+            "Pixel Forge",
+            1
+          ],
+          [
+            "Ledgerline",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": true,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Pixel Forge",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-3c98c9915b7384da6a61",
+          "level": "fresher",
+          "level_source": "stated",
+          "location": "Remote",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 0,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Junior Frontend Developer",
+          "top_skills": [
+            "react",
+            "typescript"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 2,
+      "total_postings": 2
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "remote": true,
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "remote only"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 2,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 2
+        },
+        "levels": {
+          "lead": 1,
+          "senior": 1
+        },
+        "top_companies": [
+          [
+            "Orbit Labs",
+            1
+          ],
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [
+          "kafka",
+          "rust"
+        ],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-eb6dfa32bb3635b1864f",
+          "level": "lead",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Staff Software Engineer",
+          "top_skills": [
+            "rust",
+            "kubernetes",
+            "grpc",
+            "platform"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Nimbus Robotics",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-7eb05e18c9446e83fe11",
+          "level": "senior",
+          "level_source": "stated",
+          "location": "Hyderabad, Telangana, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 6,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Senior Backend Engineer",
+          "top_skills": [
+            "kafka",
+            "postgresql",
+            "distributed systems"
+          ],
+          "url": null,
+          "workplace": "hybrid"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 2,
+      "total_postings": 2
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "keywords": [
+          "kafka",
+          "rust"
+        ],
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "keywords"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 1,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 1
+        },
+        "levels": {
+          "junior": 1
+        },
+        "top_companies": [
+          [
+            "Ledgerline",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": [
+          "backend",
+          "-senior"
+        ]
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 1,
+      "total_postings": 1
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "sort": "recent",
+        "title_keywords": [
+          "backend",
+          "-senior"
+        ]
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "title words"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 2,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 2
+        },
+        "levels": {
+          "junior": 1,
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Ledgerline",
+            2
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [
+          "ledger"
+        ],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f722d8cd7337e4648b85",
+          "level": null,
+          "level_source": null,
+          "location": "Pune, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Data Analyst",
+          "top_skills": [
+            "sql",
+            "tableau",
+            "dashboards",
+            "finance"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 2,
+      "total_postings": 2
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "companies": [
+          "ledger"
+        ],
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "companies"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 6,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 6
+        },
+        "levels": {
+          "fresher": 1,
+          "intern": 1,
+          "junior": 1,
+          "lead": 1,
+          "senior": 1,
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Orbit Labs",
+            2
+          ],
+          [
+            "Ledgerline",
+            2
+          ],
+          [
+            "Pixel Forge",
+            1
+          ],
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [
+          "custom"
+        ],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-6cc96cfc6224cde06339",
+          "level": "intern",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Software Engineering Intern",
+          "top_skills": [
+            "software engineering",
+            "java",
+            "spring boot"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-eb6dfa32bb3635b1864f",
+          "level": "lead",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Staff Software Engineer",
+          "top_skills": [
+            "rust",
+            "kubernetes",
+            "grpc",
+            "platform"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        }
+      ],
+      "page": 1,
+      "page_size": 2,
+      "pages": 3,
+      "profile_skills_used": 0,
+      "total_matches": 6,
+      "total_postings": 6
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "company_slugs": [
+          "custom"
+        ],
+        "page_size": 2,
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "company slugs"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 6,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 6
+        },
+        "levels": {
+          "fresher": 1,
+          "intern": 1,
+          "junior": 1,
+          "lead": 1,
+          "senior": 1,
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Orbit Labs",
+            2
+          ],
+          [
+            "Ledgerline",
+            2
+          ],
+          [
+            "Pixel Forge",
+            1
+          ],
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [
+          "custom"
+        ],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f722d8cd7337e4648b85",
+          "level": null,
+          "level_source": null,
+          "location": "Pune, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Data Analyst",
+          "top_skills": [
+            "sql",
+            "tableau",
+            "dashboards",
+            "finance"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Pixel Forge",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-3c98c9915b7384da6a61",
+          "level": "fresher",
+          "level_source": "stated",
+          "location": "Remote",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 0,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Junior Frontend Developer",
+          "top_skills": [
+            "react",
+            "typescript"
+          ],
+          "url": null,
+          "workplace": "remote"
+        }
+      ],
+      "page": 2,
+      "page_size": 2,
+      "pages": 3,
+      "profile_skills_used": 0,
+      "total_matches": 6,
+      "total_postings": 6
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "company_slugs": [
+          "custom"
+        ],
+        "page": 2,
+        "page_size": 2,
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "second page"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 6,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 6
+        },
+        "levels": {
+          "fresher": 1,
+          "intern": 1,
+          "junior": 1,
+          "lead": 1,
+          "senior": 1,
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Orbit Labs",
+            2
+          ],
+          [
+            "Ledgerline",
+            2
+          ],
+          [
+            "Pixel Forge",
+            1
+          ],
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [
+          "DATA",
+          "ENG",
+          "IT",
+          "SWE"
+        ],
+        "departments_not_understood": [
+          "nonsense"
+        ],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-6cc96cfc6224cde06339",
+          "level": "intern",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Software Engineering Intern",
+          "top_skills": [
+            "software engineering",
+            "java",
+            "spring boot"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-eb6dfa32bb3635b1864f",
+          "level": "lead",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Staff Software Engineer",
+          "top_skills": [
+            "rust",
+            "kubernetes",
+            "grpc",
+            "platform"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f722d8cd7337e4648b85",
+          "level": null,
+          "level_source": null,
+          "location": "Pune, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Data Analyst",
+          "top_skills": [
+            "sql",
+            "tableau",
+            "dashboards",
+            "finance"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Pixel Forge",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-3c98c9915b7384da6a61",
+          "level": "fresher",
+          "level_source": "stated",
+          "location": "Remote",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 0,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Junior Frontend Developer",
+          "top_skills": [
+            "react",
+            "typescript"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Nimbus Robotics",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-7eb05e18c9446e83fe11",
+          "level": "senior",
+          "level_source": "stated",
+          "location": "Hyderabad, Telangana, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 6,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Senior Backend Engineer",
+          "top_skills": [
+            "kafka",
+            "postgresql",
+            "distributed systems"
+          ],
+          "url": null,
+          "workplace": "hybrid"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 6,
+      "total_postings": 6
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "departments": [
+          "Technology",
+          "nonsense"
+        ],
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "departments without a model"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 6,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {
+          "unknown": 6
+        },
+        "levels": {
+          "fresher": 1,
+          "intern": 1,
+          "junior": 1,
+          "lead": 1,
+          "senior": 1,
+          "unknown": 1
+        },
+        "top_companies": [
+          [
+            "Orbit Labs",
+            2
+          ],
+          [
+            "Ledgerline",
+            2
+          ],
+          [
+            "Pixel Forge",
+            1
+          ],
+          [
+            "Nimbus Robotics",
+            1
+          ]
+        ]
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": 24.0,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 6,
+        "jobs_last_24h": 6,
+        "jobs_software": 5,
+        "jobs_total": 6,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-6cc96cfc6224cde06339",
+          "level": "intern",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Software Engineering Intern",
+          "top_skills": [
+            "software engineering",
+            "java",
+            "spring boot"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Orbit Labs",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-eb6dfa32bb3635b1864f",
+          "level": "lead",
+          "level_source": "stated",
+          "location": "Austin, TX",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Staff Software Engineer",
+          "top_skills": [
+            "rust",
+            "kubernetes",
+            "grpc",
+            "platform"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f722d8cd7337e4648b85",
+          "level": null,
+          "level_source": null,
+          "location": "Pune, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": null,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Data Analyst",
+          "top_skills": [
+            "sql",
+            "tableau",
+            "dashboards",
+            "finance"
+          ],
+          "url": null,
+          "workplace": "onsite"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Pixel Forge",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-3c98c9915b7384da6a61",
+          "level": "fresher",
+          "level_source": "stated",
+          "location": "Remote",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 0,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Junior Frontend Developer",
+          "top_skills": [
+            "react",
+            "typescript"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Ledgerline",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-f8fd5864d12387d88052",
+          "level": "junior",
+          "level_source": "stated",
+          "location": "Chennai, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 2,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Backend Engineer",
+          "top_skills": [
+            "python",
+            "django",
+            "aws"
+          ],
+          "url": null,
+          "workplace": "remote"
+        },
+        {
+          "also_posted_in": null,
+          "company": "Nimbus Robotics",
+          "department": null,
+          "department_code": null,
+          "in_pipeline": false,
+          "job_ref": "custom-7eb05e18c9446e83fe11",
+          "level": "senior",
+          "level_source": "stated",
+          "location": "Hyderabad, Telangana, India",
+          "match_count": 0,
+          "matched_skills": [],
+          "min_years": 6,
+          "posted": "<datetime>",
+          "posted_basis": "first_seen",
+          "role_confidence": null,
+          "title": "Senior Backend Engineer",
+          "top_skills": [
+            "kafka",
+            "postgresql",
+            "distributed systems"
+          ],
+          "url": null,
+          "workplace": "hybrid"
+        }
+      ],
+      "page": 1,
+      "page_size": 15,
+      "pages": 1,
+      "profile_skills_used": 0,
+      "total_matches": 6,
+      "total_postings": 6
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "since_hours": 24,
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "recent window"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "ctx": {
+            "pattern": "^(match|recent|level)$"
+          },
+          "input": "best",
+          "loc": [
+            "body",
+            "sort"
+          ],
+          "msg": "String should match pattern '^(match|recent|level)$'",
+          "type": "string_pattern_mismatch"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "sort": "best"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 422,
+    "step": "bad sort"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "ctx": {
+            "le": 25
+          },
+          "input": 26,
+          "loc": [
+            "body",
+            "page_size"
+          ],
+          "msg": "Input should be less than or equal to 25",
+          "type": "less_than_equal"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "page_size": 26
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 422,
+    "step": "bad page size"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "input": "blue",
+          "loc": [
+            "body",
+            "colour"
+          ],
+          "msg": "Extra inputs are not permitted",
+          "type": "extra_forbidden"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "colour": "blue",
+        "role": "x"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 422,
+    "step": "extra field"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "ctx": {
+            "ge": 1.0
+          },
+          "input": 0.5,
+          "loc": [
+            "body",
+            "since_hours"
+          ],
+          "msg": "Input should be greater than or equal to 1",
+          "type": "greater_than_equal"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "since_hours": 0.5
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 422,
+    "step": "bad since"
+  },
+  {
+    "body": {
+      "departments": [
+        {
+          "count": 0,
+          "name": "Technology",
+          "subdepartments": [
+            {
+              "code": "ENG",
+              "count": 0,
+              "name": "Engineering"
+            },
+            {
+              "code": "SWE",
+              "count": 0,
+              "name": "Software Development"
+            },
+            {
+              "code": "IT",
+              "count": 0,
+              "name": "Information Technology"
+            },
+            {
+              "code": "DATA",
+              "count": 0,
+              "name": "Data and Analytics"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Design and Creative",
+          "subdepartments": [
+            {
+              "code": "DES",
+              "count": 0,
+              "name": "Design"
+            },
+            {
+              "code": "ART",
+              "count": 0,
+              "name": "Creative and Art Services"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Business Operations",
+          "subdepartments": [
+            {
+              "code": "PGM",
+              "count": 0,
+              "name": "Project and Program Management"
+            },
+            {
+              "code": "PM",
+              "count": 0,
+              "name": "Product Management"
+            },
+            {
+              "code": "OPS",
+              "count": 0,
+              "name": "Business Operations"
+            },
+            {
+              "code": "LEGAL",
+              "count": 0,
+              "name": "Legal and Compliance"
+            },
+            {
+              "code": "FIN",
+              "count": 0,
+              "name": "Finance and Accounting"
+            },
+            {
+              "code": "HR",
+              "count": 0,
+              "name": "Human Resources"
+            },
+            {
+              "code": "ADMIN",
+              "count": 0,
+              "name": "Administrative & Clerical Support"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Sales and Marketing",
+          "subdepartments": [
+            {
+              "code": "SALES",
+              "count": 0,
+              "name": "Sales"
+            },
+            {
+              "code": "MKT",
+              "count": 0,
+              "name": "Marketing"
+            },
+            {
+              "code": "COMMS",
+              "count": 0,
+              "name": "Communications and Public Affairs"
+            },
+            {
+              "code": "BD",
+              "count": 0,
+              "name": "Business Development"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Healthcare",
+          "subdepartments": [
+            {
+              "code": "HC_ADV",
+              "count": 0,
+              "name": "Healthcare Services - Advanced Practice"
+            },
+            {
+              "code": "HC_ALLIED",
+              "count": 0,
+              "name": "Healthcare Services - Allied Health"
+            },
+            {
+              "code": "HC_NURSE",
+              "count": 0,
+              "name": "Healthcare Services - Nursing"
+            },
+            {
+              "code": "HC_PHARM",
+              "count": 0,
+              "name": "Healthcare Services - Pharmacy"
+            },
+            {
+              "code": "HC_VET",
+              "count": 0,
+              "name": "Healthcare Services - Veterinary"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Education",
+          "subdepartments": [
+            {
+              "code": "EDU",
+              "count": 0,
+              "name": "Education services"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Customer and Social Services",
+          "subdepartments": [
+            {
+              "code": "CS",
+              "count": 0,
+              "name": "Customer Service"
+            },
+            {
+              "code": "SOCIAL",
+              "count": 0,
+              "name": "Social Services"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Skilled Trades",
+          "subdepartments": [
+            {
+              "code": "T_CONSTR",
+              "count": 0,
+              "name": "Skilled Trades - Construction"
+            },
+            {
+              "code": "T_MECHEL",
+              "count": 0,
+              "name": "Skilled Trades - Mechanical and Electrical"
+            },
+            {
+              "code": "T_MFG",
+              "count": 0,
+              "name": "Skilled Trades - Manufacturing and Industrial"
+            },
+            {
+              "code": "T_MAINT",
+              "count": 0,
+              "name": "Skilled Trades - Maintenance and Repair"
+            },
+            {
+              "code": "T_LABOR",
+              "count": 0,
+              "name": "Skilled Trades - General Labor"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Transportation and Logistics",
+          "subdepartments": [
+            {
+              "code": "TRANSPORT",
+              "count": 0,
+              "name": "Transportation Services"
+            },
+            {
+              "code": "SCM",
+              "count": 0,
+              "name": "Supply Chain / Logistics / Procurement"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Quality and Safety",
+          "subdepartments": [
+            {
+              "code": "QA",
+              "count": 0,
+              "name": "Quality Assurance"
+            },
+            {
+              "code": "EHS",
+              "count": 0,
+              "name": "Environment, Health, and Safety"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Research and Development",
+          "subdepartments": [
+            {
+              "code": "RND",
+              "count": 0,
+              "name": "Research and Development (R&D)"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Food and Hospitality",
+          "subdepartments": [
+            {
+              "code": "FOOD",
+              "count": 0,
+              "name": "Food and Beverage Services"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Protective Services",
+          "subdepartments": [
+            {
+              "code": "PROTECT",
+              "count": 0,
+              "name": "Protective Services"
+            }
+          ]
+        },
+        {
+          "count": 0,
+          "name": "Custodial Services",
+          "subdepartments": [
+            {
+              "code": "CUSTODIAL",
+              "count": 0,
+              "name": "Custodial Services"
+            }
+          ]
+        }
+      ],
+      "model": false
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/jobindex/departments"
+    },
+    "status": 200,
+    "step": "departments"
+  },
+  {
+    "body": {
+      "added": [],
+      "already_in_pipeline": [],
+      "cart_size": null,
+      "missing": [
+        "missing-1"
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_cart": false,
+        "job_refs": [
+          "missing-1"
+        ]
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/promote"
+    },
+    "status": 200,
+    "step": "promote two"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "ctx": {
+            "actual_length": 0,
+            "field_type": "List",
+            "min_length": 1
+          },
+          "input": [],
+          "loc": [
+            "body",
+            "job_refs"
+          ],
+          "msg": "List should have at least 1 item after validation, not 0",
+          "type": "too_short"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "job_refs": []
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/promote"
+    },
+    "status": 422,
+    "step": "promote nothing"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "ctx": {
+            "min_length": 2
+          },
+          "input": "x",
+          "loc": [
+            "body",
+            "title"
+          ],
+          "msg": "String should have at least 2 characters",
+          "type": "string_too_short"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "company": "y",
+        "title": "x"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 422,
+    "step": "custom title too short"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "ctx": {
+            "pattern": "^(index|pipeline|both)$"
+          },
+          "input": "nowhere",
+          "loc": [
+            "body",
+            "scope"
+          ],
+          "msg": "String should match pattern '^(index|pipeline|both)$'",
+          "type": "string_pattern_mismatch"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "job_refs": [
+          "a"
+        ],
+        "scope": "nowhere"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/delete"
+    },
+    "status": 422,
+    "step": "delete bad scope"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "ctx": {
+            "pattern": "^(pipeline|index|all)$"
+          },
+          "input": "everything",
+          "loc": [
+            "body",
+            "scope"
+          ],
+          "msg": "String should match pattern '^(pipeline|index|all)$'",
+          "type": "string_pattern_mismatch"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "confirm": "RESET",
+        "scope": "everything"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/reset"
+    },
+    "status": 422,
+    "step": "reset bad scope"
+  },
+  {
+    "body": {
+      "detail": "Unknown speed categories: warp (use fast, quick, medium, slow, very_slow, unknown)"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "categories": [
+          "warp"
+        ]
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/scrape"
+    },
+    "status": 422,
+    "step": "scrape unknown category"
+  },
+  {
+    "body": {
+      "reason": "no_known_companies",
+      "started": false,
+      "unknown": [
+        "no-such-company-xyz"
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "companies": [
+          "no-such-company-xyz"
+        ]
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/scrape"
+    },
+    "status": 200,
+    "step": "scrape unknown company"
+  },
+  {
+    "body": {
+      "index_deleted": 6
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "confirm": "RESET",
+        "scope": "index"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/reset"
+    },
+    "status": 200,
+    "step": "reset the index"
+  },
+  {
+    "body": {
+      "classification": {
+        "candidates_scanned": 0,
+        "decision_endpoints": [],
+        "pending_decisions": 0,
+        "source": "rules"
+      },
+      "facets": {
+        "departments": {},
+        "levels": {},
+        "top_companies": []
+      },
+      "filters": {
+        "companies": [],
+        "company_slugs": [],
+        "department_model": false,
+        "departments": [],
+        "departments_not_understood": [],
+        "keywords": [],
+        "levels": [],
+        "locations": [],
+        "match_profile": false,
+        "remote": null,
+        "role": "",
+        "role_family": null,
+        "since_hours": null,
+        "title_keywords": []
+      },
+      "index": {
+        "companies_indexed": 0,
+        "jobs_active": 0,
+        "jobs_last_24h": 0,
+        "jobs_software": 0,
+        "jobs_total": 0,
+        "jobs_with_published_date": 0,
+        "last_import_at": null
+      },
+      "jobs": [],
+      "page": 1,
+      "page_size": 15,
+      "pages": 0,
+      "profile_skills_used": 0,
+      "total_matches": 0,
+      "total_postings": 0
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "sort": "recent"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/search"
+    },
+    "status": 200,
+    "step": "empty after reset"
+  }
+]

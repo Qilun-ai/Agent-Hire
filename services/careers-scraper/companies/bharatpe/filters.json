@@ -1,0 +1,78 @@
+{
+  "company": "BharatPe",
+  "slug": "bharatpe",
+  "portal": "https://bharatpe.com/career/",
+  "listing_url": "https://bharatpe.darwinbox.in/ms/candidatev2/main/careers/allJobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "Rendered board shows a Location filter and POST job/newfilters returns its vocabulary as location[].{_id,name} (currently only Remote). The observed listing body carries no location key; the applied-filter payload is built in a lazy chunk, so server-side narrowing is unproven."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Filter is enabled (getCompanyConfig careers_filters.department=\"1\") and job/newfilters returns a department bucket, currently empty. No department key appears in the listing body, so filtering is local."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employee Type",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Filter is enabled (careers_filters.employee_type=\"1\"); job/newfilters returns employee_type, currently empty."
+    },
+    {
+      "key": "job_family",
+      "label": "Job Tag",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Portal labels this control Job Tag (careers_filters.job_tags=\"1\"); job/newfilters returns a job_tags bucket, currently empty. Mapped to job_family because the schema has no job_tag key."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Filter is enabled (careers_filters.country=\"1\"); job/newfilters returns a country bucket, currently empty."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "new",
+      "label": "Newest",
+      "native_param": "sort_option=new"
+    },
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort_option=relevance"
+    }
+  ],
+  "default_sort": "new",
+  "native_query": false,
+  "local_query": true,
+  "notes": "BharatPe's official /career/ page (client-rendered) links to its Darwinbox candidate board. Listing is POST https://bharatpe.darwinbox.in/ms/candidateapi/job/alljobs?companyId=main with {companyId:\"main\",page,sort_option,limit}; the bundle's loadAllJobs(payload) posts that payload verbatim, so no filter or keyword keys are added by the listing call as observed. Facet vocabulary comes from POST job/newfilters?companyId=main {companyId:\"main\",id:[]}, which returns employee_type, functional_area, location, department, job_tags, country, capability. getCompanyConfig careers_filters enables department, location, experience, employee_type, job_tags, country, job_title (functional_area and capability are \"0\"); the rendered board shows Department, Location, Employee Type, Job Tag, Country, Experience. The Experience control has no facet bucket (it is a range control) and is therefore not modelled as a field. A keyword box is rendered ('Search by role, department or location'), but no keyword key appears in the listing body; the bundle declares unused constants jobSearch:\"job?\" and search:\"search\" and the applied-filter/search dispatch sits in a lazy chunk, so keyword_param is null and matching is local. Pagination is page/limit in the same POST body (UI starts page 1, limit 10, sort_option new). The board currently lists 0 jobs (job_counts 0, live 2026-11-07), which makes any server-side narrowing unobservable, hence native_query false.",
+  "evidence": [
+    "https://bharatpe.darwinbox.in/ms/candidateapi/job/alljobs?companyId=main (POST {companyId:main,page:1,sort_option:new,limit:10} -> 200 {\"status\":\"success\",\"data\":[],\"job_counts\":0})",
+    "https://bharatpe.darwinbox.in/ms/candidateapi/job/newfilters?companyId=main (POST {companyId:main,id:[]} -> 200 message{employee_type:[],functional_area:[],location:[{_id:Remote,name:Remote}],department:[],job_tags:[],country:[],capability:[]})",
+    "https://bharatpe.darwinbox.in/ms/candidatev2/main.819c4120b20f8091.js (loadAllJobs posts payload verbatim; sort_option:\"relevance\" dispatch; endpoint constants allJobs/newFilters/jobSearch)",
+    "https://bharatpe.darwinbox.in/ms/candidatev2/main/careers/allJobs (rendered: 'Search by role, department or location', filters Department/Location/Employee Type/Job Tag/Country/Experience)",
+    "https://bharatpe.darwinbox.in/ms/candidateapi/getCompanyConfig?is_preview=false&companyId=main (careers_filters + allJobsCount 0)",
+    "adapter:src/career_scraper/adapters/bharatpe.py"
+  ],
+  "verified": true
+}

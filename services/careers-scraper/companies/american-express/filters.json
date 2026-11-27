@@ -1,0 +1,88 @@
+{
+  "company": "American Express",
+  "slug": "american-express",
+  "portal": "https://careers.americanexpress.com/",
+  "listing_url": "https://careers.americanexpress.com/en/sites/CX_1/jobs",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Administration/Management Info",
+        "Banking",
+        "Compliance, Control & Legal",
+        "Credit",
+        "Customer Service",
+        "Data Mgmt and Analytics",
+        "Design",
+        "Finance",
+        "Human Resources",
+        "Internal Audit",
+        "Legal",
+        "Marketing",
+        "Operations/Customer Service",
+        "Product",
+        "Project Management",
+        "Public Affairs/Communications",
+        "Real Estate",
+        "Risk",
+        "Sales/Relationship Management",
+        "Security",
+        "Strategic Planning",
+        "Technology",
+        "Travel Services"
+      ],
+      "native_param": "selectedCategoriesFacet",
+      "note": "Oracle Recruiting Cloud finder facet name echoed in the response (SelectedCategoriesFacet)."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "On-site",
+        "Remote"
+      ],
+      "native_param": "selectedWorkplaceTypesFacet",
+      "note": "Finder facet SelectedWorkplaceTypesFacet."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": "location",
+      "note": "Free-text finder argument; no value list was captured."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [],
+      "native_param": "selectedLocationsFacet",
+      "note": "Finder facet SelectedLocationsFacet; country-level values were not captured."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "American Express careers is Oracle Recruiting Cloud site CX_1 (base data-sitenumber=CX_1, API egug.fa.us2.oraclecloud.com). The finder-string API findReqs;siteNumber=CX_1,... accepts keyword= (verified: engineer returned 146 jobs) and echoed Keyword; it also echoes SelectedCategoriesFacet, SelectedWorkplaceTypesFacet, SelectedLocationsFacet and location as supported filter fields. Only keyword was exercised; facet values come from collected records.",
+  "evidence": [
+    "https://www.americanexpress.com/en-us/careers/",
+    "https://careers.americanexpress.com/en/sites/CX_1/jobs",
+    "https://egug.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?finder=findReqs;siteNumber=CX_1,facetsList=WORK_LOCATIONS;WORKPLACE_TYPES;TITLES;CATEGORIES;ORGANIZATIONS;POSTING_DATES;FLEX_FIELDS;LOCATIONS,limit=3,sortBy=POSTING_DATES_DESC,offset=0,keyword=engineer"
+  ],
+  "verified": true
+}

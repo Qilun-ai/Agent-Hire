@@ -1,0 +1,541 @@
+[
+  {
+    "body": {
+      "achievements": [],
+      "certifications": [],
+      "education": [],
+      "exp": [],
+      "identity": {
+        "city": "",
+        "country": "",
+        "email": "",
+        "github_url": "",
+        "linkedin_url": "",
+        "phone": "",
+        "website_url": ""
+      },
+      "n": "",
+      "projects": [],
+      "s": "",
+      "skills": []
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/profile"
+    },
+    "status": 200,
+    "step": "empty profile"
+  },
+  {
+    "body": {
+      "n": "Priya Raman",
+      "s": "Backend engineer, 6 years, Go and Kafka"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "n": "Priya Raman",
+        "s": "Backend engineer, 6 years, Go and Kafka."
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/candidate"
+    },
+    "status": 200,
+    "step": "candidate"
+  },
+  {
+    "body": {
+      "city": "Hyderabad",
+      "country": "India",
+      "email": "priya@example.com",
+      "github_url": "https://github.com/priya",
+      "linkedin_url": "https://linkedin.com/in/priya",
+      "phone": "+91 98765 43210",
+      "website_url": "https://priya.dev"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "city": "Hyderabad",
+        "country": "India",
+        "email": "priya@example.com",
+        "github_url": "https://github.com/priya",
+        "linkedin_url": "https://linkedin.com/in/priya",
+        "phone": "+91 98765 43210",
+        "website_url": "https://priya.dev"
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/identity"
+    },
+    "status": 200,
+    "step": "identity"
+  },
+  {
+    "body": {
+      "cat": "language",
+      "id": "5f075ae3e1f9",
+      "n": "Go"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "cat": "language",
+        "n": "Go"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/skill"
+    },
+    "status": 200,
+    "step": "add skill"
+  },
+  {
+    "body": {
+      "co": "Ledgerline",
+      "d": "Payments platform on Kafka.",
+      "id": "572224ee0ba7",
+      "period": "2021-2026",
+      "role": "Senior Engineer"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "co": "Ledgerline",
+        "d": "Payments platform on Kafka.",
+        "period": "2021-2026",
+        "role": "Senior Engineer"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/experience"
+    },
+    "status": 200,
+    "step": "add experience"
+  },
+  {
+    "body": {
+      "id": "6ad0d180964e",
+      "impact": "3M transactions a day",
+      "repo": "",
+      "stack": [
+        "Go",
+        " Kafka",
+        " PostgreSQL"
+      ],
+      "title": "Settlement service"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "impact": "3M transactions a day",
+        "repo": "",
+        "stack": "Go, Kafka, PostgreSQL",
+        "title": "Settlement service"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/project"
+    },
+    "status": 200,
+    "step": "add project"
+  },
+  {
+    "body": {
+      "id": "129d5c4cb581",
+      "title": "B.Tech CSE, NIT Warangal"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "title": "B.Tech CSE, NIT Warangal"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/education"
+    },
+    "status": 200,
+    "step": "add education"
+  },
+  {
+    "body": {
+      "id": "4a3580e14fb3",
+      "title": "CKA"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "title": "CKA"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/certification"
+    },
+    "status": 200,
+    "step": "add certification"
+  },
+  {
+    "body": {
+      "id": "4d4c6b79bb89",
+      "title": "Cut MTTR 90 to 25 min"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "title": "Cut MTTR 90 to 25 min"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/achievement"
+    },
+    "status": 200,
+    "step": "add achievement"
+  },
+  {
+    "body": {
+      "achievements": [
+        "Cut MTTR 90 to 25 min"
+      ],
+      "certifications": [
+        "CKA"
+      ],
+      "education": [
+        "B.Tech CSE, NIT Warangal"
+      ],
+      "exp": [
+        {
+          "co": "Ledgerline",
+          "d": "Payments platform on Kafka.",
+          "id": "572224ee0ba7",
+          "period": "2021-2026",
+          "points": [
+            {
+              "id": "c2f76a3f9745",
+              "text": "Payments platform on Kafka."
+            }
+          ],
+          "role": "Senior Engineer"
+        }
+      ],
+      "identity": {
+        "city": "Hyderabad",
+        "country": "India",
+        "email": "priya@example.com",
+        "github_url": "https://github.com/priya",
+        "linkedin_url": "https://linkedin.com/in/priya",
+        "phone": "+91 98765 43210",
+        "website_url": "https://priya.dev"
+      },
+      "n": "Priya Raman",
+      "projects": [
+        {
+          "id": "6ad0d180964e",
+          "impact": "3M transactions a day",
+          "points": [
+            {
+              "id": "bd2d211a0094",
+              "text": "3M transactions a day"
+            }
+          ],
+          "repo": "",
+          "stack": [
+            "Go",
+            "Kafka",
+            "PostgreSQL"
+          ],
+          "title": "Settlement service"
+        }
+      ],
+      "s": "Backend engineer, 6 years, Go and Kafka",
+      "skills": [
+        {
+          "cat": "project_stack",
+          "id": "5f075ae3e1f9",
+          "n": "Go"
+        },
+        {
+          "cat": "project_stack",
+          "id": "51be25b0145a",
+          "n": "Kafka"
+        },
+        {
+          "cat": "project_stack",
+          "id": "399bd1ee5872",
+          "n": "PostgreSQL"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/profile"
+    },
+    "status": 200,
+    "step": "profile after adds"
+  },
+  {
+    "body": {
+      "cat": "language",
+      "id": "5f075ae3e1f9",
+      "n": "Golang"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "cat": "language",
+        "n": "Golang"
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/skill/5f075ae3e1f9"
+    },
+    "status": 200,
+    "step": "edit skill"
+  },
+  {
+    "body": {
+      "co": "Ledgerline",
+      "d": "Led the payments platform.",
+      "id": "572224ee0ba7",
+      "period": "2021-2026",
+      "role": "Staff Engineer"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "co": "Ledgerline",
+        "d": "Led the payments platform.",
+        "period": "2021-2026",
+        "role": "Staff Engineer"
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/experience/572224ee0ba7"
+    },
+    "status": 200,
+    "step": "edit experience"
+  },
+  {
+    "body": {
+      "id": "6ad0d180964e",
+      "impact": "3M tx/day",
+      "repo": "https://github.com/priya/settle",
+      "stack": [
+        "Go",
+        " Kafka"
+      ],
+      "title": "Settlement service"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "impact": "3M tx/day",
+        "repo": "https://github.com/priya/settle",
+        "stack": "Go, Kafka",
+        "title": "Settlement service"
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/project/6ad0d180964e"
+    },
+    "status": 200,
+    "step": "edit project"
+  },
+  {
+    "body": {
+      "achievements": [
+        "Cut MTTR 90 to 25 min"
+      ],
+      "certifications": [
+        "CKA"
+      ],
+      "education": [
+        "B.Tech CSE, NIT Warangal"
+      ],
+      "exp": [
+        {
+          "co": "Ledgerline",
+          "d": "Led the payments platform.",
+          "id": "572224ee0ba7",
+          "period": "2021-2026",
+          "points": [
+            {
+              "id": "d11e78a204d9",
+              "text": "Led the payments platform."
+            }
+          ],
+          "role": "Staff Engineer"
+        }
+      ],
+      "identity": {
+        "city": "Hyderabad",
+        "country": "India",
+        "email": "priya@example.com",
+        "github_url": "https://github.com/priya",
+        "linkedin_url": "https://linkedin.com/in/priya",
+        "phone": "+91 98765 43210",
+        "website_url": "https://priya.dev"
+      },
+      "n": "Priya Raman",
+      "projects": [
+        {
+          "id": "6ad0d180964e",
+          "impact": "3M tx/day",
+          "points": [],
+          "repo": "https://github.com/priya/settle",
+          "stack": [
+            "Go",
+            "Kafka"
+          ],
+          "title": "Settlement service"
+        }
+      ],
+      "s": "Backend engineer, 6 years, Go and Kafka",
+      "skills": [
+        {
+          "cat": "project_stack",
+          "id": "5f075ae3e1f9",
+          "n": "Go"
+        },
+        {
+          "cat": "project_stack",
+          "id": "51be25b0145a",
+          "n": "Kafka"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/profile"
+    },
+    "status": 200,
+    "step": "profile after edits"
+  },
+  {
+    "body": {
+      "cat": "general",
+      "id": "nope",
+      "n": "X"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "n": "X"
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/skill/nope"
+    },
+    "status": 200,
+    "step": "edit a missing skill"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/profile/skill/5f075ae3e1f9"
+    },
+    "status": 200,
+    "step": "delete skill"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/profile/experience/572224ee0ba7"
+    },
+    "status": 200,
+    "step": "delete experience"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/profile/project/6ad0d180964e"
+    },
+    "status": 200,
+    "step": "delete project"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/profile/education/B.Tech%20CSE%2C%20NIT%20Warangal"
+    },
+    "status": 200,
+    "step": "delete education by title"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/profile/certification/CKA"
+    },
+    "status": 200,
+    "step": "delete certification by title"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/profile/achievement/Cut%20MTTR%2090%20to%2025%20min"
+    },
+    "status": 200,
+    "step": "delete achievement by title"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "DELETE",
+      "path": "/api/v1/profile/education/nope"
+    },
+    "status": 200,
+    "step": "delete a missing entry"
+  },
+  {
+    "body": {
+      "achievements": [],
+      "certifications": [],
+      "education": [],
+      "exp": [],
+      "identity": {
+        "city": "Hyderabad",
+        "country": "India",
+        "email": "priya@example.com",
+        "github_url": "https://github.com/priya",
+        "linkedin_url": "https://linkedin.com/in/priya",
+        "phone": "+91 98765 43210",
+        "website_url": "https://priya.dev"
+      },
+      "n": "Priya Raman",
+      "projects": [],
+      "s": "Backend engineer, 6 years, Go and Kafka",
+      "skills": [
+        {
+          "cat": "general",
+          "id": "nope",
+          "n": "X"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/profile"
+    },
+    "status": 200,
+    "step": "profile after deletes"
+  }
+]

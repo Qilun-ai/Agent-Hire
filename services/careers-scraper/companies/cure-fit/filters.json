@@ -1,0 +1,71 @@
+{
+  "company": "Cure.fit",
+  "slug": "cure-fit",
+  "portal": "https://www.cult.fit/careers",
+  "listing_url": "https://careers.cult.fit/cult/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "anyOfTheseWords",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Cultfit Healthcare Pvt Ltd",
+        "Cultsport Private Limited",
+        "Curefit Healthcare Pvt Ltd",
+        "Curefit Services Private Ltd",
+        "Diverse Retails Pvt Ltd",
+        "Jogo Technologies Private Limited"
+      ],
+      "native_param": null,
+      "note": "postings carry departmentName / legal-entity labels; the app sends facet chips in filterCri.facetSelectionString[<facet field>], whose field names come from its dynamic facetedSearchConfig and were not captured"
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Ahmedabad",
+        "Bangalore",
+        "Bengaluru",
+        "Chennai",
+        "Coimbatore",
+        "Delhi",
+        "Gujarat",
+        "Gurgaon",
+        "Gurugram",
+        "Guwahati",
+        "Hyderabad",
+        "Kochi",
+        "Lucknow",
+        "Mumbai",
+        "Nagpur",
+        "New Delhi",
+        "Noida",
+        "Pune",
+        "Punjab"
+      ],
+      "native_param": null,
+      "note": "row fields location / officeLocation; same facetSelectionString mechanism as department"
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent (modified)",
+      "native_param": "filterCri.sortCriteria={\"name\":\"modifiedDate\",\"isAscending\":false}"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "cult.fit/careers 301-redirects to the Angular app at https://careers.cult.fit/cult/. Its main.3f2a2948bb3197cd.js posts a multipart form to https://public.zwayam.com/jobs/search with fields filterCri (JSON), domain and companyId; the base filterCri is {paginationStartNo, selectedCall:\"sort\", sortCriteria:{name:\"modifiedDate\",isAscending:false}, anyOfTheseWords:\"\"}. Keyword is native-verified from the bundle: the search handler assigns filterCri.anyOfTheseWords = this.searchKeyword and emits {keyword} before calling searchJobsv1. Facet chips are stored in filterCri.facetSelectionString[<facet field name>] (keys taken from the response-driven facetedSearchConfig, so per-field keys are not confirmed here) - apply those locally, and page with paginationStartNo using the same body. The API requires the bundle's browser user agent (the generic scraper UA is WAF-stalled).",
+  "evidence": [
+    "https://www.cult.fit/careers -> https://careers.cult.fit/cult/",
+    "https://careers.cult.fit/cult/main.3f2a2948bb3197cd.js (filterCri.anyOfTheseWords = this.searchKeyword; facetSelectionString; jobs/search)",
+    "adapter:cure_fit (filterCri body, paginationStartNo, sortCriteria modifiedDate desc)"
+  ],
+  "verified": true
+}

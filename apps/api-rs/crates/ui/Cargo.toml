@@ -1,0 +1,20 @@
+[package]
+name = "agent-hire-ui"
+description = "Server-rendered Agent-Hire pages and fragments."
+version = "1.4.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+maud = "0.27"
+pulldown-cmark = { version = "0.13", default-features = false, features = ["html"] }
+regex.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+url.workspace = true
+
+[lints]
+workspace = true
