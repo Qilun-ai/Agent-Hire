@@ -1,0 +1,101 @@
+{
+  "company": "HDFC Bank",
+  "slug": "hdfc-bank",
+  "portal": "https://www.hdfcbank.com/personal/about-us/careers",
+  "listing_url": "https://hdfcbank.ripplehire.com/candidate/careers",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Agartala",
+        "Agra",
+        "Ahmedabad",
+        "Aizawl",
+        "Ajmer",
+        "Amritsar",
+        "Angul",
+        "Ariyalur",
+        "Banda",
+        "Bangalore",
+        "Barddhaman",
+        "Bareilly",
+        "Bargarh",
+        "Bathinda(Punjb)",
+        "Berhampore",
+        "Bhadrak",
+        "Bhagalpur",
+        "Bhanpuri",
+        "Bhilai",
+        "Bhimavaram",
+        "Bhiwadi",
+        "Bhubaneswar",
+        "Bicholim",
+        "Bihar Sharif",
+        "Bilaspur"
+      ],
+      "native_param": null,
+      "note": "Row field 'locations' (and jobLocationList/locationCount). The API returns cityCount/locationCount maps, but no location key appears in the observed request body, so match locally."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "ABCP Product",
+        "Alternate Banking Channel & Partnerships",
+        "Audit",
+        "Business Banking - Working Cap",
+        "Business Enhancement Unit",
+        "Collections",
+        "Corporate Banking",
+        "Corporate Legal",
+        "Corporate Social Responsibility",
+        "Credit Cards",
+        "Debt Management",
+        "Dept for Special Ops",
+        "Digital Banking",
+        "ECOM",
+        "Emerging Corporates Group",
+        "Emerging Enterprises Group",
+        "Environmental, Social and Governance",
+        "Finance",
+        "Financial Institutions (FIs)",
+        "GIB Product",
+        "Govt.&Institutional Business",
+        "Healthcare Finance",
+        "Human Resources",
+        "Information Security Group",
+        "Infrastructure Finance"
+      ],
+      "native_param": null,
+      "note": "Department values come from collected records; the API returns departmentsCount/bussinessUnitCount maps but the filter transport key was not observed, so match locally."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Permanent"
+      ],
+      "native_param": null,
+      "note": "From collected records (row field jobType is null for the sampled postings)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official careers URL lands on https://www.hdfc.bank.in/careers, which links to the RippleHire board https://hdfcbank.ripplehire.com/candidate/careers. The board is a JS shell; results come from POST https://hdfcbank.ripplehire.com/candidate/candidatejobsearch with one form field careerSiteUrlParams = JSON {page, search, token, source:'CAREERSITE', pagesize} plus lang=en. 'search' is a query string (unfiltered default '*:*'), so keyword/city text works server-side; verified search='Mumbai' returned totalJobCount 137. The response also carries cityCount/departmentsCount/bussinessUnitCount/jobLevelCount aggregation maps, but the request has no facet keys, so location/department must be filtered locally.",
+  "evidence": [
+    "https://hdfcbank.ripplehire.com/candidate/careers -> /candidate/?token=pvB5iAMcmu4ydUh2IW2O&source=CAREERSITE#list (HTTP 200)",
+    "POST /candidate/candidatejobsearch careerSiteUrlParams={\"page\":0,\"search\":\"Mumbai\",\"token\":\"...\",\"source\":\"CAREERSITE\",\"pagesize\":10} -> totalJobCount 137, maxJobSize 10, rows with locations='Mumbai'",
+    "response keys include startJobIndex, maxJobSize, totalJobCount, jobVoList, cityCount, departmentsCount, bussinessUnitCount, jobLevelCount",
+    "adapter src/career_scraper/adapters/hdfc_bank.py: UNFILTERED_SEARCH='*:*', SEARCH_API=/candidate/candidatejobsearch"
+  ],
+  "verified": true
+}

@@ -1,0 +1,112 @@
+{
+  "company": "Commvault Systems Pvt Ltd",
+  "slug": "commvault-systems-pvt-ltd",
+  "portal": "https://www.commvault.com/careers",
+  "listing_url": "https://www.commvault.com/careers/jobs",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Corporate",
+        "Sales & Sales Engineering",
+        "Enterprise & Customer Support",
+        "Services",
+        "Marketing",
+        "IT",
+        "Engineering & Product",
+        "Security"
+      ],
+      "native_param": "filters[department]",
+      "note": "rendered radio group (values are slugs, e.g. sales-sales-engineering); applied in-browser, no request"
+    },
+    {
+      "key": "employment_type",
+      "label": "Hiring Type",
+      "kind": "multi",
+      "values": [
+        "Full Time",
+        "Other"
+      ],
+      "native_param": "filters[hiring_type]",
+      "note": "rendered radio group, applied in-browser"
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote",
+      "kind": "multi",
+      "values": [
+        "Yes",
+        "No"
+      ],
+      "native_param": "filters[remote_position]",
+      "note": "Yes = remote position (30 of 56), No = onsite"
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Australia",
+        "Canada",
+        "Egypt",
+        "France",
+        "Germany",
+        "India",
+        "Korea, Republic Of",
+        "Malaysia",
+        "Poland",
+        "Singapore",
+        "Spain",
+        "United Kingdom",
+        "United States of America"
+      ],
+      "native_param": "filters[country]",
+      "note": "rendered select of country slugs"
+    },
+    {
+      "key": "location",
+      "label": "State",
+      "kind": "multi",
+      "values": [
+        "Berkshire",
+        "British Columbia",
+        "Cairo",
+        "California",
+        "Central Singapore",
+        "Florida",
+        "Hauts-de-Seine",
+        "Karnataka",
+        "Madrid",
+        "Masovian",
+        "Minnesota",
+        "New Jersey",
+        "New South Wales",
+        "North Carolina",
+        "North Rhine-Westphalia",
+        "Pennsylvania",
+        "Selangor",
+        "Telangana",
+        "Texas",
+        "Virginia",
+        "Washington"
+      ],
+      "native_param": "filters[state]",
+      "note": "sub-national state/province select; also has an 'Other' bucket"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "https://www.commvault.com/careers/jobs is server-rendered: it ships const greenhouse_list (Greenhouse job ids), 56 .job-card elements and a form#job-filters whose radio/select controls are named filters[department], filters[hiring_type], filters[country], filters[state], filters[remote_position], each with All/Total counts; the visible keyword box is <input type=text name=search-jobs>. The page's own greenhouse.js only hides/shows those already-rendered cards (no listing request, no pagination, no URL-parameter search), so every filter is a client-side control: native_param records the observed form field name purely as evidence, and there is no server-side query to send. Counts at capture: Department total 56 (Corporate 5, Sales & Sales Engineering 29, Enterprise & Customer Support 1, Services 3, Marketing 3, IT 4, Engineering & Product 10, Security 1); Hiring Type Full Time 55 / Other 1; Remote Yes 30 / No 26.",
+  "evidence": [
+    "https://www.commvault.com/careers/jobs (form#job-filters: filters[department], filters[hiring_type], filters[country], filters[state], filters[remote_position]; input name=search-jobs)",
+    "adapter:commvault (greenhouse.js filters rendered cards only; no listing request)"
+  ],
+  "verified": true
+}

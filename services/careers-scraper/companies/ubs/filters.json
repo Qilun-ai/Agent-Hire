@@ -1,0 +1,119 @@
+{
+  "company": "UBS",
+  "slug": "ubs",
+  "portal": "https://www.ubs.com/global/en/careers/search-jobs.html",
+  "listing_url": "https://jobs.ubs.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=25008&siteid=5012&PageType=searchResults&SearchType=linkquery&LinkID=15231",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Australia",
+        "Brazil",
+        "Canada - Ontario",
+        "France",
+        "Germany",
+        "Hong Kong SAR",
+        "India",
+        "Israel",
+        "Italy",
+        "Japan",
+        "Jersey",
+        "Korea, Republic of",
+        "Luxembourg",
+        "Mainland China",
+        "Mexico",
+        "Monaco",
+        "New Zealand",
+        "Panama",
+        "Philippines",
+        "Poland",
+        "Qatar",
+        "Schweiz - Mittelland",
+        "Schweiz - Nordschweiz",
+        "Schweiz - Ostschweiz",
+        "Schweiz - Valais"
+      ],
+      "native_param": null,
+      "note": "Free-text Location box; the results facet is formtext2 = City (150 options), not a country facet."
+    },
+    {
+      "key": "department",
+      "label": "Business Divisions",
+      "kind": "multi",
+      "values": [
+        "Asset Management",
+        "Global Wealth Management",
+        "Group Functions",
+        "Investment Bank",
+        "Personal & Corporate Banking"
+      ],
+      "native_param": null,
+      "note": "Facet department = Business Divisions; native option values are codes N14953, N14951, N14954, N14952, N14949."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [
+        "Full Time",
+        "Part Time",
+        "Temporary / Contract"
+      ],
+      "native_param": null,
+      "note": "Facet formtext22 = Job Type; native option values are FullTime, PartTime, contract."
+    },
+    {
+      "key": "job_family",
+      "label": "Function Category",
+      "kind": "multi",
+      "values": [
+        "Audit",
+        "Business development",
+        "Business management, administration and support",
+        "Client advisory / Relationship management",
+        "Compliance",
+        "Corporate services, infrastructure and facilities",
+        "Digital",
+        "Equities",
+        "Finance",
+        "Financial advisors",
+        "Fund services",
+        "Human Resources (HR)",
+        "Information Technology (IT)",
+        "Investment banking",
+        "Legal",
+        "Management and Business Support",
+        "Marketing and communications",
+        "Operations",
+        "Portfolio and fund management",
+        "Process, project and program management",
+        "Product management and development",
+        "Quantitative analysis",
+        "Research",
+        "Risk",
+        "Sales",
+        "Sales and trading",
+        "Strategy",
+        "Trading"
+      ],
+      "native_param": null,
+      "note": "Facet formtext21 = Function Category (28 options)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Taleo TGnewUI. The published listing is a linkquery (partnerid=25008, siteid=5012, SearchType=linkquery, LinkID=15231). The search UI posts JSON to /TgNewUI/Search/Ajax/MatchedJobs with Keyword, Location, FacetFilterFields, SortType and PageNumber; a direct POST without the ASP.NET anti-forgery session returned HTTP 500, so native_query is false and filtering is local. Observed result facets: formtext2=City (150), formtext22=Job Type (3), formtext21=Function Category (28), department=Business Divisions (5). SortFields: LastUpdated (Date), JobTitle (Alphabetical).",
+  "evidence": [
+    "https://jobs.ubs.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=25008&siteid=5012&PageType=searchResults&SearchType=linkquery&LinkID=15231",
+    "https://jobs.ubs.com/TGNewUI/Scripts/app/v-639295504200224940/search.min.js",
+    "https://jobs.ubs.com/TgNewUI/Search/Ajax/MatchedJobs"
+  ],
+  "verified": true
+}

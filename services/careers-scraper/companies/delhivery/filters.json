@@ -1,0 +1,63 @@
+{
+  "company": "Delhivery",
+  "slug": "delhivery",
+  "portal": "https://www.delhivery.com/company/careers",
+  "listing_url": "https://delhivery.darwinbox.in/ms/candidate/careers",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "GGNFC11 (Haryana), Jhajjar, Haryana, India",
+        "GGN_HQ05 # (Haryana), Gurgaon, Haryana, India",
+        "Goa_HQ2_Office (Goa), Goa, Goa, India",
+        "Goa_HQ_Office (Goa), Panjim, Goa, India",
+        "ORION_Goa (Goa), Goa, Goa, India",
+        "Remote"
+      ],
+      "native_param": "location",
+      "note": "GET /ms/candidateapi/job?location=<filters _id>; confirmed (a6116015b04710 -> 1 row, zzz -> 0, unfiltered -> 7). Remote is the is_remote location id."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Management Training",
+        "Trucking",
+        "LTL",
+        "SNOP",
+        "Reconciliation",
+        "Business Partner Development"
+      ],
+      "native_param": "department",
+      "note": "GET /ms/candidateapi/job?department=<filters _id>; confirmed (real id -> subset, zzz-nonexistent -> jobscount 0)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Permanent",
+        "Probation"
+      ],
+      "native_param": null,
+      "note": "Vocabulary from /ms/candidateapi/job/filters; the employment-type query parameter name was not confirmed (employmenttype/employment_type/employmenttypes/type all returned the unfiltered count)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The live /careers landing publishes the hosted Darwinbox v1 board https://delhivery.darwinbox.in/ms/candidate/careers. Its listing is GET /ms/candidateapi/job?page=&limit= and accepts department=<id> and location=<id>; /ms/candidateapi/job/filters publishes employmenttypes, locations, departments, functional_areas and capabilities. Confirmed live: unfiltered jobscount 7, department=zzz-nonexistent -> 0, department=<real id> -> subset, location=<real id> -> 1. Employment-type and keyword parameters are unconfirmed, so those stay local.",
+  "evidence": [
+    "https://delhivery.darwinbox.in/ms/candidateapi/job/filters",
+    "https://delhivery.darwinbox.in/ms/candidateapi/job?page=1&limit=10&location=a6116015b04710",
+    "https://delhivery.darwinbox.in/ms/candidateapi/job?page=1&limit=10&department=zzz-nonexistent"
+  ],
+  "verified": true
+}

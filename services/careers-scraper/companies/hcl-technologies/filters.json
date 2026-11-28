@@ -1,0 +1,67 @@
+{
+  "company": "HCL Technologies",
+  "slug": "hcl-technologies",
+  "portal": "https://www.hcltech.com/careers",
+  "listing_url": "https://careers.hcltech.com/search/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country/Region",
+      "kind": "multi",
+      "values": [
+        "India",
+        "United States",
+        "United Kingdom",
+        "Canada",
+        "Philippines",
+        "Romania",
+        "Singapore",
+        "Poland",
+        "France",
+        "Sri Lanka",
+        "Australia",
+        "Malaysia",
+        "Mexico",
+        "Bulgaria",
+        "Brazil",
+        "Viet Nam",
+        "China",
+        "Saudi Arabia",
+        "Spain",
+        "Sweden",
+        "Taiwan"
+      ],
+      "native_param": "facetFilters.custCountryRegion",
+      "note": "The only facet published by the search widget (fieldId custCountryRegion, label 'Country/Region'). Verified live: facetFilters {\"custCountryRegion\":[\"India\"]} -> totalJobs 12,723 of 15,248."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": "location",
+      "note": "Free-text location field in the same request body; the search page pairs it with the country/region facet."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "date",
+      "label": "Newest first",
+      "native_param": "sortBy=date"
+    }
+  ],
+  "default_sort": "date",
+  "native_query": true,
+  "local_query": true,
+  "notes": "HCLTech's careers entry leads to its SuccessFactors Career Site Builder search at https://careers.hcltech.com/search/ (input name='q', placeholder 'Search by Keyword'). The page posts to https://careers.hcltech.com/services/recruiting/v1/jobs with body {locale:'en_US', pageNumber, sortBy:'date', keywords, location, facetFilters, brand:'', skills:[], categoryId, alertId, rcmCandidateId} and returns totalJobs/jobSearchResult. Facets are passed in facetFilters as {fieldId: [values]}; the only configured facet is custCountryRegion. Sorting is server-side via sortBy (adapter uses date and reconciles newest-first ordering).",
+  "evidence": [
+    "https://careers.hcltech.com/search/ (HTTP 200) -> <input type='search' name='q' aria-label='Search by Keyword'>",
+    "search page JS: facetFields.push({fieldId:\"custCountryRegion\", label:\"Country/Region\"}); appParams.locale='en_US'",
+    "POST https://careers.hcltech.com/services/recruiting/v1/jobs {facetFields:['custCountryRegion'],facetingOnly:true} -> totalJobs 15,248; values India 12,723, United States 884, United Kingdom 206, Canada 121, Philippines 121 ...",
+    "POST {facetFilters:{custCountryRegion:['India']}} -> totalJobs 12,723 (machine-usable country filter)"
+  ],
+  "verified": true
+}

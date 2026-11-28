@@ -1,0 +1,74 @@
+{
+  "company": "GitHub",
+  "slug": "github",
+  "portal": "https://www.github.careers/careers-home/jobs",
+  "listing_url": "https://www.github.careers/careers-home/jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Each /api/jobs row carries location_name/country/country_code; the board's facet response returns no location list, so filter locally."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Administration",
+        "Customer Success",
+        "Customer Support & Services",
+        "Data & Analytics",
+        "Design",
+        "Engineering",
+        "Human Resources",
+        "Legal & Corporate Affairs",
+        "Machine learning & AI",
+        "Product",
+        "Program Management",
+        "Revenue Operations & Enablement",
+        "Sales",
+        "Security",
+        "Tech Sales"
+      ],
+      "native_param": null,
+      "note": "Rendered as filter.categories[].category in /api/jobs; request parameter not confirmed, applied locally."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "FULL_TIME"
+      ],
+      "native_param": null,
+      "note": "job.employment_type per row; local."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "Rendered as facet tags6=Remote in /api/jobs; local."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Jibe-powered native board. /api/jobs accepts keywords= natively (totalCount 101 unfiltered -> 54 for keywords=security, and facet counts shrink accordingly). The page's JSON-LD SearchAction documents ?keywords={search_term_string}. Other facets (categories/tags5/tags6/location) are returned by the API but their request parameters were not confirmed, so they are applied locally. Sort config is relevance|posted_date with relevance default, but the sort request parameter was not confirmed.",
+  "evidence": [
+    "https://www.github.careers/careers-home/jobs (JSON-LD SearchAction target: /careers-home/jobs?keywords={search_term_string})",
+    "https://www.github.careers/api/jobs?internal=false&page=1 (totalCount=101)",
+    "https://www.github.careers/api/jobs?internal=false&page=1&keywords=security (totalCount=54)"
+  ],
+  "verified": true
+}

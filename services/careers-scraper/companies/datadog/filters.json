@@ -1,0 +1,68 @@
+{
+  "company": "Datadog",
+  "slug": "datadog",
+  "portal": "https://careers.datadoghq.com/all-jobs/",
+  "listing_url": "https://careers.datadoghq.com/all-jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "General & Administrative",
+        "Marketing",
+        "Product Design",
+        "Product Management",
+        "Sales",
+        "Technical Solutions"
+      ],
+      "native_param": "filter_by",
+      "note": "Hierarchical facets from the site bundle: parent_department_<Name>:=true / child_department_<Name>:=true (e.g. parent_department_Engineering:=true). A plain department:=Engineering filter also returned hits."
+    },
+    {
+      "key": "location",
+      "label": "Region",
+      "kind": "multi",
+      "values": [
+        "EMEA",
+        "APAC",
+        "Americas"
+      ],
+      "native_param": "filter_by",
+      "note": "region_EMEA:=true / location_EMEA:=true (same for APAC/Americas); city-level location_string is a document field, not a facet."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote",
+      "kind": "multi",
+      "values": [
+        "Remote"
+      ],
+      "native_param": "filter_by",
+      "note": "remote:=true refinement in the site's search state."
+    },
+    {
+      "key": "date_posted",
+      "label": "Date posted",
+      "kind": "multi",
+      "values": [],
+      "native_param": "filter_by",
+      "note": "time_type refinement is part of the UI search state; its accepted values were not extracted, so none are listed."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The careers frontend reads TYPESENSE_HOST/TYPESENSE_COLLECTION/TYPESENSE_PUBLIC_KEY from /assets/scripts/main-*.js and queries https://<host>.a1.typesense.net/collections/careers_alias/documents/search with q, preset=careers_list_view, per_page, page and filter_by. Confirmed live: q=*&preset=careers_list_view returns found=401, while filter_by=department:=Engineering returns found=55, so native keyword and facet filtering work. The UI's refinement list also exposes parent/child_department_*, region_*/location_*, remote and time_type.",
+  "evidence": [
+    "https://gk6e3zbyuntvc5dap.a1.typesense.net/collections/careers_alias/documents/search?q=*&preset=careers_list_view&per_page=2&page=1&filter_by=department%3A%3DEngineering",
+    "https://careers.datadoghq.com/assets/scripts/main-C4WRBHHP.js",
+    "https://careers.datadoghq.com/all-jobs/"
+  ],
+  "verified": true
+}

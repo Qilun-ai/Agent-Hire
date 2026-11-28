@@ -1,0 +1,80 @@
+{
+  "company": "Notion",
+  "slug": "notion",
+  "portal": "https://www.notion.com/careers",
+  "listing_url": "https://www.notion.com/careers",
+  "family": "ashby",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Amsterdam, Netherlands",
+        "Atlanta, Georgia",
+        "Brazil (Remote)",
+        "Dubai",
+        "Dublin, Ireland",
+        "Hyderabad, India",
+        "Italy",
+        "London, United Kingdom",
+        "Madrid, Spain",
+        "Munich, Germany",
+        "New York, New York",
+        "Paris, France",
+        "Remote",
+        "San Francisco, California",
+        "Seoul, South Korea",
+        "Singapore",
+        "Spain",
+        "Stockholm, Sweden",
+        "Sydney, Australia",
+        "Taiwan",
+        "Tokyo, Japan"
+      ],
+      "native_param": null,
+      "note": "21 options from the 'All locations' listbox (aria-label 'Filter jobs by location'); applied client-side."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Early Career",
+        "Business Technology",
+        "Customer Experience",
+        "Data Science",
+        "Engineering",
+        "Finance",
+        "General",
+        "Leadership",
+        "Legal",
+        "Marketing",
+        "Outcomes Architect",
+        "People",
+        "Product Design",
+        "Product Management",
+        "Revenue Operations & Strategy",
+        "Sales",
+        "Security",
+        "Solutions Consultant",
+        "Storytelling",
+        "User Research and Product Operations"
+      ],
+      "native_param": null,
+      "note": "20 options from the 'All departments' listbox (aria-label 'Filter jobs by department'); applied client-side."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The official careers page server-renders 154 Ashby job cards grouped by department and exposes two client-side menus, All locations (21 options) and All departments (20 options), inside #open-positions. Selecting either filters the already-rendered cards and issues no request, so there are no native query parameters. There is no keyword job search: the only search input on the page is the language selector (aria-label 'Search languages'). The Ashby board API is used by the adapter only for the complete unfiltered membership.",
+  "evidence": [
+    "https://www.notion.com/careers (listboxes 'Filter jobs by location' with 21 options and 'Filter jobs by department' with 20 options; 154 cards)",
+    "https://api.ashbyhq.com/posting-api/job-board/notion?includeCompensation=true (unfiltered board used for membership; no filter parameters)"
+  ],
+  "verified": true
+}

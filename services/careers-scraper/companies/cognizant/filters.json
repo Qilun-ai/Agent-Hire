@@ -1,0 +1,89 @@
+{
+  "company": "Cognizant",
+  "slug": "cognizant",
+  "portal": "https://careers.cognizant.com/global-en/jobs/",
+  "listing_url": "https://careers.cognizant.com/global-en/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": "location",
+      "note": "Free-text search input on form#job-filter."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [],
+      "native_param": "ccode",
+      "note": "Hidden country-code field populated by the location typeahead (companion cname field carries the country name)."
+    },
+    {
+      "key": "department",
+      "label": "Job category",
+      "kind": "multi",
+      "values": [
+        "Business Processes",
+        "Consulting",
+        "Corporate",
+        "Delivery Management",
+        "Digital",
+        "IT Infrastructure",
+        "Sales and Marketing",
+        "Technology & Engineering"
+      ],
+      "native_param": "team",
+      "note": "Select name=team on form#job-filter."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-time"
+      ],
+      "native_param": "type",
+      "note": "Select name=type on form#job-filter."
+    },
+    {
+      "key": "seniority",
+      "label": "Persona",
+      "kind": "multi",
+      "values": [
+        "Entry level / Early Careers",
+        "Executive",
+        "Professional",
+        "Student - Undergrad"
+      ],
+      "native_param": "persona",
+      "note": "Select name=persona on form#job-filter."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work model",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Work from Home",
+        "Work from Office"
+      ],
+      "native_param": "pattern",
+      "note": "Select name=pattern on form#job-filter."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Cognizant's global-en jobs page is server-rendered with a native GET form#job-filter (action /global-en/jobs/#results) carrying keyword, industry, location, radius, lat, lng, cname, ccode, team, type, persona, pattern and pagesize=10, with ?page=N pagination. The industry select is a real control but has no matching filter key in this schema, so it is not exported. The adapter walks every listing page and reads each job's JobPosting JSON-LD.",
+  "evidence": [
+    "https://careers.cognizant.com/global-en/jobs/",
+    "https://careers.cognizant.com/global-en/jobs/?keyword=engineer&team=Technology%20%26%20Engineering&page=1"
+  ],
+  "verified": true
+}

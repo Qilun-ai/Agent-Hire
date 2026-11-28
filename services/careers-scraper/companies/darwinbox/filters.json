@@ -1,0 +1,100 @@
+{
+  "company": "Darwinbox",
+  "slug": "darwinbox",
+  "portal": "https://darwinbox.com/careers/",
+  "listing_url": "https://dbx.darwinbox.in/ms/candidatev2/main/careers/allJobs",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Atlanta, Georgia, United States",
+        "Austin, Texas, United States",
+        "Bangkok, Krung Thep, Thailand",
+        "Bengaluru, Karnataka, India",
+        "Carmel, Indiana, United States",
+        "Chennai, Tamil Nadu, India",
+        "Dallas, Texas, United States",
+        "Gurgaon, Haryana, India",
+        "Houston, Texas, United States",
+        "Hyderabad, Telangana, India",
+        "Imperial, Missouri, United States",
+        "Irving, Texas, United States",
+        "Jakarta, Jakarta Raya, Indonesia",
+        "Kuala Lumpur, Wilayah Persekutuan, Malaysia",
+        "Lake Geneva, Wisconsin, United States",
+        "Manila, Manila, Philippines",
+        "Marana, Arizona, United States",
+        "Miami, Florida, United States",
+        "Mumbai, Maharashtra, India",
+        "Nashville, Tennessee, United States",
+        "New York, New York, United States",
+        "Phoenix, Arizona, United States",
+        "Pittsburgh, Pennsylvania, United States",
+        "Royal Oak, Michigan, United States",
+        "Seattle, Washington, United States"
+      ],
+      "native_param": null,
+      "note": "Values from the company's collected records; the board renders them from the alljobs payload and filters in the UI."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Account Management",
+        "Customer Excellence",
+        "Engineering",
+        "Finance and Legal",
+        "Marketing",
+        "Pre-Sales",
+        "Product and Engineering",
+        "Professional Services",
+        "Sales",
+        "Sales and Marketing"
+      ],
+      "native_param": null,
+      "note": "Values from the company's collected records; UI-side filtering."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-time"
+      ],
+      "native_param": null,
+      "note": "Values from the company's collected records; no request parameter confirmed."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "Values from the company's collected records; no request parameter confirmed."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "new",
+      "label": "Newest",
+      "native_param": "sort_option=new"
+    }
+  ],
+  "default_sort": "new",
+  "native_query": false,
+  "local_query": true,
+  "notes": "The darwinbox.com careers hero links to the hosted candidate board https://dbx.darwinbox.in/ms/candidatev2/main/careers/allJobs. Its listing is POST https://dbx.darwinbox.in/ms/candidateapi/job/alljobs?companyId=main with body {companyId, page, sort_option, limit}; only sort_option ('new') is a confirmed machine control. Department/location/employment-type choices are applied by the board UI over the fetched page, so filtering stays local.",
+  "evidence": [
+    "https://dbx.darwinbox.in/ms/candidatev2/main/careers/allJobs",
+    "https://dbx.darwinbox.in/ms/candidateapi/job/alljobs?companyId=main"
+  ],
+  "verified": true
+}

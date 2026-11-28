@@ -1,0 +1,92 @@
+{
+  "company": "Fidelity",
+  "slug": "fidelity",
+  "portal": "https://jobs.fidelity.com/",
+  "listing_url": "https://jobs.fidelity.com/en/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Albany",
+        "Albuquerque",
+        "Alexandria",
+        "Alpharetta",
+        "Ann Arbor",
+        "Annapolis",
+        "Arlington",
+        "Ashburn",
+        "Atlanta",
+        "Austin",
+        "Baltimore"
+      ],
+      "native_param": "location",
+      "note": "Multi-select name=\"location\" (id l-location); the full city list is populated by the page script, so only the confirmed leading options are listed."
+    },
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Administrative",
+        "Business & Marketing",
+        "Business Analysis & Project Management",
+        "Capital Markets Product",
+        "Corporate Services",
+        "Customer Service",
+        "Finance & Accounting",
+        "Investment Management",
+        "Marketing, Creative & Communications",
+        "Operations",
+        "Pembroke Real Estate",
+        "Product Development & Management",
+        "Risk Management",
+        "Sales & Relationship Management",
+        "Technology"
+      ],
+      "native_param": "team",
+      "note": "Multi-select name=\"team\" (id l-team)."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work pattern",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Onsite",
+        "Remote"
+      ],
+      "native_param": "pattern",
+      "note": "Multi-select name=\"pattern\" (id l-pattern)."
+    },
+    {
+      "key": "seniority",
+      "label": "Career level",
+      "kind": "multi",
+      "values": [
+        "Associate",
+        "Contingent",
+        "Director",
+        "Manager",
+        "Senior Manager",
+        "Senior Vice President",
+        "Vice President"
+      ],
+      "native_param": "level",
+      "note": "Multi-select name=\"level\" (id l-level)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official jobs.fidelity.com/en/jobs/ search form (rendered by its own script, behind a Cloudflare check) exposes named controls: search=keywords (ids ql-search and l-search), location, region (US states), team, pattern and level, all multi-selects, plus a license checkbox and pagesize hidden field. Result pages are server-rendered and paginate with ?page=N. The adapter collects the unfiltered English/Ireland/India editions plus Fidelity TalentSource, then filters locally.",
+  "evidence": [
+    "https://jobs.fidelity.com/en/jobs/"
+  ],
+  "verified": true
+}

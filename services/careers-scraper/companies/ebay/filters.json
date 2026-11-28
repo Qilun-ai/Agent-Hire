@@ -1,0 +1,124 @@
+{
+  "company": "eBay",
+  "slug": "ebay",
+  "portal": "https://careers.ebayinc.com/us/en/jobs/",
+  "listing_url": "https://jobs.ebayinc.com/us/en/search-results",
+  "family": "phenom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Australia",
+        "Belgium",
+        "Canada",
+        "China",
+        "Germany",
+        "India",
+        "Ireland",
+        "Italy",
+        "Japan",
+        "Malaysia",
+        "Netherlands",
+        "Norway",
+        "South Korea",
+        "United Kingdom",
+        "United States of America"
+      ],
+      "native_param": "selected_fields.country",
+      "note": "Enabled facet; values from the embedded aggregations."
+    },
+    {
+      "key": "location",
+      "label": "State/Province",
+      "kind": "multi",
+      "values": [
+        "Brandenburg",
+        "Brussels-Capital Region",
+        "California",
+        "Colorado",
+        "District of Columbia",
+        "Dublin",
+        "Karnataka",
+        "Kentucky",
+        "Milano",
+        "New Jersey",
+        "New South Wales",
+        "New York",
+        "North Holland",
+        "North Rhine-Westphalia",
+        "Ontario",
+        "Oregon",
+        "Oslo",
+        "Selangor",
+        "Seoul",
+        "Shanghai",
+        "Surrey",
+        "Texas",
+        "Tokyo",
+        "Utah"
+      ],
+      "native_param": "selected_fields.state",
+      "note": "Enabled State/Province facet; values from the embedded aggregations."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Customer Service",
+        "Data Science",
+        "Design & UX",
+        "Engineering",
+        "Finance & Business Analytics",
+        "General Management & Business Support",
+        "IT & Technical Operations",
+        "Legal",
+        "Marketing & Communications",
+        "Other",
+        "People Team",
+        "Product Management",
+        "Sales & Business Development",
+        "Trust, Safety & Fraud"
+      ],
+      "native_param": "selected_fields.category",
+      "note": "Enabled Category facet; values from the embedded aggregations."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Flexible Workstyles",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Onsite",
+        "Remote"
+      ],
+      "native_param": "selected_fields.remote",
+      "note": "Enabled remote facet; values from the embedded aggregations."
+    },
+    {
+      "key": "employment_type",
+      "label": "Type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time"
+      ],
+      "native_param": "selected_fields.type",
+      "note": "type is listed in all_fields but is not one of the four enabled facets."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The assigned careers.ebayinc.com/us/en/jobs/ URL is a 404; the live official search is the Phenom site jobs.ebayinc.com/us/en/search-results, which POSTs refineSearch to /widgets. Keyword is body.keywords; filters are nested in body.selected_fields (country, state, category, remote), with all_fields listing city/state/category/type/orgFunction/country. Verified keywords=engineer + selected_fields.country=[India] returned 44 hits. The site config enables facets remote, country, state and category.",
+  "evidence": [
+    "https://jobs.ebayinc.com/us/en/search-results",
+    "https://jobs.ebayinc.com/widgets"
+  ],
+  "verified": true
+}

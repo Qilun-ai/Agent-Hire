@@ -1,0 +1,84 @@
+{
+  "company": "Cloudera",
+  "slug": "cloudera",
+  "portal": "https://www.cloudera.com/careers.html",
+  "listing_url": "https://cloudera.wd5.myworkdayjobs.com/External_Career",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Business Area",
+      "kind": "multi",
+      "values": [
+        "Sales-Team",
+        "Engineering-Team",
+        "Info Systems/Technology-Team",
+        "Product Mgmt-Team",
+        "Professional Services-Team",
+        "Human Resources-Team",
+        "Finance-Team",
+        "Project/Program-Team",
+        "Sales Enablement-Team",
+        "Marketing-Team"
+      ],
+      "native_param": "Business_Area",
+      "note": "appliedFacets.Business_Area, returned by the CXS facets payload."
+    },
+    {
+      "key": "country",
+      "label": "Location Country",
+      "kind": "multi",
+      "values": [
+        "Australia",
+        "Brazil",
+        "Canada",
+        "Chile",
+        "China",
+        "Costa Rica",
+        "Czechia",
+        "France",
+        "Hungary",
+        "India",
+        "Ireland",
+        "Italy",
+        "Japan",
+        "Korea, Republic of",
+        "Netherlands",
+        "Poland",
+        "Portugal",
+        "Singapore",
+        "South Africa",
+        "Spain",
+        "Switzerland",
+        "United Kingdom",
+        "United States of America"
+      ],
+      "native_param": "locationCountry",
+      "note": "Nested under locationMainGroup in the CXS facets payload."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote Type",
+      "kind": "multi",
+      "values": [
+        "Remote",
+        "Hybrid",
+        "Office (In Office 4 days/week)"
+      ],
+      "native_param": "remoteType",
+      "note": "appliedFacets.remoteType; the listing rows carry the same remoteType value."
+    }
+  ],
+  "sorts": [],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Cloudera's careers page reaches the Workday CXS site External_Career. Search is POST https://cloudera.wd5.myworkdayjobs.com/wday/cxs/cloudera/External_Career/jobs with {appliedFacets, limit, offset, searchText}; the returned facets are exactly remoteType, Business_Area, locationMainGroup>locationCountry and distance (no job-family or time-type facet). The unfiltered response is already newest-first (Posted Today, Today, 3 Days Ago ...); adding sortBy=postedOn returned HTTP 200 with an identical order, so no distinct sort control is claimed.",
+  "evidence": [
+    "https://cloudera.wd5.myworkdayjobs.com/External_Career",
+    "https://cloudera.wd5.myworkdayjobs.com/wday/cxs/cloudera/External_Career/jobs"
+  ],
+  "verified": true
+}

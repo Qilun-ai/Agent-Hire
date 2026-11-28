@@ -1,0 +1,151 @@
+{
+  "company": "Microsoft",
+  "slug": "microsoft",
+  "portal": "https://careers.microsoft.com/",
+  "listing_url": "https://apply.careers.microsoft.com/careers",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote",
+        "Redmond, WA, United States",
+        "United States",
+        "Mountain View, CA, United States",
+        "Bengaluru, KA, India",
+        "New York, NY, United States",
+        "Atlanta, GA, United States",
+        "Tokyo, Japan",
+        "Hyderabad, TS, India",
+        "Austin, TX, United States",
+        "Reston, VA, United States"
+      ],
+      "native_param": "location",
+      "note": "Free-text location param; values are the API's locations facet"
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work site",
+      "kind": "multi",
+      "values": [
+        "0 days / week in-office \u2013 remote",
+        "1 day / week in-office",
+        "2 days / week in-office",
+        "3 days / week in-office",
+        "4 days / week in-office",
+        "fully on-site"
+      ],
+      "native_param": "filter_work_site",
+      "note": ""
+    },
+    {
+      "key": "seniority",
+      "label": "Experience level",
+      "kind": "multi",
+      "values": [
+        "Senior",
+        "Mid-Level",
+        "Manager",
+        "Director",
+        "Entry",
+        "Intern",
+        "Vice President",
+        "CXO"
+      ],
+      "native_param": "filter_seniority",
+      "note": ""
+    },
+    {
+      "key": "department",
+      "label": "Profession",
+      "kind": "multi",
+      "values": [
+        "software engineering",
+        "sales",
+        "data center",
+        "customer success",
+        "hardware engineering",
+        "research, applied, & data sciences",
+        "program management",
+        "technology sales",
+        "product management",
+        "consulting services",
+        "digital sales and solutions",
+        "security engineering",
+        "marketing",
+        "business operations",
+        "technical support",
+        "finance",
+        "design & creative",
+        "governance, risk, & compliance",
+        "human resources",
+        "legal"
+      ],
+      "native_param": "filter_profession",
+      "note": "Smart-filter facet; the full option list comes from filterDef"
+    },
+    {
+      "key": "job_family",
+      "label": "Discipline",
+      "kind": "multi",
+      "values": [
+        "Software Engineering",
+        "Cloud Solution Architecture",
+        "Product Management",
+        "Technical Program Management",
+        "Silicon Engineering",
+        "Research Sciences",
+        "Solution Engineering",
+        "Critical Environment Ops",
+        "Solution Area Specialists",
+        "Applied Sciences",
+        "Data Center Operations Management",
+        "Business Program Management",
+        "Data Center Technicians",
+        "Security Research",
+        "Construction Project Management",
+        "Solution Architecture",
+        "Technical Support Engineering",
+        "Quantum Engineering",
+        "Logistics Technician",
+        "Financial Analysis"
+      ],
+      "native_param": "filter_career_discipline",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "full-time",
+        "internship",
+        "part-time",
+        "post doc research"
+      ],
+      "native_param": "filter_employment_type",
+      "note": ""
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Eightfold PCSX at apply.careers.microsoft.com (domain=microsoft.com). GET /api/pcsx/search takes domain, query, location, start, sort_by and filter_<filterName> params; the facet names and option values above are the API's own filterDef (smartFilters/allFilters) plus its locations facet. Verified requests: query=engineer&location=India -> 108 rows; filter_work_site=fully on-site&filter_employment_type=internship -> 13 rows with appliedFilters echoed ({workSite, employmentType}).",
+  "evidence": [
+    "https://apply.careers.microsoft.com/careers",
+    "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=engineer&location=India&start=0&sort_by=timestamp",
+    "https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=&location=&start=0&sort_by=timestamp&filter_work_site=fully%20on-site&filter_employment_type=internship"
+  ],
+  "verified": true
+}

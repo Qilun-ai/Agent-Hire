@@ -1,0 +1,96 @@
+{
+  "company": "Fractal Analytics",
+  "slug": "fractal-analytics",
+  "portal": "https://fractal.ai/careers/",
+  "listing_url": "https://fractal.wd1.myworkdayjobs.com/Careers",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Amsterdam",
+        "Bengaluru",
+        "California",
+        "Chennai",
+        "Coimbatore",
+        "Florida",
+        "Gurgaon",
+        "Hyderabad",
+        "Illinois",
+        "London",
+        "Massachusetts",
+        "Melbourne",
+        "Minnesota",
+        "Mumbai",
+        "New Jersey",
+        "New York",
+        "Noida",
+        "Ohio",
+        "Pune",
+        "Tennessee",
+        "Texas",
+        "Washington"
+      ],
+      "native_param": "appliedFacets.locations",
+      "note": "CXS facets[].values[].values under locationMainGroup -> facetParameter \"locations\"; array of facet IDs."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Fractal Analytics - Data Engineer",
+        "Fractal Analytics",
+        "Fractal Analytics - Data Scientist",
+        "Fractal Analytics - Decision Scientist",
+        "Fractal Analytics - AI Engineer",
+        "Fractal Analytics - Sales Farmers",
+        "Fractal Analytics - Corporate Functions",
+        "EdTech",
+        "Fractal Analytics - Sales Hunters",
+        "Fractal Analytics - Project Management"
+      ],
+      "native_param": "appliedFacets.jobFamilyGroup",
+      "note": "jobFamilyGroup facet (descriptor \"Job Category\") with its published facet IDs."
+    },
+    {
+      "key": "employment_type",
+      "label": "Time Type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": "appliedFacets.timeType",
+      "note": "timeType facet ID 8240e72be1a10127e0c2dccb7ba70000. The separate workerSubType facet (Job Type: Regular, Fixed Term, EOR - Regular, Agency Contractor) is also available."
+    },
+    {
+      "key": "business_unit",
+      "label": "Company",
+      "kind": "multi",
+      "values": [
+        "Fractal Analytics Ltd.",
+        "Fractal Analytics Inc",
+        "Fractal Analytics UK Limited",
+        "Fractal Analytics Netherland B.V.",
+        "Analytics Vidhya Educon Private Limited",
+        "Fractal Analytics Australia Pty Ltd"
+      ],
+      "native_param": "appliedFacets.hiringCompany",
+      "note": "hiringCompany facet with its published facet IDs."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "https://fractal.ai/careers/ redirects to the hosted Workday site https://fractal.wd1.myworkdayjobs.com/Careers. The public CXS endpoint POST /wday/cxs/fractal/Careers/jobs takes JSON {appliedFacets, limit, offset, searchText}; a POST with appliedFacets {} returned total 115, 20 jobPostings per page, and facets jobFamilyGroup, workerSubType, timeType, hiringCompany and the nested locations facet. The adapter walks every page and filters any remaining fields locally.",
+  "evidence": [
+    "https://fractal.wd1.myworkdayjobs.com/Careers",
+    "https://fractal.wd1.myworkdayjobs.com/wday/cxs/fractal/Careers/jobs"
+  ],
+  "verified": true
+}

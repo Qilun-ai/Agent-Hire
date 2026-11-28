@@ -1,0 +1,69 @@
+{
+  "company": "Redis",
+  "slug": "redis",
+  "portal": "https://redis.io/careers/",
+  "listing_url": "https://redis.io/company/careers/current-job-openings/",
+  "family": "ashby",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Austin, TX",
+        "Bulgaria",
+        "Canada",
+        "Germany",
+        "HQ (San Francisco)",
+        "India",
+        "Israel",
+        "London, England",
+        "Mexico",
+        "United Arab Emirates",
+        "United States",
+        "Vancouver"
+      ],
+      "native_param": "location",
+      "note": "Location dropdown on the listing; the feed also accepts region groups (All Americas / All EMEA / All APAC) via its region parameter."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "CTO",
+        "Customer Org",
+        "General & Administrative",
+        "Marketing",
+        "Product",
+        "R&D",
+        "Sales"
+      ],
+      "native_param": "department",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-time"
+      ],
+      "native_param": null,
+      "note": "From the collected job records; not a feed filter."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "redis.io/careers/ 301s to /company/careers/; the listing page calls https://redis.io/api/careers/feed/ with start/end (page size 12) plus location, department and search. Live check: department=Marketing returned total=2 (both Marketing), and search=zzzznomatch returned total=0, so both filters are applied server-side. The page renders 12 cards with Load More; the full unfiltered feed returns all 31 postings.",
+  "evidence": [
+    "https://redis.io/api/careers/feed/?start=0&end=5&location=&department=Marketing&search=",
+    "https://redis.io/api/careers/feed/?start=0&end=3&location=&department=&search=zzzznomatch",
+    "https://redis.io/company/careers/current-job-openings/"
+  ],
+  "verified": true
+}

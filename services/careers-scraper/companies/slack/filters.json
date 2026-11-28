@@ -1,0 +1,92 @@
+{
+  "company": "Slack",
+  "slug": "slack",
+  "portal": "https://slack.com/careers",
+  "listing_url": "https://salesforce.wd12.myworkdayjobs.com/Slack",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Australia - Melbourne",
+        "Australia - Sydney",
+        "California - Palo Alto",
+        "California - Remote",
+        "California - San Francisco",
+        "California - San Francisco Metro - Remote",
+        "Colorado - Denver",
+        "Georgia - Atlanta",
+        "Illinois - Chicago",
+        "New York - New York",
+        "New York - New York City Metro - Remote",
+        "New York - Remote",
+        "Washington - Bellevue",
+        "Washington - Seattle"
+      ],
+      "native_param": "appliedFacets[locations]",
+      "note": "Nested locations facet inside locationMainGroup."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "United States of America",
+        "Australia"
+      ],
+      "native_param": "appliedFacets[CF_-_REC_-_LRV_-_Job_Posting_Anchor_-_Country_from_Job_Posting_Location_Extended]",
+      "note": "Country facet uses this tenant-specific custom field key (descriptor \"Country\"), not locationCountry."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Software Engineering",
+        "Product",
+        "Sales",
+        "Program & Project Management",
+        "Data",
+        "User Experience"
+      ],
+      "native_param": "appliedFacets[jobFamilyGroup]",
+      "note": "Workday jobFamilyGroup facet. Verified: facet id 14fa3452ec7c1011f90d0002a2100000 (Software Engineering) returns 9 of 15 roles."
+    },
+    {
+      "key": "employment_type",
+      "label": "Time Type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": "appliedFacets[timeType]",
+      "note": "Workday timeType facet (only Full time currently posted)."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sortBy=relevance"
+    },
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=postedOn"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "slack.com/careers renders the job rows and links each to salesforce.wd12.myworkdayjobs.com/Slack. The Workday site is the machine-usable search surface: POST /wday/cxs/salesforce/Slack/jobs with {appliedFacets, limit, offset, searchText, sortBy}. Live facets are jobFamilyGroup, workerSubType, timeType, locationMainGroup (nested locations only) and the tenant-specific Country custom field; there is no jobFamily facet and no workplaceType facet (remoteType is only a job attribute). 15 postings at verification time.",
+  "evidence": [
+    "https://slack.com/careers (job rows + link to the Slack Workday site)",
+    "POST https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/Slack/jobs {\"appliedFacets\":{},\"limit\":20,\"offset\":0,\"searchText\":\"\"} -> total=15, facets [CF_-_REC_-_LRV_-_Job_Posting_Anchor_-_Country_from_Job_Posting_Location_Extended(2), jobFamilyGroup(6), workerSubType(1), timeType(1), locationMainGroup(locations 14)]",
+    "POST same endpoint {\"appliedFacets\":{\"jobFamilyGroup\":[\"14fa3452ec7c1011f90d0002a2100000\"]},\"sortBy\":\"postedOn\",\"searchText\":\"\"} -> total=9 (Software Engineering)"
+  ],
+  "verified": true
+}

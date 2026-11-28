@@ -1,0 +1,55 @@
+{
+  "company": "Zoho",
+  "slug": "zoho",
+  "portal": "https://www.zoho.com/careers/",
+  "listing_url": "https://www.zoho.com/careers/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "City / state / country",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Zoho Recruit widget location search (info.keys._search2); filters loaded rows in the browser."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Country dropdown (ul.zwc-contry-list) beside the region dropdown; options are injected by the widget."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": null,
+      "note": "Job_Type field returned by the regional Job_Openings endpoints."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote Job",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Remote_Job field/facet in the Zoho Recruit widget; no enumerated option list is published."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "zoho.com/careers renders one Zoho Recruit job widget (#rec_job_listing_div) with region (ul.zwc-region-list) and country (ul.zwc-contry-list) dropdowns plus keyword/location search boxes. The widget maps nine region hosts to GET /recruit/v2/public/Job_Openings?pagename=Careers&source=CareerSite&extra_fields=[\"Remote_Job\",\"Job_Description\"] (APAC hosts include careers.zohocorp.com). Those requests carry no search or filter values, so region/country/keyword filtering happens client-side over the loaded rows. A live APAC request returned 2 rows with Job_Type 'Full time' and only a Remote_Job facet; overall option values beyond the collected records are not published natively.",
+  "evidence": [
+    "https://www.zoho.com/careers/",
+    "https://careers.zohocorp.com/recruit/v2/public/Job_Openings?pagename=Careers&source=CareerSite&extra_fields=%5B%22Remote_Job%22%2C%22Job_Description%22%5D"
+  ],
+  "verified": true
+}

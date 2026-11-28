@@ -1,0 +1,19 @@
+[package]
+name = "agent-hire-email"
+description = "Email monitoring for Agent-Hire: read the inbox (read-only IMAP) and work out application outcomes."
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+agent-hire-store = { path = "../store" }
+imap.workspace = true
+mail-parser.workspace = true
+regex.workspace = true
+serde_json.workspace = true
+url.workspace = true
+
+[lints]
+workspace = true

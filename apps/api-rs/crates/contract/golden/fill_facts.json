@@ -1,0 +1,1255 @@
+[
+  {
+    "body": {
+      "defaults": {
+        "current_company": "",
+        "current_title": "",
+        "summary": "",
+        "total_years_experience": "",
+        "why_interested": ""
+      },
+      "facts": {
+        "address_line1": "",
+        "citizenship": "",
+        "city": "",
+        "country": "",
+        "country_of_residence": "",
+        "current_ctc": "",
+        "disability_status": "I don't wish to answer",
+        "earliest_start_date": "",
+        "email": "",
+        "first_name": "",
+        "full_name": "",
+        "gender": "I don't wish to answer",
+        "github_url": "",
+        "highest_education": "",
+        "how_heard": "Company careers website",
+        "languages": "",
+        "last_name": "",
+        "linkedin_url": "",
+        "military_service": "No",
+        "needs_sponsorship": "",
+        "notice_period": "",
+        "over_18": "Yes",
+        "phone": "",
+        "phone_country_code": "",
+        "portfolio_url": "",
+        "postal_code": "",
+        "preferred_name": "",
+        "previously_employed_here": "No",
+        "pronouns": "I don't wish to answer",
+        "race_ethnicity": "I don't wish to answer",
+        "referral": "",
+        "relative_at_company": "No",
+        "salary_expectation": "",
+        "sexual_orientation": "I don't wish to answer",
+        "state": "",
+        "veteran_status": "I don't wish to answer",
+        "visa_status": "",
+        "willing_to_relocate": "",
+        "work_authorized": ""
+      },
+      "schema": {
+        "defaults": [
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "total_years_experience",
+            "label": "Total years of experience",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "current_title",
+            "label": "Current / latest job title",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "current_company",
+            "label": "Current / latest employer",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "summary",
+            "label": "Short summary",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "why_interested",
+            "label": "Why this role (default)",
+            "options": []
+          }
+        ],
+        "facts": [
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "full_name",
+            "label": "Full name",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "first_name",
+            "label": "First name",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "last_name",
+            "label": "Last name",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "preferred_name",
+            "label": "Preferred name",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Identity",
+            "key": "pronouns",
+            "label": "Pronouns",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Contact",
+            "key": "email",
+            "label": "Email",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Contact",
+            "key": "phone",
+            "label": "Phone",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Contact",
+            "key": "phone_country_code",
+            "label": "Phone country code",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "address_line1",
+            "label": "Street address",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "city",
+            "label": "City",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "state",
+            "label": "State / province",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "postal_code",
+            "label": "Postal code",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "country",
+            "label": "Country",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Links",
+            "key": "linkedin_url",
+            "label": "LinkedIn",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Links",
+            "key": "github_url",
+            "label": "GitHub",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Links",
+            "key": "portfolio_url",
+            "label": "Website / portfolio",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "citizenship",
+            "label": "Citizenship",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "country_of_residence",
+            "label": "Country of residence",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "work_authorized",
+            "label": "Authorised to work?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "needs_sponsorship",
+            "label": "Needs visa sponsorship?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "visa_status",
+            "label": "Visa / permit status",
+            "options": []
+          },
+          {
+            "default": "Yes",
+            "group": "Eligibility",
+            "key": "over_18",
+            "label": "18 or older?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "willing_to_relocate",
+            "label": "Willing to relocate?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "notice_period",
+            "label": "Notice period",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "earliest_start_date",
+            "label": "Earliest start date",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "salary_expectation",
+            "label": "Salary expectation",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "current_ctc",
+            "label": "Current salary",
+            "options": []
+          },
+          {
+            "default": "No",
+            "group": "Relationships",
+            "key": "relative_at_company",
+            "label": "Relatives at the company?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "No",
+            "group": "Relationships",
+            "key": "previously_employed_here",
+            "label": "Worked here before?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Relationships",
+            "key": "referral",
+            "label": "Referred by",
+            "options": []
+          },
+          {
+            "default": "Company careers website",
+            "group": "Relationships",
+            "key": "how_heard",
+            "label": "How did you hear about us?",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "veteran_status",
+            "label": "Veteran status",
+            "options": []
+          },
+          {
+            "default": "No",
+            "group": "Military & EEO",
+            "key": "military_service",
+            "label": "Military service",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "gender",
+            "label": "Gender",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "race_ethnicity",
+            "label": "Race / ethnicity",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "disability_status",
+            "label": "Disability",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "sexual_orientation",
+            "label": "Sexual orientation",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Other",
+            "key": "languages",
+            "label": "Languages",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Other",
+            "key": "highest_education",
+            "label": "Highest education",
+            "options": []
+          }
+        ]
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/fill/facts"
+    },
+    "status": 200,
+    "step": "empty facts"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "defaults": {
+          "current_company": "Ledgerline",
+          "total_years_experience": "6"
+        },
+        "facts": {
+          "first_name": "Priya",
+          "last_name": "Raman",
+          "needs_sponsorship": "No",
+          "notice_period": "30 days"
+        }
+      },
+      "method": "PUT",
+      "path": "/api/v1/fill/facts"
+    },
+    "status": 200,
+    "step": "save facts and defaults"
+  },
+  {
+    "body": {
+      "defaults": {
+        "current_company": "Ledgerline",
+        "current_title": "",
+        "summary": "",
+        "total_years_experience": "6",
+        "why_interested": ""
+      },
+      "facts": {
+        "address_line1": "",
+        "citizenship": "",
+        "city": "",
+        "country": "",
+        "country_of_residence": "",
+        "current_ctc": "",
+        "disability_status": "",
+        "earliest_start_date": "",
+        "email": "",
+        "first_name": "Priya",
+        "full_name": "",
+        "gender": "",
+        "github_url": "",
+        "highest_education": "",
+        "how_heard": "",
+        "languages": "",
+        "last_name": "Raman",
+        "linkedin_url": "",
+        "military_service": "",
+        "needs_sponsorship": "No",
+        "notice_period": "30 days",
+        "over_18": "",
+        "phone": "",
+        "phone_country_code": "",
+        "portfolio_url": "",
+        "postal_code": "",
+        "preferred_name": "",
+        "previously_employed_here": "",
+        "pronouns": "",
+        "race_ethnicity": "",
+        "referral": "",
+        "relative_at_company": "",
+        "salary_expectation": "",
+        "sexual_orientation": "",
+        "state": "",
+        "veteran_status": "",
+        "visa_status": "",
+        "willing_to_relocate": "",
+        "work_authorized": ""
+      },
+      "schema": {
+        "defaults": [
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "total_years_experience",
+            "label": "Total years of experience",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "current_title",
+            "label": "Current / latest job title",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "current_company",
+            "label": "Current / latest employer",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "summary",
+            "label": "Short summary",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "why_interested",
+            "label": "Why this role (default)",
+            "options": []
+          }
+        ],
+        "facts": [
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "full_name",
+            "label": "Full name",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "first_name",
+            "label": "First name",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "last_name",
+            "label": "Last name",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "preferred_name",
+            "label": "Preferred name",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Identity",
+            "key": "pronouns",
+            "label": "Pronouns",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Contact",
+            "key": "email",
+            "label": "Email",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Contact",
+            "key": "phone",
+            "label": "Phone",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Contact",
+            "key": "phone_country_code",
+            "label": "Phone country code",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "address_line1",
+            "label": "Street address",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "city",
+            "label": "City",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "state",
+            "label": "State / province",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "postal_code",
+            "label": "Postal code",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "country",
+            "label": "Country",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Links",
+            "key": "linkedin_url",
+            "label": "LinkedIn",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Links",
+            "key": "github_url",
+            "label": "GitHub",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Links",
+            "key": "portfolio_url",
+            "label": "Website / portfolio",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "citizenship",
+            "label": "Citizenship",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "country_of_residence",
+            "label": "Country of residence",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "work_authorized",
+            "label": "Authorised to work?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "needs_sponsorship",
+            "label": "Needs visa sponsorship?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "visa_status",
+            "label": "Visa / permit status",
+            "options": []
+          },
+          {
+            "default": "Yes",
+            "group": "Eligibility",
+            "key": "over_18",
+            "label": "18 or older?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "willing_to_relocate",
+            "label": "Willing to relocate?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "notice_period",
+            "label": "Notice period",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "earliest_start_date",
+            "label": "Earliest start date",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "salary_expectation",
+            "label": "Salary expectation",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "current_ctc",
+            "label": "Current salary",
+            "options": []
+          },
+          {
+            "default": "No",
+            "group": "Relationships",
+            "key": "relative_at_company",
+            "label": "Relatives at the company?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "No",
+            "group": "Relationships",
+            "key": "previously_employed_here",
+            "label": "Worked here before?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Relationships",
+            "key": "referral",
+            "label": "Referred by",
+            "options": []
+          },
+          {
+            "default": "Company careers website",
+            "group": "Relationships",
+            "key": "how_heard",
+            "label": "How did you hear about us?",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "veteran_status",
+            "label": "Veteran status",
+            "options": []
+          },
+          {
+            "default": "No",
+            "group": "Military & EEO",
+            "key": "military_service",
+            "label": "Military service",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "gender",
+            "label": "Gender",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "race_ethnicity",
+            "label": "Race / ethnicity",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "disability_status",
+            "label": "Disability",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "sexual_orientation",
+            "label": "Sexual orientation",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Other",
+            "key": "languages",
+            "label": "Languages",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Other",
+            "key": "highest_education",
+            "label": "Highest education",
+            "options": []
+          }
+        ]
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/fill/facts"
+    },
+    "status": 200,
+    "step": "facts saved"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "facts": {
+          "city": "Hyderabad"
+        }
+      },
+      "method": "PUT",
+      "path": "/api/v1/fill/facts"
+    },
+    "status": 200,
+    "step": "partial update"
+  },
+  {
+    "body": {
+      "defaults": {
+        "current_company": "Ledgerline",
+        "current_title": "",
+        "summary": "",
+        "total_years_experience": "6",
+        "why_interested": ""
+      },
+      "facts": {
+        "address_line1": "",
+        "citizenship": "",
+        "city": "Hyderabad",
+        "country": "",
+        "country_of_residence": "",
+        "current_ctc": "",
+        "disability_status": "",
+        "earliest_start_date": "",
+        "email": "",
+        "first_name": "",
+        "full_name": "",
+        "gender": "",
+        "github_url": "",
+        "highest_education": "",
+        "how_heard": "",
+        "languages": "",
+        "last_name": "",
+        "linkedin_url": "",
+        "military_service": "",
+        "needs_sponsorship": "",
+        "notice_period": "",
+        "over_18": "",
+        "phone": "",
+        "phone_country_code": "",
+        "portfolio_url": "",
+        "postal_code": "",
+        "preferred_name": "",
+        "previously_employed_here": "",
+        "pronouns": "",
+        "race_ethnicity": "",
+        "referral": "",
+        "relative_at_company": "",
+        "salary_expectation": "",
+        "sexual_orientation": "",
+        "state": "",
+        "veteran_status": "",
+        "visa_status": "",
+        "willing_to_relocate": "",
+        "work_authorized": ""
+      },
+      "schema": {
+        "defaults": [
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "total_years_experience",
+            "label": "Total years of experience",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "current_title",
+            "label": "Current / latest job title",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "current_company",
+            "label": "Current / latest employer",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "summary",
+            "label": "Short summary",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Default answers",
+            "key": "why_interested",
+            "label": "Why this role (default)",
+            "options": []
+          }
+        ],
+        "facts": [
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "full_name",
+            "label": "Full name",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "first_name",
+            "label": "First name",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "last_name",
+            "label": "Last name",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Identity",
+            "key": "preferred_name",
+            "label": "Preferred name",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Identity",
+            "key": "pronouns",
+            "label": "Pronouns",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Contact",
+            "key": "email",
+            "label": "Email",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Contact",
+            "key": "phone",
+            "label": "Phone",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Contact",
+            "key": "phone_country_code",
+            "label": "Phone country code",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "address_line1",
+            "label": "Street address",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "city",
+            "label": "City",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "state",
+            "label": "State / province",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "postal_code",
+            "label": "Postal code",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Address",
+            "key": "country",
+            "label": "Country",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Links",
+            "key": "linkedin_url",
+            "label": "LinkedIn",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Links",
+            "key": "github_url",
+            "label": "GitHub",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Links",
+            "key": "portfolio_url",
+            "label": "Website / portfolio",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "citizenship",
+            "label": "Citizenship",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "country_of_residence",
+            "label": "Country of residence",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "work_authorized",
+            "label": "Authorised to work?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "needs_sponsorship",
+            "label": "Needs visa sponsorship?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Eligibility",
+            "key": "visa_status",
+            "label": "Visa / permit status",
+            "options": []
+          },
+          {
+            "default": "Yes",
+            "group": "Eligibility",
+            "key": "over_18",
+            "label": "18 or older?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "willing_to_relocate",
+            "label": "Willing to relocate?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "notice_period",
+            "label": "Notice period",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "earliest_start_date",
+            "label": "Earliest start date",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "salary_expectation",
+            "label": "Salary expectation",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Availability",
+            "key": "current_ctc",
+            "label": "Current salary",
+            "options": []
+          },
+          {
+            "default": "No",
+            "group": "Relationships",
+            "key": "relative_at_company",
+            "label": "Relatives at the company?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "No",
+            "group": "Relationships",
+            "key": "previously_employed_here",
+            "label": "Worked here before?",
+            "options": [
+              "Yes",
+              "No"
+            ]
+          },
+          {
+            "default": "",
+            "group": "Relationships",
+            "key": "referral",
+            "label": "Referred by",
+            "options": []
+          },
+          {
+            "default": "Company careers website",
+            "group": "Relationships",
+            "key": "how_heard",
+            "label": "How did you hear about us?",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "veteran_status",
+            "label": "Veteran status",
+            "options": []
+          },
+          {
+            "default": "No",
+            "group": "Military & EEO",
+            "key": "military_service",
+            "label": "Military service",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "gender",
+            "label": "Gender",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "race_ethnicity",
+            "label": "Race / ethnicity",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "disability_status",
+            "label": "Disability",
+            "options": []
+          },
+          {
+            "default": "I don't wish to answer",
+            "group": "Military & EEO",
+            "key": "sexual_orientation",
+            "label": "Sexual orientation",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Other",
+            "key": "languages",
+            "label": "Languages",
+            "options": []
+          },
+          {
+            "default": "",
+            "group": "Other",
+            "key": "highest_education",
+            "label": "Highest education",
+            "options": []
+          }
+        ]
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/fill/facts"
+    },
+    "status": 200,
+    "step": "facts merged"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "facts": {
+          "not_a_fact": "x"
+        }
+      },
+      "method": "PUT",
+      "path": "/api/v1/fill/facts"
+    },
+    "status": 200,
+    "step": "unknown fact key"
+  },
+  {
+    "body": {
+      "decided_by": "rules",
+      "fills": [],
+      "job_data": {
+        "confidence": 0.0,
+        "source": "resume"
+      },
+      "skipped": []
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "fields": [],
+        "job_id": "does-not-exist"
+      },
+      "method": "POST",
+      "path": "/api/v1/fill/plan"
+    },
+    "status": 200,
+    "step": "plan for an unknown job"
+  }
+]

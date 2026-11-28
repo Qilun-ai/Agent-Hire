@@ -1,0 +1,58 @@
+{
+  "company": "L&T Infotech",
+  "slug": "l-t-infotech",
+  "portal": "https://www.ltimindtree.com/careers/",
+  "listing_url": "https://careers.ltm.com/search/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "text",
+      "values": [
+        "India",
+        "United States",
+        "Canada",
+        "Europe"
+      ],
+      "native_param": "locationsearch",
+      "note": "SuccessFactors free-text location box; the form also has optionsFacetsDD_location. RippleHire regional boards use geo=India, geo=Canada,United States, or the European country list."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "enum",
+      "values": [
+        "India",
+        "United States",
+        "Canada"
+      ],
+      "native_param": "optionsFacetsDD_country",
+      "note": "Country select on the SuccessFactors /search/ form; options are loaded by the board."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortColumn=referencedate&sortDirection=desc"
+    },
+    {
+      "value": "oldest",
+      "label": "Oldest",
+      "native_param": "sortColumn=referencedate&sortDirection=asc"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official careers page publishes five regional boards. SuccessFactors careers.ltm.com/search/ accepts q, locationsearch, optionsFacetsDD_country, optionsFacetsDD_location, sortColumn, sortDirection and startrow (the live form and result links use them). India/US/Canada/Europe use RippleHire: POST /candidate/candidatejobsearch with form field careerSiteUrlParams = JSON {token, source=CAREERSITE, search, geo, page, pagesize}; search=engineer reduced the India total from 649 to 199. keyword_param is q on SuccessFactors and search inside the RippleHire JSON body.",
+  "evidence": [
+    "https://careers.ltm.com/search/?q=&sortColumn=referencedate&sortDirection=desc",
+    "https://ltm.ripplehire.com/candidate/candidatejobsearch",
+    "https://ltm.ripplehire.com/candidate/?token=xviyQvbnyYZdGtozXoNm&lang=en&source=CAREERSITE#list/geo=India"
+  ],
+  "verified": true
+}

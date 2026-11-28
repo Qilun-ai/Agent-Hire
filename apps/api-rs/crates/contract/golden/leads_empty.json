@@ -1,0 +1,261 @@
+[
+  {
+    "body": [],
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads"
+    },
+    "status": 200,
+    "step": "legacy list"
+  },
+  {
+    "body": {
+      "has_more": false,
+      "items": [],
+      "limit": 25,
+      "page": 1,
+      "pages": 0,
+      "total": 0
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads?page=1&limit=25&view=all&sort=newest"
+    },
+    "status": 200,
+    "step": "paged list"
+  },
+  {
+    "body": {
+      "detail": "limit must be a canonical decimal integer in [1, 1000]"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads?page=1&limit=0"
+    },
+    "status": 422,
+    "step": "bad page size"
+  },
+  {
+    "body": {
+      "companies": [],
+      "counts": {
+        "accepted": 0,
+        "accepted_after_interview": 0,
+        "applied": 0,
+        "approved": 0,
+        "discarded": 0,
+        "discovered": 0,
+        "evaluated": 0,
+        "evaluating": 0,
+        "hot": 0,
+        "interviewing": 0,
+        "ready": 0,
+        "rejected": 0,
+        "rejected_after_interview": 0,
+        "tailoring": 0
+      },
+      "locations": [],
+      "platforms": [],
+      "skills": [],
+      "sponsorship": {},
+      "total": 0
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/summary"
+    },
+    "status": 200,
+    "step": "summary"
+  },
+  {
+    "body": {
+      "detail": "Lead not found"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/does-not-exist"
+    },
+    "status": 404,
+    "step": "missing lead"
+  },
+  {
+    "body": {
+      "detail": "Lead not found"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/does-not-exist/pdf"
+    },
+    "status": 404,
+    "step": "missing lead pdf"
+  },
+  {
+    "body": {
+      "detail": "lead not found"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "status": "applied"
+      },
+      "method": "PUT",
+      "path": "/api/v1/leads/does-not-exist/status"
+    },
+    "status": 404,
+    "step": "status of a missing lead"
+  },
+  {
+    "body": {
+      "candidates": 0,
+      "discarded": 0,
+      "dry_run": false,
+      "items": [],
+      "scanned": 0
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/leads/cleanup"
+    },
+    "status": 200,
+    "step": "cleanup with nothing to clean"
+  },
+  {
+    "body": {
+      "job_ids": []
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/cart"
+    },
+    "status": 200,
+    "step": "empty cart"
+  },
+  {
+    "body": {
+      "job_ids": [
+        "nope-1"
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "job_ids": [
+          "nope-1"
+        ]
+      },
+      "method": "PUT",
+      "path": "/api/v1/cart"
+    },
+    "status": 200,
+    "step": "cart with unknown ids"
+  },
+  {
+    "body": {
+      "job_ids": [
+        "nope-1"
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/cart"
+    },
+    "status": 200,
+    "step": "cart after put"
+  },
+  {
+    "body": [],
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/events?limit=20"
+    },
+    "status": 200,
+    "step": "events"
+  },
+  {
+    "body": {
+      "jobs": []
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/extension/jobs"
+    },
+    "status": 200,
+    "step": "extension queue"
+  },
+  {
+    "body": {
+      "jobs": []
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/extension/jobs?include_done=true"
+    },
+    "status": 200,
+    "step": "extension queue incl. done"
+  },
+  {
+    "body": {
+      "detail": "job not found"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/fill-context?job_id=does-not-exist"
+    },
+    "status": 404,
+    "step": "fill context, unknown job"
+  },
+  {
+    "body": {
+      "detail": "no prepared application matches that URL"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/fill-context?url=https%3A%2F%2Fexample.com%2Fjobs%2F1"
+    },
+    "status": 404,
+    "step": "fill context, unknown url"
+  },
+  {
+    "body": {
+      "detail": "no prepared application matches that URL"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/fill-context"
+    },
+    "status": 404,
+    "step": "fill context, no arguments"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "message": "contract test",
+        "source": "web",
+        "stack": "at test"
+      },
+      "method": "POST",
+      "path": "/api/v1/errors"
+    },
+    "status": 200,
+    "step": "client error report"
+  }
+]

@@ -1,0 +1,150 @@
+{
+  "company": "JPMorgan Chase",
+  "slug": "jpmorgan-chase",
+  "portal": "https://careers.jpmorgan.com/global/en/home",
+  "listing_url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "NY, United States",
+        "TX, United States",
+        "New York, NY, United States",
+        "NJ, United States",
+        "Jersey City, NJ, United States",
+        "OH, United States",
+        "United Kingdom",
+        "Plano, TX, United States",
+        "CA, United States",
+        "Columbus, OH, United States",
+        "LONDON, United Kingdom",
+        "DE, United States",
+        "FL, United States",
+        "IL, United States",
+        "Wilmington, DE, United States",
+        "Chicago, IL, United States",
+        "India",
+        "LONDON, LONDON, United Kingdom",
+        "Tampa, FL, United States",
+        "Singapore",
+        "WA, United States"
+      ],
+      "native_param": "selectedLocationsFacet",
+      "note": "locationsFacet IDs are sent; the free-text alternative is location/locationId."
+    },
+    {
+      "key": "job_family",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Software Engineering",
+        "Associate Bankers",
+        "Advisors",
+        "Product Management",
+        "Originations",
+        "Relationship Bankers",
+        "Relationship Manager",
+        "Private Client Bankers",
+        "Client Advisory",
+        "Analysts",
+        "Predictive Science",
+        "Branch Managers",
+        "Technical Program Delivery",
+        "Associates",
+        "Branch Operations Lead",
+        "Business Management",
+        "Infrastructure Engineering",
+        "Controller",
+        "Marketing Strategy",
+        "Product Portfolio & Delivery",
+        "Architecture",
+        "Assoc Relationship Banker",
+        "Analytics Solutions & Delivery",
+        "Client Service",
+        "Data Management"
+      ],
+      "native_param": "selectedCategoriesFacet",
+      "note": ""
+    },
+    {
+      "key": "department",
+      "label": "Title",
+      "kind": "multi",
+      "values": [
+        "Client Management",
+        "Technology",
+        "Product",
+        "Operations",
+        "Data & Analytics",
+        "Finance",
+        "Program Analysts & Associate",
+        "Product/Investment Mgmt",
+        "Marketing & Communications",
+        "Risk",
+        "Administration",
+        "Oversight & Control",
+        "Project & Process Mgmt",
+        "Human Resources",
+        "Strategy & Development",
+        "Legal",
+        "Compliance",
+        "Internal Audit",
+        "General Services",
+        "Corporate Responsibility",
+        "HL Production Operations",
+        "Digital",
+        "Real Estate Admin",
+        "Unassigned",
+        "Multi-Function Management",
+        "Operations Control"
+      ],
+      "native_param": "selectedTitlesFacet",
+      "note": ""
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "On-site"
+      ],
+      "native_param": "selectedWorkplaceTypesFacet",
+      "note": "Only On-site is published for this board."
+    },
+    {
+      "key": "date_posted",
+      "label": "Date posted",
+      "kind": "multi",
+      "values": [
+        "Less than 7 days",
+        "Less than 30 days",
+        "Greater than 30 days"
+      ],
+      "native_param": "selectedPostingDatesFacet",
+      "note": ""
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "This is Oracle Candidate Experience, not Workday: careers.jpmorgan.com/global/en/home redirects to www.jpmorganchase.com/careers and the public board is site CX_1001 on jpmc.fa.oraclecloud.com. Membership is GET /hcmRestApi/resources/latest/recruitingCEJobRequisitions with finder=findReqs;siteNumber=CX_1001,limit,sortBy,offset (7,072 jobs). Filters are finder parameters mirroring the response fields: keyword, location/locationId, selectedCategoriesFacet, selectedTitlesFacet, selectedLocationsFacet, selectedWorkLocationsFacet, selectedWorkplaceTypesFacet, selectedPostingDatesFacet, selectedOrganizationsFacet, selectedFlexFieldsFacets. The response returns categoriesFacet, locationsFacet, titlesFacet, workLocationsFacet, workplaceTypesFacet, postingDatesFacet, organizationsFacet and flexFieldsFacet, and a filtered request echoed Keyword=engineer and returned exactly the 1,054-job category facet count.",
+  "evidence": [
+    "https://careers.jpmorgan.com/global/en/home",
+    "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs",
+    "https://jpmc.fa.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX_1001,facetsList=WORK_LOCATIONS;WORKPLACE_TYPES;TITLES;CATEGORIES;ORGANIZATIONS;POSTING_DATES;FLEX_FIELDS;LOCATIONS,limit=2,sortBy=POSTING_DATES_DESC,offset=0"
+  ],
+  "verified": true
+}

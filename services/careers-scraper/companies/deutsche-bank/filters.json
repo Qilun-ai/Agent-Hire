@@ -1,0 +1,95 @@
+{
+  "company": "Deutsche Bank",
+  "slug": "deutsche-bank",
+  "portal": "https://careers.db.com/professionals/search-roles/",
+  "listing_url": "https://careers.db.com/professionals/search-roles/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "data",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Aachen",
+        "Aalen",
+        "Aalst",
+        "Ahmedabad",
+        "Ahrensburg",
+        "Ahrensbök",
+        "Albstadt",
+        "Alfeld",
+        "Almeria",
+        "Alsdorf",
+        "Altenburg",
+        "Alzey",
+        "Amberg",
+        "Amsterdam",
+        "Andernach",
+        "Anklam",
+        "Annaberg-Buchholz",
+        "Ansbach",
+        "Apolda",
+        "Arlington",
+        "Arnsberg",
+        "Aschaffenburg",
+        "Aschersleben",
+        "Asso",
+        "Aue"
+      ],
+      "native_param": "SearchCriteria",
+      "note": "Sent in ?data=<JSON> as {CriterionName:\"PositionLocation.CityName\",CriterionValue:[...]} for a city keyword, or PositionLocation.City / CountrySubDivision for exact values. Values are city names from the company's collected records."
+    },
+    {
+      "key": "department",
+      "label": "Division",
+      "kind": "multi",
+      "values": [
+        "Asset Management",
+        "Chairman",
+        "Chief Financial Office",
+        "Chief Risk Office",
+        "Compliance & Anti-Financial Crime",
+        "COO",
+        "Corporate Bank",
+        "Investment Bank",
+        "Investment Bank and Corporate Bank Central",
+        "Private Bank",
+        "Sonstige",
+        "Technology Data & Innovation"
+      ],
+      "native_param": "SearchCriteria",
+      "note": "CriterionName \"JobCategory.Code\" (division) per the jobplatform.js mapping; \"ProfessionCategory.Code\" is the profession facet."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-time",
+        "Part-time",
+        "Vollzeit"
+      ],
+      "native_param": "SearchCriteria",
+      "note": "CriterionName \"PositionOfferingType.Code\" (type) per the jobplatform.js mapping."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "Sort=[{\"Criterion\":\"PublicationStartDate\",\"Direction\":\"DESC\"}]"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The Search Roles page embeds the PROFESSIONAL job module (jobplatform.js), which calls GET https://api-deutschebank.beesite.de/search/?data=<JSON>. The JSON holds SearchParameters (FirstItem, CountItem, MatchedObjectDescriptor, Sort) plus a top-level SearchCriteria array of {CriterionName, CriterionValue}. Confirmed live: SearchCriteria [{CriterionName:PositionFormattedDescription.Content, CriterionValue:[\"engineer\"]}] narrowed SearchResultCountAll from 1819 to 316, so the keyword criterion is machine-usable; the criterion names for city/division/employment type come verbatim from the site bundle's mapping.",
+  "evidence": [
+    "https://api-deutschebank.beesite.de/search/?data=%7B%22LanguageCode%22%3A%22EN%22%2C%22SearchParameters%22%3A%7B%22FirstItem%22%3A1%2C%22CountItem%22%3A5%2C%22MatchedObjectDescriptor%22%3A%5B%22PositionID%22%2C%22PositionTitle%22%2C%22PositionLocation%22%5D%2C%22Sort%22%3A%5B%7B%22Criterion%22%3A%22PublicationStartDate%22%2C%22Direction%22%3A%22DESC%22%7D%5D%7D%2C%22SearchCriteria%22%3A%5B%7B%22CriterionName%22%3A%22PositionFormattedDescription.Content%22%2C%22CriterionValue%22%3A%5B%22engineer%22%5D%7D%5D%7D",
+    "https://careers.db.com/application/project/js/jobplatform.js?5",
+    "https://careers.db.com/professionals/search-roles/"
+  ],
+  "verified": true
+}

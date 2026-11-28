@@ -1,0 +1,163 @@
+{
+  "company": "Mastercard",
+  "slug": "mastercard",
+  "portal": "https://careers.mastercard.com/us/en/search-results",
+  "listing_url": "https://careers.mastercard.com/us/en/search-results",
+  "family": "phenom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Arlington",
+        "Atlanta",
+        "Bogotá D.C.",
+        "Boston",
+        "Chicago",
+        "Da'an District",
+        "Dublin 18",
+        "Gurgaon",
+        "Hyderabad",
+        "Istanbul",
+        "Jakarta",
+        "Kuala Lumpur",
+        "London",
+        "Makati City",
+        "Mexico City",
+        "Miami",
+        "New York",
+        "North York",
+        "O Fallon",
+        "Pune",
+        "Purchase",
+        "Salt Lake City",
+        "San Francisco",
+        "Santiago",
+        "Sao Paulo",
+        "Seattle",
+        "Singapore",
+        "Tokyo",
+        "Toronto",
+        "Vancouver",
+        "Warsaw"
+      ],
+      "native_param": "city",
+      "note": "refineSearch aggregation field 'city' (97 buckets); sent inside selected_fields."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Argentina",
+        "Australia",
+        "Austria",
+        "Belgium",
+        "Brazil",
+        "Canada",
+        "Chile",
+        "China",
+        "Colombia",
+        "Costa Rica",
+        "Denmark",
+        "Dominican Republic",
+        "Egypt",
+        "France",
+        "Germany",
+        "Greece",
+        "Hong Kong",
+        "Hungary",
+        "India",
+        "Indonesia",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Japan",
+        "Kazakhstan",
+        "Malaysia",
+        "Mexico",
+        "Norway",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Saudi Arabia",
+        "Singapore",
+        "South Africa",
+        "Spain",
+        "Taiwan",
+        "Türkiye",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States of America",
+        "Vietnam"
+      ],
+      "native_param": "country",
+      "note": "refineSearch aggregation field 'country' (59 buckets). Verified: selected_fields {\"country\":[\"India\"],\"type\":[\"Part time\"]} returned totalHits 0, i.e. both keys bind (Part time has only 2 postings worldwide, none in India)."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "AI & Data",
+        "Consulting",
+        "Customer Success",
+        "Cyber and Corporate Security",
+        "Design",
+        "Engineering",
+        "Finance",
+        "HR",
+        "Legal and Compliance",
+        "Marketing and Communications",
+        "Other",
+        "Product",
+        "Project and Program Management",
+        "Sales"
+      ],
+      "native_param": "category",
+      "note": "refineSearch aggregation field 'category' (14 buckets). Verified with keywords:\"engineer\" + selected_fields.category=[\"Engineering\"] -> totalHits 196 (935 unfiltered)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time"
+      ],
+      "native_param": "type",
+      "note": "refineSearch aggregation field 'type' (Full time 949, Part time 2 of 951)."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Most relevant",
+      "native_param": "sortBy=Most relevant"
+    },
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=Most recent"
+    },
+    {
+      "value": "popular",
+      "label": "Most popular",
+      "native_param": "sortBy=Most popular"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Phenom site (refNum MASRUS, widgetApiEndpoint https://careers.mastercard.com/widgets). Search is a POST to that endpoint with ddoKey=refineSearch, global=true, clearAll=false, all_fields=[category,country,state,city,postalCode,jobType,phLocSlider], keywords and selected_fields. Facet keys and vocabularies are published in data.aggregations (country, city, state, orgFunction, type, category). Sort values come from the page's own select#sortselect (Most relevant / Most recent / Most popular) and travel in the body as sortBy. Unfiltered totalHits 935; keywords=engineer + category=[Engineering] -> 196, which is also the fixture the adapter posts (empty filters, clearAll=true).",
+  "evidence": [
+    "POST https://careers.mastercard.com/widgets {\"ddoKey\":\"refineSearch\",\"keywords\":\"engineer\",\"selected_fields\":{\"category\":[\"Engineering\"]}} -> 200, totalHits 196 (935 unfiltered)",
+    "POST https://careers.mastercard.com/widgets {\"selected_fields\":{\"country\":[\"India\"],\"type\":[\"Part time\"]}} -> 200, totalHits 0 (no Part time role in India)",
+    "https://careers.mastercard.com/us/en/search-results (select#sortselect options: Most relevant, Most recent, Most popular)",
+    "companies/mastercard/source/widgets-refine-search-page1.json (data.aggregations facets)"
+  ],
+  "verified": true
+}

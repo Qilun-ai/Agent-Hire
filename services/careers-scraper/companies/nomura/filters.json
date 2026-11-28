@@ -1,0 +1,85 @@
+{
+  "company": "Nomura",
+  "slug": "nomura",
+  "portal": "https://www.nomura.com/careers/",
+  "listing_url": "https://careers.nomura.com/search/?q=&sortColumn=referencedate&sortDirection=desc",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Skill Category",
+      "kind": "multi",
+      "values": [
+        "Admin/Support",
+        "Asset Management",
+        "Audit",
+        "BCM",
+        "Communications",
+        "Compliance",
+        "Corporate",
+        "Corporate Real Estate & Services",
+        "Corporate Strategy",
+        "Digital",
+        "ESS Core",
+        "Finance",
+        "Finance Middle Office",
+        "Firmwide",
+        "Global HR",
+        "Global Markets",
+        "Group Data Office",
+        "Human Resources",
+        "India CMT",
+        "Instinet",
+        "Internal Audit",
+        "International Wealth Management",
+        "Investment Banking",
+        "IT\\Technology",
+        "Legal"
+      ],
+      "native_param": "optionsFacetsDD_department",
+      "note": "Facet select is named optionsFacetsDD_department; its options are populated from result data, so these values come from Nomura's collected records."
+    },
+    {
+      "key": "job_family",
+      "label": "Division",
+      "kind": "multi",
+      "values": [],
+      "native_param": "optionsFacetsDD_facility",
+      "note": "Facet select optionsFacetsDD_facility. No complete option list is server-rendered, so values are left empty rather than guessed."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Date (referencedate)",
+      "native_param": "sortColumn=referencedate&sortDirection=desc"
+    },
+    {
+      "value": "title",
+      "label": "Job Title",
+      "native_param": "sortColumn=sort_title&sortDirection=desc"
+    },
+    {
+      "value": "division",
+      "label": "Division",
+      "native_param": "sortColumn=sort_facility&sortDirection=desc"
+    },
+    {
+      "value": "location",
+      "label": "Location",
+      "native_param": "sortColumn=sort_location&sortDirection=desc"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The global careers listing is a server-rendered SuccessFactors/Radancy search at careers.nomura.com/search/. It is a GET form with q (keyword) and three facet selects: optionsFacetsDD_title (Job Title), optionsFacetsDD_facility (Division) and optionsFacetsDD_department (Skill Category). q=engineer reduced the advertised 495 results to 165, confirming the keyword parameter. Pagination is startrow=100 and the sort links use sortColumn/sortDirection. Location is a displayed column and a sort key, not a facet; no location filter parameter is published. The facet select option lists are not server-rendered, so only the department values from collected records are listed.",
+  "evidence": [
+    "https://careers.nomura.com/search/?q=&sortColumn=referencedate&sortDirection=desc (GET form with q, optionsFacetsDD_title, optionsFacetsDD_facility, optionsFacetsDD_department; 495 results)",
+    "https://careers.nomura.com/search/?q=engineer&sortColumn=referencedate&sortDirection=desc (165 results)",
+    "https://careers.nomura.com/search/?q=&sortColumn=sort_title&sortDirection=desc (sort links: sort_title, sort_facility, sort_location)"
+  ],
+  "verified": true
+}

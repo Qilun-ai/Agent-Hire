@@ -1,0 +1,83 @@
+{
+  "company": "TCS",
+  "slug": "tcs",
+  "portal": "https://www.tcs.com/careers",
+  "listing_url": "https://ibegin.tcsapps.com/candidate/next/en-IN/jobs/search",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "searchTerms",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "bengaluru",
+        "chennai",
+        "trivandrum",
+        "hyderabad",
+        "mumbai",
+        "pune",
+        "gandhinagar",
+        "indor",
+        "visakhapatnam",
+        "delhi",
+        "kochi"
+      ],
+      "native_param": "jobLocationFilters",
+      "note": "POST body array; facet values are lower-case city slugs exactly as returned (e.g. bengaluru, chennai, trivandrum)."
+    },
+    {
+      "key": "department",
+      "label": "Domain",
+      "kind": "multi",
+      "values": [
+        "QUALITY ASSURANCE",
+        "FINANCE",
+        "IT INFRASTRUCTURE SERVICES",
+        "HUMAN RESOURCES",
+        "BUSINESS PROCESS SERVICES",
+        "MARKETING AND SALES",
+        "CONSULTANCY",
+        "TECHNOLOGY"
+      ],
+      "native_param": "jobDomainFilters",
+      "note": "POST body array of domain ids: QUALITY ASSURANCE=2130; FINANCE=2131; IT INFRASTRUCTURE SERVICES=2132; HUMAN RESOURCES=2133; BUSINESS PROCESS SERVICES=2134; MARKETING AND SALES=2135; CONSULTANCY=2136; TECHNOLOGY=2137."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience Level",
+      "kind": "multi",
+      "values": [
+        "entry_level",
+        "middle_level",
+        "senior_level"
+      ],
+      "native_param": "experienceLevelFilters",
+      "note": "POST body array of experience band slugs from the portal facet (entry_level, middle_level, senior_level)."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Posted Date",
+      "native_param": "recentSortOrder=desc"
+    },
+    {
+      "value": "relevance",
+      "label": "Most Relevant",
+      "native_param": "relevancySortOrder"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "TCS's own iBegin candidate portal. Requires a session: GET /candidate/next/en-IN/landing (sets XSRF-TOKEN), then POST /candidate/next/api/en-IN/search/jobs with header next-xsrf-token and JSON body {includeRegularJob, includeWalkIn, searchTerms[], jobLocationFilters[], jobDomainFilters[], experienceLevelFilters[], skillFilters[], recentSortOrder, page, resultsPerPage (10/25/50)}. searchTerms:['engineer'] returned totalElements=178 for en-IN versus 1389 unfiltered; the response facets returned location slugs, domain ids 2130-2137, experience levels and skills. The marketing entry tcs.com/careers is Akamai-protected (403) but is not the search endpoint.",
+  "evidence": [
+    "https://ibegin.tcsapps.com/candidate/next/en-IN/jobs/search",
+    "POST https://ibegin.tcsapps.com/candidate/next/api/en-IN/search/jobs {\"searchTerms\":[\"engineer\"],...} -> status 200, totalElements 178, facets.locations/domains/experiences",
+    "https://ibegin.tcsapps.com/candidate/next/en-IN/landing",
+    "src/career_scraper/adapters/tcs.py"
+  ],
+  "verified": true
+}

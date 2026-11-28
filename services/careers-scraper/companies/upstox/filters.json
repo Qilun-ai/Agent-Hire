@@ -1,0 +1,69 @@
+{
+  "company": "Upstox",
+  "slug": "upstox",
+  "portal": "https://upstox.com/careers/",
+  "listing_url": "https://upstox.com/careers/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Finance",
+        "Insurance",
+        "Legal & Compliance",
+        "Product - Product Management",
+        "Security"
+      ],
+      "native_param": null,
+      "note": "Checkbox group rendered on the careers page; filters the loaded cards client-side."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore, Karnataka",
+        "Mumbai, Maharashtra",
+        "Mumbai, Mumbai"
+      ],
+      "native_param": null,
+      "note": "Checkbox group rendered on the careers page; values are city/state labels."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Location Type",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Onsite"
+      ],
+      "native_param": null,
+      "note": "Checkbox group rendered on the careers page."
+    },
+    {
+      "key": "employment_type",
+      "label": "Work Type",
+      "kind": "multi",
+      "values": [
+        "Full-time"
+      ],
+      "native_param": null,
+      "note": "Checkbox group rendered on the careers page; the API rows use employee_type Permanent/Consultant/Intern."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Next.js careers page reads GET https://service.upstox.com/content/open/v1/jobs/ with no query parameters (58 API rows, of which the 13 with post_on_careers_page == 1 are rendered). The page has a keyword box ('Search jobs by title, department, or location...') plus Department, Location, Location Type and Work Type checkboxes, all filtering the rendered cards client-side via 'Show Results'; the jobs API accepts no filter parameters.",
+  "evidence": [
+    "https://upstox.com/careers/",
+    "https://service.upstox.com/content/open/v1/jobs/"
+  ],
+  "verified": true
+}

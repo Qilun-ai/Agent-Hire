@@ -1,0 +1,59 @@
+# deps
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# builds
+dist/
+build/
+coverage/
+apps/api-rs/target/
+*.tsbuildinfo
+
+# caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.nx/
+.vite/
+.vite-temp/
+node_modules/.cache/
+
+# runtime state — regenerable, never committed
+var/
+*.sqlite
+*.sqlite3
+*.db
+*.lance/
+kuzu_db/
+
+# secrets + local config
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+credentials.json
+
+# editors / OS
+.DS_Store
+.idea/
+*.swp
+
+.run/
+
+# Agent-Hire Agent local data
+.data/
+.run/
+
+# agent builds for the external e2e harness and launch video
+apps/agent/dist-*/
+
+# local scratch output
+tmp/

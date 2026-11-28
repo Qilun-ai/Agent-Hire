@@ -1,0 +1,64 @@
+{
+  "company": "Amagi",
+  "slug": "amagi",
+  "portal": "https://www.amagi.com/careers",
+  "listing_url": "https://www.amagi.com/careers/open-roles",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Customer Engagement-(T256)",
+        "Engineering - Cloud Broadcast-(T285)",
+        "Engineering - Incubation-(T279)",
+        "Engineering - Monetization-(T294)",
+        "Management - Ads Plus-(T012)",
+        "Management - Marketing-(T027)",
+        "Marketing - Others-(T159)",
+        "Onboarding and Customer  Implementation-(T255)",
+        "Platform Engineering-(T306)",
+        "Program Management-(T140)",
+        "Revenue Operations-(T028)"
+      ],
+      "native_param": null,
+      "note": "buName from the public reqlist response; the API only exposes an internal numeric filterByBuId, not a name filter."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Brazil",
+        "United Kingdom"
+      ],
+      "native_param": null,
+      "note": "Current reqlist locations; no location parameter is exposed."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "eor-contract",
+        "full-time"
+      ],
+      "native_param": null,
+      "note": "Current reqlist employmentType values."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The official careers page links to /careers/open-roles, which embeds the Amagi mynexthire job board. POST https://amagi.mynexthire.com/employer/careers/reqlist/get with {source:careers,code:'',filterByBuId:-1} returns all 14 current requisitions with buName, location and employmentType. The body exposes only an internal numeric business-unit filter and no keyword/facet parameters, so filtering is local.",
+  "evidence": [
+    "https://www.amagi.com/careers/open-roles",
+    "https://amagi.mynexthire.com/employer/careers/reqlist/get (POST source=careers, filterByBuId=-1)"
+  ],
+  "verified": true
+}

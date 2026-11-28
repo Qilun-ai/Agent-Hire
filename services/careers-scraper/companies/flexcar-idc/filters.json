@@ -1,0 +1,55 @@
+{
+  "company": "Flexcar IDC",
+  "slug": "flexcar-idc",
+  "portal": "https://www.flexcar.com/careers",
+  "listing_url": "https://careers.flexcar.com/apply",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Auburn, MA",
+        "Boston, MA",
+        "Chestnut Hill, MA",
+        "Conshohocken, PA",
+        "Dallas, TX",
+        "Downtown Boston, MA",
+        "El Monte, CA",
+        "Larchmont, NY",
+        "Lilburn, GA",
+        "MA",
+        "Marietta, GA",
+        "Morrow, GA",
+        "morrow, GA",
+        "Nashville, TN",
+        "Richmond, CA",
+        "San Jose, CA"
+      ],
+      "native_param": null,
+      "note": "Location text from the listing card's ul.list-inline; the board has no location control."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full Time"
+      ],
+      "native_param": null,
+      "note": "From the job page JSON-LD employmentType; no native facet."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The ledger URL https://www.flexcar.com/careers returns 404; the homepage publishes https://careers.flexcar.com/ (JazzHR/Resumator skin, canonical /apply). The board is a single server-rendered <ul class=\"list-group\"> under \"Current Openings\" with one anchor per posting and no search box, facet bar, load-more or pagination. Each /apply/<10-char-code>/<slug> page is both the job page and the apply page. Only local filtering is possible.",
+  "evidence": [
+    "https://careers.flexcar.com/apply"
+  ],
+  "verified": true
+}

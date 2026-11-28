@@ -1,0 +1,66 @@
+{
+  "company": "Slice",
+  "slug": "slice",
+  "portal": "https://www.sliceit.com/careers",
+  "listing_url": "https://slice.bank.in/careers/open-positions",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Guwahati, Assam, India",
+        "Bengaluru, Karnataka, India",
+        "Assam, India",
+        "India"
+      ],
+      "native_param": null,
+      "note": "Kula filter_options offices; job_filter_location_enabled=true, but no request parameter could be confirmed."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Asset",
+        "Human Resources",
+        "Asset - Distribution",
+        "Branch Banking",
+        "Data Science",
+        "Internal Audit",
+        "IT",
+        "Product",
+        "Product Operations",
+        "Risk",
+        "Technology",
+        "Vigilance"
+      ],
+      "native_param": null,
+      "note": "Top-level Kula departments from filter_options (nested children such as Credit/Recovery exist)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": null,
+      "note": "From collected job records; not a Kula filter facet."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "www.sliceit.com/careers 301s to slice.bank.in/careers, which links /careers/open-positions and embeds the Kula board https://careers.kula.ai/slice?jobs=true. Membership comes from GET https://careers.kula.ai/api/internal/ats_job_posts?accountName=slice&page=1&type=ats_job_post.index&items=99 (meta.count=34). Department/location vocabulary comes from GET .../ats_job_posts/filter_options?accountName=slice&type=ats_job_post.filter_options. The UI selects (All departments / All locations) filter the already-loaded rows client-side: adding department_id=8516 to the listing request left the result at 34 rows, so no native filter parameter is claimed.",
+  "evidence": [
+    "https://careers.kula.ai/api/internal/ats_job_posts/filter_options?accountName=slice&type=ats_job_post.filter_options",
+    "https://careers.kula.ai/api/internal/ats_job_posts?accountName=slice&page=1&type=ats_job_post.index&items=99",
+    "https://careers.kula.ai/slice?jobs=true"
+  ],
+  "verified": true
+}

@@ -1,0 +1,78 @@
+{
+  "company": "Icertis",
+  "slug": "icertis",
+  "portal": "https://www.icertis.com/company/careers/",
+  "listing_url": "https://iaaviz.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/Jobs-at-Icertis",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "India",
+        "Maharashtra, India",
+        "Pune, Maharashtra, India",
+        "VA, United States",
+        "Reston, VA, United States",
+        "NY, United States",
+        "New York, NY, United States",
+        "United Kingdom",
+        "London, United Kingdom"
+      ],
+      "native_param": "location",
+      "note": "Free-text location inside the finder string; the response echoes it back as 'Location'/'LocationId'. The locationsFacet lists the wider set. Facility-level narrowing uses selectedLocationsFacet with the numeric ids from workLocationsFacet."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Customer Support",
+        "Engineering",
+        "Enterprise Systems",
+        "Human Resources",
+        "Information Security",
+        "Marketing",
+        "Product Enablement",
+        "Product Management",
+        "Professional Services",
+        "Sales"
+      ],
+      "native_param": "selectedCategoriesFacet",
+      "note": "categoriesFacet publishes the ids (e.g. Engineering 300000003426001); the response echoes the applied selection as SelectedCategoriesFacet."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Hybrid/Club",
+        "On-Site/Hub",
+        "Remote"
+      ],
+      "native_param": "selectedWorkplaceTypesFacet",
+      "note": "Facet ids are ORA_HYBRID, ORA_ON_SITE, ORA_REMOTE. Confirmed live: selectedWorkplaceTypesFacet=ORA_REMOTE returned 11 jobs, all WorkplaceType 'Remote'."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The icertis.com careers page hands off to Oracle Candidate Experience on iaaviz.fa.ocs.oraclecloud.com (siteNumber CX_1, site short URL 'Jobs-at-Icertis'). The single search entry point is the recruitingCEJobRequisitions REST resource, driven by a finder string: findReqs;siteNumber=CX_1,facetsList=WORK_LOCATIONS;WORKPLACE_TYPES;TITLES;CATEGORIES;ORGANIZATIONS;POSTING_DATES;FLEX_FIELDS;LOCATIONS,limit=25,sortBy=POSTING_DATES_DESC,offset=N plus optional keyword=, location=, selectedWorkplaceTypesFacet=, selectedCategoriesFacet=, selectedLocationsFacet=, selectedTitlesFacet=, selectedPostingDatesFacet=. Every accepted filter is echoed back on the result block (Keyword/Location/Selected*), which is how the machine-usable set was confirmed. No job-family finder parameter was evidenced, so none is declared.",
+  "evidence": [
+    "https://iaaviz.fa.ocs.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.workLocation&finder=findReqs;siteNumber=CX_1,facetsList=WORK_LOCATIONS;WORKPLACE_TYPES;TITLES;CATEGORIES;ORGANIZATIONS;POSTING_DATES;FLEX_FIELDS;LOCATIONS,limit=5,sortBy=POSTING_DATES_DESC,offset=0 -> TotalJobsCount 44, facets incl. locationsFacet/categoriesFacet/workplaceTypesFacet",
+    "...finder=findReqs;siteNumber=CX_1,...,keyword=engineer,... -> TotalJobsCount 31, Keyword echoed 'engineer'",
+    "...finder=findReqs;siteNumber=CX_1,...,selectedWorkplaceTypesFacet=ORA_REMOTE,... -> TotalJobsCount 11, all WorkplaceType 'Remote'"
+  ],
+  "verified": true
+}

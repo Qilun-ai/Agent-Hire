@@ -1,0 +1,80 @@
+{
+  "company": "MONEYVIEW",
+  "slug": "moneyview",
+  "portal": "https://moneyview.in/careers",
+  "listing_url": "https://moneyview.darwinbox.in/ms/candidatev2/main/careers/allJobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore, Karnataka, India",
+        "Bengaluru, Karnataka, India",
+        "Bhive, Bangalore, Bengaluru, Karnataka, India",
+        "Dehli, Delhi, India",
+        "EFC Limited. Noida, Noida, Uttar Pradesh, India",
+        "Jaipur, Rajasthan, India",
+        "Lucknow, Uttar Pradesh, India",
+        "Hyderabad, Telangana, India"
+      ],
+      "native_param": null,
+      "note": "From row fields locations/officelocations_without_area; applied client-side"
+    },
+    {
+      "key": "department",
+      "label": "Sub Department",
+      "kind": "multi",
+      "values": [
+        "Customer Support",
+        "Finance",
+        "Home Loans",
+        "Marketing"
+      ],
+      "native_param": null,
+      "note": "department_name values seen in the tenant's rows"
+    },
+    {
+      "key": "employment_type",
+      "label": "Employee Type",
+      "kind": "multi",
+      "values": [
+        "Contract",
+        "Full Time",
+        "Outsourced"
+      ],
+      "native_param": null,
+      "note": "emp_type_name values"
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "India"
+      ],
+      "native_param": null,
+      "note": "Row field country"
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Newest first",
+      "native_param": "sort_option=new"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": false,
+  "local_query": true,
+  "notes": "Moneyview Darwinbox tenant (published from moneyview.in/careers). The listing is one unfiltered POST /ms/candidateapi/job/alljobs?companyId=main with JSON {\"companyId\":\"main\",\"page\":1,\"sort_option\":\"new\",\"limit\":10} returning status/data/job_counts (6 rows at review); sort_option=new is the only native control. The rendered allJobs page shows filter groups Sub Department, Employee Type, Job Tag, Country, Experience plus a keyword box (\"Search by role, department or location\"), all applied client-side over that response. The tenant answers this worker's curl with Cloudflare 403 even for browser-shaped requests, so the listing shape is taken from the project's archived response (companies/moneyview/source/alljobs-page1.json).",
+  "evidence": [
+    "https://moneyview.in/careers",
+    "https://moneyview.darwinbox.in/ms/candidatev2/main/careers/allJobs",
+    "https://moneyview.darwinbox.in/ms/candidateapi/job/alljobs?companyId=main"
+  ],
+  "verified": true
+}

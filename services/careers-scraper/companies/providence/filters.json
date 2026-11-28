@@ -1,0 +1,123 @@
+{
+  "company": "Providence",
+  "slug": "providence",
+  "portal": "https://www.providence.jobs/",
+  "listing_url": "https://providence.jobs/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Seattle, WA",
+        "Portland, OR",
+        "Spokane, WA",
+        "Anchorage, AK",
+        "Lubbock, TX",
+        "Everett, WA",
+        "Richland, WA",
+        "Eureka, CA",
+        "Santa Rosa, CA",
+        "Missoula, MT",
+        "Santa Monica, CA",
+        "Olympia, WA",
+        "Mission Viejo, CA",
+        "Walla Walla, WA",
+        "Medford, OR",
+        "Renton, WA",
+        "Torrance, CA",
+        "Edmonds, WA",
+        "California, USA",
+        "Mission Hills, CA",
+        "Issaquah, WA",
+        "Orange, CA",
+        "Fullerton, CA",
+        "Centralia, WA",
+        "Napa, CA",
+        "Hood River, OR",
+        "Burbank, CA",
+        "Hobbs, NM",
+        "Kodiak, AK",
+        "Apple Valley, CA"
+      ],
+      "native_param": null,
+      "note": "Facet exposed by the search API; UI links are SEO paths, not query params."
+    },
+    {
+      "key": "department",
+      "label": "Job category",
+      "kind": "multi",
+      "values": [
+        "Nursing-Patient Facing",
+        "Patient Care (Non-Acute)",
+        "Diagnostic Imaging",
+        "Rehabilitation",
+        "Patient Access",
+        "Pharmacy",
+        "Surgical / Perioperative Services",
+        "Clinical Laboratory",
+        "Care Management",
+        "Clinical Administration",
+        "Cardio Services",
+        "Technical Services",
+        "Food Preparation / Service",
+        "Behavioral Health",
+        "Applications",
+        "Respiratory Care",
+        "Environmental Services",
+        "Facilities Management",
+        "Advanced Practice",
+        "Fundraising",
+        "Facilities Security/Safety",
+        "Radiation Therapy",
+        "Development / Engineering",
+        "Social Services",
+        "Neurology",
+        "Clinical Nutrition Services",
+        "Administrative Support",
+        "Coding",
+        "Research",
+        "Project Management"
+      ],
+      "native_param": null,
+      "note": "Adapter maps job_category to department."
+    },
+    {
+      "key": "employment_type",
+      "label": "Schedule",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time",
+        "Per-Diem"
+      ],
+      "native_param": null,
+      "note": ""
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote",
+      "kind": "multi",
+      "values": [
+        "No",
+        "Yes",
+        "Hybrid"
+      ],
+      "native_param": null,
+      "note": "Portal values: Yes=remote, No=on-site."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The DirectEmployers/JobSyn search API (requires x-origin: providence.jobs) takes only page and num_items and returns the full facet dictionary (city, state, jobcategory, schedule, workplacetype, employer, hospital, shift) for local filtering. A city query parameter was tried and ignored (total unchanged), and the site's filter links are SEO paths (/locations/<city>/jobs), so native_query is false. Response meta.sort.active is 'date'.",
+  "evidence": [
+    "https://prod-search-api.jobsyn.org/api/v1/solr/search?page=1&num_items=2",
+    "https://providence.jobs/jobs/"
+  ],
+  "verified": true
+}

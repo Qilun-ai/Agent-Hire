@@ -1,0 +1,57 @@
+{
+  "company": "Postman",
+  "slug": "postman",
+  "portal": "https://www.postman.com/company/careers/",
+  "listing_url": "https://postman.wd108.myworkdayjobs.com/careers",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Austin, TX, US",
+        "Bangalore, India",
+        "Cupertino, CA, US",
+        "Hyderabad, India",
+        "NYC, NY, US",
+        "Remote, DC, US",
+        "Remote, South Korea",
+        "Remote, UK",
+        "Remote, WA, US",
+        "San Francisco, CA, US"
+      ],
+      "native_param": "appliedFacets[locations]",
+      "note": "Nested facet under locationMainGroup; values are the facet descriptor IDs."
+    },
+    {
+      "key": "employment_type",
+      "label": "Full/Part-time",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": "appliedFacets[timeType]",
+      "note": ""
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=postedOn"
+    }
+  ],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Workday CXS POST /wday/cxs/postman/careers/jobs accepts a JSON body with searchText, appliedFacets and sortBy. Verified searchText=engineer + locations=Bangalore + timeType=Full time returns 11 of 41 postings, all matching. The Job Category facet (jobFamilyGroup) currently exposes only 'POSTMAN'; Job Type (workerSubType) exposes Management/Regular. Default order is relevance.",
+  "evidence": [
+    "https://postman.wd108.myworkdayjobs.com/wday/cxs/postman/careers/jobs",
+    "https://postman.wd108.myworkdayjobs.com/careers",
+    "https://www.postman.com/company/careers/open-positions/"
+  ],
+  "verified": true
+}

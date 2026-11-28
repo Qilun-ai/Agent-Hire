@@ -1,0 +1,79 @@
+{
+  "company": "Flipkart",
+  "slug": "flipkart",
+  "portal": "https://www.flipkartcareers.com/",
+  "listing_url": "https://flipkart.turbohire.co/careerpage/4d757ba0-3d57-448a-b82c-238ed87ac90f",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "Keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Bangalore, Karnataka, India",
+        "Bengaluru, Karnataka, India",
+        "Bhiwandi, Maharashtra, India",
+        "Embassy TechVillage, Kadubeesanahalli, Bengaluru, Karnataka, India",
+        "Mumbai, Maharashtra, India",
+        "Nagpur, Maharashtra, India",
+        "Padgha, Maharashtra, India"
+      ],
+      "native_param": "Locations",
+      "note": "TurboHire JSON body field Locations={Value:[...],FilterType:1}; values from collected postings."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Central",
+        "CL-Engg",
+        "Commercial",
+        "Ethics & Compliance",
+        "FM & LM Ops",
+        "Fulfilment Center Ops",
+        "Large & Furniture (D2067)",
+        "Minutes & Groceries",
+        "Sourcing & Fulfilment",
+        "Technology"
+      ],
+      "native_param": "Department",
+      "note": "TurboHire JSON body field Department (string); values from collected postings."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job type",
+      "kind": "multi",
+      "values": [],
+      "native_param": "JobTypes",
+      "note": "TurboHire JSON body field JobTypes={Value,FilterType}; JobTypeV2 is also accepted."
+    },
+    {
+      "key": "business_unit",
+      "label": "Business unit",
+      "kind": "multi",
+      "values": [],
+      "native_param": "BunitIds",
+      "note": "TurboHire JSON body field BunitIds={Value,FilterType}."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "SortByV2={'Key':'PostedDate','Order':2}"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "https://www.flipkartcareers.com/ publishes one TurboHire career page for Flipkart Internet Private Limited. The page's data comes from POST https://thapi.azurewebsites.net/api/careerpagev2/filteredjobs (bearer token from /api/token/noauth, Origin/Referer flipkart.turbohire.co) with a JSON body containing Keyword, Department, Locations, JobTypes, JobTypeV2, Experience, CreatedDate, Compensation, Skills, BunitIds and SortByV2. The adapter sends all filters empty to enumerate the board, then filters locally.",
+  "evidence": [
+    "https://www.flipkartcareers.com/",
+    "https://flipkart.turbohire.co/careerpage/4d757ba0-3d57-448a-b82c-238ed87ac90f",
+    "https://thapi.azurewebsites.net/api/careerpagev2/filteredjobs"
+  ],
+  "verified": true
+}

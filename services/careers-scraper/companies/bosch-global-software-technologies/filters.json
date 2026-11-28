@@ -1,0 +1,132 @@
+{
+  "company": "Bosch Global Software Technologies",
+  "slug": "bosch-global-software-technologies",
+  "portal": "https://www.bosch-softwaretechnologies.com/en/careers/",
+  "listing_url": "https://jobs.bosch.com/en/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search_term",
+  "fields": [
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [],
+      "native_param": "city",
+      "note": "avars key city (JobsService filter enum); city options come from the portal cities aggregate."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Australia",
+        "Austria",
+        "Belgium",
+        "China",
+        "France",
+        "Germany",
+        "Greece",
+        "Hungary",
+        "India",
+        "Indonesia",
+        "Italy",
+        "Japan",
+        "Korea",
+        "Luxembourg",
+        "Malaysia",
+        "Mexico",
+        "Netherlands",
+        "New Zealand",
+        "Philippines",
+        "Portugal",
+        "Romania",
+        "Singapore",
+        "Spain",
+        "Switzerland",
+        "Thailand",
+        "Türkiye",
+        "United Kingdom",
+        "USA",
+        "Vietnam"
+      ],
+      "native_param": "country",
+      "note": "avars key country (ISO-style ids from countryFilterOptions, e.g. India = [\"in\"])."
+    },
+    {
+      "key": "department",
+      "label": "Division",
+      "kind": "multi",
+      "values": [
+        "Bosch Global Software Technologies"
+      ],
+      "native_param": "division",
+      "note": "avars key division; BGSW is division id RBEI in divisionFilterOptions (adapter pins it)."
+    },
+    {
+      "key": "job_family",
+      "label": "Function",
+      "kind": "multi",
+      "values": [
+        "Corporate Communication & PR",
+        "Customer Service",
+        "Engineering",
+        "Health Care Provider",
+        "Human Resources",
+        "Information Technology",
+        "Legal",
+        "Logistics",
+        "Management Accounting, Financial Accounting, and Credit Control",
+        "Manufacturing",
+        "Marketing",
+        "others",
+        "Project Management",
+        "Purchasing",
+        "Quality Management",
+        "Research & Development",
+        "Sales",
+        "Strategy"
+      ],
+      "native_param": "functions",
+      "note": "avars key functions, from functionsFilterOptions ids."
+    },
+    {
+      "key": "employment_type",
+      "label": "Working hours",
+      "kind": "multi",
+      "values": [
+        "Full-time",
+        "Full-time and/or part-time",
+        "Full-time or job sharing",
+        "Part-time"
+      ],
+      "native_param": "working_hours",
+      "note": "avars key working_hours, ids from workingHoursFilterOptions."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote",
+      "kind": "multi",
+      "values": [],
+      "native_param": "remote",
+      "note": "avars key remote (JobFilterKey.Remote); no option labels were exposed in the portal HTML."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Newest first",
+      "native_param": "sort={\"releasedDate\":-1}"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Bosch Global Software Technologies postings live on the Bosch global portal jobs.bosch.com (e-spirit CaaS). Listing: GET {baseUrl}/bosch-i3-prod/bosch-de.jobs.content/_aggrs/get_jobs?avars=<json>&pagesize=N&page=N with a public Bearer key; avars keys are country, division, functions, position_types, remote, type_of_contract, working_hours, search_term, sort, page_language, city, coordinates (extracted from the portal JS). Verified live: avars {\"country\":[\"in\"],\"search_term\":\"software\",\"sort\":{\"releasedDate\":-1}} returned BGSW jobs with count 523. Portal filter option lists: country 29, division 46, functions 18, position types 4, type of contract 3, working hours 4.",
+  "evidence": [
+    "https://jobs.bosch.com/en/ (data-prop-name countryFilterOptions/divisionFilterOptions/functionsFilterOptions/positionTypesFilterOptions/typeOfContractFilterOptions/workingHoursFilterOptions; jobsApi base https://bosch-i3-caas-api.e-spirit.cloud)",
+    "https://bosch-i3-caas-api.e-spirit.cloud/bosch-i3-prod/bosch-de.jobs.content/_aggrs/get_jobs?avars={\"country\":[\"in\"],\"search_term\":\"software\",\"sort\":{\"releasedDate\":-1}}&pagesize=2&page=1 -> 2 jobs, meta.count 523",
+    "https://jobs.bosch.com/media/gcw_tech/main-gcw-fs.js (JobsService avars keys search_term/country/division/functions/position_types/remote/type_of_contract/working_hours/sort/page_language)"
+  ],
+  "verified": true
+}

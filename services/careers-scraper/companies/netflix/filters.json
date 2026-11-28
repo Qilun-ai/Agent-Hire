@@ -1,0 +1,132 @@
+{
+  "company": "Netflix",
+  "slug": "netflix",
+  "portal": "https://explore.jobs.netflix.net/careers",
+  "listing_url": "https://explore.jobs.netflix.net/careers",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote",
+        "Los Gatos, CA, United States",
+        "Los Angeles, CA, United States",
+        "Remote, OR, United States",
+        "New York, NY, United States",
+        "Vancouver, BC, Canada",
+        "NSW, Australia",
+        "Tokyo, Japan",
+        "Seattle, WA, United States",
+        "Warsaw, Masovian Voivodeship, Poland",
+        "London, England, United Kingdom",
+        "Seoul, Korea, Republic of",
+        "Mumbai, MH, India",
+        "Singapore",
+        "México D.F., CDMX, Mexico",
+        "NJ, United States",
+        "Manila, NCR, Philippines",
+        "Burbank, CA, United States",
+        "Jakarta, Indonesia",
+        "Stockholm, Stockholm County, Sweden",
+        "Amsterdam, NH, Netherlands",
+        "CA, United States",
+        "Canada",
+        "Taipei City, Taiwan",
+        "กทม, Bangkok, Thailand",
+        "Berlin, BE, Germany",
+        "Chicago, IL, United States",
+        "HKI, Finland",
+        "Madrid, MD, Spain",
+        "Milan, Lombardy, Italy",
+        "NC, United States",
+        "Paris, IDF, France",
+        "Poland",
+        "Toronto, ON, Canada",
+        "Washington, DC, United States"
+      ],
+      "native_param": "location",
+      "note": "Values are the locations facet keys returned by the listing API."
+    },
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Administration",
+        "Advertising",
+        "Communications & Corporate Affairs",
+        "Consumer Products & Experiences",
+        "Content Development & Acquisition",
+        "Content Production",
+        "Content Production Operations",
+        "Core Finance & Controllership",
+        "Data & Insights",
+        "Engineering",
+        "Engineering Operations",
+        "Enterprise Operations",
+        "Feature Animation",
+        "Financial Planning and Analysis",
+        "Games",
+        "Inkubator",
+        "Legal",
+        "Marketing",
+        "Netflix Games Studio",
+        "Next Games",
+        "Partnerships",
+        "Product Design",
+        "Product Discovery & Promotion",
+        "Product Management",
+        "Program Management",
+        "Publishing",
+        "Series Animation",
+        "Strategy & Analysis",
+        "Talent"
+      ],
+      "native_param": "department",
+      "note": "Values are the Teams facet keys; department=Engineering returns the facet's 77 jobs."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work type",
+      "kind": "multi",
+      "values": [
+        "onsite",
+        "remote"
+      ],
+      "native_param": "work_location_option",
+      "note": "Lower-case values as used by job rows and accepted by the API; source facet counts onsite=311, remote=83."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "New to Old",
+      "native_param": "sort_by=new"
+    },
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort_by=relevance"
+    },
+    {
+      "value": "oldest",
+      "label": "Old to New",
+      "native_param": "sort_by=old"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Netflix's company microsite is Eightfold PCSX. The listing API GET /api/apply/v2/jobs takes domain, start, num, sort_by and filter parameters; the server-rendered page publishes 394 jobs and the API pages 10 at a time. department=Engineering returned count=77, matching the Teams facet, confirming native filtering; the page sortByConfig exposes the ids new/old/relevance used by sort_by. The public first page uses sort_by=relevance. No request was needed for the location/work-type parameters beyond the observed filter echo; the API query object and department probe confirm native handling.",
+  "evidence": [
+    "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com&start=0&num=10&sort_by=relevance (count=394; facets Teams/Work Type/Region/locations)",
+    "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com&start=0&num=10&sort_by=relevance&department=Engineering (count=77)",
+    "https://explore.jobs.netflix.net/api/apply/v2/jobs?domain=netflix.com&start=0&num=10&sort_by=relevance&work_location_option=remote (count=38)",
+    "https://explore.jobs.netflix.net/careers (sortByConfig ids new/old/relevance)"
+  ],
+  "verified": true
+}

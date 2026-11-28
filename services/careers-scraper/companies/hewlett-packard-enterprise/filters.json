@@ -1,0 +1,104 @@
+{
+  "company": "Hewlett Packard Enterprise",
+  "slug": "hewlett-packard-enterprise",
+  "portal": "https://careers.hpe.com/us/en/search-results",
+  "listing_url": "https://careers.hpe.com/us/en/search-results",
+  "family": "phenom",
+  "keyword": true,
+  "keyword_param": "keywords",
+  "fields": [
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Bengaluru",
+        "Spring",
+        "All",
+        "Sunnyvale",
+        "San Jose",
+        "Ft. Collins",
+        "San Juan",
+        "Chippewa Falls",
+        "Aguadilla",
+        "Durham",
+        "Roseville",
+        "Tlaquepaque"
+      ],
+      "native_param": "selected_fields.city",
+      "note": "Live aggregation buckets for the city facet; 'All' is the published multi-city/all-locations value."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "United States of America",
+        "India",
+        "Puerto Rico",
+        "Mexico",
+        "United Kingdom",
+        "Singapore",
+        "Japan",
+        "Costa Rica",
+        "Germany",
+        "Canada",
+        "Bulgaria",
+        "Australia",
+        "Taiwan",
+        "Czechia",
+        "Ireland",
+        "Malaysia",
+        "Korea, Republic of",
+        "Netherlands",
+        "Poland",
+        "Italy",
+        "Spain"
+      ],
+      "native_param": "selected_fields.country",
+      "note": "Live aggregation buckets (53 countries). Verified: selected_fields {country:['India']} -> totalHits 373."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Engineering & QA",
+        "Sales",
+        "Administration & Workplace",
+        "Professional Services & Consulting",
+        "Manufacturing, Supply Chain & Operations",
+        "Finance, Accounting & Business Planning",
+        "IT & Cybersecurity",
+        "Human Resources & Talent Development",
+        "Marketing, Communications & Public Relations",
+        "Legal"
+      ],
+      "native_param": "selected_fields.category",
+      "note": "Live aggregation buckets for the category facet."
+    },
+    {
+      "key": "employment_type",
+      "label": "Type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time"
+      ],
+      "native_param": "selected_fields.type",
+      "note": "Live aggregation buckets for the type facet."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "HPE's own Phenom search (/us/en/search-results) posts to https://careers.hpe.com/widgets with ddoKey='refineSearch', global=true, clearAll=true, from/size paging, keywords, subsearch, sortBy and selected_fields + all_fields=['city','state','category','type','orgFunction','country']. Facets are applied through selected_fields as {field:[values]} and the response's refineSearch.data.aggregations returns the option lists/counts. Sort labels ('Most Recent', 'Newest to Oldest', 'Title A-Z', ...) are rendered by the UI and travel in the same sortBy field, but sending sortBy='Most Recent' did not reorder the results, so no sort value is declared here.",
+  "evidence": [
+    "https://careers.hpe.com/us/en/search-results (HTTP 200) embeds phApp.ddo.eagerLoadRefineSearch with totalHits and job rows",
+    "POST https://careers.hpe.com/widgets {ddoKey:'refineSearch',global:true,clearAll:true,selected_fields:{},all_fields:['city','state','category','type','orgFunction','country'],keywords:'',sortBy:''} -> status 200, totalHits 1760, hits 10",
+    "same response aggregations: country 53 {United States of America:720, India:373, ...}, city 179 {Bengaluru:319, Spring:197, All:178, ...}, type {Full time:1732, Part time:28}, category 10",
+    "POST with selected_fields {country:['India']} -> totalHits 373 (machine-usable facet); sortBy='Most Recent' did not reorder, so sorts left empty"
+  ],
+  "verified": true
+}

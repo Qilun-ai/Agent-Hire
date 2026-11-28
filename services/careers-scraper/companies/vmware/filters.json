@@ -1,0 +1,59 @@
+{
+  "company": "VMware",
+  "slug": "vmware",
+  "portal": "https://www.vmware.com/careers",
+  "listing_url": "https://broadcom.wd1.myworkdayjobs.com/External_Career",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "job_family",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Administration",
+        "Finance",
+        "Information Technology",
+        "Legal",
+        "Manufacturing",
+        "Marketing",
+        "R&D",
+        "Sales",
+        "Services & Support",
+        "Workplace Services"
+      ],
+      "native_param": "appliedFacets[jobFamilyGroup]",
+      "note": "Verified: jobFamilyGroup=[7430f1a1df52470a87028736ca41b235] (R&D) returns 290 of 389."
+    },
+    {
+      "key": "employment_type",
+      "label": "Full/Part-time",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": "appliedFacets[timeType]",
+      "note": "The board also exposes appliedFacets[workerSubType] (Job Type: 'Regular'), which is a contract type rather than an employment type."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "CXS returns locations only as a nested locationMainGroup facet with no flat facet ids, so location is matched locally against locationsText."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "VMware has no careers site of its own: careers.vmware.com no longer answers (TCP timeouts) and vmware.com/careers routes through broadcom.com/jobs to Broadcom's Workday board tenant 'broadcom' / site 'External_Career' (389 postings at capture). The board is parent-wide and exposes no VMware facet, so membership is decided by the structured hiringOrganization.name field (VMware legal employer) after enumerating the board, not by the keyword search. CXS POST body: appliedFacets + searchText + limit/offset; facets published are timeType, workerSubType, jobFamilyGroup and locationMainGroup — the seed's 'appliedFacets[jobFamily]'/'workplaceType'/'locationCountry' parameters do not exist on this board and were removed. Keyword search is fuzzy: searchText='vmware' returns 41 rows, only some of which are VMware-employer postings.",
+  "evidence": [
+    "https://broadcom.wd1.myworkdayjobs.com/wday/cxs/broadcom/External_Career/jobs POST {\"appliedFacets\":{},\"limit\":1,\"offset\":0,\"searchText\":\"\"} -> total 389, facets timeType/workerSubType/jobFamilyGroup/locationMainGroup",
+    "https://broadcom.wd1.myworkdayjobs.com/wday/cxs/broadcom/External_Career/jobs POST {\"appliedFacets\":{\"jobFamilyGroup\":[\"7430f1a1df52470a87028736ca41b235\"]}} -> total 290",
+    "https://broadcom.wd1.myworkdayjobs.com/wday/cxs/broadcom/External_Career/jobs POST {\"searchText\":\"vmware\"} -> total 41 (fuzzy keyword search, no VMware facet)"
+  ],
+  "verified": true
+}

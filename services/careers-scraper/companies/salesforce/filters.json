@@ -1,0 +1,106 @@
+{
+  "company": "Salesforce",
+  "slug": "salesforce",
+  "portal": "https://careers.salesforce.com/en/jobs/",
+  "listing_url": "https://www.salesforce.com/company/careers/jobs/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Alabama - Remote",
+        "Alberta - Remote",
+        "Argentina - Buenos Aires",
+        "Argentina - Remote",
+        "Arizona - Remote",
+        "Arkansas - Remote",
+        "Australia - Adelaide",
+        "Australia - Brisbane",
+        "Australia - Canberra",
+        "Australia - Melbourne",
+        "Australia - Sydney",
+        "Austria - Vienna",
+        "Belgium - Brussels",
+        "Brazil - Remote",
+        "Brazil - Sao Paulo",
+        "British Columbia - Remote",
+        "California - Irvine",
+        "California - Palo Alto",
+        "California - Redwood City",
+        "California - Remote",
+        "California - San Francisco",
+        "Canada - Montreal",
+        "Canada - Montreal Metro - Remote"
+      ],
+      "native_param": "location",
+      "note": "Repeated URL parameter (one per selected value)."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [],
+      "native_param": "country",
+      "note": "Feed exposes Countries; values were not extracted here."
+    },
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Compliance",
+        "Corporate Functions",
+        "Customer Success",
+        "Data",
+        "Development & Strategy",
+        "Employee Success",
+        "Enterprise Technology & Infrastructure",
+        "Finance",
+        "Fixed Term & Temporary",
+        "Global Affairs",
+        "Marketing & Communications",
+        "Operations",
+        "Product",
+        "Program & Project Management",
+        "Real Estate & Facility Management",
+        "Sales",
+        "Software Engineering",
+        "User Experience"
+      ],
+      "native_param": "team",
+      "note": "The UI's Team options are built from each job's Job_Family_Group (department)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employee Type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time"
+      ],
+      "native_param": "employeeTypes",
+      "note": "Contract type is a separate control (contractTypes) with no separate canonical field."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": null
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": false,
+  "local_query": true,
+  "notes": "careers.salesforce.com/en/jobs/ redirects to www.salesforce.com/company/careers/jobs/?bc=OTH. The page loads careers.js, which reads search, location, country, region, team, contractTypes, employeeTypes, page and pagesize from URLSearchParams and filters the static a.sfdcstatic.com jobs_1.json / jobs_2.json feed in the browser; the server does not return a filtered result set, so filtering is local. The feed is ordered by External_Job_Posting_Start_Date descending.",
+  "evidence": [
+    "https://www.salesforce.com/company/careers/jobs/?bc=OTH",
+    "https://c.salesforce.com/digital/xsf/components/v1-stable/careers.js",
+    "https://www.salesforce.com/company/careers/jobs/?search=engineer&team=Sales"
+  ],
+  "verified": true
+}

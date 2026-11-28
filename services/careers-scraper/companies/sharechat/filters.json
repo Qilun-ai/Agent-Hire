@@ -1,0 +1,59 @@
+{
+  "company": "ShareChat",
+  "slug": "sharechat",
+  "portal": "https://sharechat.com/careers",
+  "listing_url": "https://sharechat.com/api/careersList?limit=100",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "India",
+        "Mumbai"
+      ],
+      "native_param": null,
+      "note": "officeLocationNames from careersList; the page has no location control, so this is a local filter."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Artificial Intelligence",
+        "Business Development",
+        "Content & Operations",
+        "Marketing"
+      ],
+      "native_param": null,
+      "note": "careersList groups rows by these titles; also orgUnitName on each row. Local filter."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "contract",
+        "full_time",
+        "intern"
+      ],
+      "native_param": null,
+      "note": "employmentType on careersList rows. Local filter."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "ShareChat's careers page is a Next.js app whose job list is one GET /api/careersList request (limit=100, plus offsetToken only when hasNext is true) returning all 11 requisitions grouped by department. The page publishes no keyword box, facet control or sort menu, and the API accepts no filter, keyword or sort parameter; department/location/employment values are display labels filtered locally. The linked MyNextHire tenant list (POST /employer/careers/reqlist/get) takes only {source, code, filterByBuId} and is used for reconciliation, not as a search UI.",
+  "evidence": [
+    "https://sharechat.com/careers (no form/input/select controls; loads one careers.<hash>.lazy.js chunk)",
+    "GET https://sharechat.com/api/careersList?limit=100 -> count=11, hasNext=false, groups [Content & Operations, Marketing, Business Development, Artificial Intelligence], locations [Bangalore, India, Mumbai], employmentType [contract, full_time, intern]",
+    "src/career_scraper/adapters/sharechat.py -> bundle queries are only /api/careersList?limit=100 and ?offsetToken=; tenant body {source, code, filterByBuId}"
+  ],
+  "verified": true
+}

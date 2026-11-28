@@ -1,0 +1,118 @@
+{
+  "company": "Varonis",
+  "slug": "varonis",
+  "portal": "https://www.varonis.com/company/careers",
+  "listing_url": "https://careers.varonis.com/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "Canada",
+        "India",
+        "France",
+        "United Kingdom",
+        "Poland",
+        "Israel",
+        "Germany",
+        "Netherlands",
+        "South Africa"
+      ],
+      "native_param": null,
+      "note": "From GET /api/getSearchCriteria filters[title=Country]."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Morrisville",
+        "Phoenix",
+        "New York",
+        "San Francisco",
+        "United States",
+        "Columbus",
+        "Vancouver",
+        "India",
+        "Los Angeles",
+        "Dallas",
+        "Courbevoie",
+        "London",
+        "Krakow",
+        "Herzliya",
+        "Minneapolis",
+        "Washington DC",
+        "Las Vegas",
+        "Philadelphia",
+        "Germany",
+        "Austin",
+        "Netherlands",
+        "Boston",
+        "Johannesburg",
+        "Seattle"
+      ],
+      "native_param": null,
+      "note": "From GET /api/getSearchCriteria filters[title=Location]."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Sales",
+        "Threat Services",
+        "R&D",
+        "Marketing",
+        "CS",
+        "Finance",
+        "PS",
+        "Support",
+        "IT"
+      ],
+      "native_param": null,
+      "note": "From GET /api/getSearchCriteria filters[title=Department]."
+    },
+    {
+      "key": "job_family",
+      "label": "Sub Department",
+      "kind": "multi",
+      "values": [
+        "Inside Sales",
+        "MDDR",
+        "Outside Sales",
+        "Engineering",
+        "Marketing",
+        "Incident Response",
+        "TAM",
+        "Procurement",
+        "Professional Services",
+        "FLS",
+        "Forensics",
+        "Technical Support",
+        "Security Architecture",
+        "Customer Success",
+        "Cloud Security Architecture",
+        "Product",
+        "Security"
+      ],
+      "native_param": null,
+      "note": "From GET /api/getSearchCriteria filters[title=Sub Department]; dependency map keys are country/location/hrDepartment/hrSubDepartment."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Angular careersite. GET /api/getSearchCriteria returns Country, Location, Department and Sub Department filter values plus a dependency map; GET /api/getRequisitions returns the full 74-row list and takes no parameters. The app filters the full requisition array client-side (freeText, country, location, department, subDepartment); there is no server-side filter request.",
+  "evidence": [
+    "https://careers.varonis.com/api/getSearchCriteria",
+    "https://careers.varonis.com/api/getRequisitions",
+    "https://careers.varonis.com/"
+  ],
+  "verified": true
+}

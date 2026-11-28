@@ -1,0 +1,56 @@
+{
+  "company": "HackerRank",
+  "slug": "hackerrank",
+  "portal": "https://www.hackerrank.com/careers",
+  "listing_url": "https://www.hackerrank.com/careers",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Design",
+        "Engineering",
+        "Go To Market",
+        "Internship",
+        "Marketing",
+        "People Operations",
+        "Product"
+      ],
+      "native_param": null,
+      "note": "Department names come from the Greenhouse departments endpoint (render_as=list); each job also carries a 'Team Name' metadata value. No department query parameter exists on the board API."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Hybrid in Bangalore, India",
+        "Hybrid in Bengaluru, India",
+        "Hybrid in Santa Clara or Mountain View, CA",
+        "In-office in Bangalore, India",
+        "Onsite in Bangalore",
+        "Onsite in Santa Clara or Mountain View, CA",
+        "Remote Globally",
+        "Remote in San Francisco Bay Area, Los Angeles, Seattle",
+        "San Francisco Bay Area, New York, Los Angeles, Seattle, Salt Lake City, Phoenix, Denver"
+      ],
+      "native_param": null,
+      "note": "Greenhouse location.name strings, which mix workplace type and geography."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "HackerRank's own careers page renders the Greenhouse board (board token 'hackerrank'). The board API returns the complete job set in one call and exposes no keyword, department or location query parameters, so keyword/department/location matching has to be done locally over the returned rows.",
+  "evidence": [
+    "https://boards-api.greenhouse.io/v1/boards/hackerrank/departments?render_as=list -> HTTP 200, departments Design/Engineering/... with embedded jobs",
+    "https://boards-api.greenhouse.io/v1/boards/hackerrank/jobs?content=false",
+    "adapter src/career_scraper/adapters/hackerrank.py: LISTING_API, BOARD_JOBS_API, DETAIL_API (no filter params)"
+  ],
+  "verified": true
+}

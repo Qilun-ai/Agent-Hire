@@ -1,0 +1,59 @@
+{
+  "company": "Enphase Energy",
+  "slug": "enphase-energy",
+  "portal": "https://enphase.com/careers",
+  "listing_url": "https://enphase.com/careers",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "description",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Accounting & Finance",
+        "Commodity Management",
+        "Engineering",
+        "Hardware Engineering",
+        "Information Technology",
+        "Mechanical Engineering",
+        "Operations",
+        "Other",
+        "Quality",
+        "Sales",
+        "Technical Support"
+      ],
+      "native_param": "category",
+      "note": "Facet control bound to selectedCategory; sent as ?category=."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Arlington, TX, United States",
+        "Austin, TX, United States",
+        "Bangalore, India",
+        "Christchurch, New Zealand",
+        "Fremont, CA, United States",
+        "Netherlands",
+        "Norway",
+        "Petaluma, CA, United States",
+        "United States"
+      ],
+      "native_param": "location",
+      "note": "Facet control bound to selectedLocation; sent as ?location=."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The full-variant career() component on /careers builds GET https://enphase.com/api/v2/jobs from its filters. A keyword sets description, name and requisitionid to the same text (description is the canonical key here); category and location are separate params; page is 0-based. Verified the unfiltered API returns 34 items over 5 pages of 7.",
+  "evidence": [
+    "https://enphase.com/themes/custom/smalcode/dist/career-search-form.js",
+    "https://enphase.com/api/v2/jobs"
+  ],
+  "verified": true
+}

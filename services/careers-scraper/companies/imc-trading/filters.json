@@ -1,0 +1,63 @@
+{
+  "company": "IMC Trading",
+  "slug": "imc-trading",
+  "portal": "https://www.imc.com/us/careers/jobs",
+  "listing_url": "https://www.imc.com/eu/search-careers",
+  "family": "greenhouse",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Job category",
+      "kind": "multi",
+      "values": [
+        "Development",
+        "Finance",
+        "Human Resources",
+        "Legal & Compliance",
+        "Machine Learning Engineering",
+        "Operations",
+        "Quantitative Research",
+        "Risk Management",
+        "Screen/Quant Trading",
+        "Software Development",
+        "Systems & Infrastructure",
+        "Technology",
+        "Trading",
+        "Trading Services"
+      ],
+      "native_param": null,
+      "note": "Rows carry departments[].name (Greenhouse metadata). The page renders 'Job Category' facets from that embedded array; selecting one filters client-side."
+    },
+    {
+      "key": "location",
+      "label": "Office",
+      "kind": "multi",
+      "values": [
+        "Aarhus, Central Denmark Region, Denmark",
+        "Amsterdam, Netherlands",
+        "Chicago, United States",
+        "Hong Kong, Hong Kong",
+        "London, United Kingdom",
+        "Mumbai, India",
+        "New York, United States",
+        "Sydney, Australia",
+        "Zug, Switzerland"
+      ],
+      "native_param": null,
+      "note": "Rows carry offices[].location. The regional routes are the only server-side narrowing: /us, /ap, /hk, /in return the same embedded job array pre-filtered by office country."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The ledger route https://www.imc.com/us/careers/jobs is retired; the live board is https://www.imc.com/<region>/search-careers, whose Next.js RSC payload embeds the full Greenhouse job array (including hidden jobs flagged 'Is Hidden Job?'). The listing route rejects query strings, and the page's 'Job Category' / 'Office' / 'Location' controls operate on that in-page array after hydration, so no filter or keyword is machine-usable via request parameters — everything is applied locally. The only server-side variation is the region path (/eu global, /us, /ap, /hk, /in). Job detail pages embed the employer HTML in the RSC chunk.",
+  "evidence": [
+    "https://www.imc.com/eu/search-careers (200, 722868 bytes: Next.js RSC 'jobs' array with departments/offices; 'Job Category', 'Office' filter labels; rejects query strings)",
+    "https://www.imc.com/us/search-careers",
+    "https://www.imc.com/eu/careers/jobs/<id>"
+  ],
+  "verified": true
+}

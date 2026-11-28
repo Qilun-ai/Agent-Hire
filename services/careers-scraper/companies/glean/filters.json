@@ -1,0 +1,57 @@
+{
+  "company": "Glean",
+  "slug": "glean",
+  "portal": "https://www.glean.com/careers",
+  "listing_url": "https://www.glean.com/careers",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "503 Solutions Engineering",
+        "Customer Outcomes",
+        "Data",
+        "Design",
+        "Engineering",
+        "Forward Deployment",
+        "G&A",
+        "Marketing",
+        "Product",
+        "QA",
+        "Sales",
+        "Support"
+      ],
+      "native_param": null,
+      "note": "Rendered into select#Departments[name=Departments]; client-side list filter."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Amsterdam, North Holland, Netherlands",
+        "Bengaluru, Karnataka, India",
+        "Mountain View, California, United States",
+        "Nashville, Tennessee, United States",
+        "Remote",
+        "San Francisco, California, United States"
+      ],
+      "native_param": null,
+      "note": "Rendered into select#Locations[name=Locations]; client-side list filter."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Glean's Webflow careers page loads its own Greenhouse board client-side (boards-api.greenhouse.io/v1/boards/gleanwork/jobs?content=true) and filters with the Finsweet list controls: text input #Search-Jobs[name=Search-Jobs] plus two dropdowns select#Departments[name=Departments] and select#Locations[name=Locations]. All filtering is in-page; no query parameter is sent, so the scraper loads the full board and filters locally.",
+  "evidence": [
+    "https://www.glean.com/careers (input#Search-Jobs[name=Search-Jobs], select#Departments[name=Departments], select#Locations[name=Locations])",
+    "https://boards-api.greenhouse.io/v1/boards/gleanwork/jobs?content=true"
+  ],
+  "verified": true
+}

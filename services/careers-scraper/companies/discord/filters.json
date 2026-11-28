@@ -1,0 +1,70 @@
+{
+  "company": "Discord",
+  "slug": "discord",
+  "portal": "https://discord.com/careers",
+  "listing_url": "https://discord.com/careers",
+  "family": "greenhouse",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Accounting",
+        "Business Systems",
+        "Core Tech Engineering",
+        "Customer Success & Ops",
+        "Data Science & Engineering",
+        "Developer Solutions",
+        "Developers",
+        "Finance",
+        "IT & Corporate Security",
+        "Legal",
+        "Office of the CTO",
+        "Operations Support",
+        "Policy",
+        "Product Design",
+        "Product Engineering",
+        "Product Management",
+        "Recruiting",
+        "Security Engineering",
+        "Talent Development",
+        "Trust & Safety"
+      ],
+      "native_param": null,
+      "note": "Department dropdown filters client-side by data-name."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Lisbon, Portugal",
+        "Netherlands",
+        "Remote",
+        "Remote (U.S.)",
+        "Remote (US)",
+        "Remote (West Coast)",
+        "San Francisco Bay Area",
+        "San Francisco Bay Area or Los Angeles Area",
+        "San Francisco Bay Area or Remote (U.S.)",
+        "San Francisco Bay Area or Remote (West Coast)",
+        "Singapore"
+      ],
+      "native_param": null,
+      "note": "Location dropdown filters client-side by data-location."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The Webflow careers page renders three combined Greenhouse boards (discord, discordinternational, internationaleor) and offers only All Departments / All Locations dropdowns, applied client-side via data-name and data-location. There is no keyword search and no URL parameter.",
+  "evidence": [
+    "https://discord.com/careers",
+    "https://api.greenhouse.io/v1/boards/discord/jobs?content=true"
+  ],
+  "verified": true
+}

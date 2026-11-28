@@ -1,0 +1,86 @@
+{
+  "company": "auxoAI",
+  "slug": "auxoai",
+  "portal": "https://auxo.ai/careers",
+  "listing_url": "https://auxoai.zohorecruit.com/jobs/Careers",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "employment_type",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": null,
+      "note": "Board facet Remote_Job/Job_Type; the public endpoint rejects extra query params with HTTP 400, so filtering is client-side."
+    },
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Bangalore North",
+        "Bangalore South",
+        "Bangalore urban",
+        "Hyderabad",
+        "Gurugram",
+        "Remote",
+        "San Francisco",
+        "San Francisco, Bay Area",
+        "New York",
+        "Boston",
+        "Chicago",
+        "Atlanta",
+        "Irvine"
+      ],
+      "native_param": null,
+      "note": "Board facet City."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "India",
+        "United States"
+      ],
+      "native_param": null,
+      "note": "Board facet Country."
+    },
+    {
+      "key": "department",
+      "label": "Industry",
+      "kind": "multi",
+      "values": [
+        "Consulting",
+        "Technology"
+      ],
+      "native_param": null,
+      "note": "Board facet Industry (the board publishes no department field)."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Remote Job",
+      "kind": "multi",
+      "values": [
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "Board facet Remote_Job."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "auxo.ai itself is unreachable from this network (connect timeout); the user-confirmed board is auxoAI's own Zoho Recruit career site at auxoai.zohorecruit.com/jobs/Careers. GET /recruit/v2/public/Job_Openings?pagename=Careers&source=CareerSite returned all 55 rows in one response with info.facets = Remote_Job, Job_Type, Industry, City, Country (no pagination). Adding facet parameters (e.g. &Job_Type=Full time&Country=India) returns HTTP 400 INTERNAL_ERROR, so the rendered board applies every facet in the browser: all filtering is local.",
+  "evidence": [
+    "https://auxoai.zohorecruit.com/recruit/v2/public/Job_Openings?pagename=Careers&source=CareerSite",
+    "https://auxoai.zohorecruit.com/jobs/Careers"
+  ],
+  "verified": true
+}

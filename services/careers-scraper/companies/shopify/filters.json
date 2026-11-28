@@ -1,0 +1,67 @@
+{
+  "company": "Shopify",
+  "slug": "shopify",
+  "portal": "https://www.shopify.com/careers",
+  "listing_url": "https://www.shopify.com/careers/jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote - Americas",
+        "Remote - ANZ",
+        "Remote - Canada",
+        "Remote - Germany",
+        "Remote - Hong Kong",
+        "Remote - India",
+        "Remote - Ireland",
+        "Remote - Japan",
+        "Remote - Luxembourg",
+        "Remote - Poland",
+        "Remote - San Francisco",
+        "Remote - Singapore",
+        "Remote - Spain",
+        "Remote - United Kingdom"
+      ],
+      "native_param": null,
+      "note": "Location popover checkbox list (data-component-name=jobs-filter-location); default is \"All locations\". City locations are printed on the cards but are not a filter control."
+    },
+    {
+      "key": "department",
+      "label": "Discipline",
+      "kind": "multi",
+      "values": [
+        "Engineering & Data",
+        "Design",
+        "Product",
+        "Sales",
+        "Support",
+        "Finance",
+        "Legal",
+        "Partnerships",
+        "<General>",
+        "Communications",
+        "Creative",
+        "Growth",
+        "Talent Density"
+      ],
+      "native_param": null,
+      "note": "Discipline dropdown (data-component-name=jobs-filter-discipline, value slugs engineering-data, design, product, ...)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "www.shopify.com/careers/jobs is a server-rendered React Router page that prints all 112 live roles in one response. Its controls (Search roles box, Location popover, Discipline select) are client-side only: requesting ?search=engineer&location=Remote+-+India&discipline=engineering-data returned the identical 112-role HTML, so there is no keyword/filter/sort request parameter to drive. No sort control is published. Filter on the collected rows locally.",
+  "evidence": [
+    "https://www.shopify.com/careers/jobs (112 role links; controls data-component-name=jobs-filter-search / jobs-filter-location / jobs-filter-discipline)",
+    "https://www.shopify.com/careers/jobs?search=engineer&location=Remote+-+India&discipline=engineering-data -> same 112 role links, same byte size (client-side filtering)",
+    "Discipline options extracted from the jobs-filter-discipline select; location checkboxes from data-component-extra-location"
+  ],
+  "verified": true
+}

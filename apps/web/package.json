@@ -1,0 +1,28 @@
+{
+  "name": "agent-hire-web",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Agent-Hire web interface: agent chat, jobs, applications, profile and settings.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "d3-sankey": "0.12.3",
+    "preact": "10.29.8"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@preact/preset-vite": "2.10.6",
+    "@testing-library/preact": "3.2.6",
+    "@types/d3-sankey": "0.12.5",
+    "jsdom": "25.0.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.8",
+    "vitest": "3.2.7"
+  }
+}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Careers — Northwind Labs</title>
+<style>body { font: 15px/1.5 system-ui, sans-serif; margin: 0; } header { padding: 16px 24px; background: #123; color: #fff; }
+  .newsletter { padding: 12px 24px; } iframe { width: 100%; height: 2400px; border: 0; }</style></head>
+<body>
+<!-- A company careers page that embeds the application form from another origin (how Greenhouse/Lever embeds work).
+     The page itself has one unrelated field; the extension must pick the iframe, the frame with the form. -->
+<header>Northwind Labs careers</header>
+<div class="newsletter"><label>Get job alerts <input type="email" name="newsletter" placeholder="you@example.com"></label></div>
+<iframe id="grnhse_iframe" title="Job application" src="http://localhost:8765/apply.html"></iframe>
+</body>
+</html>

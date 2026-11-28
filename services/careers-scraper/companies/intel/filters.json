@@ -1,0 +1,103 @@
+{
+  "company": "Intel",
+  "slug": "intel",
+  "portal": "https://jobs.intel.com/en/search-jobs",
+  "listing_url": "https://intel.wd1.myworkdayjobs.com/External",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Canada, Toronto",
+        "Costa Rica, San Jose",
+        "Germany, Munich",
+        "India, Bangalore",
+        "Ireland, Leixlip",
+        "Israel, Haifa",
+        "Israel, Jerusalem",
+        "Israel, Kiryat-Gat",
+        "Israel, Petah-Tikva",
+        "Japan, Tokyo",
+        "Malaysia, Kulim",
+        "Malaysia, Penang",
+        "Mexico, Guadalajara",
+        "Poland, Gdansk",
+        "PRC, Beijing",
+        "PRC, Chengdu",
+        "PRC, Shanghai",
+        "PRC, Shenzhen",
+        "Saudi Arabia, Riyadh",
+        "South Korea, Seoul",
+        "Taiwan, Hsinchu",
+        "Taiwan, Taipei",
+        "US, Arizona, Phoenix",
+        "US, California, Folsom",
+        "US, California, San Diego",
+        "US, California, Santa Clara",
+        "US, Colorado, Fort Collins",
+        "US, Massachusetts, Beaver Brook"
+      ],
+      "native_param": "appliedFacets[locations]",
+      "note": "Nested facet under locationMainGroup; only locations is accepted."
+    },
+    {
+      "key": "job_family",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Manufacturing and Process Development",
+        "Silicon Hardware Engineering",
+        "Software Engineering",
+        "Intern",
+        "Contract Employee",
+        "Platform Hardware and Systems Engineering",
+        "Construction and Corporate Services",
+        "Supply Chain",
+        "Business Strategy and Enablement",
+        "Sales",
+        "Finance",
+        "Project and Program Management",
+        "Data, UX, and Ecosystem Sciences",
+        "Communication",
+        "Information Technology",
+        "Marketing",
+        "Human Resources",
+        "Legal, Trade and Government Affairs"
+      ],
+      "native_param": "appliedFacets[jobFamilyGroup]",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Time Type",
+      "kind": "multi",
+      "values": [
+        "Full time",
+        "Part time"
+      ],
+      "native_param": "appliedFacets[timeType]",
+      "note": ""
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=postedOn"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Workday CXS for tenant intel, site External. The machine request is POST https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs with a JSON body {appliedFacets, searchText, sortBy, limit, offset}: no filters returns 860 jobs, appliedFacets locations=[India, Bangalore] plus searchText=software returns 47, and sortBy=postedOn returns the newest postings first. The API's facet list is Job Category (jobFamilyGroup), Job Type (workerSubType), Time Type (timeType) and Locations (locations under locationMainGroup). The extra 'Job Type' facet (appliedFacets[workerSubType]: Regular / Student-Intern / Contract Employee) exists but has no matching schema key, so it is not exposed here.",
+  "evidence": [
+    "https://jobs.intel.com/en/search-jobs",
+    "https://intel.wd1.myworkdayjobs.com/External",
+    "https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs"
+  ],
+  "verified": true
+}

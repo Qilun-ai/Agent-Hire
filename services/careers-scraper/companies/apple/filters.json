@@ -1,0 +1,99 @@
+{
+  "company": "Apple",
+  "slug": "apple",
+  "portal": "https://jobs.apple.com/en-us/search",
+  "listing_url": "https://jobs.apple.com/en-us/search?location=",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "India",
+        "China",
+        "United Kingdom",
+        "Germany",
+        "Ireland",
+        "Israel",
+        "Japan",
+        "Singapore",
+        "Australia",
+        "Canada",
+        "France",
+        "Italy",
+        "Netherlands",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "Taiwan",
+        "Brazil",
+        "Mexico"
+      ],
+      "native_param": "location",
+      "note": "URL slug form (e.g. location=united-states-USA); the Refine by panel also has a location typeahead."
+    },
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Apple Retail",
+        "Corporate Functions",
+        "Design",
+        "Hardware",
+        "Machine Learning and AI",
+        "Marketing",
+        "Operations and Supply Chain",
+        "Sales and Business Development",
+        "Software and Services",
+        "Support and Service",
+        "Students"
+      ],
+      "native_param": "team",
+      "note": "URL uses team codes (SFTWR, HRDWR, MLAI, CORPSV, ...); UI control is 'Enter teams' typeahead."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Fixed",
+        "Intern",
+        "Standard"
+      ],
+      "native_param": null,
+      "note": "Record-derived; no employment-type control in the search UI, filtered locally."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Home office"
+      ],
+      "native_param": null,
+      "note": "Rendered as the 'Home office' checkbox (input#filter-location-home-office); its URL/API parameter is not exposed, filtered locally."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort=newest"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "jobs.apple.com search is a React app. Portal-emitted links carry ?search=, ?team= (team code) and ?location= (country slug). The client request is POST https://jobs.apple.com/api/v1/search with an X-Apple-CSRF-Token from /api/v1/CSRFToken and body {query, filters, page, locale, sort}; a direct POST with {\"query\":\"AppDynamics\",\"filters\":{},\"page\":1,\"locale\":\"en-us\",\"sort\":\"newest\"} returned HTTP 200 and a filtered totalRecords, so keyword search is machine-usable through the body field 'query'. The UI also exposes keyword, location and teams typeaheads plus a language typeahead; the API 'filters' object schema was not observed with a populated filter, so non-keyword facets are applied locally.",
+  "evidence": [
+    "https://jobs.apple.com/en-us/search?search=engineer",
+    "https://jobs.apple.com/api/v1/search",
+    "https://jobs.apple.com/api/v1/CSRFToken"
+  ],
+  "verified": true
+}

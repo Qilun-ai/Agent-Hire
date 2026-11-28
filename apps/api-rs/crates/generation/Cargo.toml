@@ -1,0 +1,26 @@
+[package]
+name = "agent-hire-generation"
+description = "Application package drafting and single-page PDF rendering."
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+agent-hire-llm = { path = "../llm" }
+md-5.workspace = true
+pdf-writer.workspace = true
+regex.workspace = true
+reqwest.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha1.workspace = true
+tempfile.workspace = true
+thiserror.workspace = true
+tokio.workspace = true
+unicode-normalization.workspace = true
+url.workspace = true
+
+[lints]
+workspace = true

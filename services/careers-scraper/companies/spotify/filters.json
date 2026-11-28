@@ -1,0 +1,87 @@
+{
+  "company": "Spotify",
+  "slug": "spotify",
+  "portal": "https://www.lifeatspotify.com/jobs",
+  "listing_url": "https://www.lifeatspotify.com/jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Berlin",
+        "Bogotá",
+        "Boston",
+        "Jakarta",
+        "London",
+        "Munich",
+        "New York",
+        "San Francisco",
+        "São Paulo",
+        "Singapore",
+        "Stockholm",
+        "Sydney",
+        "Taiwan",
+        "Tokyo",
+        "Toronto",
+        "Washington D.C."
+      ],
+      "native_param": null,
+      "note": "allFilters.locations values (slug in 'value')."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Business Affairs",
+        "Business Support & Operations",
+        "Content",
+        "Customer Service",
+        "Data, Research & Insights",
+        "Design",
+        "Engineering",
+        "Finance",
+        "Human Resources",
+        "Legal",
+        "Marketing",
+        "Payments",
+        "Product",
+        "Public Affairs",
+        "Sales",
+        "Students",
+        "Support & Operations",
+        "Workplace Services"
+      ],
+      "native_param": null,
+      "note": "allFilters.categories top-level labels; children exist."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job type",
+      "kind": "multi",
+      "values": [
+        "Permanent",
+        "Full Time Contractor",
+        "Short Term",
+        "Internship",
+        "Early Career Program"
+      ],
+      "native_param": null,
+      "note": "allFilters.jobtypes values."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "lifeatspotify.com/jobs is a Next.js page whose props.pageProps.allFilters publishes the location/category/jobtype vocabulary with position counts, and whose __NEXT_DATA__ plus GET https://api.lifeatspotify.com/wp-json/animal/v1/job/search returns the complete unfiltered array (no query string). The UI filters/paginates that array client-side ('Load more jobs'), so filters are applied locally; no keyword or facet query parameter was observed.",
+  "evidence": [
+    "https://www.lifeatspotify.com/jobs",
+    "https://api.lifeatspotify.com/wp-json/animal/v1/job/search"
+  ],
+  "verified": true
+}

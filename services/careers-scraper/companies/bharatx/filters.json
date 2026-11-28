@@ -1,0 +1,53 @@
+{
+  "company": "BharatX",
+  "slug": "bharatx",
+  "portal": "https://bharatx.tech/careers/",
+  "listing_url": "https://apply.workable.com/bharatx/?lng=en",
+  "family": "workable",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": "location",
+      "note": "POST body array; /jobs/filters returned locations: []."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [],
+      "native_param": "department",
+      "note": "POST body array; /jobs/filters returned departments: []."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [],
+      "native_param": "workplace",
+      "note": "POST body array; /jobs/filters returned workplaces: []."
+    },
+    {
+      "key": "employment_type",
+      "label": "Work type",
+      "kind": "multi",
+      "values": [],
+      "native_param": "worktype",
+      "note": "POST body array; /jobs/filters returned worktypes: []."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "BharatX careers CTA opens the Workable board apply.workable.com/bharatx. Listing is POST https://apply.workable.com/api/v3/accounts/bharatx/jobs with body {\"query\":\"\",\"department\":[],\"location\":[],\"workplace\":[],\"worktype\":[]}; facet options come from GET /api/v3/accounts/bharatx/jobs/filters. Live filters response: {\"departments\":[],\"locations\":[],\"remotes\":[],\"workplaces\":[],\"worktypes\":[]} (board currently has zero postings).",
+  "evidence": [
+    "https://apply.workable.com/api/v3/accounts/bharatx/jobs/filters -> {\"departments\":[],\"locations\":[],\"remotes\":[],\"workplaces\":[],\"worktypes\":[]}",
+    "https://apply.workable.com/api/v3/accounts/bharatx/jobs (POST body query/department/location/workplace/worktype)"
+  ],
+  "verified": true
+}

@@ -1,0 +1,63 @@
+{
+  "company": "Mindtree",
+  "slug": "mindtree",
+  "portal": "https://www.ltm.com/careers",
+  "listing_url": "https://ltm.ripplehire.com/candidate/?token=xviyQvbnyYZdGtozXoNm&lang=en&source=CAREERSITE",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Bengaluru",
+        "Banglore",
+        "Hyderabad",
+        "Pune",
+        "Mumbai",
+        "Chennai",
+        "Kolkata",
+        "Noida",
+        "Amsterdam",
+        "Barcelona",
+        "Belfast",
+        "London",
+        "Addison - Texas - USA",
+        "Alpharetta - Georgia - USA",
+        "Atlanta - Georgia - USA",
+        "Austin - Texas - USA",
+        "Bellevue - Washington - USA",
+        "Charlotte - North Carolina - USA",
+        "Toronto"
+      ],
+      "native_param": null,
+      "note": "Values are the listing API's cityCount facet (label+count, count stripped); no request parameter - filtering is client-side"
+    },
+    {
+      "key": "employment_type",
+      "label": "Job type",
+      "kind": "multi",
+      "values": [
+        "Permanent",
+        "Retainer",
+        "Sub-con"
+      ],
+      "native_param": null,
+      "note": "jobType values seen in collected rows; the tenant returns no jobType facet count, so applied locally"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "RippleHire board published by the LTM careers page (region cards): POST https://ltm.ripplehire.com/candidate/candidatejobsearch with form field careerSiteUrlParams = {\"page\":0,\"search\":\"*:*\",\"token\":...,\"source\":\"CAREERSITE\"}. `search` is a real server-side query (engineer -> 396 of 1357 rows, 10 rows/page); facet params (jobLocation etc.) are ignored, and the response only ships cityCount counts for client-side filtering. Two published tokens: xviyQvbnyYZdGtozXoNm (India/Europe) and nP1GISU2A024qt3otg3V (US/Canada); \"Everywhere else\" is the SuccessFactors site careers.ltm.com/search/.",
+  "evidence": [
+    "https://www.ltm.com/careers",
+    "https://ltm.ripplehire.com/candidate/?token=xviyQvbnyYZdGtozXoNm&lang=en&source=CAREERSITE",
+    "https://ltm.ripplehire.com/candidate/candidatejobsearch"
+  ],
+  "verified": true
+}

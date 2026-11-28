@@ -1,0 +1,47 @@
+{
+  "company": "Urban Company",
+  "slug": "urban-company",
+  "portal": "https://careers.urbancompany.com/",
+  "listing_url": "https://careers.urbancompany.com/jobs",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Bengaluru",
+        "Chennai",
+        "Delhi",
+        "Gurugram",
+        "Mumbai",
+        "Noida"
+      ],
+      "native_param": null,
+      "note": "Client-side filter over the location_city values returned by getAllJobs."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Business"
+      ],
+      "native_param": null,
+      "note": "Client-side filter over the parent_department values returned by getAllJobs."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "React careers app at careers.urbancompany.com/jobs. POST https://www.urbanclap.com/api/v2/platform-gateway/getAllJobs with an empty JSON body returns all 9 rows; the request has no query or filter parameters and the app renders every returned row. The app exposes a client-side keyword search plus department/location options (department_options=['Business'], location_options are the city values); no server-side filters or pagination exist.",
+  "evidence": [
+    "https://careers.urbancompany.com/jobs",
+    "https://www.urbanclap.com/api/v2/platform-gateway/getAllJobs"
+  ],
+  "verified": true
+}

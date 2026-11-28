@@ -1,0 +1,51 @@
+{
+  "company": "42 Gears",
+  "slug": "42-gears",
+  "portal": "https://www.42gears.com/careers/",
+  "listing_url": "https://www.42gears.com/careers/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "single",
+      "values": [
+        "Bangalore",
+        "Bengaluru",
+        "California",
+        "Delhi",
+        "India",
+        "Manchester, UK",
+        "Milpitas",
+        "Mumbai",
+        "Rajkot",
+        "USA"
+      ],
+      "native_param": null,
+      "note": "Client-side <select id=\"career-location\">; options equal the jobLocations values embedded in the page payload. No query parameter is sent."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full Time"
+      ],
+      "native_param": null,
+      "note": "Only value present in the embedded items[].jobTypes arrays; no employment-type control is rendered on the page."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Next.js careers page (id=\"careers-list\", model.enableSearch + filters.enableJobLocation/enableJobType) ships every opening inside the __next_f payload with title/href/jobTypes/jobLocations and filters purely in client JS via #career-search and #career-location. No fetch/XHR search endpoint and no URL parameters, so the scraper must filter locally.",
+  "evidence": [
+    "https://www.42gears.com/careers/",
+    "embedded payload: items[].jobTypes/jobLocations (10 locations, \"Full Time\")",
+    "src/career_scraper/adapters/42_gears.py"
+  ],
+  "verified": true
+}

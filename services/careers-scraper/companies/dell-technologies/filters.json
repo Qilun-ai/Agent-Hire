@@ -1,0 +1,107 @@
+{
+  "company": "Dell Technologies",
+  "slug": "dell-technologies",
+  "portal": "https://jobs.dell.com/search-jobs",
+  "listing_url": "https://enterpriseplatform.dell.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "TX, United States",
+        "Round Rock, TX, United States",
+        "Taiwan",
+        "Austin, TX, United States",
+        "MA, United States",
+        "India",
+        "VA, United States",
+        "Taipei City, Taiwan",
+        "Karnataka, India"
+      ],
+      "native_param": "selectedLocationsFacet",
+      "note": "Finder facet ids from locationsFacet (country/state/city levels); the Oracle CE UI also accepts location=<text>&locationId=<id>."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Consulting",
+        "Engineering Technologist",
+        "Solutions Architecture",
+        "Systems Development Engineering",
+        "Software Engineering",
+        "Service Delivery",
+        "Hardware Engineering",
+        "Undergraduate Intern",
+        "Services Project/Program Management",
+        "Field Service"
+      ],
+      "native_param": "selectedCategoriesFacet",
+      "note": "categoriesFacet ids; confirmed live (selectedCategoriesFacet=300000036284414 narrowed 471 -> 43 jobs)."
+    },
+    {
+      "key": "job_family",
+      "label": "Job family",
+      "kind": "multi",
+      "values": [
+        "Engineering Research & Development",
+        "Professional Services",
+        "Product Services",
+        "Interns",
+        "Outside Sales",
+        "Inside Sales",
+        "Materials & Procurement",
+        "Information Technology",
+        "Sales Engineering",
+        "Data Science & Analytics"
+      ],
+      "native_param": "selectedTitlesFacet",
+      "note": "titlesFacet codes (e.g. ENGREDEV, PROFESSIONAL SERVICES)."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "On-site",
+        "Field"
+      ],
+      "native_param": "selectedWorkplaceTypesFacet",
+      "note": "Codes ORA_ON_SITE / ORA_REMOTE."
+    },
+    {
+      "key": "date_posted",
+      "label": "Date posted",
+      "kind": "multi",
+      "values": [
+        "Less than 7 days",
+        "Less than 30 days",
+        "Greater than 30 days"
+      ],
+      "native_param": "selectedPostingDatesFacet",
+      "note": "Facet ids 7 / 30 / 31."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "jobs.dell.com redirects to Oracle Candidate Experience site CX_1001 on enterpriseplatform.dell.com. Listing is GET /hcmRestApi/resources/latest/recruitingCEJobRequisitions?finder=findReqs;siteNumber=CX_1001,facetsList=...,limit=...,sortBy=POSTING_DATES_DESC,offset=... Confirmed live: unfiltered TotalJobsCount 471; keyword=engineer -> 359; selectedCategoriesFacet=300000036284414 -> 43. Facets returned: locations, categories, titles, workplace types, posting dates, organizations, flex fields.",
+  "evidence": [
+    "https://enterpriseplatform.dell.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX_1001,facetsList=LOCATIONS;WORK_LOCATIONS;WORKPLACE_TYPES;TITLES;CATEGORIES;ORGANIZATIONS;POSTING_DATES;FLEX_FIELDS,limit=5,keyword=engineer,sortBy=POSTING_DATES_DESC",
+    "https://enterpriseplatform.dell.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX_1001,facetsList=CATEGORIES,limit=5,selectedCategoriesFacet=300000036284414"
+  ],
+  "verified": true
+}

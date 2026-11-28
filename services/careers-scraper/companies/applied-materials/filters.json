@@ -1,0 +1,155 @@
+{
+  "company": "Applied Materials",
+  "slug": "applied-materials",
+  "portal": "https://www.appliedmaterials.com/us/en/careers.html",
+  "listing_url": "https://careers.appliedmaterials.com/careers?domain=appliedmaterials.com&sort_by=relevance&triggerGoButton=false",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore, IND",
+        "Chennai, IND",
+        "Santa Clara, CA, United States",
+        "Austin, TX, United States",
+        "Singapore",
+        "Rehovot, Center District, Israel",
+        "Tainan City, Taiwan",
+        "Hsinchu City, Taiwan",
+        "Shanghai, China",
+        "Gloucester, MA, United States",
+        "Remote",
+        "Gloucester, MA",
+        "Alzenau, DEU",
+        "Bernin, FRA",
+        "Catania, ITA",
+        "Agrate MB, ITA",
+        "Chitose, JPN",
+        "Bundang, KOR"
+      ],
+      "native_param": "location",
+      "note": ""
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Customer Service & Support",
+        "Project/Program Management",
+        "Manufacturing",
+        "Interns",
+        "Materials",
+        "Finance",
+        "Information Technology",
+        "Human Resources",
+        "Legal",
+        "Marketing & Business Development",
+        "Administration",
+        "Business Operations",
+        "Communications & Public Affairs",
+        "Facilities and Real Estate",
+        "Logistics",
+        "Maintenance/Engineering",
+        "Production/Manufacturing",
+        "EH&S"
+      ],
+      "native_param": "filter_department",
+      "note": ""
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "United States of America",
+        "Singapore",
+        "China",
+        "India",
+        "Taiwan",
+        "Japan",
+        "Israel",
+        "Germany",
+        "France",
+        "Italy",
+        "Korea, Republic of",
+        "Malaysia",
+        "United Kingdom",
+        "Ireland",
+        "Canada",
+        "Austria",
+        "Belgium",
+        "Finland"
+      ],
+      "native_param": "filter_country",
+      "note": "From the PCSX filterDef country facet."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employee Type",
+      "kind": "multi",
+      "values": [
+        "assignee / regular",
+        "new college grad",
+        "intern / student",
+        "fixed term (fixed term)",
+        "temporary worker"
+      ],
+      "native_param": "filter_employee_type",
+      "note": "PCSX filterDef employee_type facet."
+    },
+    {
+      "key": "seniority",
+      "label": "Seniority",
+      "kind": "multi",
+      "values": [
+        "Entry",
+        "Mid-Level",
+        "Manager",
+        "Senior",
+        "Intern",
+        "Director"
+      ],
+      "native_param": "filter_seniority",
+      "note": "PCSX filterDef seniority facet."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "onsite",
+        "hybrid",
+        "remote_local"
+      ],
+      "native_param": null,
+      "note": "position.workLocationOption; not advertised in this tenant's filterDef, filtered locally."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    },
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort_by=relevance"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Applied Materials careers runs Eightfold PCSX at careers.appliedmaterials.com. GET /api/pcsx/search accepts domain=appliedmaterials.com, query, location, start, sort_by and filter_<facet>. Live responses advertise count and filterDef.allFilters = department, seniority, time_type, employee_type, country, your_relevant_skills (+ location facet counts) and echo appliedFilters, so filter_country/filter_department/filter_employee_type/filter_seniority/filter_time_type are machine-usable. Portal-emitted sort values timestamp and relevance are both accepted and echoed in data.sortBy.",
+  "evidence": [
+    "https://careers.appliedmaterials.com/api/pcsx/search?domain=appliedmaterials.com&query=engineer&location=&start=0&sort_by=timestamp&filter_country=India&filter_department=Engineering",
+    "https://careers.appliedmaterials.com/careers?domain=appliedmaterials.com&sort_by=relevance&triggerGoButton=false"
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "company": "WebEngage",
+  "slug": "webengage",
+  "portal": "https://webengage.com/careers/",
+  "listing_url": "https://webengage.com/current-openings/",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Channel Partnership",
+        "CS and Onboarding",
+        "Customer Success",
+        "Engineering",
+        "Marketing",
+        "Sales",
+        "Sales - MEA"
+      ],
+      "native_param": null,
+      "note": "careerportalinfo.jobListingSetting.filters = [\"department\",\"location\"]; the Keka embed widget filters the single unfiltered active feed client-side, so no query parameter carries the department."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Head Office - Mumbai",
+        "Gurgaon office",
+        "Bangalore office",
+        "Riyadh",
+        "Saudi Arabia"
+      ],
+      "native_param": null,
+      "note": "Second configured portal filter; values are the locations published on the active feed."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "webengage.com/careers/ 301-redirects to /current-openings/, which inlines window.khConfig (identifier db770a22-93d1-46f6-af73-c35e960ea796, domain https://webklipper.keka.com/careers/, target #khembedjobs) and loads the Keka embedjobs widget. Membership is the unfiltered GET https://webklipper.keka.com/careers/api/embedjobs/default/active/db770a22-93d1-46f6-af73-c35e960ea796 (26 rows); the portal is configured with exactly two filters, department and location (plus displayed fields location/experience/jobType), and the widget applies them in the browser with no pagination — so there is no native query string and the scraper filters locally. jobType ids map {1:'Part Time', 2:'Full Time'}.",
+  "evidence": [
+    "https://webengage.com/careers/ -> 301 -> https://webengage.com/current-openings/ (HTTP 200); khConfig identifier db770a22-93d1-46f6-af73-c35e960ea796, embedjobs script api/embedjobs/js/<identifier>",
+    "https://webklipper.keka.com/careers/api/organization/default/careerportalinfo -> HTTP 200, name WebEngage, jobListingSetting.filters = [\"department\",\"location\"], jobFields = [\"location\",\"experience\",\"jobType\"], jobListingFormat 1"
+  ],
+  "verified": true
+}

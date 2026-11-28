@@ -1,0 +1,72 @@
+{
+  "company": "DigitalOcean",
+  "slug": "digitalocean",
+  "portal": "https://www.digitalocean.com/careers",
+  "listing_url": "https://www.digitalocean.com/careers/open-roles",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "229653 Customer Support",
+        "229654 Customer Success",
+        "236104 Solutions Architects",
+        "296559 IaaS & Data Centers",
+        "298008 Developer Relations",
+        "341236 Events & Field Marketing",
+        "341237 Growth & Marketing",
+        "35130 Legal",
+        "365098 Agentic AI",
+        "365099 AI Data Cloud",
+        "365100 Core Cloud",
+        "365101 Physical Infrastructure",
+        "365161 Data & Learning",
+        "45958 Security",
+        "7723 People",
+        "7727 Revenue Operations",
+        "7728 Marketing",
+        "7731 Infrastructure",
+        "77971 Sales",
+        "80175 IaaS",
+        "8052 Finance",
+        "84598 Cloudways",
+        "89359 PaaS",
+        "91619 AI/ML"
+      ],
+      "native_param": null,
+      "note": "Career Page Grouping values are client-side sections over the departments response; no query parameter."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "All Other Locations",
+        "Austin Metro",
+        "Bay Area Metro",
+        "Boston Metro",
+        "Denver Metro",
+        "Hyderabad Metro",
+        "Karachi, Sindh, Pakistan",
+        "Seattle Metro",
+        "Singapore"
+      ],
+      "native_param": null,
+      "note": "No location request parameter; locations are matched client-side from the departments rows."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The careers page keyword form is GET /careers/open-roles?query=... (input name=query); the page embeds the query in its router state. Rows come from the Greenhouse digitalocean98 departments embed, and department/location grouping is client-side.",
+  "evidence": [
+    "https://www.digitalocean.com/careers/open-roles?query=engineer",
+    "https://api.greenhouse.io/v1/boards/digitalocean98/embed/departments"
+  ],
+  "verified": true
+}

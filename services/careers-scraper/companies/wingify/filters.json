@@ -1,0 +1,69 @@
+{
+  "company": "Wingify",
+  "slug": "wingify",
+  "portal": "https://wingify.com/careers",
+  "listing_url": "https://wingify.com/company/careers/",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Client",
+        "Engineering",
+        "Ideact",
+        "Legal Counsel",
+        "Marketing",
+        "Product",
+        "Product Success",
+        "Revenue Operations",
+        "Sales"
+      ],
+      "native_param": null,
+      "note": "Rendered by the page's own JS into .js-careers-team-filters from the departmentName of each feed row; no URL parameter is used."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience",
+      "kind": "text",
+      "values": [],
+      "native_param": null,
+      "note": "Experience range slider (.js-careers-exp-min / .js-careers-exp-max) bounded by the min/max experience published on the loaded rows; applied client-side."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote",
+        "India",
+        "Delhi, India",
+        "Gurugram",
+        "Paris",
+        "Paris, FR",
+        "London",
+        "London, GB",
+        "Köln, DE",
+        "Germany",
+        "Tokyo",
+        "Latin America",
+        "NewYork"
+      ],
+      "native_param": null,
+      "note": "Not a portal control: locations are published per row (jobLocations) and are matched locally by the scraper."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "wingify.com/careers renders the company's own board at /company/careers/, whose element carries data-jobs-endpoint=https://wingify.com/wp-json/api/get-active-jobs and whose JS renders one card per returned row (30 rows at capture). The same section links the Keka portal https://wingify.keka.com/careers/, whose unfiltered board API is https://wingify.keka.com/careers/api/jobs/default/active (one extra live role). Neither endpoint takes a query string or filter body: the only two controls on the page are the Team filter and an Experience range slider, both applied in the browser after the union is loaded, so filters are local. The seed's invented location/department parameter schema has been dropped.",
+  "evidence": [
+    "https://wingify.com/company/careers/ (HTTP 200) -> data-jobs-endpoint=\"https://wingify.com/wp-json/api/get-active-jobs\"; filter panel markup: .js-careers-team-filters with .js-careers-team-filter-template, .js-careers-exp-min/.js-careers-exp-max, .js-careers-clear-filters; no search input and no filter query parameters",
+    "https://wingify.com/wp-json/api/get-active-jobs and https://wingify.keka.com/careers/api/jobs/default/active are fetched with filters_applied:false and no pagination"
+  ],
+  "verified": true
+}

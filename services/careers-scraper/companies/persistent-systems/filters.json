@@ -1,0 +1,38 @@
+{
+  "company": "Persistent Systems",
+  "slug": "persistent-systems",
+  "portal": "https://www.persistent.com/careers/",
+  "listing_url": "https://careers.persistent.com/explore-opportunities",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "anyOfTheseWords",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "India",
+        "United States",
+        "Japan",
+        "Australia",
+        "Mexico",
+        "United Kingdom",
+        "Sri Lanka"
+      ],
+      "native_param": null,
+      "note": "The portal's only facet (facetedSearchConfig.facets: fieldName text1, displayName 'Location') is country-level; facet request field not confirmed, so location is matched locally against the country/city strings."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "www.persistent.com/careers/ redirects to the company portal careers.persistent.com (Angular SPA, Zwayam tenant; 685 rows, 9 per page behind 'Show More'). The listing is POST https://public.zwayam.com/jobs/search with multipart fields filterCri (JSON criteria), domain=careers.persistent.com and companyId=MTYzNDQ=; the criteria object carries paginationStartNo, selectedCall, sortCriteria and anyOfTheseWords. Verified live: anyOfTheseWords='engineer' returns totalCount 241 versus 685 unfiltered. The request's default sort is modifiedDate descending. No keyword/facet URL parameter exists, so everything else (city, department, employment type) is filtered locally from the listing rows.",
+  "evidence": [
+    "https://careers.persistent.com/explore-opportunities (Angular portal over Zwayam tenant 16344)",
+    "https://public.zwayam.com/jobs/search POST filterCri={\"anyOfTheseWords\":\"engineer\",...} -> totalCount 241 (unfiltered 685)",
+    "https://public.zwayam.com/jobs/search POST filterCri={\"anyOfTheseWords\":\"\",...} -> totalCount 685, facets: Location (India 623, United States 46, ...)"
+  ],
+  "verified": true
+}

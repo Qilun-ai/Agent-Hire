@@ -1,0 +1,52 @@
+{
+  "company": "InMobi",
+  "slug": "inmobi",
+  "portal": "https://www.inmobi.com/company/careers",
+  "listing_url": "https://www.inmobi.com/company/careers",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Egypt",
+        "India",
+        "United States",
+        "United Arab Emirates",
+        "South Africa",
+        "Indonesia",
+        "Vietnam",
+        "United Kingdom",
+        "Germany",
+        "Spain"
+      ],
+      "native_param": null,
+      "note": "countryArr from the listing response; the page renders it as a country dropdown (data-country)."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Direct Consultant",
+        "Full Time Employee"
+      ],
+      "native_param": null,
+      "note": "The API field is named jobDepartment, but its values are employment categories."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The careers page loads the whole published set from https://www.inmobi.com/api/v1/careersapi (79 rows, 10 countries); page/limit/country/department query strings are ignored by that endpoint. The UI offers a country dropdown, a 'Search Jobs' box and department headings, all client-side. Each job's detail page embeds the Greenhouse job (boards.greenhouse.io/inmobi), and apply goes through Greenhouse, hence the greenhouse family.",
+  "evidence": [
+    "https://www.inmobi.com/company/careers",
+    "https://www.inmobi.com/api/v1/careersapi",
+    "https://boards.greenhouse.io/inmobi/jobs"
+  ],
+  "verified": true
+}

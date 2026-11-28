@@ -1,0 +1,37 @@
+[package]
+name = "agent-hire-server"
+description = "The Agent-Hire backend HTTP server."
+version = "1.4.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "agent-hire-api"
+path = "src/main.rs"
+
+[dependencies]
+agent-hire-docs = { path = "../docs" }
+agent-hire-email = { path = "../email" }
+agent-hire-generation = { path = "../generation" }
+agent-hire-jobindex = { path = "../jobindex" }
+agent-hire-leadtext = { path = "../leadtext" }
+agent-hire-llm = { path = "../llm" }
+agent-hire-ml = { path = "../ml" }
+agent-hire-ranking = { path = "../ranking" }
+agent-hire-store = { path = "../store" }
+axum.workspace = true
+fancy-regex.workspace = true
+futures-util.workspace = true
+getrandom.workspace = true
+regex.workspace = true
+reqwest.workspace = true
+rusqlite.workspace = true
+serde.workspace = true
+serde_json = { workspace = true, features = ["arbitrary_precision"] }
+tokio.workspace = true
+url.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,69 @@
+{
+  "company": "Hasura",
+  "slug": "hasura",
+  "portal": "https://hasura.io/careers/",
+  "listing_url": "https://jobs.gem.com/promptql",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Forward Deployed Engineering",
+        "People"
+      ],
+      "native_param": null,
+      "note": "Gem oatsExternalJobPostingsFilters type=DEPARTMENT. Each option carries an opaque encoded token (rawValue) that the Gem page applies client-side; only the three departments above currently have openings (count>0)."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "San Francisco",
+        "Bengaluru - Office",
+        "Remote - United States",
+        "Remote - India"
+      ],
+      "native_param": null,
+      "note": "Gem oatsExternalJobPostingsFilters type=LOCATION_CITY, applied client-side in the board UI."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "From job.locationType / locations.isRemote on the Gem board; no dedicated facet type is published."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-time"
+      ],
+      "native_param": null,
+      "note": "From job.employmentType on the Gem board (collected records)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "https://hasura.io/careers/ redirects to https://promptql.io/careers, whose open roles are a Gem board at https://jobs.gem.com/promptql. The board UI reads everything from one GraphQL query (POST /api/public/graphql/batch, boardId='promptql') that accepts only boardId: oatsExternalJobPostings returns all postings plus their department/location/employmentType, and oatsExternalJobPostingsFilters returns the DEPARTMENT and LOCATION_CITY filter options with counts. No keyword, department or location argument exists on the API, so filtering is applied locally (the Gem UI does the same with its opaque filter tokens).",
+  "evidence": [
+    "https://hasura.io/careers/ -> https://promptql.io/careers (FINAL_CAREERS_URL in adapter)",
+    "POST https://jobs.gem.com/api/public/graphql/batch {boardId:'promptql'} -> 5 job postings",
+    "oatsExternalJobPostingsFilters returned types: DEPARTMENT (Engineering 1, Forward Deployed Engineering 3, People 1, others 0) and LOCATION_CITY (San Francisco 4, Remote - United States 4, Bengaluru - Office 2, Remote - India 2)",
+    "query JobBoardList($boardId: String!) takes only boardId - no filter/keyword arguments"
+  ],
+  "verified": true
+}

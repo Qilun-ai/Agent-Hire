@@ -1,0 +1,59 @@
+{
+  "company": "ConveGenius",
+  "slug": "convegenius",
+  "portal": "https://convegenius.com/careers.html",
+  "listing_url": "https://convegenius.keka.com/careers",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Business Development",
+        "Fellow",
+        "Finance",
+        "Growth and Impact",
+        "Pods",
+        "Product Delivery",
+        "Programs",
+        "Shared Services",
+        "Technology"
+      ],
+      "native_param": null,
+      "note": "cards are grouped by departmentName by the Keka embedjobs script (api/embedjobs/departments/); grouping only, no request filter"
+    },
+    {
+      "key": "employment_type",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [
+        "Full Time",
+        "Part Time"
+      ],
+      "native_param": null,
+      "note": "row field jobType; the app maps 1=Part Time, 2=Full Time"
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "row location values vary per posting; none published as a control"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "convegenius.com/careers.html links exactly one board, https://convegenius.keka.com/careers. That landing is a 1.6 KB JS shell whose only request is fetch('/ats/documents/0c764aaa-3be8-4767-b051-a188dd5c0cb6/careerportal/a540de213c6a48e2ba85623a91324040.html'); the fetched 12.6 KB careerportal document contains window.khConfig plus one embedjobs script that calls api/embedjobs/${portalName}/active/ (full active-job array), api/embedjobs/departments/ and api/organization/${portalName}/careerportalinfo, then renders cards grouped by departmentName and sorted by title. No filter or search form exists in either document, so there is no native filter request to replay: keyword and all facets must be applied locally to the active-jobs array.",
+  "evidence": [
+    "https://convegenius.keka.com/careers (shell -> careerportal document, khConfig identifier 0c764aaa-3be8-4767-b051-a188dd5c0cb6)",
+    "https://convegenius.keka.com/ats/documents/0c764aaa-3be8-4767-b051-a188dd5c0cb6/careerportal/a540de213c6a48e2ba85623a91324040.html",
+    "adapter:convegenius (JOB_TYPE_LABELS, embedjobs script contract)"
+  ],
+  "verified": true
+}

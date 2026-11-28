@@ -1,0 +1,95 @@
+{
+  "company": "HP",
+  "slug": "hp",
+  "portal": "https://jobs.hp.com/",
+  "listing_url": "https://apply.hp.com/careers",
+  "family": "phenom",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Remote",
+        "Spring, Texas, United States of America",
+        "Sant Cugat del Valles, Barcelona, Spain",
+        "Bengaluru, Karnataka, India",
+        "Tlaquepaque, Jalisco, Mexico",
+        "Singapore, South West, Singapore",
+        "Vancouver, Washington, United States of America",
+        "Palo Alto, California, United States of America",
+        "Austin, Texas, United States of America",
+        "Batu Kawan, Pulau Pinang (Penang), Malaysia",
+        "Rio Rancho, New Mexico, United States of America"
+      ],
+      "native_param": "filter_locations",
+      "note": "Values are the filterDef.facets.locations buckets the API returns. A free-text city can also be passed in the separate 'location' parameter."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Sales",
+        "Administration",
+        "Software",
+        "Engineering",
+        "Supply Chain & Operations",
+        "Services",
+        "Marketing",
+        "Business Planning",
+        "Finance",
+        "Data & Information Technology",
+        "Human Resources",
+        "Sales Operations",
+        "Legal",
+        "Technical",
+        "Public Aff",
+        "Corporate Administration",
+        "Engineering Services",
+        "Corporate Affairs",
+        "Learning & Development",
+        "Quality"
+      ],
+      "native_param": "filter_job_category",
+      "note": "filterDef.allFilters[job_category] multi_select_facet_search; option values are the lower-case labels the API echoes back (e.g. 'software', 'supply chain & operations')."
+    },
+    {
+      "key": "seniority",
+      "label": "Seniority",
+      "kind": "multi",
+      "values": [
+        "Experienced",
+        "Internship",
+        "Graduate"
+      ],
+      "native_param": "filter_seniority",
+      "note": "filterDef.smartFilters[seniority] multi_select; values are lower-case ('experienced', 'internship', 'graduate')."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    },
+    {
+      "value": "relevance",
+      "label": "Most relevant",
+      "native_param": "sort_by=relevance"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "HP's board is Phenom PCSX at https://apply.hp.com/api/pcsx/search. Required parameters: domain=hp.com, start (offset), sort_by. Keyword goes in 'query'; a city string goes in 'location'. Facet filters use the pattern filter_<filterName> where filterName comes from the response's own filterDef (confirmed: filter_seniority, filter_job_category, filter_locations). The response echoes the accepted selection in data.appliedFilters, so a param that is not recognised can be detected (filter_include_remote was silently dropped, so no workplace-type field is declared). Sorts are relevance and timestamp.",
+  "evidence": [
+    "https://apply.hp.com/api/pcsx/search?domain=hp.com&query=&location=&start=0&sort_by=timestamp",
+    "https://apply.hp.com/api/pcsx/search?domain=hp.com&query=&location=&start=0&sort_by=timestamp&filter_seniority=internship -> appliedFilters {\"seniority\":[\"internship\"]}, count 123",
+    "https://apply.hp.com/api/pcsx/search?domain=hp.com&query=&location=&start=0&sort_by=relevance&filter_job_category=software -> appliedFilters {\"jobCategory\":[\"software\"]}, sortBy relevance",
+    "https://apply.hp.com/api/pcsx/search?domain=hp.com&query=engineer&location=India&start=0&sort_by=timestamp (count 30)"
+  ],
+  "verified": true
+}

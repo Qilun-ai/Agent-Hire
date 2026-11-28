@@ -1,0 +1,73 @@
+{
+  "company": "Loom",
+  "slug": "loom",
+  "portal": "https://www.loom.com/careers",
+  "listing_url": "https://www.atlassian.com/company/careers/all-jobs?team=&location=&search=Loom",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Function",
+      "kind": "multi",
+      "values": [
+        "Analytics & Data Science",
+        "Atlassian Corporate Engineering (ACE)",
+        "Design",
+        "Engineering",
+        "Finance & Accounting",
+        "Graduates",
+        "Interns",
+        "Legal",
+        "Marketing",
+        "Other",
+        "People",
+        "Product Management",
+        "Program Management",
+        "Sales",
+        "Security",
+        "Site Reliability Engineering",
+        "Support"
+      ],
+      "native_param": "team",
+      "note": "Atlassian board fieldset 'WHAT FUNCTION MATCHES YOU?'. The board is rendered in full, so ?team= is URL state the client applies to the loaded rows."
+    },
+    {
+      "key": "location",
+      "label": "Eligible location",
+      "kind": "multi",
+      "values": [
+        "Australia",
+        "Canada",
+        "France",
+        "Germany",
+        "India",
+        "Japan",
+        "Netherlands",
+        "New Zealand",
+        "Philippines",
+        "Poland",
+        "Singapore",
+        "South Korea",
+        "Turkey",
+        "United Kingdom",
+        "United States"
+      ],
+      "native_param": "location",
+      "note": "Atlassian board fieldset 'WHERE ARE YOU ELIGIBLE TO WORK?' (country level); ?location= is URL state applied client-side."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "loom.com/careers answers HTTP 308 with Location https://www.atlassian.com/company/careers/all-jobs?team=&location=&search=Loom (Loom is an Atlassian product), so the parent Atlassian board is the only listing. That page renders all 339 rows and its search input is empty, i.e. ?search=Loom is not applied server-side; ?team=Engineering&location=&search= returned the same 339 rows and the same advertised count. The keyword box, the Function fieldset and the Location fieldset filter the already-loaded rows in the browser, so the scraper applies every filter locally over the collected set.",
+  "evidence": [
+    "https://www.loom.com/careers -> HTTP 308, location: https://www.atlassian.com/company/careers/all-jobs?team=&location=&search=Loom",
+    "https://www.atlassian.com/company/careers/all-jobs?team=&location=&search=Loom (339 rows; 17 function options, 15 location options; search input value '')",
+    "https://www.atlassian.com/company/careers/all-jobs?team=Engineering&location=&search= -> same 339 rows and advertised count",
+    "src/career_scraper/adapters/loom.py"
+  ],
+  "verified": true
+}

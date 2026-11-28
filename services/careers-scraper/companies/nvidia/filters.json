@@ -1,0 +1,97 @@
+{
+  "company": "NVIDIA",
+  "slug": "nvidia",
+  "portal": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+  "listing_url": "https://jobs.nvidia.com/careers",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Armenia, Yerevan",
+        "Brazil, Sao Paulo",
+        "Canada, Toronto",
+        "China, Beijing",
+        "China, Shanghai",
+        "China, Shenzhen",
+        "Denmark, Roskilde",
+        "Finland, Helsinki",
+        "France, Courbevoie",
+        "Germany, Berlin",
+        "Germany, Munich",
+        "Germany, Wuerselen",
+        "Hong Kong, STP",
+        "Hungary, Budapest",
+        "India, Bengaluru",
+        "India, Gurugram",
+        "India, Hyderabad",
+        "India, Mumbai",
+        "India, Pune",
+        "Israel, Beer Sheva",
+        "Israel, Raanana",
+        "Israel, Tel Aviv",
+        "Israel, Tel Hai",
+        "Israel, Yokneam",
+        "Japan, Tokyo"
+      ],
+      "native_param": "location",
+      "note": "Free-text location parameter of the PCSX search; location=India returned 248 postings"
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Engineering",
+        "Sales",
+        "Univ Employment",
+        "Program Manager",
+        "Operations",
+        "Marketing",
+        "It - Information Technology",
+        "Research",
+        "Finance",
+        "Professional Services",
+        "Human Resources",
+        "Business Development",
+        "Facilities",
+        "Legal",
+        "Administration"
+      ],
+      "native_param": "filter_job_category",
+      "note": "From filterDef.smartFilters.job_category; filter_job_category=engineering echoed as appliedFilters.jobCategory"
+    },
+    {
+      "key": "workplace_type",
+      "label": "Location Type",
+      "kind": "multi",
+      "values": [
+        "Office",
+        "Remote"
+      ],
+      "native_param": "filter_work_location_option",
+      "note": "From filterDef.smartFilters.work_location_option"
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "jobs.nvidia.com is an Eightfold PCSX board. GET /api/pcsx/search takes domain=nvidia.com, query, location, start, sort_by and filter_<filterName> parameters. query=engineer returned 2357 rows; filter_job_category=engineering returned 1771 with appliedFilters={jobCategory:[engineering]}; location=India returned 248. The API filterDef advertises Job Title (hiring_title), Job Category (job_category) and Location Type (work_location_option).",
+  "evidence": [
+    "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com&query=engineer&location=&start=0&sort_by=timestamp",
+    "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com&query=&location=&start=0&sort_by=timestamp&filter_job_category=engineering",
+    "https://jobs.nvidia.com/api/pcsx/search?domain=nvidia.com&query=&location=India&start=0&sort_by=timestamp"
+  ],
+  "verified": true
+}

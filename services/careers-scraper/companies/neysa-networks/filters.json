@@ -1,0 +1,49 @@
+{
+  "company": "Neysa Networks",
+  "slug": "neysa-networks",
+  "portal": "https://neysa.ai/careers/",
+  "listing_url": "https://neysa.ai/careers/job-openings/",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "search",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bengaluru",
+        "Mumbai",
+        "New Delhi"
+      ],
+      "native_param": "location",
+      "note": "Values from the listing's All locations dropdown data-value attributes."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Finance",
+        "Human Resources",
+        "Infrastructure",
+        "Operations",
+        "Product",
+        "Sales"
+      ],
+      "native_param": "department",
+      "note": "Values from the All departments dropdown data-value attributes."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official listing is a server-rendered WordPress page with a GET form action=/careers/job-openings/ containing search, hidden department and hidden location inputs, plus dropdowns whose data-value values populate them. The server-side filter works over the query string: ?search=engineer returned 7 matching cards from the unfiltered 20. The page's admin-ajax.php filter endpoint is broken (it replaces the list with 'No results found'), so use the GET form parameters, not the AJAX call. The company Kula board's filter_options API lists the same canonical offices (New Delhi/Bengaluru/Navi Mumbai/Mumbai) and departments.",
+  "evidence": [
+    "https://neysa.ai/careers/job-openings/ (form method=get action=/careers/job-openings/ with input name=search and hidden name=department/location; 20 cards)",
+    "https://neysa.ai/careers/job-openings/?search=engineer (server-filtered to 7 cards)",
+    "https://careers.kula.ai/api/internal/ats_job_posts/filter_options?accountName=neysa&type=ats_job_post.filter_options (canonical departments and offices)"
+  ],
+  "verified": true
+}

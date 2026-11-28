@@ -1,0 +1,82 @@
+{
+  "company": "Arista Networks",
+  "slug": "arista-networks",
+  "portal": "https://www.arista.com/en/careers",
+  "listing_url": "https://www.smartrecruiters.com/job-api/public/search/widgets/AristaNetworks/postings?dcr_ci=AristaNetworks&offset=0&limit=100&jobAdType=PUBLIC&fq=&customFields=&langCode=en&locationType=ANY",
+  "family": "smartrecruiters",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bengaluru",
+        "Santa Clara",
+        "Austin",
+        "Singapore",
+        "Taipei",
+        "Hsinchu",
+        "Dublin",
+        "London",
+        "Amsterdam",
+        "Remote",
+        "Nashville",
+        "Salt Lake City",
+        "Chennai",
+        "Pune",
+        "Sydney",
+        "Tokyo"
+      ],
+      "native_param": "fq=location",
+      "note": "Elasticsearch-style filter: fq=location:(Bengaluru) or fq=location:(Bengaluru;Santa Clara)."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Central Engineering",
+        "Customer Engineering",
+        "Customer Support",
+        "Engineering & Operations",
+        "Finance",
+        "Hardware Engineering",
+        "Information Technology",
+        "Legal",
+        "Manufacturing",
+        "Marketing",
+        "NPI Engineering",
+        "Platform Engineering",
+        "Sales",
+        "Service Logistics & Repairs",
+        "Software Engineering"
+      ],
+      "native_param": "customFields",
+      "note": "customFields=<fieldId>|<externalId> using the widget's published department field id 58b81d3de4b06dbf7dd514e1, e.g. customFields=58b81d3de4b06dbf7dd514e1|1650435."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job type",
+      "kind": "multi",
+      "values": [
+        "Full-time",
+        "Contract",
+        "Intern"
+      ],
+      "native_param": "fq=typeOfEmployment",
+      "note": "fq component, e.g. fq=typeOfEmployment:(Full-time)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Arista embeds SmartRecruiters' public job widget (company code AristaNetworks, PUBLIC scope). Its listing endpoint is /job-api/public/search/widgets/AristaNetworks/postings with dcr_ci/offset/limit/jobAdType/fq/customFields/langCode/locationType. Verified live: q=<term> behaves as keyword search (q=zzzqqqxyz returned numFound 0, q=engineer returned 223), fq=location:(Bengaluru) and fq=typeOfEmployment:(Full-time) filter to 16 Bengaluru full-time roles, and companyDepartments returns the department labels with external ids for customFields. No sort parameter was observed; results come back in the widget's own default order.",
+  "evidence": [
+    "https://www.smartrecruiters.com/job-api/public/search/widgets/AristaNetworks/postings?dcr_ci=AristaNetworks&offset=0&limit=3&jobAdType=PUBLIC&fq=&customFields=&langCode=en&locationType=ANY&q=engineer",
+    "https://www.smartrecruiters.com/job-api/public/search/widgets/AristaNetworks/postings?dcr_ci=AristaNetworks&offset=0&limit=1&jobAdType=PUBLIC&fq=location:(Bengaluru)%3BtypeOfEmployment:(Full-time)&customFields=&langCode=en&locationType=ANY"
+  ],
+  "verified": true
+}

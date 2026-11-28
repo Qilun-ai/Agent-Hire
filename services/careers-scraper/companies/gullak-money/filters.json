@@ -1,0 +1,61 @@
+{
+  "company": "Gullak Money",
+  "slug": "gullak-money",
+  "portal": "https://www.gullak.money/",
+  "listing_url": "https://candid.hub.gullak.money/jobs/",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Koramangala, Bangalore"
+      ],
+      "native_param": null,
+      "note": "Parsed from each JD's 'Location:' line; local."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Not published by the public jobs API."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-time",
+        "Internship"
+      ],
+      "native_param": null,
+      "note": "Parsed from each JD's 'Role Type:' line; local."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "On-site"
+      ],
+      "native_param": null,
+      "note": "Derived from 'Work from Office' wording in the JD; local."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Gullak's Careers link points to candid.hub.gullak.money/jobs/, a Candid SPA. It calls GET https://autohire.internal.svc.uat.glkmny.tech/public/jobs, which returns all 13 active pipelines in one unfiltered payload (id, name, description, experience_required, jd_link, status) and accepts no search/filter parameters. There is no search control or per-job detail page; the scraper takes the full response and filters locally.",
+  "evidence": [
+    "https://autohire.internal.svc.uat.glkmny.tech/public/jobs (200, 13 pipelines, fields id/name/description/experience_required/jd_link/status)",
+    "https://candid.hub.gullak.money/jobs/"
+  ],
+  "verified": true
+}

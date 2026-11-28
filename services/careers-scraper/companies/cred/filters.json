@@ -1,0 +1,88 @@
+{
+  "company": "CRED",
+  "slug": "cred",
+  "portal": "https://careers.cred.club/",
+  "listing_url": "https://careers.cred.club/careers/openings",
+  "family": "lever",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "team",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "business - CREDpay",
+        "business - cards",
+        "cloud and data security",
+        "collections",
+        "consumer products",
+        "finance",
+        "lending",
+        "public relations"
+      ],
+      "native_param": null,
+      "note": "row field categories.team; no confirmed request parameter"
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "business",
+        "corporate and business strategy",
+        "data science",
+        "product & growth",
+        "security & enterprise it"
+      ],
+      "native_param": null,
+      "note": "row field categories.department; the page additionally hides department 'prefr' client-side. ?department=... was tested and returned 0 rows, so no usable parameter"
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "bengaluru",
+        "hyderabad",
+        "mumbai",
+        "tamil nadu"
+      ],
+      "native_param": "location",
+      "note": "confirmed: ?location=bengaluru returns exactly the 10 bengaluru rows of 14"
+    },
+    {
+      "key": "employment_type",
+      "label": "Commitment",
+      "kind": "multi",
+      "values": [
+        "full time"
+      ],
+      "native_param": null,
+      "note": "row field categories.commitment"
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "onsite"
+      ],
+      "native_param": null,
+      "note": "row field workplaceType"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "CRED's official openings UI (careers.cred.club/careers/openings) reads a Lever-shaped board proxy, GET https://kong-web-prod.dreamplug.in/lever-jobs-api/v1/jobs, which returns {data:[...14 published rows...]} with categories {team, department, location, commitment}, workplaceType, createdAt and urls.show/apply on jobs.lever.co/cred/<uuid>. The endpoint honours ?location=<value> server-side (14 rows unfiltered -> 10 rows with ?location=bengaluru, exactly the bengaluru subset), so location is a native filter; ?department=data%20science returned 0 rows although one posting has that department, so department has no usable parameter and the remaining facets (team, commitment, workplaceType) are unconfirmed - those, plus the page's own client-side exclusion of department 'prefr', are applied locally.",
+  "evidence": [
+    "https://kong-web-prod.dreamplug.in/lever-jobs-api/v1/jobs (14 rows)",
+    "https://kong-web-prod.dreamplug.in/lever-jobs-api/v1/jobs?location=bengaluru (10 rows, all bengaluru)",
+    "https://kong-web-prod.dreamplug.in/lever-jobs-api/v1/jobs?department=data%20science (0 rows)",
+    "https://careers.cred.club/careers/openings",
+    "adapter:cred (KONG_JOBS, prefr exclusion)"
+  ],
+  "verified": true
+}

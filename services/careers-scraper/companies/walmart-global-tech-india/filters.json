@@ -1,0 +1,123 @@
+{
+  "company": "Walmart Global Tech India",
+  "slug": "walmart-global-tech-india",
+  "portal": "https://tech.walmart.com/content/walmart-global-tech/en_us/careers.html",
+  "listing_url": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal?q=&locationCountry=c4f78be1a8f14da0ab49ce1162348a5e",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "India"
+      ],
+      "native_param": "appliedFacets[locationCountry]",
+      "note": "Portal-published India country facet id c4f78be1a8f14da0ab49ce1162348a5e; the Global Tech careers page itself sends 'India based' searches to that facet. 194 postings at capture."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Technology",
+        "Data Analytics and Management",
+        "Business Services",
+        "Investigations and Security",
+        "Finance",
+        "PMO",
+        "General and Retail Management",
+        "Compliance Ethics and Legal",
+        "Other"
+      ],
+      "native_param": "appliedFacets[jobFamilyGroup]",
+      "note": "Verified: jobFamilyGroup=Technology returns 148 of 194."
+    },
+    {
+      "key": "job_family",
+      "label": "Job Family",
+      "kind": "multi",
+      "values": [
+        "Software Engineering and Architecture",
+        "Data Engineering and Architecture",
+        "Data Science",
+        "Product Management",
+        "Customer Service",
+        "Security",
+        "Commercial Finance",
+        "Information Security",
+        "Business Support",
+        "Technical Program Management",
+        "Program Management",
+        "Network Engineering",
+        "Data Analytics",
+        "Business Strategy and Planning",
+        "Intern",
+        "Corporate Law",
+        "System and Infrastructure Engineering"
+      ],
+      "native_param": "appliedFacets[jobFamily]",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Time Type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": "appliedFacets[timeType]",
+      "note": "Facet count 185 of 194 at capture."
+    },
+    {
+      "key": "seniority",
+      "label": "Job Profile",
+      "kind": "multi",
+      "values": [
+        "(IND) STAFF, SOFTWARE ENGINEER",
+        "(IND) PRINCIPAL, SOFTWARE ENGINEER",
+        "(IND) SENIOR, SOFTWARE ENGINEER",
+        "(IND) DISTINGUISHED, SOFTWARE ENGINEER",
+        "(IND) STAFF, DATA ENGINEER",
+        "(IND) SENIOR MANAGER, SOFTWARE ENGINEERING",
+        "(IND) Software Engineer III",
+        "(IND) STAFF, DATA SCIENTIST",
+        "(IND) MANAGER, SECURITY",
+        "(IND) RESOLUTION COORDINATOR, CONTACT CENTER"
+      ],
+      "native_param": "appliedFacets[Job_Profiles]",
+      "note": "41 India requisition profiles published by the facet; the first 10 are listed."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "IN KA BANGALORE Home Office Building 10",
+        "IN KA BANGALORE Home Office Building 11",
+        "IN KA BANGALORE Home Office CUMULUS",
+        "IN KA BANGALORE Home Office PTPP1",
+        "IN KA BANGALORE Home Office PTPP2",
+        "IN KA BANGALORE Home Office PW II",
+        "IN TN CHENNAI Home Office Capita Land",
+        "IN TN CHENNAI Home Office RMZ Millenia Biz Park",
+        "IN TN CHENNAI Home Office TECCI Park"
+      ],
+      "native_param": null,
+      "note": "CXS exposes locations only as a nested locationMainGroup facet (Location Country / Region / Primary Location) with no flat facet ids, so the office string is matched locally against locationsText."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "tech.walmart.com's Global Tech careers page sends 'India based' searches to the Walmart Workday tenant 'walmart' / site 'WalmartExternal' with the India country facet c4f78be1a8f14da0ab49ce1162348a5e. CXS POST body: appliedFacets + searchText + limit/offset (20 rows per page, 194 postings at capture). Facets published: timeType, jobFamilyGroup, jobFamily, Job_Profiles, company, distance and the nested locationMainGroup. No sort parameter is accepted by the CXS body, so the adapter keeps the portal's default (most-recent-first) order.",
+  "evidence": [
+    "https://walmart.wd504.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs POST {\"appliedFacets\":{\"locationCountry\":[\"c4f78be1a8f14da0ab49ce1162348a5e\"]},\"limit\":1,\"offset\":0,\"searchText\":\"\"} -> total 194",
+    "https://walmart.wd504.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs POST {\"appliedFacets\":{\"locationCountry\":[\"c4f78be1a8f14da0ab49ce1162348a5e\"],\"jobFamilyGroup\":[\"e83ebdbd2a0a01e7e1477a8948e904c6\"]}} -> total 148 (equals the published Technology facet count)",
+    "https://walmart.wd504.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs POST {\"appliedFacets\":{\"locationCountry\":[\"c4f78be1a8f14da0ab49ce1162348a5e\"]},\"searchText\":\"engineer\"} -> total 193"
+  ],
+  "verified": true
+}

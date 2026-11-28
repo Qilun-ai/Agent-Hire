@@ -1,0 +1,71 @@
+{
+  "company": "Figma",
+  "slug": "figma",
+  "portal": "https://www.figma.com/careers/",
+  "listing_url": "https://boards-api.greenhouse.io/v1/boards/figma/jobs?content=true",
+  "family": "greenhouse",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Business Development",
+        "Business Operations",
+        "Customer Operations and Support",
+        "Design",
+        "Early Career",
+        "Engineering",
+        "Figma Weave",
+        "Legal",
+        "Marketing",
+        "People",
+        "Product",
+        "Sales",
+        "Talent"
+      ],
+      "native_param": null,
+      "note": "Board feed departments[] plus the /careers/ #job-openings group headings; the feed has no department parameter."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bengaluru, India",
+        "Berlin, Germany",
+        "London, England",
+        "New York, NY",
+        "New York, NY • United States",
+        "New York, NY; San Francisco, CA • New York, NY • United States",
+        "Paris, France",
+        "San Francisco, CA",
+        "San Francisco, CA • New York, NY",
+        "San Francisco, CA • New York, NY • United States",
+        "San Francisco, CA • United States",
+        "San Francisco, CA; San Francisco, CA • United States",
+        "Seoul, South Korea",
+        "Singapore",
+        "Sydney, Australia",
+        "Sydney, Australia • Melbourne, Australia",
+        "São Paulo, Brazil",
+        "Tel Aviv, Israel",
+        "Tokyo, Japan"
+      ],
+      "native_param": null,
+      "note": "Board feed location.name; no location parameter exists on the feed."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The official /careers/ page server-renders a stale job list and then, in the rendered UI, requests the company-scoped Greenhouse board feed https://boards-api.greenhouse.io/v1/boards/figma/jobs?content=true. That single response returns meta.total and every posting with full HTML content; the feed accepts no keyword, department, location or pagination parameters, and the #job-openings section ships no filter controls. All filtering is therefore local.",
+  "evidence": [
+    "https://www.figma.com/careers/",
+    "https://boards-api.greenhouse.io/v1/boards/figma/jobs?content=true"
+  ],
+  "verified": true
+}

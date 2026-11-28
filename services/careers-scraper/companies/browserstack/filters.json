@@ -1,0 +1,72 @@
+{
+  "company": "BrowserStack",
+  "slug": "browserstack",
+  "portal": "https://www.browserstack.com/careers",
+  "listing_url": "https://browserstack.wd3.myworkdayjobs.com/External",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Dublin",
+        "India Remote",
+        "Mumbai Remote",
+        "Mumbai - WFO",
+        "Newport WFO",
+        "San Francisco Bay Remote"
+      ],
+      "native_param": "appliedFacets[locations]",
+      "note": "6 portal location facets; IDs are returned by the CXS facet response"
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Sales",
+        "Engineering",
+        "Product",
+        "Marketing",
+        "Business Ops & Strategy"
+      ],
+      "native_param": "appliedFacets[jobFamilyGroup]",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Full/Part-time",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": "appliedFacets[timeType]",
+      "note": ""
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=postedOn"
+    },
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sortBy=relevance"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "BrowserStack publishes its jobs on Workday CXS. The live facet response exposes timeType, jobFamilyGroup and locations; jobFamily/workplaceType/locationCountry/country are not returned. POST /wday/cxs/browserstack/External/jobs with appliedFacets, searchText, limit/offset and sortBy is machine-usable.",
+  "evidence": [
+    "https://www.browserstack.com/careers",
+    "https://browserstack.wd3.myworkdayjobs.com/wday/cxs/browserstack/External/jobs",
+    "POST CXS body: appliedFacets/searchText/sortBy; unfiltered total=30; facets timeType, jobFamilyGroup, locations"
+  ],
+  "verified": true
+}

@@ -1,0 +1,110 @@
+{
+  "company": "SendGrid",
+  "slug": "sendgrid",
+  "portal": "https://sendgrid.com/en-us/careers",
+  "listing_url": "https://jobs.twilio.com/careers",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "remote - us",
+        "remote - united kingdom",
+        "remote - colombia",
+        "remote - india",
+        "remote - canada",
+        "remote - ireland",
+        "remote - australia",
+        "remote - mexico",
+        "remote - singapore",
+        "remote - brazil",
+        "mexico city, mexico",
+        "remote - estonia",
+        "remote - japan",
+        "remote - ontario, canada (dnu)"
+      ],
+      "native_param": "filter_job_location",
+      "note": "Eightfold smart filter `job_location` (Location). The API also accepts a free-text `location` parameter, which the adapter sends empty."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "sales",
+        "engineering",
+        "customer support",
+        "product management",
+        "marketing",
+        "finance",
+        "accounting",
+        "people team",
+        "services",
+        "enterprise sales",
+        "business operations",
+        "carrier relations/carrier ops",
+        "sales development",
+        "sales operations",
+        "security",
+        "solutions engineering",
+        "customer success",
+        "legal",
+        "administration",
+        "developer network",
+        "ops (fraud, compliance, biz, prod, analyst)",
+        "service operations"
+      ],
+      "native_param": "filter_custom_department",
+      "note": "Eightfold smart filter `custom_department`. Verified: filter_custom_department=engineering returned 17 rows and appliedFilters.customDepartment=[engineering]."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Location Type",
+      "kind": "multi",
+      "values": [
+        "remote_local"
+      ],
+      "native_param": "filter_work_location_option",
+      "note": "Eightfold smart filter `work_location_option`; only option is Remote (value remote_local)."
+    },
+    {
+      "key": "seniority",
+      "label": "Seniority",
+      "kind": "multi",
+      "values": [
+        "1",
+        "2",
+        "3"
+      ],
+      "native_param": "filter_seniority",
+      "note": "Eightfold smart filter `seniority`: 1=Entry, 2=Mid/Senior, 3=Director/Executive."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sort_by=relevance"
+    },
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "SendGrid's official careers page hands off to Twilio's Eightfold PCSX board at jobs.twilio.com (Twilio owns SendGrid). The listing is GET https://jobs.twilio.com/api/pcsx/search with domain=twilio.com, query, location, start and sort_by; facet filters use filter_<filterName> (verified filter_custom_department). filterDef.smartFilters declares job_location, work_location_option, custom_department and seniority. There is no separate country filter. Query \"SendGrid\" returns 2 SendGrid-titled roles, so the keyword is a real probe and the full Twilio board is the membership source.",
+  "evidence": [
+    "https://sendgrid.com/en-us/careers -> Twilio careers",
+    "https://jobs.twilio.com/careers (PCSX config: smartFilters=[include_remote,distance,job_location,work_location_option,custom_department,seniority])",
+    "GET https://jobs.twilio.com/api/pcsx/search?domain=twilio.com&query=SendGrid&location=&start=0 -> count=2, filterDef.smartFilters/facets as above",
+    "GET https://jobs.twilio.com/api/pcsx/search?domain=twilio.com&query=&location=&start=0&filter_custom_department=engineering -> count=17, appliedFilters={\"customDepartment\":[\"engineering\"]}"
+  ],
+  "verified": true
+}

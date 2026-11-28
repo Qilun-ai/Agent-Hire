@@ -1,0 +1,104 @@
+{
+  "company": "Zoom",
+  "slug": "zoom",
+  "portal": "https://careers.zoom.us/jobs/search",
+  "listing_url": "https://www.careers.zoom.us/job-results",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "Corporate & Business Services",
+        "Customer Services",
+        "Cyber Security & Risk",
+        "Engineering",
+        "Finance & Accounting",
+        "Go To Market Operations",
+        "Information Technology",
+        "Marketing",
+        "Product",
+        "Sales"
+      ],
+      "native_param": null,
+      "note": "category field in the ShazamMe feed; rendered through the widget's dynamic filter-attribute controls."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Amsterdam (NLD)",
+        "Bangalore (IND)",
+        "Denver (CO)",
+        "Dublin (IRL)",
+        "London (UK)",
+        "Malaysia (MYS)",
+        "Mumbai (IND)",
+        "Remote (CA)",
+        "Remote (DEU)",
+        "Remote (IL)",
+        "Remote (IND)",
+        "Remote (IRL)",
+        "Remote (MA)",
+        "Remote (SAU)",
+        "Remote (SWE)",
+        "Remote (UK)",
+        "Remote (US)",
+        "Remote (UT)",
+        "San Jose (CA)",
+        "Seattle (WA)",
+        "Singapore (SGP)",
+        "Sydney (AUS)",
+        "Tokyo (JPN)"
+      ],
+      "native_param": null,
+      "note": "city field in the feed (country also present); filtered client-side."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "SORT BY - RECENT POSTS",
+      "native_param": null
+    },
+    {
+      "value": "oldest",
+      "label": "SORT BY - OLDER POSTS",
+      "native_param": null
+    },
+    {
+      "value": "title_asc",
+      "label": "SORT BY -  ALPHABETICAL A-Z",
+      "native_param": null
+    },
+    {
+      "value": "title_desc",
+      "label": "SORT BY ALPHABETICAL Z-A",
+      "native_param": null
+    },
+    {
+      "value": "salary_desc",
+      "label": "SORT BY - SALARY HIGH TO LOW",
+      "native_param": null
+    },
+    {
+      "value": "salary_asc",
+      "label": "SORT BY - SALARY LOW TO HIGH",
+      "native_param": null
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": false,
+  "local_query": true,
+  "notes": "The ledger URL /jobs/search now 404s; the current journey is www.careers.zoom.us/ -> /job-results, a Duda page embedding the ShazamMe job-results widget. The widget makes one GET https://shazamme.io/job-results/a5bcebfa-981b-46cd-b46f-ad91a50505b8 with no query and returns all 83 active postings with category, city, country, dates and fullDescription inline. The side 'Filter by Keyword' box, dynamic filter attributes and the Sort menu (data-sort-field changedOnUTC/jobName/salaryFrom) all operate on that array in the browser; appending ?keyword=Manager returned the identical 83 rows, confirming there is no server-side search.",
+  "evidence": [
+    "https://www.careers.zoom.us/job-results",
+    "https://shazamme.io/job-results/a5bcebfa-981b-46cd-b46f-ad91a50505b8",
+    "https://shazamme.io/job-results/a5bcebfa-981b-46cd-b46f-ad91a50505b8?keyword=Manager"
+  ],
+  "verified": true
+}

@@ -1,0 +1,95 @@
+{
+  "company": "Accenture",
+  "slug": "accenture",
+  "portal": "https://www.accenture.com/in-en/careers/jobsearch",
+  "listing_url": "https://www.accenture.com/in-en/careers/jobsearch",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "jobKeyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Ahmedabad",
+        "Bengaluru",
+        "Bhubaneswar",
+        "Chennai",
+        "Coimbatore",
+        "Gandhinagar",
+        "Gurugram",
+        "Hyderabad",
+        "Indore",
+        "Jaipur",
+        "Kochi",
+        "Kolkata",
+        "Mumbai",
+        "Nagpur",
+        "Navi Mumbai",
+        "Noida",
+        "Pune"
+      ],
+      "native_param": null,
+      "note": "Aggregation field location.keyword. Facet values are submitted through the API's jobFilters JSON, whose item schema could not be confirmed, so they are applied locally."
+    },
+    {
+      "key": "department",
+      "label": "Area of Interest",
+      "kind": "multi",
+      "values": [
+        "Artificial Intelligence (AI) & Data Science",
+        "Cloud",
+        "Consulting",
+        "Corporate Functions",
+        "Emerging Technology",
+        "Engineering & Manufacturing",
+        "Industries",
+        "Operations & Delivery",
+        "Product Development",
+        "Program & Project Management",
+        "Programming Languages",
+        "Security",
+        "Software Engineering",
+        "Technology",
+        "Technology Platforms"
+      ],
+      "native_param": null,
+      "note": "Aggregation field areaOfInterestTitle.keyword; jobFilters schema unconfirmed."
+    },
+    {
+      "key": "employment_type",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [
+        "Full-time"
+      ],
+      "native_param": null,
+      "note": "Aggregation field employeeType.keyword; local filter."
+    },
+    {
+      "key": "seniority",
+      "label": "Experience",
+      "kind": "multi",
+      "values": [
+        "Experience: 0-2 years",
+        "Experience: 10-12 years",
+        "Experience: 12-14 years",
+        "Experience: 2-5 years",
+        "Experience: 5-10 years"
+      ],
+      "native_param": null,
+      "note": "Aggregation field yearsOfExperience.keyword; local filter."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Accenture's own AEM search endpoint POST /api/accenture/elastic/findjobs accepts form field jobKeyword (verified with engineer); it returns matching roles plus aggregations for location, Area of Interest, Job Type and Experience. The jobFilters JSON item schema is not exposed by the page, so only the keyword is sent natively and facet fields are filtered locally.",
+  "evidence": [
+    "https://www.accenture.com/in-en/careers/jobsearch",
+    "https://www.accenture.com/api/accenture/elastic/findjobs (POST jobKeyword=engineer&countrySite=in-en)"
+  ],
+  "verified": true
+}

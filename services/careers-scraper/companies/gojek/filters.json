@@ -1,0 +1,51 @@
+{
+  "company": "Gojek",
+  "slug": "gojek",
+  "portal": "https://www.gojek.io/careers",
+  "listing_url": "https://www.gojek.io/careers",
+  "family": "lever",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Samarinda",
+        "Singapore",
+        "Surabaya",
+        "Tangerang"
+      ],
+      "native_param": null,
+      "note": "Search field input[name=selectedLocations][type=hidden]; the page keeps filter state client-side."
+    },
+    {
+      "key": "team",
+      "label": "Team",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Posting categories/lists are available per job; no separate team control parameter observed."
+    },
+    {
+      "key": "employment_type",
+      "label": "Commitment",
+      "kind": "multi",
+      "values": [
+        "Permanent"
+      ],
+      "native_param": null,
+      "note": "Per-posting commitment value; local."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Next.js careers page (RSC-embedded postings) with a client-side search: input#keyword[name=keyword][type=search] (Keyword) and input[name=selectedLocations][type=hidden] (Location). There is no <form> and the URL is not rewritten when filtering; the rendered page shows '12 open jobs found' with those fields blank. The scraper reads the unfiltered RSC rows and filters locally. Plain curl gets a Vercel security checkpoint, so collection needs a browser-like client.",
+  "evidence": [
+    "https://www.gojek.io/careers (rendered DOM: input#keyword[name=keyword] type=search, input[name=selectedLocations] type=hidden, '12 open jobs found', no form element)"
+  ],
+  "verified": true
+}

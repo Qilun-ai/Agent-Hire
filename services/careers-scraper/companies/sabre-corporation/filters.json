@@ -1,0 +1,97 @@
+{
+  "company": "Sabre Corporation",
+  "slug": "sabre-corporation",
+  "portal": "https://www.sabre.com/careers/",
+  "listing_url": "https://sabre.wd1.myworkdayjobs.com/SabreJobs",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Bengaluru, Karnataka, India",
+        "Chile Remote",
+        "Colombia Remote",
+        "Dallas-Fort Worth Metroplex",
+        "India - Bangalore-Explorer Bldg",
+        "India - Bangalore-Navigator Bldg",
+        "Japan - Tokyo-Kyobashi Edo Grand",
+        "Krakow, Małopolskie, Poland",
+        "Mexico City, Mexico City, Mexico",
+        "Mexico Remote",
+        "Poland - Poland -Tischnera",
+        "Richmond, England, United Kingdom",
+        "Singapore - Singapore-Paya Lebar Quarter",
+        "Singapore, Singapore",
+        "United Kingdom - Richmond-Church Rd",
+        "United Kingdom Remote",
+        "United States of America - HDQ-Bldg A",
+        "Uruguay - Montevideo-Zonamerica Bldg. 400",
+        "USA Remote",
+        "ZonAmerica, Montevideo, Uruguay"
+      ],
+      "native_param": "appliedFacets[locations]",
+      "note": "Nested under the locationMainGroup facet."
+    },
+    {
+      "key": "country",
+      "label": "Location Country",
+      "kind": "multi",
+      "values": [
+        "Chile",
+        "Colombia",
+        "India",
+        "Japan",
+        "Mexico",
+        "Poland",
+        "Singapore",
+        "United Kingdom",
+        "United States of America",
+        "Uruguay"
+      ],
+      "native_param": "appliedFacets[locationCountry]",
+      "note": "Nested under the locationMainGroup facet."
+    },
+    {
+      "key": "department",
+      "label": "Job Category",
+      "kind": "multi",
+      "values": [
+        "Service/Support",
+        "Development / Engineering",
+        "Sales",
+        "Product",
+        "Finance",
+        "Legal",
+        "People Team",
+        "Strategy",
+        "Information Technology"
+      ],
+      "native_param": "appliedFacets[jobFamilyGroup]",
+      "note": ""
+    },
+    {
+      "key": "employment_type",
+      "label": "Time Type",
+      "kind": "multi",
+      "values": [
+        "Full time"
+      ],
+      "native_param": "appliedFacets[timeType]",
+      "note": ""
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "sabre.com/careers links the SabreJobs Workday site. Its CXS endpoint POST /wday/cxs/sabre/SabreJobs/jobs returns total=91 and facets jobFamilyGroup (Job Category), workerSubType (Job Type: Regular / Fixed Term), timeType (Time Type) and locationMainGroup containing locationCountry and locations. Live check: appliedFacets jobFamilyGroup=Development / Engineering with searchText=engineer returned total=23. workerSubType is a further facet but has no separate canonical field. No server-side sort parameter was confirmed.",
+  "evidence": [
+    "https://sabre.wd1.myworkdayjobs.com/wday/cxs/sabre/SabreJobs/jobs",
+    "https://sabre.wd1.myworkdayjobs.com/SabreJobs"
+  ],
+  "verified": true
+}

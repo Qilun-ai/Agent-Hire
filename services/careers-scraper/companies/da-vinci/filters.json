@@ -1,0 +1,49 @@
+{
+  "company": "Da Vinci",
+  "slug": "da-vinci",
+  "portal": "https://davincitrading.com/careers/",
+  "listing_url": "https://davincitrading.com/careers/",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Development",
+        "HR & Recruitment",
+        "IT Operations",
+        "Legal and Compliance",
+        "Quant",
+        "Risk",
+        "Trading"
+      ],
+      "native_param": null,
+      "note": "Each li.card-grid__item publishes data-department; filtering is client-side."
+    },
+    {
+      "key": "location",
+      "label": "Office",
+      "kind": "multi",
+      "values": [
+        "Amsterdam, North Holland, Netherlands",
+        "Hong Kong, Hong Kong",
+        "Miami, Florida, United States",
+        "Mumbai, Maharashtra, India"
+      ],
+      "native_param": null,
+      "note": "Each card publishes data-office (Amsterdam/Hong Kong/Miami/Mumbai); filtering is client-side."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Native WordPress listing (not the Greenhouse embed): one div.card-grid--careers-jobs grid whose cards carry data-department/data-office, filtered by wp-content/themes/davinci card-grid.js, which asserts 'No AJAX'. There is no query-string search or facet endpoint. Live fetch from the worker network failed (TLS reset) so the control contract is taken from the adapter's verified DOM selectors; values are the company's collected records.",
+  "evidence": [
+    "https://davincitrading.com/careers/"
+  ],
+  "verified": true
+}

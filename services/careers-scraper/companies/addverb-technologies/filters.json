@@ -1,0 +1,71 @@
+{
+  "company": "Addverb Technologies",
+  "slug": "addverb-technologies",
+  "portal": "https://career.hrone.cloud/career-portal?appId=7tWNRPWSUZu0VguJmvSJXMyljfO8M7QCdHmvF4VcAcNIOcixYwKl-ii2unEc37eeaSQ0cNuvKQZ9w-Mm0DSY-sptVvdx4sR5aFgWpv1_fBiLiCQ_FjkslFnESW19alwz&dc=addverb&rqt=UVozgs-AUV1ILPLBxDlf7A&cc=P3WIS3az9HUC6WAJ9eS1Rg",
+  "listing_url": "https://career.hrone.cloud/career-portal?appId=7tWNRPWSUZu0VguJmvSJXMyljfO8M7QCdHmvF4VcAcNIOcixYwKl-ii2unEc37eeaSQ0cNuvKQZ9w-Mm0DSY-sptVvdx4sR5aFgWpv1_fBiLiCQ_FjkslFnESW19alwz&dc=addverb&rqt=UVozgs-AUV1ILPLBxDlf7A&cc=P3WIS3az9HUC6WAJ9eS1Rg",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "jobTitle",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Advanced Robotics",
+        "After Sales",
+        "Embedded Systems",
+        "HR",
+        "Mobile Robotics",
+        "Production",
+        "Project",
+        "R&D Controls",
+        "R&D Mechanical",
+        "Software",
+        "Strategic Sourcing"
+      ],
+      "native_param": "department",
+      "note": "Public CareerPosition/Details body accepts department (exact name) or departmentCode; a department=Software request returned 0 of 15 rows at inspection, so the value must match the current portal exactly."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Permanent",
+        "Trainee"
+      ],
+      "native_param": null,
+      "note": "Collected from detail records; the listing body has employmentType but its accepted values were not mapped."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "Work from office"
+      ],
+      "native_param": null,
+      "note": "Collected from preferredLocationOptionName on detail records."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "The listing filter takes locationId/preferredLocationId; no public name-to-ID map was exposed, so locations are empty."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Addverb's official careers CTA (hr1.to/9c16d2) opens the public hrone career portal. POST /api/external/public/referral/CareerPosition/Details with the portal's appId/domainCode returns the full current requisition list; the same body accepts jobTitle (title/keyword search, not separately exercised) and department (tested). Keyword/department are native; remaining fields are filtered locally.",
+  "evidence": [
+    "https://hr1.to/9c16d2",
+    "https://career.hrone.cloud/career-portal?appId=...&dc=addverb&rqt=...&cc=...",
+    "https://gateway.app.hrone.cloud/api/external/public/referral/CareerPosition/Details (POST department=Software and unfiltered)"
+  ],
+  "verified": true
+}

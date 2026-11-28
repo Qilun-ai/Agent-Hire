@@ -1,0 +1,157 @@
+{
+  "company": "Fortinet",
+  "slug": "fortinet",
+  "portal": "https://www.fortinet.com/corporate/careers",
+  "listing_url": "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/jobs",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Abidjan, Cote d'Ivoire",
+        "Abu Dhabi, Abu Dhabi, United Arab Emirates",
+        "Abu Dhabi, United Arab Emirates",
+        "Albania",
+        "Albany, NY, United States",
+        "Alexandria, VA, United States",
+        "Almaty, Kazakhstan",
+        "Amsterdam, Noord-Holland, Netherlands",
+        "Ankara, Ankara, Türkiye",
+        "Astana, Kazakhstan",
+        "Atlanta, GA, United States",
+        "Austin, TX, United States",
+        "Australia",
+        "Austria",
+        "Bakersfield, CA, United States",
+        "Baltimore, MD, United States",
+        "Bangalore East, Karnataka, India",
+        "Bangkok, Central Thailand, Thailand",
+        "Barcelona, Cataluña, Spain",
+        "Belgium",
+        "Belo Horizonte, MG, Brazil",
+        "Bentonville, AR, United States",
+        "Birmingham, AL, United States",
+        "Bizkaia, País Vasco, Spain",
+        "Bogota, Cundinamarca, Colombia"
+      ],
+      "native_param": "selectedLocationsFacet",
+      "note": "locationsFacet IDs (country/state/city hierarchy); the response echoes SelectedLocationsFacet. Values from collected postings."
+    },
+    {
+      "key": "department",
+      "label": "Categories",
+      "kind": "multi",
+      "values": [
+        "Accounting",
+        "ASIC Engineering",
+        "Business Development Rep",
+        "Channel Account",
+        "Consulting Systems Engineering",
+        "Cyber Threat Engineering",
+        "Deal Desk Analyst",
+        "DevOps Engineering",
+        "Digital Forensics and Incident Response",
+        "Distribution Account",
+        "Embedded SW/Firmware Engineering",
+        "Facilities",
+        "Failure Analysis",
+        "Field CISO",
+        "Field Marketing",
+        "Finance",
+        "Global Account",
+        "Hardware Development",
+        "Human Resources",
+        "Incident Response",
+        "Information Security",
+        "Infrastructure Security",
+        "Inside Regional Account",
+        "Inside Sales",
+        "Internal Auditing"
+      ],
+      "native_param": "selectedCategoriesFacet",
+      "note": "categoriesFacet IDs (e.g. 300000010292600=Systems Engineering); the response echoes SelectedCategoriesFacet."
+    },
+    {
+      "key": "job_family",
+      "label": "Titles",
+      "kind": "multi",
+      "values": [
+        "Sales",
+        "Sales Engineering",
+        "Research/Development",
+        "Service/Support",
+        "Marketing",
+        "Information Technology",
+        "Human Resources",
+        "Operations",
+        "Finance/Accounting",
+        "Sales Operations"
+      ],
+      "native_param": "selectedTitlesFacet",
+      "note": "titlesFacet IDs are codes (SALES, SE, RD, SUPPORT, MRK, IT, HR, OPT, FA, SO)."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "On-site",
+        "Remote",
+        "Hybrid"
+      ],
+      "native_param": "selectedWorkplaceTypesFacet",
+      "note": "workplaceTypesFacet IDs ORA_ON_SITE, ORA_REMOTE, ORA_HYBRID."
+    },
+    {
+      "key": "business_unit",
+      "label": "Organizations",
+      "kind": "multi",
+      "values": [
+        "Fortinet Inc.",
+        "Fortinet Technologies Canada ULC",
+        "Fortinet GmbH Germany",
+        "Fortinet Japan GK",
+        "EMEA",
+        "Fortinet Technologies India Private Limited",
+        "Fortinet UK Ltd.",
+        "Fortinet Mexico S. de R.L. de C.V.",
+        "Fortinet SARL France",
+        "Fortinet Belgium BV"
+      ],
+      "native_param": "selectedOrganizationsFacet",
+      "note": "organizationsFacet IDs; the response echoes SelectedOrganizationsFacet."
+    },
+    {
+      "key": "date_posted",
+      "label": "Posted date",
+      "kind": "multi",
+      "values": [
+        "Less than 7 days",
+        "Less than 30 days",
+        "Greater than 30 days"
+      ],
+      "native_param": "selectedPostingDatesFacet",
+      "note": "postingDatesFacet IDs 7, 30, 31."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The official careers page links to Oracle Candidate Experience site CX_2001, whose public REST board is https://edel.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions. The finder (findReqs;siteNumber=CX_2001,limit=12,sortBy=POSTING_DATES_DESC, plus keyword/facet entries) returns TotalJobsCount and one requisitionList page per 12 rows; the response exposes categoriesFacet, locationsFacet, workLocationsFacet, titlesFacet, organizationsFacet, workplaceTypesFacet, postingDatesFacet and flexFieldsFacet with their IDs. keyword=engineer cut the total from 1048 to 656, confirming server-side filtering.",
+  "evidence": [
+    "https://edel.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001/jobs",
+    "https://edel.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX_2001,keyword=engineer,limit=12,sortBy=POSTING_DATES_DESC"
+  ],
+  "verified": true
+}

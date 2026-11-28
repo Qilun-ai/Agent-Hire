@@ -1,0 +1,63 @@
+{
+  "company": "Walmart Labs",
+  "slug": "walmart-labs",
+  "portal": "https://tech.walmart.com/content/walmart-global-tech/en_us/careers.html",
+  "listing_url": "https://careers.walmart.com/us/en/results?searchQuery=All&careerareas=Technology",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "searchQuery",
+  "fields": [
+    {
+      "key": "job_family",
+      "label": "Career area",
+      "kind": "multi",
+      "values": [
+        "Technology",
+        "technology|Information Security",
+        "corporate|Creative, Design and UX",
+        "corporate|Finance and Accounting",
+        "corporate|Human Resources",
+        "stores/clubs|Cashier, Front-End and Membership Services",
+        "stores/clubs|General Merchandise, Stocking and Unloading"
+      ],
+      "native_param": "careerareas",
+      "note": "The published Technology listing is itself ?searchQuery=All&careerareas=Technology; the other values are the career areas this page links to."
+    },
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "single",
+      "values": [
+        "us"
+      ],
+      "native_param": "path segment /{country}/{lang}/results",
+      "note": "Country and language are route segments (/us/en/results), not a query parameter: the frontend reads them from __NEXT_DATA__.query as country=us, lang=en."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "BENTONVILLE",
+        "SUNNYVALE",
+        "BELLEVUE",
+        "HOBOKEN",
+        "SAN BRUNO",
+        "HERNDON",
+        "DENVER"
+      ],
+      "native_param": null,
+      "note": "The results page filters are driven by the GraphQL request (query + filter + locale/page/size); no location query parameter was observed, so city/state/country are matched locally on the structured job location fields."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "Walmart Global Tech's US technology jobs run on careers.walmart.com (AEM + Next.js), not on Workday. The published Technology surface is https://careers.walmart.com/us/en/results?searchQuery=All&careerareas=Technology, and the frontend's own machine request is POST https://careers.walmart.com/api/graphql with queryId b09f52ab-9c7f-421f-8a2a-d990b6f288a8 (HybridCombinedSearchV2Query) and variables {request:{query, isBasicSearch:false, filter:\"areas IN ['Technology']\"}, locale, page, size} — that one request returns the full id set (661 at review). Keyword matches searchQuery/query, career area matches the 'areas IN [...]' filter; department categories (e.g. 'Software Engineering and Architecture') are published per job and filtered locally. The AI ten-card pagination is not membership authority (repeats/re-ranks).",
+  "evidence": [
+    "https://careers.walmart.com/us/en/results?searchQuery=All&careerareas=Technology -> HTTP 200; __NEXT_DATA__.query = {searchQuery:\"All\", careerareas:\"Technology\", country:\"us\", lang:\"en\"}",
+    "https://careers.walmart.com/api/graphql POST HybridCombinedSearchV2Query {query:\"All jobs in Technology\", filter:\"areas IN ['Technology']\", page:0, size:1000}"
+  ],
+  "verified": true
+}

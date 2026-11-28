@@ -1,0 +1,78 @@
+{
+  "company": "Confluent",
+  "slug": "confluent",
+  "portal": "https://careers.confluent.io/jobs",
+  "listing_url": "https://www.ibm.com/careers/search?q=confluent",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "q",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "India",
+        "Canada",
+        "United Kingdom",
+        "Australia",
+        "Germany",
+        "Singapore",
+        "France",
+        "Israel",
+        "Japan",
+        "Netherlands"
+      ],
+      "native_param": null,
+      "note": "returned as agg field_keyword_05 (11 buckets of 96 hits); no confirmed request filter key"
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work arrangement",
+      "kind": "multi",
+      "values": [
+        "Remote",
+        "Hybrid"
+      ],
+      "native_param": null,
+      "note": "returned as agg field_keyword_17"
+    },
+    {
+      "key": "department",
+      "label": "Career area",
+      "kind": "multi",
+      "values": [
+        "Software Engineering",
+        "Sales",
+        "Product Management",
+        "Consulting",
+        "Enterprise Operations"
+      ],
+      "native_param": null,
+      "note": "returned as agg field_keyword_08 (5 buckets)"
+    },
+    {
+      "key": "seniority",
+      "label": "Experience level",
+      "kind": "multi",
+      "values": [
+        "Professional",
+        "Entry Level"
+      ],
+      "native_param": null,
+      "note": "returned as agg field_keyword_18"
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": true,
+  "local_query": true,
+  "notes": "careers.confluent.io/jobs 301-redirects to https://www.ibm.com/careers/search?q=confluent because Confluent's hiring now runs on IBM's board. That page is an IBM search app: its machine-usable request is POST https://www-api.ibm.com/search/api/v2 with the app's own body (appId=careers, scopes=[careers2], query.bool.must.simple_query_string.query=confluent, size=30, sort=[_score desc, pageviews desc]) and returns 96 job hits. Keyword scope is native (q on the portal URL, query/sm.query in the body); the four facet dimensions above come back as aggregations field_keyword_05/17/08/18 in that same request, but the body treats aggs as reporting-only and no facet filter parameter (post_filter or term clause) was confirmed, so facet selection must be applied locally. IBM JobDetail pages sit behind a WAF JS challenge for details, not for this listing API.",
+  "evidence": [
+    "https://careers.confluent.io/jobs -> 301 -> https://www.ibm.com/careers/search?q=confluent",
+    "https://www-api.ibm.com/search/api/v2 (POST careers/IBM search body, 96 hits, aggs field_keyword_05/08/17/18)",
+    "adapter:confluent (SEARCH_API_URL, _SEARCH_BODY)"
+  ],
+  "verified": true
+}

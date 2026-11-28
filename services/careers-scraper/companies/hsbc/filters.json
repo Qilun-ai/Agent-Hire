@@ -1,0 +1,89 @@
+{
+  "company": "HSBC",
+  "slug": "hsbc",
+  "portal": "https://www.hsbc.com/careers/find-a-job",
+  "listing_url": "https://portal.careers.hsbc.com/careers?location=any",
+  "family": "eightfold",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Ahmedabad, Gujarat, India",
+        "Bangalore, Karnataka, India",
+        "Bengaluru, Karnataka, India",
+        "Pune, Maharashtra, India",
+        "Mumbai, Maharashtra, India",
+        "London, United Kingdom",
+        "Birmingham, United Kingdom",
+        "Buffalo, New York, United States",
+        "New York, United States",
+        "Hong Kong",
+        "Singapore",
+        "Toronto, Ontario, Canada"
+      ],
+      "native_param": "location",
+      "note": "Free-text location query; 'any' is the unfiltered value the portal itself uses (listing_url)."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Asset and Wealth Management",
+        "Audit",
+        "Branch and Retail Banking",
+        "Commercial Banking",
+        "Digital",
+        "Finance",
+        "Human Resources",
+        "Insurance",
+        "Investment Banking, Markets, and Research",
+        "Legal",
+        "Operations",
+        "Risk and Compliance",
+        "Technology"
+      ],
+      "native_param": "department",
+      "note": "Matches positions[].department in the API response."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "multi",
+      "values": [
+        "hybrid",
+        "onsite",
+        "remote"
+      ],
+      "native_param": "work_location_option",
+      "note": "Matches positions[].work_location_option in the API response."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "relevance",
+      "label": "Most relevant",
+      "native_param": "sort_by=relevance"
+    },
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sort_by=timestamp"
+    }
+  ],
+  "default_sort": "relevance",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The ledger page https://www.hsbc.com/careers/find-a-job is HSBC's own hand-off to the eightfold-hosted portal at https://portal.careers.hsbc.com/careers, whose listing API is https://portal.careers.hsbc.com/api/apply/v2/jobs. Confirmed parameters: domain=hsbc.com, start, num, query (keyword), location, department, work_location_option, sort_by, sort_order. The response returns count + positions[] and echoes the applied state, so each filter is machine-usable. No country facet was confirmed, so none is declared.",
+  "evidence": [
+    "https://portal.careers.hsbc.com/api/apply/v2/jobs?domain=hsbc.com&start=0&num=10&location=India&sort_by=relevance&sort_order=desc (count 149)",
+    "https://portal.careers.hsbc.com/api/apply/v2/jobs?domain=hsbc.com&start=0&num=10&query=engineer&location=India&department=Technology&sort_by=relevance&sort_order=desc (count 6)",
+    "https://portal.careers.hsbc.com/api/apply/v2/jobs?domain=hsbc.com&start=0&num=10&location=any&work_location_option=onsite&sort_by=timestamp&sort_order=desc (count 1008, t_create descending)",
+    "https://portal.careers.hsbc.com/careers?location=any"
+  ],
+  "verified": true
+}

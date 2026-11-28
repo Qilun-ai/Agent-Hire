@@ -1,0 +1,103 @@
+{
+  "company": "BNY Mellon",
+  "slug": "bny-mellon",
+  "portal": "https://www.bny.com/corporate/global/en/careers.html",
+  "listing_url": "https://eofe.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/BNY-Careers/jobs",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "United States",
+        "PA, United States",
+        "Pittsburgh, PA, United States",
+        "United Kingdom",
+        "FL, United States",
+        "Lake Mary, FL, United States",
+        "NY, United States",
+        "New York, NY, United States",
+        "India",
+        "MH, India"
+      ],
+      "native_param": "location",
+      "note": "Oracle findReqs accepts location= and locationId= (facet Id from locationsFacet); values observed in locationsFacet."
+    },
+    {
+      "key": "department",
+      "label": "Category",
+      "kind": "multi",
+      "values": [
+        "1LoD Risk and Controls",
+        "Accounting",
+        "Accounting Services",
+        "Administrative Support",
+        "Agile Coach",
+        "AI / Machine Learning Data Engineering",
+        "AI / Machine Learning Software Engineering",
+        "AML and Client Onboarding",
+        "Application Development Management",
+        "Audio Visual Engineering",
+        "Audit",
+        "Audit Practice and Quality",
+        "Back-End Development",
+        "Benefits & Wellbeing",
+        "Benefits Administration, Strategy & Delivery",
+        "Billing Services",
+        "Business Data Architecture",
+        "Business Development Support",
+        "Business Planning and Analysis",
+        "Client Coverage",
+        "Client Coverage Rep Office",
+        "Client Enablement",
+        "Client Implementations",
+        "Client Operations & Reporting",
+        "Client Processing"
+      ],
+      "native_param": "selectedCategoriesFacet",
+      "note": "CATEGORIES facet; pass facet Id, e.g. selectedCategoriesFacet=300002556277068."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "On-site",
+        "Hybrid"
+      ],
+      "native_param": "selectedWorkplaceTypesFacet",
+      "note": "WORKPLACE_TYPES facet Ids ORA_ON_SITE / ORA_HYBRID observed in workplaceTypesFacet."
+    },
+    {
+      "key": "date_posted",
+      "label": "Posted",
+      "kind": "multi",
+      "values": [
+        "Less than 7 days",
+        "Less than 30 days",
+        "Greater than 30 days"
+      ],
+      "native_param": "selectedPostingDatesFacet",
+      "note": "POSTING_DATES facet Ids 7 / 30 / 31 observed in postingDatesFacet."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Newest first",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "BNY Mellon uses Oracle Candidate Experience site CX_3001 (short URL BNY-Careers). Listing: GET /hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=...&finder=findReqs;siteNumber=CX_3001,facetsList=...,limit=100,sortBy=POSTING_DATES_DESC,offset=N. Verified live: adding keyword=analyst to the finder returned TotalJobsCount 122 with Keyword=\"analyst\"; selectedCategoriesFacet=300002556277068 (Graduate Programs) returned TotalJobsCount 37.",
+  "evidence": [
+    "https://eofe.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?...finder=findReqs;siteNumber=CX_3001,...,keyword=analyst -> TotalJobsCount 122, Keyword=\"analyst\"",
+    "https://eofe.fa.us2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?...finder=findReqs;siteNumber=CX_3001,...,selectedCategoriesFacet=300002556277068 -> TotalJobsCount 37"
+  ],
+  "verified": true
+}

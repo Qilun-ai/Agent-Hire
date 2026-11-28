@@ -1,0 +1,54 @@
+{
+  "company": "PlanetScale",
+  "slug": "planetscale",
+  "portal": "https://planetscale.com/careers",
+  "listing_url": "https://job-boards.greenhouse.io/planetscale",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Customer Engineering",
+        "Engineering",
+        "Legal",
+        "Marketing",
+        "Sales"
+      ],
+      "native_param": null,
+      "note": "Board section headings; control filters client-side."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "EMEA or NA",
+        "Remote",
+        "Remote - EMEA, Remote - NA",
+        "Remote - NA, APAC, EMEA",
+        "Remote - US",
+        "Remote - USA",
+        "Remote US",
+        "San Francisco Office",
+        "San Francisco, CA",
+        "US"
+      ],
+      "native_param": null,
+      "note": "Board location strings; no query parameter."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Official careers page links to the Greenhouse board. The board renders all 12 jobs with only client-side Search and Department controls (#keyword-filter, #department-filter); the board page/API accept no filter query parameters, so filters are applied locally.",
+  "evidence": [
+    "https://job-boards.greenhouse.io/planetscale",
+    "https://boards-api.greenhouse.io/v1/boards/planetscale/jobs"
+  ],
+  "verified": true
+}

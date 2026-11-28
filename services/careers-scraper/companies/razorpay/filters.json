@@ -1,0 +1,61 @@
+{
+  "company": "Razorpay",
+  "slug": "razorpay",
+  "portal": "https://razorpay.com/jobs/",
+  "listing_url": "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Business",
+        "Business / Banking",
+        "Business / Banking / Banking Alliances",
+        "Business / Business Engineering / Technical Account Management",
+        "Business / Finance",
+        "Business / GTM - Online First",
+        "Business / GTM Offline First",
+        "Business / New Initiatives Team / NIT Sales",
+        "Business / Offline Banking Alliances / Banking Alliance",
+        "Business / Strategy / Corporate Strategy",
+        "Design / Communication Design",
+        "Design / Product Design",
+        "Engineering",
+        "Engineering / DevOps",
+        "Engineering / Security",
+        "Product / Product Management",
+        "Product / Product Marketing"
+      ],
+      "native_param": null,
+      "note": "Board section paths; control filters client-side."
+    },
+    {
+      "key": "location",
+      "label": "Office",
+      "kind": "multi",
+      "values": [
+        "Bengaluru",
+        "Chennai",
+        "Malaysia",
+        "Mumbai"
+      ],
+      "native_param": null,
+      "note": ""
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The official careers page links only to the company Greenhouse board, which SSRs 23 jobs on one page. Search, Department and Office controls (#keyword-filter, #department-filter, #office-filter) filter the already-loaded rows in the browser; the board API takes no filter parameters, so filters are local.",
+  "evidence": [
+    "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited",
+    "https://boards-api.greenhouse.io/v1/boards/razorpaysoftwareprivatelimited/jobs",
+    "https://razorpay.com/careers/"
+  ],
+  "verified": true
+}

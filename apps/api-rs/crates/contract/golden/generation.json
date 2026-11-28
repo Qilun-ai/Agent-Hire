@@ -1,0 +1,707 @@
+[
+  {
+    "body": {
+      "checks": {
+        "graph": {
+          "counts": {
+            "candidate": 0,
+            "experience": 0,
+            "joblead": 0,
+            "project": 0,
+            "skill": 0
+          },
+          "status": "ok"
+        },
+        "llm": {
+          "key_source": "local",
+          "model": "llama3",
+          "provider": "ollama",
+          "status": "ok"
+        },
+        "profile": {
+          "has_profile": false,
+          "status": "ok"
+        },
+        "sqlite": {
+          "lead_count": 0,
+          "status": "ok"
+        },
+        "vector": {
+          "mode": "not_loaded",
+          "status": "ok",
+          "tables": []
+        }
+      },
+      "components": {
+        "graph": {
+          "counts": {
+            "candidate": 0,
+            "experience": 0,
+            "joblead": 0,
+            "project": 0,
+            "skill": 0
+          },
+          "status": "ok"
+        },
+        "llm": {
+          "key_source": "local",
+          "model": "llama3",
+          "provider": "ollama",
+          "status": "ok"
+        },
+        "profile": {
+          "has_profile": false,
+          "status": "ok"
+        },
+        "sqlite": {
+          "lead_count": 0,
+          "status": "ok"
+        },
+        "vector": {
+          "mode": "not_loaded",
+          "status": "ok",
+          "tables": []
+        }
+      },
+      "details_available": true,
+      "last_scan_finished_at": "<string>",
+      "log_level": "INFO",
+      "services": {},
+      "status": "alive",
+      "timestamp": "<string>",
+      "uptime_seconds": "<string>"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/health"
+    },
+    "status": 200,
+    "step": "authenticated health"
+  },
+  {
+    "body": {
+      "n": "Maya Rao",
+      "s": "Backend engineer specializing in payment systems"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "n": "Maya Rao",
+        "s": "Backend engineer specializing in payment systems"
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/candidate"
+    },
+    "status": 200,
+    "step": "set candidate"
+  },
+  {
+    "body": {
+      "city": "",
+      "country": "",
+      "email": "maya@example.test",
+      "github_url": "",
+      "linkedin_url": "",
+      "phone": "",
+      "website_url": ""
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "email": "maya@example.test"
+      },
+      "method": "PUT",
+      "path": "/api/v1/profile/identity"
+    },
+    "status": 200,
+    "step": "set identity"
+  },
+  {
+    "body": {
+      "cat": "language",
+      "id": "f5e265d607cb",
+      "n": "Rust"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "cat": "language",
+        "n": "Rust"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/skill"
+    },
+    "status": 200,
+    "step": "add skill"
+  },
+  {
+    "body": {
+      "co": "Harbor Labs",
+      "d": "Built reliable payment services with Rust and PostgreSQL.",
+      "id": "ba5bb90fd0f7",
+      "period": "2022-2025",
+      "role": "Backend Engineer"
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "co": "Harbor Labs",
+        "d": "Built reliable payment services with Rust and PostgreSQL.",
+        "period": "2022-2025",
+        "role": "Backend Engineer"
+      },
+      "method": "POST",
+      "path": "/api/v1/profile/experience"
+    },
+    "status": 200,
+    "step": "add experience"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-059608573977ba7dd1bc",
+      "pipeline": {
+        "added": [
+          "custom-059608573977ba7dd1bc"
+        ],
+        "already_in_pipeline": [],
+        "cart_size": 1,
+        "missing": []
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": true,
+        "company": "Aster Payments",
+        "description": "",
+        "title": "https://example.test/posting",
+        "url": "https://example.test/jobs/link"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "seed link posting"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-13188a3fab92954b74a7",
+      "pipeline": {
+        "added": [
+          "custom-13188a3fab92954b74a7"
+        ],
+        "already_in_pipeline": [],
+        "cart_size": 2,
+        "missing": []
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": true,
+        "company": "Aster Payments",
+        "description": "",
+        "title": "Backend Engineer",
+        "url": "https://example.test/jobs/empty"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "seed empty posting"
+  },
+  {
+    "body": {
+      "added_to_index": true,
+      "job_ref": "custom-5c68c71b75de35c45d65",
+      "pipeline": {
+        "added": [
+          "custom-5c68c71b75de35c45d65"
+        ],
+        "already_in_pipeline": [],
+        "cart_size": 3,
+        "missing": []
+      }
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "add_to_pipeline": true,
+        "company": "Aster Payments",
+        "description": "Build backend payment services in Rust and PostgreSQL. Maintain production APIs and work with the payments team on service reliability.",
+        "title": "Rust Engineer",
+        "url": "https://example.test/jobs/ready"
+      },
+      "method": "POST",
+      "path": "/api/v1/jobindex/custom"
+    },
+    "status": 200,
+    "step": "seed ready posting"
+  },
+  {
+    "body": {
+      "detail": "Paste the job description before generating. The current lead only contains a URL."
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/leads/custom-059608573977ba7dd1bc/generate"
+    },
+    "status": 422,
+    "step": "URL-only blocker"
+  },
+  {
+    "body": {
+      "detail": "Paste the job description before generating. The current lead has no role requirements to tailor against."
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/leads/custom-13188a3fab92954b74a7/suggest-selection"
+    },
+    "status": 422,
+    "step": "missing requirements blocker"
+  },
+  {
+    "body": {
+      "detail": "Lead not found"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/leads/unknown/generate"
+    },
+    "status": 404,
+    "step": "unknown lead"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "input": "no",
+          "loc": [
+            "body",
+            "selection",
+            "version"
+          ],
+          "msg": "Input should be a valid integer, unable to parse string as an integer",
+          "type": "int_parsing"
+        },
+        {
+          "input": 5,
+          "loc": [
+            "body",
+            "selection",
+            "sections",
+            0
+          ],
+          "msg": "Input should be a valid string",
+          "type": "string_type"
+        },
+        {
+          "input": true,
+          "loc": [
+            "body",
+            "selection",
+            "unknown"
+          ],
+          "msg": "Extra inputs are not permitted",
+          "type": "extra_forbidden"
+        },
+        {
+          "input": false,
+          "loc": [
+            "body",
+            "extra"
+          ],
+          "msg": "Extra inputs are not permitted",
+          "type": "extra_forbidden"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "extra": false,
+        "selection": {
+          "sections": [
+            5
+          ],
+          "unknown": true,
+          "version": "no"
+        }
+      },
+      "method": "POST",
+      "path": "/api/v1/leads/custom-5c68c71b75de35c45d65/generate"
+    },
+    "status": 422,
+    "step": "validate selection"
+  },
+  {
+    "body": {
+      "detail": [
+        {
+          "input": "maybe",
+          "loc": [
+            "query",
+            "show_location"
+          ],
+          "msg": "Input should be a valid boolean, unable to interpret input",
+          "type": "bool_parsing"
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/leads/custom-5c68c71b75de35c45d65/generate?show_location=maybe"
+    },
+    "status": 422,
+    "step": "validate show_location"
+  },
+  {
+    "body": {
+      "ok": true
+    },
+    "content_type": "application/json",
+    "request": {
+      "body": {
+        "llm_provider": "ollama",
+        "ollama_url": "<model-fixture>"
+      },
+      "method": "POST",
+      "path": "/api/v1/settings"
+    },
+    "status": 200,
+    "step": "install empty-reply generation fixture"
+  },
+  {
+    "body": {
+      "generation_job_id": "<generation-id>",
+      "job_id": "custom-5c68c71b75de35c45d65",
+      "lead": {
+        "asset": "<data>/appdata/assets/<resume>.pdf",
+        "base_score": 0,
+        "base_signal_score": 0,
+        "budget": "",
+        "company": "Aster Payments",
+        "contact_lookup": {
+          "contacts": [],
+          "domain": "example.test",
+          "message": "Add a Hunter.io API key in Settings to find company contacts.",
+          "status": "missing_hunter_key"
+        },
+        "cover_letter_asset": "<data>/appdata/assets/<letter>.pdf",
+        "created_at": "<string>",
+        "description": "Build backend payment services in Rust and PostgreSQL. Maintain production APIs and work with the payments team on service reliability.",
+        "events": [],
+        "feedback": "",
+        "feedback_note": "",
+        "fit_bullets": [],
+        "followup_due_at": "<string>",
+        "followup_sequence": [],
+        "gaps": [],
+        "generation_job_id": "<generation-id>",
+        "job_id": "custom-5c68c71b75de35c45d65",
+        "keyword_coverage": {
+          "coverage_pct": 100,
+          "covered_terms": [
+            "Rust",
+            "PostgreSQL"
+          ],
+          "incorporated_terms": [
+            "Rust",
+            "PostgreSQL"
+          ],
+          "jd_terms": [
+            "Rust",
+            "PostgreSQL"
+          ],
+          "missing_terms": [],
+          "verification": {
+            "approved_terms": [
+              "Rust",
+              "PostgreSQL"
+            ],
+            "rejected_terms": [],
+            "status": "deterministic_fallback"
+          }
+        },
+        "kind": "job",
+        "last_contacted_at": "<string>",
+        "lead_quality_reason": "",
+        "lead_quality_score": 0,
+        "learning_delta": 0,
+        "learning_reason": "",
+        "location": "",
+        "match_points": [],
+        "outreach_dm": "Hi! Saw the Rust Engineer opening at Aster Payments. My background in Rust maps well to the role. Would love to connect and share more.",
+        "outreach_email": "Subject: Rust Engineer at Aster Payments — relevant Rust background\n\nHi Aster Payments team,\n\nI came across the Rust Engineer role and it aligns closely with my work in Rust. I have shipped production systems that mirror the requirements in your posting. I would welcome the chance to share specific project examples that demonstrate direct fit.\n\nBest regards,\nMaya Rao",
+        "outreach_reply": "Your Rust Engineer role caught my eye — the problem space is compelling.\nI bring hands-on Rust experience with shipped projects that map to your stack.\nHappy to share specifics or jump on a quick call.",
+        "platform": "careers",
+        "proof_snippet": "",
+        "proposal_draft": "",
+        "reason": "",
+        "resume_asset": "<data>/appdata/assets/<resume>.pdf",
+        "resume_version": 0,
+        "score": 0,
+        "selected_projects": [],
+        "signal_reason": "",
+        "signal_score": 0,
+        "signal_tags": [],
+        "source_meta": {
+          "added_at": "<string>",
+          "agent_note": "added by hand",
+          "apply_url": "https://example.test/jobs/ready",
+          "company_slug": "custom",
+          "contact_lookup": {
+            "contacts": [],
+            "domain": "example.test",
+            "message": "Add a Hunter.io API key in Settings to find company contacts.",
+            "status": "missing_hunter_key"
+          },
+          "date_posted": "<datetime>",
+          "experience_level": null,
+          "full_description": "Build backend payment services in Rust and PostgreSQL. Maintain production APIs and work with the payments team on service reliability.",
+          "index_job_id": "custom-5c68c71b75de35c45d65",
+          "is_beginner": false,
+          "min_years_experience": null,
+          "posted_basis": "first_seen",
+          "seniority_level": "unknown",
+          "source": "agent",
+          "workplace_type": null
+        },
+        "status": "approved",
+        "tech_stack": [
+          "rust",
+          "payment services",
+          "postgresql",
+          "production",
+          "payments",
+          "reliability"
+        ],
+        "title": "Rust Engineer",
+        "urgency": "",
+        "url": "https://example.test/jobs/ready"
+      },
+      "status": "ready"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/leads/custom-5c68c71b75de35c45d65/generate"
+    },
+    "status": 200,
+    "step": "generate a fallback package"
+  },
+  {
+    "body": {
+      "text": "Maya Rao Email: maya@example.test SKILLS Languages: Rust EXPERIENCE Backend Engineer - Harbor Labs 2022-2025 - Built reliable payment services with Rust and PostgreSQL. PROJECTS Role-Matched Project Evidence - Add projects to the Identity Graph for stronger tailoring."
+    },
+    "content_type": "application/pdf",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/custom-5c68c71b75de35c45d65/pdf"
+    },
+    "status": 200,
+    "step": "read generated résumé"
+  },
+  {
+    "body": {
+      "text": "Dear Aster Payments team, I am writing to apply for the Rust Engineer position at Aster Payments. My background in Rust aligns directly with the requirements outlined in your posting. In my recent work on relevant work in this field, I have built directly relevant experience and a track record of delivering the outcomes your team is looking for. I would welcome the opportunity to discuss how my experience maps to your needs. Thank you for your consideration. Sincerely, Maya Rao"
+    },
+    "content_type": "application/pdf",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/custom-5c68c71b75de35c45d65/pdf?kind=cover"
+    },
+    "status": 200,
+    "step": "read generated cover letter"
+  },
+  {
+    "body": {
+      "asset": "<data>/appdata/assets/<resume>.pdf",
+      "base_score": 0,
+      "base_signal_score": 0,
+      "budget": "",
+      "company": "Aster Payments",
+      "contact_lookup": {
+        "contacts": [],
+        "domain": "example.test",
+        "message": "Add a Hunter.io API key in Settings to find company contacts.",
+        "status": "missing_hunter_key"
+      },
+      "cover_letter_asset": "<data>/appdata/assets/<letter>.pdf",
+      "created_at": "<string>",
+      "description": "Build backend payment services in Rust and PostgreSQL. Maintain production APIs and work with the payments team on service reliability.",
+      "events": [
+        {
+          "action": "assets=resume:<data>/appdata/assets/<resume>.pdf cover:<data>/appdata/assets/<letter>.pdf",
+          "ts": "<string>"
+        },
+        {
+          "action": "contact_lookup=missing_hunter_key",
+          "ts": "<string>"
+        },
+        {
+          "action": "status_changed=tailoring",
+          "ts": "<string>"
+        }
+      ],
+      "feedback": "",
+      "feedback_note": "",
+      "fit_bullets": [],
+      "followup_due_at": "<string>",
+      "followup_sequence": [],
+      "gaps": [],
+      "job_id": "custom-5c68c71b75de35c45d65",
+      "keyword_coverage": {
+        "coverage_pct": 100,
+        "covered_terms": [
+          "Rust",
+          "PostgreSQL"
+        ],
+        "incorporated_terms": [
+          "Rust",
+          "PostgreSQL"
+        ],
+        "jd_terms": [
+          "Rust",
+          "PostgreSQL"
+        ],
+        "missing_terms": [],
+        "verification": {
+          "approved_terms": [
+            "Rust",
+            "PostgreSQL"
+          ],
+          "rejected_terms": [],
+          "status": "deterministic_fallback"
+        }
+      },
+      "kind": "job",
+      "last_contacted_at": "<string>",
+      "lead_quality_reason": "",
+      "lead_quality_score": 0,
+      "learning_delta": 0,
+      "learning_reason": "",
+      "location": "",
+      "match_points": [],
+      "outreach_dm": "Hi! Saw the Rust Engineer opening at Aster Payments. My background in Rust maps well to the role. Would love to connect and share more.",
+      "outreach_email": "Subject: Rust Engineer at Aster Payments — relevant Rust background\n\nHi Aster Payments team,\n\nI came across the Rust Engineer role and it aligns closely with my work in Rust. I have shipped production systems that mirror the requirements in your posting. I would welcome the chance to share specific project examples that demonstrate direct fit.\n\nBest regards,\nMaya Rao",
+      "outreach_reply": "Your Rust Engineer role caught my eye — the problem space is compelling.\nI bring hands-on Rust experience with shipped projects that map to your stack.\nHappy to share specifics or jump on a quick call.",
+      "platform": "careers",
+      "proof_snippet": "",
+      "proposal_draft": "",
+      "reason": "",
+      "resume_asset": "<data>/appdata/assets/<resume>.pdf",
+      "resume_version": 1,
+      "score": 0,
+      "selected_projects": [],
+      "seniority_level": "unknown",
+      "signal_reason": "",
+      "signal_score": 0,
+      "signal_tags": [],
+      "source_meta": {
+        "added_at": "<string>",
+        "agent_note": "added by hand",
+        "apply_url": "https://example.test/jobs/ready",
+        "company_slug": "custom",
+        "contact_lookup": {
+          "contacts": [],
+          "domain": "example.test",
+          "message": "Add a Hunter.io API key in Settings to find company contacts.",
+          "status": "missing_hunter_key"
+        },
+        "date_posted": "<datetime>",
+        "experience_level": null,
+        "full_description": "Build backend payment services in Rust and PostgreSQL. Maintain production APIs and work with the payments team on service reliability.",
+        "index_job_id": "custom-5c68c71b75de35c45d65",
+        "is_beginner": false,
+        "keyword_coverage": {
+          "coverage_pct": 100,
+          "covered_terms": [
+            "Rust",
+            "PostgreSQL"
+          ],
+          "incorporated_terms": [
+            "Rust",
+            "PostgreSQL"
+          ],
+          "jd_terms": [
+            "Rust",
+            "PostgreSQL"
+          ],
+          "missing_terms": [],
+          "verification": {
+            "approved_terms": [
+              "Rust",
+              "PostgreSQL"
+            ],
+            "rejected_terms": [],
+            "status": "deterministic_fallback"
+          }
+        },
+        "min_years_experience": null,
+        "posted_basis": "first_seen",
+        "seniority_level": "unknown",
+        "source": "agent",
+        "workplace_type": null
+      },
+      "status": "approved",
+      "tech_stack": [
+        "rust",
+        "payment services",
+        "postgresql",
+        "production",
+        "payments",
+        "reliability"
+      ],
+      "title": "Rust Engineer",
+      "urgency": "",
+      "url": "https://example.test/jobs/ready"
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "GET",
+      "path": "/api/v1/leads/custom-5c68c71b75de35c45d65"
+    },
+    "status": 200,
+    "step": "approved lead after generation"
+  },
+  {
+    "body": {
+      "experience_on": [
+        "ba5bb90fd0f7"
+      ],
+      "job_id": "custom-5c68c71b75de35c45d65",
+      "points_on": [
+        "a294592c4618"
+      ],
+      "projects_on": [],
+      "skills_on": [
+        "f5e265d607cb"
+      ],
+      "status": "ready",
+      "suggestions": [
+        {
+          "parent_id": "ba5bb90fd0f7",
+          "parent_kind": "experience",
+          "point_id": "a294592c4618",
+          "reason": "Names the technologies in the posting.",
+          "suggested_text": "Built reliable Rust and PostgreSQL payment services."
+        }
+      ]
+    },
+    "content_type": "application/json",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/leads/custom-5c68c71b75de35c45d65/suggest-selection"
+    },
+    "status": 200,
+    "step": "suggest selection"
+  }
+]

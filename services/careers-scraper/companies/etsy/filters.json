@@ -1,0 +1,120 @@
+{
+  "company": "Etsy",
+  "slug": "etsy",
+  "portal": "https://careers.etsy.com/jobs",
+  "listing_url": "https://careers.etsy.com/jobs/search",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": "query",
+  "fields": [
+    {
+      "key": "country",
+      "label": "Country",
+      "kind": "multi",
+      "values": [
+        "Ireland",
+        "Mexico",
+        "United Kingdom",
+        "United States"
+      ],
+      "native_param": "country_codes[]",
+      "note": "Native values are ISO codes IE, MX, GB and US."
+    },
+    {
+      "key": "location",
+      "label": "City",
+      "kind": "multi",
+      "values": [
+        "Brooklyn",
+        "CDMX",
+        "Dublin"
+      ],
+      "native_param": "cities[]",
+      "note": "City checkboxes; the form also carries a hidden location_uids field."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Accounting",
+        "Analytics",
+        "CO Strategy",
+        "Content Design",
+        "Data Science & Machine Learning",
+        "Digital Marketing",
+        "Financial Systems",
+        "HR Operations",
+        "Legal Counsel",
+        "Marketing Communications & PR",
+        "ML Product",
+        "MSTS Enablement",
+        "Product Design",
+        "Product Mgmt",
+        "Project Mgmt",
+        "Research",
+        "Risk & Fraud",
+        "Security Engineer",
+        "Software Engineer",
+        "Strategic Sourcing",
+        "Support",
+        "Technical Project Management",
+        "Workplace Operations"
+      ],
+      "native_param": "department_uids[]",
+      "note": "Native values are opaque Clinch UIDs; labels from the portal are listed."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full-time"
+      ],
+      "native_param": "employment_type_uids[]",
+      "note": "Native value is an opaque Clinch UID; the label is shown."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "Remote"
+      ],
+      "native_param": "workplace_type[]",
+      "note": "Native values are lowercase hybrid and remote."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "newest_first",
+      "label": "Last Updated: Newest to Oldest",
+      "native_param": "sort=newest_first"
+    },
+    {
+      "value": "oldest_first",
+      "label": "Last Updated: Oldest to Newest",
+      "native_param": "sort=oldest_first"
+    },
+    {
+      "value": "title_asc",
+      "label": "Title: A-Z",
+      "native_param": "sort=title_asc"
+    },
+    {
+      "value": "title_desc",
+      "label": "Title: Z-A",
+      "native_param": "sort=title_desc"
+    }
+  ],
+  "default_sort": "newest_first",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The Clinch search form on /jobs/search is method=get action=/jobs/search. Keyword is query; facets are multi-value workplace_type[], department_uids[], employment_type_uids[], country_codes[] and cities[]; pagination is page=N and sorting is sort=. The /jobs ledger entry is a Clinch 404; /jobs/search is the official global listing linked from that page's navigation.",
+  "evidence": [
+    "https://careers.etsy.com/jobs/search",
+    "https://careers.etsy.com/jobs/search?query=engineer"
+  ],
+  "verified": true
+}

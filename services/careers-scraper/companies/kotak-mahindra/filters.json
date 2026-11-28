@@ -1,0 +1,98 @@
+{
+  "company": "Kotak Mahindra",
+  "slug": "kotak-mahindra",
+  "portal": "https://www.kotak.com/en/about-us/careers.html",
+  "listing_url": "https://hcbt.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX",
+  "family": "oracle",
+  "keyword": true,
+  "keyword_param": "keyword",
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "India",
+        "Maharashtra, India",
+        "Gujarat, India",
+        "Karnataka, India",
+        "Uttar Pradesh, India",
+        "Tamil Nadu, India",
+        "Delhi, India",
+        "Telangana, India",
+        "Haryana, India",
+        "Rajasthan, India"
+      ],
+      "native_param": "selectedLocationsFacet",
+      "note": "Oracle CX finder facet; selectedLocationsFacet=<locationsFacet Id>. Karnataka id 100000693765093 returned 1,199 of 12,181 requisitions."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Consumer Bank",
+        "Commercial Bank",
+        "Corporate",
+        "Wholesale Business",
+        "KMBL",
+        "Treasury",
+        "Kotak Private Banking"
+      ],
+      "native_param": "selectedCategoriesFacet",
+      "note": "categoriesFacet values (top 10, duplicate names removed)."
+    },
+    {
+      "key": "business_unit",
+      "label": "Business unit",
+      "kind": "multi",
+      "values": [
+        "Kotak Mahindra Bank Ltd",
+        "Kotak Mahindra Trusteeship Services Ltd",
+        "Kotak Mahindra Investments Ltd",
+        "KMTSL"
+      ],
+      "native_param": "selectedOrganizationsFacet",
+      "note": "organizationsFacet legal entities."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace",
+      "kind": "enum",
+      "values": [
+        "On-site"
+      ],
+      "native_param": "selectedWorkplaceTypesFacet",
+      "note": "workplaceTypesFacet; only ORA_ON_SITE / On-site is published."
+    },
+    {
+      "key": "date_posted",
+      "label": "Date posted",
+      "kind": "enum",
+      "values": [
+        "Less than 7 days",
+        "Less than 30 days",
+        "Greater than 30 days"
+      ],
+      "native_param": "selectedPostingDatesFacet",
+      "note": "postingDatesFacet ids 7 / 30 / 31."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=POSTING_DATES_DESC"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "Oracle Candidate Experience REST findReqs finder on site CX. Confirmed keyword=engineer reduced the total from 12,181 to 117, and selectedLocationsFacet=<Karnataka> returned 1,199. The same finder response echoes SelectedCategoriesFacet, SelectedOrganizationsFacet, SelectedWorkplaceTypesFacet and SelectedPostingDatesFacet, so those facet parameters are used. The careers page publishes the unfiltered CX board plus the CX_4001 ReLaunch view.",
+  "evidence": [
+    "https://hcbt.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX",
+    "https://hcbt.fa.em2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX,keyword=engineer,limit=1,sortBy=POSTING_DATES_DESC,offset=0",
+    "https://hcbt.fa.em2.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&finder=findReqs;siteNumber=CX,selectedLocationsFacet=100000693765093,limit=1,sortBy=POSTING_DATES_DESC,offset=0"
+  ],
+  "verified": true
+}

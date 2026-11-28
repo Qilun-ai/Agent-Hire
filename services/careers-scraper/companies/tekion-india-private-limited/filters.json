@@ -1,0 +1,103 @@
+{
+  "company": "Tekion India Private Limited",
+  "slug": "tekion-india-private-limited",
+  "portal": "https://tekion.com/careers",
+  "listing_url": "https://tekion.com/job-openings",
+  "family": "ashby",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "team",
+      "label": "Team",
+      "kind": "multi",
+      "values": [
+        "Application Development",
+        "Automotive Enterprise Cloud",
+        "Automotive Marketing Cloud",
+        "CTO Central Function's",
+        "Customer Value Services",
+        "Data and AI",
+        "Dev Ops",
+        "FP&A",
+        "GTM",
+        "Horizontal Platform, AI Tooling and Architecture",
+        "Integrations",
+        "Internal Engineering - Biz Apps",
+        "Internal Engineering - IT",
+        "Internal Engineering - Security",
+        "Internal Engineering - TAP Engg",
+        "Legal",
+        "Partner Integrations",
+        "People Team",
+        "Platform, Application & Architecture",
+        "Product Design",
+        "Product Management",
+        "Product Marketing, SA, & Emerging Product",
+        "Professional Services",
+        "Program & Delivery - GM",
+        "Program & Delivery - Honda",
+        "Sales",
+        "Support - ARC"
+      ],
+      "native_param": null,
+      "note": "Portal button id=btn-filter-dept filters client-side; its values are the Ashby team field (Ashby department is 'All Cost Centers' on every posting)."
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore HQ",
+        "Chennai Regional Office",
+        "Cincinnati Office",
+        "Pleasanton HQ",
+        "Virtual - California (Bay Area)",
+        "Virtual - Canada",
+        "Virtual - Ohio",
+        "Virtual - Quebec",
+        "Virtual - Texas",
+        "Virtual - United States",
+        "Virtual - Virginia"
+      ],
+      "native_param": null,
+      "note": "Portal button id=btn-filter-location filters client-side; values are the Ashby location field."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "FullTime",
+        "PartTime",
+        "Temporary"
+      ],
+      "native_param": null,
+      "note": "From posting-api employmentType; no separate employment-type control is sent to the API."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Workplace type",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "OnSite",
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "From posting-api workplaceType (OnSite/Remote/Hybrid)."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "The official listing page (tekion.com/job-openings, reached from tekion.com/careers) renders its own card grid with client-side controls btn-filter-location, btn-filter-dept and job-search-input, and loads the whole board from the Ashby posting API GET https://api.ashbyhq.com/posting-api/job-board/tekion?includeCompensation=true (91 listed jobs with department/team/location/employmentType/workplaceType/publishedAt). No keyword or facet parameters are sent to the API, so filtering is local.",
+  "evidence": [
+    "https://api.ashbyhq.com/posting-api/job-board/tekion?includeCompensation=true",
+    "https://tekion.com/job-openings",
+    "https://tekion.com/careers",
+    "src/career_scraper/adapters/tekion_india_private_limited.py"
+  ],
+  "verified": true
+}

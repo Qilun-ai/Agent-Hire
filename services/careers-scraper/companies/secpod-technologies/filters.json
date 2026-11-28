@@ -1,0 +1,64 @@
+{
+  "company": "SecPod Technologies",
+  "slug": "secpod-technologies",
+  "portal": "https://www.secpod.com/careers/",
+  "listing_url": "https://secpod.keka.com/careers/api/embedjobs/default/active/8010166a-b48d-4997-9d93-64a354522150",
+  "family": "custom",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "Bangalore",
+        "Vietnam"
+      ],
+      "native_param": null,
+      "note": "Keka jobLocations; the embed widget filters the fetched rows in the browser."
+    },
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Customer Sucess & Support",
+        "Design",
+        "Info Sec",
+        "New Hire",
+        "People Operations",
+        "R&D",
+        "Sales",
+        "Sales&Marketing",
+        "Security Content and Research"
+      ],
+      "native_param": null,
+      "note": "From Keka /api/embedjobs/departments/; the portal's jobListingSetting.filters are [department, location] and are applied client-side."
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "Full Time",
+        "Part Time"
+      ],
+      "native_param": null,
+      "note": "Keka jobType 2=Full Time, 1=Part Time; the embed bundle filters on jobTypeId in the browser."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "SecPod's official careers page embeds the Keka widget in #khembedjobs for identifier 8010166a-b48d-4997-9d93-64a354522150. The single listing request is GET /careers/api/embedjobs/default/active/<identifier>, which takes no keyword, filter, sort or pagination parameter; /careers/api/organization/default/careerportalinfo declares jobListingSetting.filters=[department,location] (grouped by department), and the embed bundle applies department, location, jobType and free-text search in the browser. Filters are therefore local on the collected rows.",
+  "evidence": [
+    "https://www.secpod.com/careers/ (Keka embed container #khembedjobs)",
+    "https://secpod.keka.com/careers/api/organization/default/careerportalinfo (name SecPod Careers, jobListingSetting.filters=[department,location], groupBy=department)",
+    "https://secpod.keka.com/careers/api/embedjobs/globalfiltergroups/8010166a-b48d-4997-9d93-64a354522150 -> Business Unit + Department groups listed above",
+    "https://secpod.keka.com/careers/api/embedjobs/departments/8010166a-b48d-4997-9d93-64a354522150 -> 9 department values",
+    "https://secpod.keka.com/careers/api/embedjobs/js/8010166a-b48d-4997-9d93-64a354522150 -> bundle filters on departmentIdentifiers/jobTypeId/locationName/searchText"
+  ],
+  "verified": true
+}

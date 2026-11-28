@@ -1,0 +1,101 @@
+{
+  "company": "SAP Labs",
+  "slug": "sap-labs",
+  "portal": "https://jobs.sap.com/search/",
+  "listing_url": "https://jobs.sap.com/en/jobs/",
+  "family": "smartrecruiters",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Teams",
+      "kind": "multi",
+      "values": [
+        "Accounting/Auditing",
+        "Administration",
+        "Administrative",
+        "Business Development",
+        "Communication",
+        "Consulting",
+        "Consulting and Professional Services",
+        "Corporate Operations",
+        "Customer Service",
+        "Customer Service and Support",
+        "Design",
+        "Education and Training",
+        "Engineering",
+        "Finance",
+        "General Business",
+        "Human Resources",
+        "Information Technology",
+        "Legal",
+        "Management",
+        "Marketing",
+        "Other",
+        "Presales",
+        "Product Management",
+        "Sales",
+        "Software Development"
+      ],
+      "native_param": null,
+      "note": "Shared SAP Teams facet; no SAP Labs-specific team."
+    },
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [],
+      "native_param": null,
+      "note": "Shared SAP Locations facet (260 observed strings); left empty here because no SAP Labs-scoped location list exists."
+    },
+    {
+      "key": "workplace_type",
+      "label": "Work Pattern",
+      "kind": "multi",
+      "values": [
+        "Hybrid",
+        "On-Site",
+        "Remote"
+      ],
+      "native_param": null,
+      "note": "Shared SAP Work Pattern facet; applied in the browser."
+    },
+    {
+      "key": "employment_type",
+      "label": "Contract Type",
+      "kind": "multi",
+      "values": [
+        "Contract",
+        "Full-time",
+        "Intern",
+        "Limited Full Time",
+        "Limited Part Time",
+        "Part-time",
+        "Regular Full Time",
+        "Regular Part Time",
+        "Teilzeit, befristet",
+        "Vollzeit, befristet",
+        "Vollzeit, unbefristet"
+      ],
+      "native_param": null,
+      "note": "Shared SAP Contract Type facet; applied in the browser."
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Newest",
+      "native_param": null
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": false,
+  "local_query": true,
+  "notes": "SAP Labs has no separate careers domain: the ledger URL is SAP's own entry, which 301s to jobs.sap.com/en/jobs/ (Next.js, ?page=N, 412 jobs). Neither SAP listing publishes a SAP Labs employer/division facet (new site: Teams / Locations / Work Pattern / Contract Type; previous site: Work area / Career status / Country), so SAP Labs-titled roles are the subset of the shared SAP board whose titles carry the SAP Labs brand. Filter parameters are inert server-side, so filtering is local.",
+  "evidence": [
+    "https://jobs.sap.com/en/jobs/",
+    "https://careers.sap.com/search/?q=&sortColumn=referencedate&sortDirection=desc&startrow=0"
+  ],
+  "verified": true
+}

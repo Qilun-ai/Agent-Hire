@@ -1,0 +1,150 @@
+{
+  "company": "CrowdStrike",
+  "slug": "crowdstrike",
+  "portal": "https://www.crowdstrike.com/en-us/careers/",
+  "listing_url": "https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers",
+  "family": "workday",
+  "keyword": true,
+  "keyword_param": "searchText",
+  "fields": [
+    {
+      "key": "department",
+      "label": "Job Family",
+      "kind": "multi",
+      "values": [
+        "Product Engineering",
+        "Sales",
+        "Professional Services",
+        "Services",
+        "Intern",
+        "Intelligence",
+        "Information Technology",
+        "Engineering",
+        "Marketing",
+        "Finance",
+        "Administration",
+        "Human Resources",
+        "Legal",
+        "Customer Support",
+        "Facilities",
+        "Technology",
+        "Business Development"
+      ],
+      "native_param": "appliedFacets[Job_Family]",
+      "note": "the only job-family facet on this site; note the capitalised key Job_Family"
+    },
+    {
+      "key": "employment_type",
+      "label": "Job Type",
+      "kind": "multi",
+      "values": [
+        "Regular",
+        "Intern (Fixed Term)",
+        "PEO Worker"
+      ],
+      "native_param": "appliedFacets[workerSubType]",
+      "note": "no timeType facet exists on this board"
+    },
+    {
+      "key": "country",
+      "label": "Location Country",
+      "kind": "multi",
+      "values": [
+        "Australia",
+        "Austria",
+        "Belgium",
+        "Brazil",
+        "Canada",
+        "Croatia",
+        "Czechia",
+        "Denmark",
+        "France",
+        "Germany",
+        "Greece",
+        "India",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Japan",
+        "Mexico",
+        "Netherlands",
+        "New Zealand",
+        "Philippines",
+        "Poland",
+        "Romania",
+        "Saudi Arabia",
+        "Singapore",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States of America"
+      ],
+      "native_param": "appliedFacets[locationCountry]",
+      "note": "nested facet locationCountry inside locationMainGroup (30 values)"
+    },
+    {
+      "key": "location",
+      "label": "Locations",
+      "kind": "multi",
+      "values": [
+        "Adelaide",
+        "Australia - Melbourne",
+        "Australia - Remote, AC",
+        "Australia - Remote, QL",
+        "Australia - Remote, TS",
+        "Australia - Remote, VC",
+        "Australia - Sydney",
+        "Austria - Remote",
+        "Belgium - Remote",
+        "Brazil - Remote",
+        "Canada - Remote AB",
+        "Canada - Remote BC",
+        "Canada - Remote ON",
+        "Canada - Toronto",
+        "Canberra",
+        "Czech Republic - Remote",
+        "Denmark - Aarhus",
+        "Denmark - Remote",
+        "France - Remote",
+        "Germany - Remote",
+        "India - Bangalore",
+        "India - Gurugram",
+        "India - Mumbai",
+        "India - Pune",
+        "India - Remote",
+        "Ireland - Remote",
+        "Israel - Remote",
+        "Israel - Tel Aviv",
+        "Japan - Remote",
+        "United Kingdom - Remote"
+      ],
+      "native_param": "appliedFacets[locations]",
+      "note": "nested facet locations; board publishes 134 values, top 30 captured here"
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "sortBy=postedOn"
+    },
+    {
+      "value": "relevance",
+      "label": "Relevance",
+      "native_param": "sortBy=relevance"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "The CrowdStrike careers page publishes a Search Jobs action to its own Workday site crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers (tenant crowdstrike, site crowdstrikecareers). The machine-usable search is POST https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs with {\"appliedFacets\":{},\"limit\":20,\"offset\":0,\"searchText\":\"\"} -> total 393, returning exactly three facets: Job_Family (17 values), workerSubType (3), locationMainGroup (nested locationCountry 30 / locations 134). Verified filtering: the same POST with {\"appliedFacets\":{\"Job_Family\":[\"1408861ee6e201641be2c2f6b000c00b\"]},\"searchText\":\"engineer\",\"sortBy\":\"postedOn\"} -> total 13 Engineer titles. There is no timeType or workplaceType facet on this site, so time-type and workplace selections cannot be sent natively; keyword, the two family facets, location facets, offset/limit and sortBy are all native.",
+  "evidence": [
+    "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs (POST, total 393)",
+    "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs (POST appliedFacets Job_Family=Engineering + searchText=engineer + sortBy=postedOn, total 13)",
+    "https://www.crowdstrike.com/en-us/careers/",
+    "adapter:crowdstrike"
+  ],
+  "verified": true
+}

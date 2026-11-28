@@ -1,0 +1,88 @@
+{
+  "company": "Myntra",
+  "slug": "myntra",
+  "portal": "https://careers.myntra.com/",
+  "listing_url": "https://jobs.myntra.com/home",
+  "family": "custom",
+  "keyword": false,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "job_family",
+      "label": "Job group",
+      "kind": "multi",
+      "values": [
+        "fashion",
+        "operations",
+        "technology",
+        "corporate services",
+        "strategy marketing and creative"
+      ],
+      "native_param": "jobGroup",
+      "note": "Confirmed: jobGroup=fashion returns 25 of 50 requisitions"
+    },
+    {
+      "key": "location",
+      "label": "Location",
+      "kind": "multi",
+      "values": [
+        "bangalore, karnataka, india",
+        "bengaluru, karnataka, india",
+        "delhi, delhi, india"
+      ],
+      "native_param": "locations",
+      "note": "Confirmed: locations=delhi, delhi, india returns 1 of 50; a cities facet also exists"
+    },
+    {
+      "key": "employment_type",
+      "label": "Employment type",
+      "kind": "multi",
+      "values": [
+        "FULL_TIME",
+        "APPRENTICESHIP"
+      ],
+      "native_param": null,
+      "note": "employmentType facet exists but the request parameter is not confirmed; applied locally"
+    },
+    {
+      "key": "workplace_type",
+      "label": "Job type",
+      "kind": "multi",
+      "values": [
+        "ONSITE",
+        "HYBRID"
+      ],
+      "native_param": null,
+      "note": "jobType facet; applied locally"
+    },
+    {
+      "key": "seniority",
+      "label": "Experience",
+      "kind": "multi",
+      "values": [
+        "experienced",
+        "fresher"
+      ],
+      "native_param": null,
+      "note": "experience facet; applied locally"
+    }
+  ],
+  "sorts": [
+    {
+      "value": "recent",
+      "label": "Most recent",
+      "native_param": "selectedSortField=postedOn&selectedSortOrder=desc"
+    }
+  ],
+  "default_sort": "recent",
+  "native_query": true,
+  "local_query": true,
+  "notes": "First-party Flutter portal jobs.myntra.com backed by the Spire iExchange API at io.spire2grow.com/ies/v1/p with workspace MYNTRA-93as3 (workspaceId from ?domain=jobs.myntra.com, sent as the `workspaceid` header plus `language: en`). GET /requisition/aggregation/_search returns the UI facets (jobGroup, departments - currently empty -, locations, cities, employmentType, jobType, experience, skills) over 50 requisitions; GET /requisition/_search is 1-based (page, size, selectedSortField=postedOn, selectedSortOrder=desc) and honours facet params for jobGroup and locations. There is no text-search control, so keyword is false.",
+  "evidence": [
+    "https://careers.myntra.com/",
+    "https://io.spire2grow.com/ies/v1/p/requisition/aggregation/_search?selectedSortOrder=desc&selectedSortField=postedOn",
+    "https://io.spire2grow.com/ies/v1/p/requisition/_search?page=1&size=6&selectedSortOrder=desc&selectedSortField=postedOn&jobGroup=fashion",
+    "https://io.spire2grow.com/ies/v1/p/requisition/_search?page=1&size=6&selectedSortOrder=desc&selectedSortField=postedOn&locations=delhi%2C%20delhi%2C%20india&employmentType=FULL_TIME"
+  ],
+  "verified": true
+}

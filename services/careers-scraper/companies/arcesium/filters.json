@@ -1,0 +1,59 @@
+{
+  "company": "Arcesium",
+  "slug": "arcesium",
+  "portal": "https://www.arcesium.com/careers",
+  "listing_url": "https://www.arcesium.com/careers",
+  "family": "greenhouse",
+  "keyword": true,
+  "keyword_param": null,
+  "fields": [
+    {
+      "key": "department",
+      "label": "Department",
+      "kind": "multi",
+      "values": [
+        "Administration",
+        "Client and Partner Development",
+        "Corporate",
+        "Financial Operations",
+        "Forward Deployed Solution Architecture",
+        "Platform Site Reliability Engineering",
+        "Product",
+        "Sales & Partnership",
+        "Sales Operations & Enablement",
+        "Technology",
+        "Trade Accounting & Operations"
+      ],
+      "native_param": null,
+      "note": "UI select 'Department' defaults to All; it slices the already-loaded own-site job array, so there is no request parameter."
+    },
+    {
+      "key": "location",
+      "label": "Country/Region",
+      "kind": "multi",
+      "values": [
+        "Bengaluru; Gurugram; Hyderabad",
+        "Gurugram; Hyderabad",
+        "Hyderabad",
+        "Lisbon",
+        "Lisbon, Portugal",
+        "London",
+        "New York",
+        "Remote - US",
+        "Stockholm, Sweden"
+      ],
+      "native_param": null,
+      "note": "UI select 'Country/Region' (default All); office taxonomy from the native Job Listing, no request parameter."
+    }
+  ],
+  "sorts": [],
+  "default_sort": null,
+  "native_query": false,
+  "local_query": true,
+  "notes": "Arcesium's own careers page embeds a complete unfiltered React 'Job Listing' dataset (mapped.jobs/departments/offices) whose ten-row UI paging is client-side; the only controls are a free-text search box plus Country/Region and Department selects that default to All. Recorded default filters are {search:'', country_region:'All', department:'All'}, and the exact detail links point at job-boards.greenhouse.io/arcesiumllc. Because membership and filtering happen in the client over one payload, no server-side search/filter request exists to reproduce; all filtering is local. jobs are paginated 10 at a time in the UI only.",
+  "evidence": [
+    "https://www.arcesium.com/careers",
+    "https://job-boards.greenhouse.io/arcesiumllc"
+  ],
+  "verified": true
+}
